@@ -90,8 +90,9 @@ export const LeaderboardTable = () => {
     {
       accessorKey: "rank",
       header: "Rank",
-      cell: ({ row }) => {
-        const rank = row.index + 1;
+      cell: ({ row, table }) => {
+        const sortedRows = table.getSortedRowModel().rows;
+        const rank = sortedRows.findIndex(r => r.id === row.id) + 1;
         const podiumColors = [
           "bg-yellow-100/50 text-yellow-700 border-yellow-200",
           "bg-slate-100/50 text-slate-700 border-slate-200",
