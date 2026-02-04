@@ -2,6 +2,7 @@ import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Users, Target, Zap, TrendingUp } from "lucide-react";
 import resultsData from "@/data/results.json";
+import { cn } from "@/lib/utils";
 
 export const StatsCards = () => {
   const totalModels = resultsData.length;
@@ -15,42 +16,47 @@ export const StatsCards = () => {
       value: totalModels,
       icon: Users,
       color: "text-blue-600",
-      bgColor: "bg-blue-50/50"
+      bgColor: "bg-blue-100/50",
+      accentColor: "bg-blue-600"
     },
     {
       label: "Best Pass@1",
       value: `${(bestPassAt1 * 100).toFixed(1)}%`,
       icon: Target,
       color: "text-emerald-600",
-      bgColor: "bg-emerald-50/50"
+      bgColor: "bg-emerald-100/50",
+      accentColor: "bg-emerald-600"
     },
     {
       label: "Avg. Efficiency",
       value: avgEfficiency.toFixed(3),
       icon: Zap,
       color: "text-amber-600",
-      bgColor: "bg-amber-50/50"
+      bgColor: "bg-amber-100/50",
+      accentColor: "bg-amber-600"
     },
     {
       label: "Avg. Line F1",
       value: avgLineF1.toFixed(3),
       icon: TrendingUp,
       color: "text-indigo-600",
-      bgColor: "bg-indigo-50/50"
+      bgColor: "bg-indigo-100/50",
+      accentColor: "bg-indigo-600"
     }
   ];
 
   return (
-    <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-8">
+    <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
       {stats.map((stat, index) => (
-        <Card key={index} className="border-none shadow-none bg-muted/20">
-          <CardContent className="p-4 flex items-center gap-4">
-            <div className={`p-2 rounded-lg ${stat.bgColor} shrink-0`}>
-              <stat.icon className={`h-4 w-4 ${stat.color}`} />
+        <Card key={index} className="border border-muted/50 shadow-sm bg-card hover:shadow-md transition-shadow relative overflow-hidden group">
+          <div className={cn("absolute top-0 left-0 w-1 h-full opacity-40 group-hover:opacity-100 transition-opacity", stat.accentColor)} />
+          <CardContent className="p-5 flex items-center gap-5">
+            <div className={`p-3 rounded-xl ${stat.bgColor} shrink-0`}>
+              <stat.icon className={`h-5 w-5 ${stat.color}`} />
             </div>
             <div>
-              <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground/80">{stat.label}</p>
-              <h3 className="text-lg font-bold tracking-tight">{stat.value}</h3>
+              <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-muted-foreground/60">{stat.label}</p>
+              <h3 className="text-xl font-bold tracking-tight mt-0.5">{stat.value}</h3>
             </div>
           </CardContent>
         </Card>
