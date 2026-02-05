@@ -111,7 +111,7 @@ export const DetailedTable = ({ systemType }: DetailedTableProps) => {
     // End-to-End Group
     {
       id: "e2e",
-      header: () => <div className="text-center py-1.5 bg-emerald-100/50 rounded-md text-[10px] font-bold uppercase tracking-widest text-emerald-500 mb-1.5 border border-emerald-200/50">End-to-End Analysis</div>,
+      header: () => <div className="text-center px-6 py-1.5 bg-emerald-100/50 rounded-md text-[10px] font-bold uppercase tracking-widest text-emerald-500 mb-1.5 border border-emerald-200/50 whitespace-nowrap">End-to-End</div>,
       columns: [
         { id: "performance_pass_at_1", accessorKey: "performance.pass_at_1", header: "Pass@1", cell: ({ row }) => <span className="font-mono text-[13px] font-bold text-emerald-700">{(row.original.performance.pass_at_1 * 100).toFixed(1)}%</span> },
       ],
