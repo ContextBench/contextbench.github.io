@@ -1,18 +1,19 @@
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Users, Target, Zap, TrendingUp } from "lucide-react";
-import resultsData from "@/data/results.json";
+import backboneData from "@/data/backbone_results.json";
 import { cn } from "@/lib/utils";
 
 export const StatsCards = () => {
-  const totalModels = resultsData.length;
-  const bestPassAt1 = Math.max(...resultsData.map(r => r.performance.pass_at_1));
-  const avgEfficiency = resultsData.reduce((acc, r) => acc + r.dynamics.efficiency, 0) / totalModels;
-  const avgLineF1 = resultsData.reduce((acc, r) => acc + r.performance.line.f1, 0) / totalModels;
+  // Use backboneData for stats as it's the more consistent baseline
+  const totalModels = backboneData.length;
+  const bestPassAt1 = Math.max(...backboneData.map(r => r.performance.pass_at_1));
+  const avgEfficiency = backboneData.reduce((acc, r) => acc + r.dynamics.efficiency, 0) / totalModels;
+  const avgLineF1 = backboneData.reduce((acc, r) => acc + r.performance.line.f1, 0) / totalModels;
 
   const stats = [
     {
-      label: "Total Models",
+      label: "Foundation Models",
       value: totalModels,
       icon: Users,
       color: "text-blue-600",

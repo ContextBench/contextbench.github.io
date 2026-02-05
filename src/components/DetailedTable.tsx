@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import {
   ColumnDef,
   flexRender,
@@ -18,44 +18,66 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { cn } from "@/lib/utils";
-import resultsData from "@/data/results.json";
+import backboneData from "@/data/backbone_results.json";
+import agentData from "@/data/agent_results.json";
 
-export type BenchmarkResult = typeof resultsData[0];
+// Define a unified interface for the table data
+export interface BenchmarkResult {
+  model: string;
+  performance: {
+    file: { recall: number; precision: number; f1: number };
+    block: { recall: number; precision: number; f1: number };
+    line: { recall: number; precision: number; f1: number };
+    pass_at_1: number;
+  };
+  patterns?: {
+    avg_steps_per_instance: number;
+    avg_lines_per_step: number;
+    avg_cost_per_instance: number;
+  };
+  dynamics?: {
+    efficiency: number;
+    redundancy: number;
+    usage_drop: number;
+  };
+}
 
-const MetricCell = ({ value, isBold = false, colorClass = "" }: { value: number | string, isBold?: boolean, colorClass?: string }) => (
-  <span className={cn(
-    "font-mono text-[13px] tabular-nums",
-    isBold ? "font-bold text-sm" : "text-muted-foreground",
-    colorClass
-  )}>
-    {typeof value === 'number' ? value.toFixed(3) : value}
-  </span>
-);
+const MetricCell = ({ value, isBold = false, colorClass = "" }: { value: number | string | undefined, isBold?: boolean, colorClass?: string }) => {
+  if (value === undefined) return <span className="font-mono text-[11px] text-muted-foreground/30">--</span>;
+  return (
+    <span className={cn(
+      "font-mono text-[13px] tabular-nums",
+      isBold ? "font-bold text-sm" : "text-muted-foreground",
+      colorClass
+    )}>
+      {typeof value === 'number' ? value.toFixed(3) : value}
+    </span>
+  );
+};
 
 interface DetailedTableProps {
   systemType: string;
 }
 
 export const DetailedTable = ({ systemType }: DetailedTableProps) => {
+  const data = useMemo<BenchmarkResult[]>(() => {
+    return systemType === "agent" ? (agentData as BenchmarkResult[]) : (backboneData as BenchmarkResult[]);
+  }, [systemType]);
+
   const [sorting, setSorting] = useState<SortingState>([
-    { id: "e2e_performance_pass_at_1", desc: true }
+    { id: "performance_pass_at_1", desc: true }
   ]);
 
-  const formatModelName = (name: string) => {
-    return systemType === "agent" ? `cmini-swe-agent + ${name}` : name;
-  };
-
-  const columns: ColumnDef<BenchmarkResult>[] = [
+  const columns = useMemo<ColumnDef<BenchmarkResult>[]>(() => [
     {
       accessorKey: "model",
       header: "Model",
       cell: ({ row }) => (
         <span className="font-bold text-sm sticky left-0 bg-background/80 backdrop-blur z-10 px-3 py-1.5 rounded border border-muted/20">
-          {formatModelName(row.original.model)}
+          {row.original.model}
         </span>
       ),
     },
-    // File-Level Group
     {
       id: "file_level",
       header: () => <div className="text-center py-1.5 bg-slate-100/50 rounded-md text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-1.5 border border-slate-200/50">File Level</div>,
@@ -65,7 +87,6 @@ export const DetailedTable = ({ systemType }: DetailedTableProps) => {
         { accessorKey: "performance.file.f1", header: "F1", cell: ({ row }) => <MetricCell value={row.original.performance.file.f1} isBold colorClass="text-slate-700" /> },
       ],
     },
-    // Block-Level Group
     {
       id: "block_level",
       header: () => <div className="text-center py-1.5 bg-indigo-100/50 rounded-md text-[10px] font-bold uppercase tracking-widest text-indigo-500 mb-1.5 border border-indigo-200/50">Block Level</div>,
@@ -75,7 +96,6 @@ export const DetailedTable = ({ systemType }: DetailedTableProps) => {
         { accessorKey: "performance.block.f1", header: "F1", cell: ({ row }) => <MetricCell value={row.original.performance.block.f1} isBold colorClass="text-indigo-700" /> },
       ],
     },
-    // Line-Level Group
     {
       id: "line_level",
       header: () => <div className="text-center py-1.5 bg-blue-100/50 rounded-md text-[10px] font-bold uppercase tracking-widest text-blue-500 mb-1.5 border border-blue-200/50">Line Level</div>,
@@ -85,37 +105,33 @@ export const DetailedTable = ({ systemType }: DetailedTableProps) => {
         { accessorKey: "performance.line.f1", header: "F1", cell: ({ row }) => <MetricCell value={row.original.performance.line.f1} isBold colorClass="text-blue-700" /> },
       ],
     },
-    // End-to-End Group
     {
       id: "e2e",
       header: () => <div className="text-center py-1.5 bg-emerald-100/50 rounded-md text-[10px] font-bold uppercase tracking-widest text-emerald-500 mb-1.5 border border-emerald-200/50">End-to-End</div>,
       columns: [
-        { accessorKey: "performance.pass_at_1", header: "Pass@1", cell: ({ row }) => <span className="font-mono text-[13px] font-bold text-emerald-700">{(row.original.performance.pass_at_1 * 100).toFixed(1)}%</span> },
+        { id: "performance_pass_at_1", accessorKey: "performance.pass_at_1", header: "Pass@1", cell: ({ row }) => <span className="font-mono text-[13px] font-bold text-emerald-700">{(row.original.performance.pass_at_1 * 100).toFixed(1)}%</span> },
       ],
     },
-    // Dynamics Group
     {
       id: "dynamics",
       header: () => <div className="text-center py-1.5 bg-amber-100/50 rounded-md text-[10px] font-bold uppercase tracking-widest text-amber-500 mb-1.5 border border-amber-200/50">Dynamics & Cost</div>,
       columns: [
-        { accessorKey: "patterns.avg_steps_per_instance", header: "Steps", cell: ({ row }) => <span className="font-mono text-[13px] tabular-nums text-muted-foreground">{row.original.patterns.avg_steps_per_instance}</span> },
-        { accessorKey: "patterns.avg_lines_per_step", header: "Lines", cell: ({ row }) => <span className="font-mono text-[13px] tabular-nums text-muted-foreground">{row.original.patterns.avg_lines_per_step}</span> },
-        { accessorKey: "dynamics.efficiency", header: "Eff.", cell: ({ row }) => <MetricCell value={row.original.dynamics.efficiency} /> },
-        { accessorKey: "dynamics.redundancy", header: "Red.", cell: ({ row }) => <MetricCell value={row.original.dynamics.redundancy} colorClass="text-red-400" /> },
-        { accessorKey: "patterns.avg_cost_per_instance", header: "Cost", cell: ({ row }) => <span className="font-mono text-[13px] font-bold text-amber-600">${row.original.patterns.avg_cost_per_instance.toFixed(2)}</span> },
+        { accessorKey: "patterns.avg_steps_per_instance", header: "Steps", cell: ({ row }) => <MetricCell value={row.original.patterns?.avg_steps_per_instance} /> },
+        { accessorKey: "patterns.avg_lines_per_step", header: "Lines", cell: ({ row }) => <MetricCell value={row.original.patterns?.avg_lines_per_step} /> },
+        { accessorKey: "dynamics.efficiency", header: "Eff.", cell: ({ row }) => <MetricCell value={row.original.dynamics?.efficiency} /> },
+        { accessorKey: "dynamics.redundancy", header: "Red.", cell: ({ row }) => <MetricCell value={row.original.dynamics?.redundancy} colorClass="text-red-400" /> },
+        { accessorKey: "patterns.avg_cost_per_instance", header: "Cost", cell: ({ row }) => <span className="font-mono text-[13px] font-bold text-amber-600">{row.original.patterns?.avg_cost_per_instance ? `$${row.original.patterns.avg_cost_per_instance.toFixed(2)}` : "--"}</span> },
       ],
     },
-  ];
+  ], []);
 
   const table = useReactTable({
-    data: resultsData,
+    data,
     columns,
     getCoreRowModel: getCoreRowModel(),
     onSortingChange: setSorting,
     getSortedRowModel: getSortedRowModel(),
-    state: {
-      sorting,
-    },
+    state: { sorting },
   });
 
   return (
@@ -135,12 +151,7 @@ export const DetailedTable = ({ systemType }: DetailedTableProps) => {
                         header.id === "model" && "sticky left-0 bg-background/95 backdrop-blur z-20"
                       )}
                     >
-                      {header.isPlaceholder
-                        ? null
-                        : flexRender(
-                            header.column.columnDef.header,
-                            header.getContext()
-                          )}
+                      {header.isPlaceholder ? null : flexRender(header.column.columnDef.header, header.getContext())}
                     </TableHead>
                   ))}
                 </TableRow>
@@ -165,13 +176,6 @@ export const DetailedTable = ({ systemType }: DetailedTableProps) => {
             </TableBody>
           </Table>
         </div>
-      </div>
-      <div className="p-5 bg-muted/10 rounded-2xl border border-muted/30 flex flex-wrap gap-x-10 gap-y-3 justify-center text-[11px] text-muted-foreground font-bold uppercase tracking-[0.15em]">
-        <div className="flex items-center gap-2"><div className="w-2.5 h-2.5 rounded-full bg-slate-300" /> File Level Metrics</div>
-        <div className="flex items-center gap-2"><div className="w-2.5 h-2.5 rounded-full bg-indigo-300" /> Block Level Metrics</div>
-        <div className="flex items-center gap-2"><div className="w-2.5 h-2.5 rounded-full bg-blue-300" /> Line Level Metrics</div>
-        <div className="flex items-center gap-2"><div className="w-2.5 h-2.5 rounded-full bg-emerald-300" /> Success Metrics</div>
-        <div className="flex items-center gap-2"><div className="w-2.5 h-2.5 rounded-full bg-amber-300" /> Agent Dynamics</div>
       </div>
     </div>
   );

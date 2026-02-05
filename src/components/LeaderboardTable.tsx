@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import {
   ColumnDef,
   flexRender,
@@ -31,17 +31,37 @@ import {
   ArrowUpDown, 
   Search,
   CheckCircle2,
+  Zap,
+  DollarSign,
   TrendingUp,
   HelpCircle,
-  Trophy,
-  Zap,
-  DollarSign
+  Trophy
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
-import resultsData from "@/data/results.json";
+import backboneData from "@/data/backbone_results.json";
+import agentData from "@/data/agent_results.json";
 
-export type BenchmarkResult = typeof resultsData[0];
+// Define a unified interface for the table data
+export interface BenchmarkResult {
+  model: string;
+  performance: {
+    file: { recall: number; precision: number; f1: number };
+    block: { recall: number; precision: number; f1: number };
+    line: { recall: number; precision: number; f1: number };
+    pass_at_1: number;
+  };
+  patterns?: {
+    avg_steps_per_instance: number;
+    avg_lines_per_step: number;
+    avg_cost_per_instance: number;
+  };
+  dynamics?: {
+    efficiency: number;
+    redundancy: number;
+    usage_drop: number;
+  };
+}
 
 const PerformanceBar = ({ value, max, color }: { value: number; max: number; color?: string }) => {
   const percentage = (value / max) * 100;
@@ -81,28 +101,36 @@ interface LeaderboardTableProps {
 }
 
 export const LeaderboardTable = ({ primaryMetric, systemType }: LeaderboardTableProps) => {
+  const data = useMemo<BenchmarkResult[]>(() => {
+    const rawData = systemType === "agent" ? agentData : backboneData;
+    return rawData.map(r => ({
+      ...r,
+      model: systemType === "agent" && !agentData.find(ad => ad.model === r.model) 
+        ? `cmini-swe-agent + ${r.model}` 
+        : r.model
+    })) as BenchmarkResult[];
+  }, [systemType]);
+
   const [sorting, setSorting] = useState<SortingState>([
     { id: primaryMetric, desc: true }
   ]);
   const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([]);
   const [expandedRows, setExpandedRows] = useState<Record<string, boolean>>({});
 
-  // Sync sorting with primaryMetric prop
   useEffect(() => {
     setSorting([{ id: primaryMetric, desc: true }]);
   }, [primaryMetric]);
 
-  const maxPass = Math.max(...resultsData.map(r => r.performance.pass_at_1));
-  const maxLineF1 = Math.max(...resultsData.map(r => r.performance.line.f1));
-  const maxEfficiency = Math.max(...resultsData.map(r => r.dynamics.efficiency));
+  const maxPass = useMemo(() => Math.max(...data.map(r => r.performance.pass_at_1)), [data]);
+  const maxLineF1 = useMemo(() => Math.max(...data.map(r => r.performance.line.f1)), [data]);
+  const maxEfficiency = useMemo(() => {
+    const efficiencies = data.map(r => r.dynamics?.efficiency).filter((v): v is number => v !== undefined);
+    return efficiencies.length > 0 ? Math.max(...efficiencies) : 1;
+  }, [data]);
 
-  const formatModelName = (name: string) => {
-    return systemType === "agent" ? `cmini-swe-agent + ${name}` : name;
-  };
-
-  const columns: ColumnDef<BenchmarkResult>[] = [
+  const columns = useMemo<ColumnDef<BenchmarkResult>[]>(() => [
     {
-      accessorKey: "rank",
+      id: "rank",
       header: "Rank",
       cell: ({ row, table }) => {
         const sortedRows = table.getSortedRowModel().rows;
@@ -132,16 +160,14 @@ export const LeaderboardTable = ({ primaryMetric, systemType }: LeaderboardTable
           className="flex items-center gap-1 hover:text-foreground transition-colors text-xs font-bold uppercase tracking-widest"
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
         >
-          Model
+          Model / System
           <ArrowUpDown className="h-3.5 w-3.5 opacity-30" />
         </button>
       ),
       cell: ({ row }) => (
-        <div className="flex flex-col">
-          <span className="font-bold text-foreground tracking-tight text-base group-hover:text-primary transition-colors">
-            {formatModelName(row.original.model)}
-          </span>
-        </div>
+        <span className="font-bold text-foreground tracking-tight text-base group-hover:text-primary transition-colors">
+          {row.original.model}
+        </span>
       ),
     },
     {
@@ -206,7 +232,8 @@ export const LeaderboardTable = ({ primaryMetric, systemType }: LeaderboardTable
         />
       ),
       cell: ({ row }) => {
-        const val = row.original.dynamics.efficiency;
+        const val = row.original.dynamics?.efficiency;
+        if (val === undefined) return <span className="font-mono text-muted-foreground/30 px-6">--</span>;
         const isMax = val === maxEfficiency;
         const isSelected = primaryMetric === "dynamics_efficiency";
         return (
@@ -231,7 +258,8 @@ export const LeaderboardTable = ({ primaryMetric, systemType }: LeaderboardTable
         />
       ),
       cell: ({ row }) => {
-        const val = row.original.patterns.avg_cost_per_instance;
+        const val = row.original.patterns?.avg_cost_per_instance;
+        if (val === undefined) return <span className="font-mono text-muted-foreground/30 px-6">--</span>;
         return (
           <div className="relative h-full flex items-center px-6 bg-teal-50/20">
             <span className="font-mono text-sm tabular-nums text-teal-700 font-bold">
@@ -241,27 +269,23 @@ export const LeaderboardTable = ({ primaryMetric, systemType }: LeaderboardTable
         );
       },
     },
-  ];
+  ], [maxPass, maxLineF1, maxEfficiency, primaryMetric]);
 
   const toggleRow = (id: string) => {
-    setExpandedRows(prev => ({
-      ...prev,
-      [id]: !prev[id]
-    }));
+    const row = table.getRow(id);
+    if (!row.original.patterns && !row.original.dynamics) return;
+    setExpandedRows(prev => ({ ...prev, [id]: !prev[id] }));
   };
 
   const table = useReactTable({
-    data: resultsData,
+    data,
     columns,
     getCoreRowModel: getCoreRowModel(),
     onSortingChange: setSorting,
     getSortedRowModel: getSortedRowModel(),
     onColumnFiltersChange: setColumnFilters,
     getFilteredRowModel: getFilteredRowModel(),
-    state: {
-      sorting,
-      columnFilters,
-    },
+    state: { sorting, columnFilters },
   });
 
   return (
@@ -271,9 +295,7 @@ export const LeaderboardTable = ({ primaryMetric, systemType }: LeaderboardTable
         <Input
           placeholder="Search models..."
           value={(table.getColumn("model")?.getFilterValue() as string) ?? ""}
-          onChange={(event) =>
-            table.getColumn("model")?.setFilterValue(event.target.value)
-          }
+          onChange={(event) => table.getColumn("model")?.setFilterValue(event.target.value)}
           className="pl-11 h-12 text-base bg-muted/20 border-muted/50 rounded-xl shadow-none focus-visible:ring-2 focus-visible:ring-primary/10 transition-all"
         />
       </div>
@@ -285,12 +307,7 @@ export const LeaderboardTable = ({ primaryMetric, systemType }: LeaderboardTable
               <TableRow key={headerGroup.id} className="hover:bg-transparent">
                 {headerGroup.headers.map((header) => (
                   <TableHead key={header.id} className="h-16 px-6">
-                    {header.isPlaceholder
-                      ? null
-                      : flexRender(
-                          header.column.columnDef.header,
-                          header.getContext()
-                        )}
+                    {header.isPlaceholder ? null : flexRender(header.column.columnDef.header, header.getContext())}
                   </TableHead>
                 ))}
                 <TableHead className="w-[70px]"></TableHead>
@@ -302,7 +319,6 @@ export const LeaderboardTable = ({ primaryMetric, systemType }: LeaderboardTable
               table.getRowModel().rows.map((row) => (
                 <React.Fragment key={row.id}>
                   <TableRow
-                    data-state={row.getIsSelected() && "selected"}
                     className={cn(
                       "group cursor-pointer transition-all duration-200 border-b border-muted/30 last:border-0",
                       expandedRows[row.id] ? "bg-muted/40" : "hover:bg-muted/20"
@@ -316,13 +332,15 @@ export const LeaderboardTable = ({ primaryMetric, systemType }: LeaderboardTable
                     ))}
                     <TableCell className="px-6 text-center">
                       <div className="flex justify-center">
-                        <motion.div
-                          animate={{ rotate: expandedRows[row.id] ? 180 : 0 }}
-                          transition={{ duration: 0.3 }}
-                          className="p-1.5 rounded-full bg-muted/50 text-muted-foreground/40 group-hover:text-primary group-hover:bg-primary/10 transition-all"
-                        >
-                          <ChevronDown className="h-5 w-5" />
-                        </motion.div>
+                        {(row.original.patterns || row.original.dynamics) ? (
+                          <motion.div
+                            animate={{ rotate: expandedRows[row.id] ? 180 : 0 }}
+                            transition={{ duration: 0.3 }}
+                            className="p-1.5 rounded-full bg-muted/50 text-muted-foreground/40 group-hover:text-primary group-hover:bg-primary/10 transition-all"
+                          >
+                            <ChevronDown className="h-5 w-5" />
+                          </motion.div>
+                        ) : null}
                       </div>
                     </TableCell>
                   </TableRow>
@@ -347,9 +365,9 @@ export const LeaderboardTable = ({ primaryMetric, systemType }: LeaderboardTable
                                   </div>
                                   <div className="space-y-5">
                                     {[
-                                      { label: "Efficiency Score", value: row.original.dynamics.efficiency.toFixed(3) },
-                                      { label: "Redundancy Index", value: row.original.dynamics.redundancy.toFixed(3), color: "text-red-500/70" },
-                                      { label: "Information Usage Drop", value: row.original.dynamics.usage_drop.toFixed(3), color: "text-amber-500/70" }
+                                      { label: "Efficiency Score", value: row.original.dynamics?.efficiency?.toFixed(3) || "--" },
+                                      { label: "Redundancy Index", value: row.original.dynamics?.redundancy?.toFixed(3) || "--", color: "text-red-500/70" },
+                                      { label: "Information Usage Drop", value: row.original.dynamics?.usage_drop?.toFixed(3) || "--", color: "text-amber-500/70" }
                                     ].map((item, i) => (
                                       <div key={i} className="flex justify-between items-center py-3 border-b border-muted/20 last:border-0">
                                         <span className="text-sm text-muted-foreground">{item.label}</span>
@@ -367,9 +385,9 @@ export const LeaderboardTable = ({ primaryMetric, systemType }: LeaderboardTable
                                   </div>
                                   <div className="space-y-5">
                                     {[
-                                      { label: "Average Steps", value: row.original.patterns.avg_steps_per_instance },
-                                      { label: "Lines per Retrieval Step", value: row.original.patterns.avg_lines_per_step },
-                                      { label: "Execution Cost", value: `$${row.original.patterns.avg_cost_per_instance}`, highlight: true }
+                                      { label: "Average Steps", value: row.original.patterns?.avg_steps_per_instance || "--" },
+                                      { label: "Lines per Retrieval Step", value: row.original.patterns?.avg_lines_per_step || "--" },
+                                      { label: "Execution Cost", value: row.original.patterns?.avg_cost_per_instance ? `$${row.original.patterns.avg_cost_per_instance}` : "--", highlight: true }
                                     ].map((item, i) => (
                                       <div key={i} className="flex justify-between items-center py-3 border-b border-muted/20 last:border-0">
                                         <span className="text-sm text-muted-foreground">{item.label}</span>
