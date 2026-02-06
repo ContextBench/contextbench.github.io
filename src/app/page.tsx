@@ -91,22 +91,6 @@ export default function Home() {
               </div>
             </div>
 
-            <TabsContent value="preview" className="mt-0 outline-none">
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4 }}
-              >
-                <LeaderboardTable primaryMetric={primaryMetric} systemType={systemType} />
-                {systemType === "agent" && (
-                  <p className="mt-4 text-[11px] text-muted-foreground italic flex items-center gap-2 px-2">
-                    <Settings2 className="h-3 w-3" />
-                    Note: Agents prefixed with <span className="font-bold text-primary not-italic">"c"</span> represent specialized versions with task-specific adaptations for ContextBench.
-                  </p>
-                )}
-              </motion.div>
-            </TabsContent>
-
             <TabsContent value="detailed" className="mt-0 outline-none">
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
@@ -117,6 +101,15 @@ export default function Home() {
               </motion.div>
             </TabsContent>
           </Tabs>
+
+          {systemType === "agent" && (
+            <div className="mt-8 pt-6 border-t border-muted/30">
+              <p className="text-xs text-muted-foreground italic flex items-center gap-2 px-2">
+                <Settings2 className="h-3.5 w-3.5 text-primary/60" />
+                Note: Agents in this category represent specialized versions with task-specific adaptations for ContextBench.
+              </p>
+            </div>
+          )}
         </div>
       </div>
 
