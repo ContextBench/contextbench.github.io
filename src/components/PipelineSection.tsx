@@ -54,8 +54,8 @@ export const PipelineSection = () => {
       </div>
 
       {/* Data Flow */}
-      <div className="space-y-10 max-w-7xl mx-auto">
-        <div className="text-center space-y-3">
+      <div className="space-y-4 max-w-[95vw] mx-auto">
+        <div className="text-center space-y-2">
           <h2 className="text-3xl font-bold tracking-tight">Data Flow Dynamics</h2>
           <p className="text-muted-foreground text-sm leading-relaxed max-w-3xl mx-auto">
             The data flow during the ContextBench construction pipeline, showing the step-by-step evolution from task deduplication to gold context annotation.
@@ -63,8 +63,8 @@ export const PipelineSection = () => {
         </div>
         
         <Card className="border-muted/40 shadow-md bg-card/50 overflow-hidden">
-          <CardContent className="p-6">
-            <div className="rounded-xl overflow-hidden border border-muted/20 bg-white p-2">
+          <CardContent className="p-3">
+            <div className="rounded-xl overflow-hidden border border-muted/20 bg-white p-1">
               <img 
                 src="/ContextBench/figures/data_filter.png" 
                 alt="Data Flow" 
