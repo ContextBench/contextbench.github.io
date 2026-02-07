@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 
 export const PipelineSection = () => {
   return (
-    <div className="mt-32 space-y-20 pb-20">
+    <div className="mt-20 space-y-20 pb-10">
       {/* Pipeline Overview */}
       <div className="space-y-10 max-w-5xl mx-auto">
         <div className="text-center space-y-3">
@@ -48,28 +48,6 @@ export const PipelineSection = () => {
                 </h4>
                 <p className="text-muted-foreground">Employs expert developers to trace code dependencies to construct gold contexts, validated through LLM-based patch generation.</p>
               </div>
-            </div>
-          </CardContent>
-        </Card>
-      </div>
-
-      {/* Data Flow */}
-      <div className="space-y-2 max-w-5xl mx-auto">
-        <div className="text-center space-y-1.5">
-          <h2 className="text-3xl font-bold tracking-tight">Data Flow Dynamics</h2>
-          <p className="text-muted-foreground text-sm leading-relaxed max-w-3xl mx-auto">
-            The data flow during the ContextBench construction pipeline, showing the step-by-step evolution from task deduplication to gold context annotation.
-          </p>
-        </div>
-        
-        <Card className="border-muted/40 shadow-md bg-card/50 overflow-hidden">
-          <CardContent className="px-3 py-0">
-            <div className="rounded-xl overflow-hidden border border-muted/20 bg-white p-0">
-              <img 
-                src="/ContextBench/figures/data_filter.png" 
-                alt="Data Flow" 
-                className="w-full h-auto object-contain"
-              />
             </div>
           </CardContent>
         </Card>

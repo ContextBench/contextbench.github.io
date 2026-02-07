@@ -14,7 +14,7 @@ import statsData from "@/data/dataset_stats.json";
 
 export const DatasetStats = () => {
   return (
-    <div className="mt-24 space-y-8">
+    <div className="mt-20 mb-24 space-y-8">
       <div className="text-center max-w-3xl mx-auto space-y-3">
         <h2 className="text-3xl font-bold tracking-tight">Dataset Statistics</h2>
         <p className="text-muted-foreground text-sm leading-relaxed">
