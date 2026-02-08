@@ -20,11 +20,11 @@ export const PipelineSection = () => {
         <Card className="border-muted/40 shadow-md bg-card/50 overflow-hidden">
           <CardContent className="p-8 space-y-8">
             <div className="rounded-xl overflow-hidden border border-muted/20 bg-white p-4">
-              <img 
-                src="/ContextBench/figures/Pipeline.png" 
-                alt="Construction Pipeline" 
-                className="w-full h-auto object-contain"
-              />
+                  <img 
+                    src="/figures/Pipeline.png" 
+                    alt="Construction Pipeline" 
+                    className="w-full h-auto object-contain"
+                  />
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm leading-relaxed">
               <div className="space-y-2">
