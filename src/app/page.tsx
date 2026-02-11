@@ -169,7 +169,7 @@ export default function Home() {
           </div>
         </div>
 
-        <section className="mb-12 rounded-3xl border border-muted/50 bg-card/70 p-6 md:p-8 shadow-sm">
+        <section className="mb-12 max-w-4xl mx-auto">
           <div className="flex items-center gap-4 mb-6">
             <div className="h-px flex-1 bg-gradient-to-r from-transparent via-primary/20 to-primary/40" />
             <h2 className="text-sm font-bold uppercase tracking-[0.3em] text-primary/70">Key Findings</h2>
@@ -179,7 +179,7 @@ export default function Home() {
             {findings.map((finding, index) => (
               <li
                 key={finding}
-                className="flex items-start gap-3 rounded-xl border border-muted/40 bg-background/60 px-4 py-3"
+                className="flex items-start gap-3 px-1 py-1"
               >
                 <span className="mt-0.5 inline-flex h-6 min-w-6 items-center justify-center rounded-full bg-primary/10 text-[11px] font-bold text-primary">
                   {index + 1}
