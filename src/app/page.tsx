@@ -137,6 +137,23 @@ export default function Home() {
 
       <footer className="mt-32 py-12 border-t bg-muted/5">
         <div className="container px-4 mx-auto text-center">
+          <div className="max-w-4xl mx-auto text-left mb-10">
+            <h3 className="text-sm font-bold uppercase tracking-[0.2em] text-primary/70">How to Cite</h3>
+            <p className="mt-2 text-sm text-muted-foreground">
+              If you use ContextBench, please cite:
+            </p>
+            <pre className="mt-4 rounded-xl border bg-muted/30 p-4 text-xs md:text-sm font-mono overflow-x-auto whitespace-pre">
+              <code>{`@misc{li2026contextbenchbenchmarkcontextretrieval,
+      title={ContextBench: A Benchmark for Context Retrieval in Coding Agents},
+      author={Han Li and Letian Zhu and Bohan Zhang and Rili Feng and Jiaming Wang and Yue Pan and Earl T. Barr and Sarro Federica and Zhaoyang Chu and He Ye},
+      year={2026},
+      eprint={2602.05892},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2602.05892},
+}`}</code>
+            </pre>
+          </div>
           <p className="text-[11px] uppercase tracking-[0.3em] text-muted-foreground/40 font-bold">
             © 2026 ContextBench Research Group · All Rights Reserved
           </p>
