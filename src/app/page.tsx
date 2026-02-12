@@ -36,6 +36,14 @@ export default function Home() {
     "Retrieved context is often not used in final solutions.",
   ];
 
+  const findingStyles = [
+    { bg: "bg-blue-50/40 dark:bg-blue-900/10", border: "border-blue-100/50 dark:border-blue-800/20", text: "text-blue-700 dark:text-blue-300", accent: "bg-blue-500/80" },
+    { bg: "bg-emerald-50/40 dark:bg-emerald-900/10", border: "border-emerald-100/50 dark:border-emerald-800/20", text: "text-emerald-700 dark:text-emerald-300", accent: "bg-emerald-500/80" },
+    { bg: "bg-amber-50/40 dark:bg-amber-900/10", border: "border-amber-100/50 dark:border-amber-800/20", text: "text-amber-700 dark:text-amber-300", accent: "bg-amber-500/80" },
+    { bg: "bg-indigo-50/40 dark:bg-indigo-900/10", border: "border-indigo-100/50 dark:border-indigo-800/20", text: "text-indigo-700 dark:text-indigo-300", accent: "bg-indigo-500/80" },
+    { bg: "bg-rose-50/40 dark:bg-rose-900/10", border: "border-rose-100/50 dark:border-rose-800/20", text: "text-rose-700 dark:text-rose-300", accent: "bg-rose-500/80" },
+  ];
+
   const bibtexText = `@misc{li2026contextbenchbenchmarkcontextretrieval,
       title={ContextBench: A Benchmark for Context Retrieval in Coding Agents},
       author={Han Li and Letian Zhu and Bohan Zhang and Rili Feng and Jiaming Wang and Yue Pan and Earl T. Barr and Federica Sarro and Zhaoyang Chu and He Ye},
@@ -170,29 +178,35 @@ export default function Home() {
         </div>
 
         <section className="mb-12 max-w-4xl mx-auto">
-          <div className="flex items-center gap-4 mb-8">
-            <div className="h-px flex-1 bg-gradient-to-r from-transparent via-primary/20 to-primary/40" />
-            <h2 className="text-sm font-bold uppercase tracking-[0.3em] text-primary/70">Key Findings</h2>
-            <div className="h-px flex-1 bg-gradient-to-l from-transparent via-primary/20 to-primary/40" />
+          <div className="flex items-center justify-center gap-6 mb-10">
+            <div className="h-px w-12 bg-gradient-to-r from-transparent to-primary/20" />
+            <h2 className="text-xs font-bold uppercase tracking-[0.4em] text-primary/50 text-center">Key Findings</h2>
+            <div className="h-px w-12 bg-gradient-to-l from-transparent to-primary/20" />
           </div>
-          <ul className="grid gap-4 md:gap-5">
-            {findings.map((finding, index) => (
-              <li
-                key={finding}
-                className="flex items-center gap-5 p-5 md:p-6 rounded-2xl bg-muted/20 border border-muted/40 hover:bg-muted/40 transition-all duration-300 hover:scale-[1.01] group"
-              >
-                <span className="flex h-8 w-8 md:h-10 md:w-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-xs md:text-sm font-bold text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
-                  {index + 1}
-                </span>
-                <p className="text-base md:text-xl font-medium text-foreground/90 leading-relaxed">
-                  {index === 0 ? (
-                    <>
-                      <span className="text-primary font-bold">Echoing "The Bitter Lesson":</span> More scaffolding does not mean better context retrieval.
-                    </>
-                  ) : finding}
-                </p>
-              </li>
-            ))}
+          <ul className="grid gap-4">
+            {findings.map((finding, index) => {
+              const style = findingStyles[index % findingStyles.length];
+              return (
+                <li
+                  key={finding}
+                  className={`group relative flex items-start gap-5 p-5 md:p-6 rounded-3xl border transition-all duration-500 hover:shadow-xl hover:shadow-primary/5 ${style.bg} ${style.border} overflow-hidden`}
+                >
+                  <div className={`absolute left-0 top-0 bottom-0 w-1.5 ${style.accent} opacity-60 group-hover:opacity-100 transition-opacity`} />
+                  <span className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl ${style.bg} ${style.text} border ${style.border} text-sm font-bold shadow-sm transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3`}>
+                    {index + 1}
+                  </span>
+                  <div className="space-y-1">
+                    <p className="text-base md:text-lg font-medium text-foreground/80 leading-relaxed tracking-tight">
+                      {index === 0 ? (
+                        <>
+                          <span className={`${style.text} font-bold decoration-dotted underline underline-offset-4 decoration-current/30`}>Echoing "The Bitter Lesson":</span> More scaffolding does not mean better context retrieval.
+                        </>
+                      ) : finding}
+                    </p>
+                  </div>
+                </li>
+              );
+            })}
           </ul>
         </section>
 
