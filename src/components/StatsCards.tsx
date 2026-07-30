@@ -8,7 +8,10 @@ export const StatsCards = () => {
   // Use backboneData for stats as it's the more consistent baseline
   const totalModels = backboneData.length;
   const bestPassAt1 = Math.max(...backboneData.map(r => r.performance.pass_at_1));
-  const avgEfficiency = backboneData.reduce((acc, r) => acc + r.dynamics.efficiency, 0) / totalModels;
+  const withDynamics = backboneData.filter(
+    (r): r is typeof r & { dynamics: { efficiency: number } } => r.dynamics !== undefined
+  );
+  const avgEfficiency = withDynamics.reduce((acc, r) => acc + r.dynamics.efficiency, 0) / withDynamics.length;
   const avgLineF1 = backboneData.reduce((acc, r) => acc + r.performance.line.f1, 0) / totalModels;
 
   const stats = [

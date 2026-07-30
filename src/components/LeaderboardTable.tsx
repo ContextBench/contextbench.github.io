@@ -52,9 +52,9 @@ export interface BenchmarkResult {
     pass_at_1: number;
   };
   patterns?: {
-    avg_steps_per_instance: number;
-    avg_lines_per_step: number;
-    avg_cost_per_instance: number;
+    avg_steps_per_instance?: number;
+    avg_lines_per_step?: number;
+    avg_cost_per_instance?: number;
   };
   dynamics?: {
     efficiency: number;
