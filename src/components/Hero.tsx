@@ -21,18 +21,18 @@ const mulberry32 = (seed: number) => () => {
 
 const MinimapBackdrop = () => {
   const rand = mulberry32(20260730);
-  const columns = Array.from({ length: 64 }, () => {
+  const columns = Array.from({ length: 56 }, () => {
     const lines = Array.from({ length: 40 }, () => {
       const r = rand();
       const tone = r < 0.06 ? "gold" : r < 0.18 ? "blue" : "gray";
       return { w: 6 + Math.floor(rand() * 22), tone, gap: rand() < 0.15 };
     });
-    return { lines, opacity: 0.35 + rand() * 0.65 };
+    return { lines, opacity: 0.3 + rand() * 0.55 };
   });
   return (
     <div
       aria-hidden
-      className="absolute inset-0 z-0 overflow-hidden pointer-events-none [mask-image:radial-gradient(ellipse_85%_90%_at_50%_40%,black_30%,transparent_85%)]"
+      className="absolute inset-0 z-0 overflow-hidden pointer-events-none opacity-80 [mask-image:radial-gradient(ellipse_85%_90%_at_50%_40%,black_30%,transparent_85%)]"
     >
       <div className="absolute inset-x-0 top-0 h-full flex justify-center gap-[14px]">
         {columns.map((col, i) => (
@@ -45,10 +45,10 @@ const MinimapBackdrop = () => {
                   l.gap
                     ? "bg-transparent h-[3px]"
                     : l.tone === "gold"
-                      ? "bg-amber-500/60 h-[3px] rounded-full"
+                      ? "bg-amber-500/45 h-[3px] rounded-full"
                       : l.tone === "blue"
-                        ? "bg-[#3b7cb8]/50 h-[3px] rounded-full"
-                        : "bg-foreground/[0.10] h-[3px] rounded-full"
+                        ? "bg-[#3b7cb8]/40 h-[3px] rounded-full"
+                        : "bg-foreground/[0.07] h-[3px] rounded-full"
                 }
               />
             ))}

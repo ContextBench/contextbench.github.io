@@ -57,7 +57,7 @@ export const InsightsChart = ({ systemType }: { systemType: string }) => {
           {[0.05, 0.25, 0.55].map((v) => (
             <span key={v} className="flex flex-col items-center gap-1">
               <span
-                className="rounded-full border border-[#3b7cb8] bg-[#3b7cb8]/40 inline-block"
+                className="rounded-full border-[1.5px] border-[#3b7cb8] bg-[#3b7cb8]/5 inline-block"
                 style={{
                   width: `${(5 + Math.sqrt(v * 100) * 1.5) * 2}px`,
                   height: `${(5 + Math.sqrt(v * 100) * 1.5) * 2}px`,
@@ -71,17 +71,6 @@ export const InsightsChart = ({ systemType }: { systemType: string }) => {
 
       <div className="relative">
         <svg viewBox={`0 0 ${W} ${H}`} className="w-full h-auto select-none">
-          <defs>
-            <radialGradient id="bubble" cx="35%" cy="30%" r="75%">
-              <stop offset="0%" stopColor="#9cc3e6" />
-              <stop offset="55%" stopColor="#5b97cb" />
-              <stop offset="100%" stopColor="#2e6da4" />
-            </radialGradient>
-            <filter id="bubble-shadow" x="-40%" y="-40%" width="180%" height="180%">
-              <feDropShadow dx="0" dy="2" stdDeviation="3" floodColor="#0b2d4d" floodOpacity="0.18" />
-            </filter>
-          </defs>
-
           {/* horizontal gridlines only */}
           {ticks
             .filter((t) => t > 0)
@@ -119,7 +108,7 @@ export const InsightsChart = ({ systemType }: { systemType: string }) => {
             y1={py(0)}
             x2={px(domain)}
             y2={py(domain)}
-            stroke="#94a3b8"
+            stroke="#cbd5e1"
             strokeWidth={1.5}
             strokeLinecap="round"
             strokeDasharray="1 7"
@@ -255,7 +244,8 @@ export const InsightsChart = ({ systemType }: { systemType: string }) => {
                     ? L.y + L.radius + 14
                     : L.ly + 3.5;
               const anchor = L.place === "left" ? "end" : L.place === "right" ? "start" : "middle";
-              const intensity = 0.35 + 0.6 * (d.performance.pass_at_1 / maxPass);
+              const intensity = 0.45 + 0.55 * (d.performance.pass_at_1 / maxPass);
+              const isTop = i === topIndex;
               return (
                 <motion.g
                   key={d.model}
@@ -281,25 +271,13 @@ export const InsightsChart = ({ systemType }: { systemType: string }) => {
                     cx={L.x}
                     cy={L.y}
                     r={L.radius + (hovered === i ? 2.5 : 0)}
-                    fill="url(#bubble)"
-                    fillOpacity={intensity}
-                    stroke="#ffffff"
-                    strokeWidth={1.5}
-                    filter="url(#bubble-shadow)"
+                    fill={isTop ? "#d97706" : "#3b7cb8"}
+                    fillOpacity={hovered === i ? 0.18 : 0.06}
+                    stroke={isTop ? "#d97706" : "#3b7cb8"}
+                    strokeOpacity={intensity}
+                    strokeWidth={isTop ? 2 : 1.6}
                     className="transition-all"
                   />
-                  {i === topIndex && (
-                    <circle
-                      cx={L.x}
-                      cy={L.y}
-                      r={L.radius + 4}
-                      fill="none"
-                      stroke="#d97706"
-                      strokeWidth={1.8}
-                      strokeDasharray="3 3"
-                      className="pointer-events-none"
-                    />
-                  )}
                   <text
                     x={tx}
                     y={ty}
