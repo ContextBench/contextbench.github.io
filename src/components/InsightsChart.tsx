@@ -49,10 +49,7 @@ export const InsightsChart = ({ systemType }: { systemType: string }) => {
         </div>
         <div className="flex items-center gap-4 text-[11px] text-muted-foreground shrink-0">
           <span className="flex items-center gap-1.5">
-            <span className="h-2.5 w-2.5 rounded-full bg-indigo-400/80" /> Evaluated
-          </span>
-          <span className="flex items-center gap-1.5">
-            <span className="h-2.5 w-2.5 rounded-full bg-brand-gradient" /> New addition
+            <span className="h-2.5 w-2.5 rounded-full bg-[#3b7cb8]/80" /> Line-level retrieval
           </span>
         </div>
       </div>
@@ -251,11 +248,7 @@ export const InsightsChart = ({ systemType }: { systemType: string }) => {
                     cx={L.x}
                     cy={L.y}
                     r={L.radius + (hovered === i ? 3 : 0)}
-                    className={
-                      d.isNew
-                        ? "fill-rose-500/80 stroke-rose-600 transition-all"
-                        : "fill-indigo-400/70 stroke-indigo-500 transition-all"
-                    }
+                    className="fill-[#3b7cb8]/60 stroke-[#3b7cb8] transition-all"
                     strokeWidth={1.5}
                   />
                   <text

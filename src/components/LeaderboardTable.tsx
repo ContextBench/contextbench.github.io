@@ -45,7 +45,6 @@ import agentData from "@/data/agent_results.json";
 // Define a unified interface for the table data
 export interface BenchmarkResult {
   model: string;
-  isNew?: boolean;
   performance: {
     file: { recall: number; precision: number; f1: number };
     block: { recall: number; precision: number; f1: number };
@@ -179,13 +178,8 @@ export const LeaderboardTable = ({ primaryMetric, systemType }: LeaderboardTable
         </button>
       ),
       cell: ({ row }) => (
-        <span className="inline-flex items-center gap-2 font-bold text-foreground tracking-tight text-base group-hover:text-primary transition-colors">
+        <span className="font-bold text-foreground tracking-tight text-base group-hover:text-primary transition-colors">
           {row.original.model}
-          {row.original.isNew && (
-            <span className="bg-brand-gradient text-white text-[9px] font-extrabold uppercase tracking-widest px-1.5 py-0.5 rounded-full shadow-sm">
-              New
-            </span>
-          )}
         </span>
       ),
     },

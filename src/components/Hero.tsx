@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { ArrowUpRight, Database, FileText } from "lucide-react";
+import { LogoMark } from "@/components/LogoMark";
 
 const stats = [
   { value: "1,136", label: "Tasks" },
@@ -9,18 +10,66 @@ const stats = [
   { value: "10", label: "Backbones" },
 ];
 
+// Deterministic PRNG so SSR and client render the identical minimap
+const mulberry32 = (seed: number) => () => {
+  seed |= 0;
+  seed = (seed + 0x6d2b79f5) | 0;
+  let t = Math.imul(seed ^ (seed >>> 15), 1 | seed);
+  t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+  return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+};
+
+const MinimapBackdrop = () => {
+  const rand = mulberry32(20260730);
+  const columns = Array.from({ length: 56 }, () => {
+    const lines = Array.from({ length: 14 }, () => {
+      const r = rand();
+      const tone = r < 0.05 ? "gold" : r < 0.16 ? "blue" : "gray";
+      return { w: 4 + Math.floor(rand() * 14), tone, gap: rand() < 0.18 };
+    });
+    return lines;
+  });
+  return (
+    <div
+      aria-hidden
+      className="absolute inset-0 z-0 overflow-hidden pointer-events-none [mask-image:radial-gradient(ellipse_70%_80%_at_50%_35%,black_20%,transparent_75%)]"
+    >
+      <div className="absolute inset-x-0 top-0 h-full flex justify-center gap-[10px] opacity-70">
+        {columns.map((lines, i) => (
+          <div key={i} className="flex flex-col gap-[7px] pt-2">
+            {lines.map((l, j) => (
+              <div
+                key={j}
+                style={{ width: `${l.w}px` }}
+                className={
+                  l.gap
+                    ? "bg-transparent h-[3px]"
+                    : l.tone === "gold"
+                      ? "bg-amber-500/50 h-[3px] rounded-full"
+                      : l.tone === "blue"
+                        ? "bg-[#3b7cb8]/40 h-[3px] rounded-full"
+                        : "bg-foreground/[0.07] h-[3px] rounded-full"
+                }
+              />
+            ))}
+          </div>
+        ))}
+      </div>
+      <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-transparent to-background" />
+    </div>
+  );
+};
+
 export const Hero = () => {
   return (
     <div className="relative pt-16 pb-10 overflow-hidden">
+      <MinimapBackdrop />
       <div className="container px-4 mx-auto relative z-10 text-center">
         <div className="animate-rise flex flex-col items-center">
-          <img
-            src="/figures/logo.png"
-            alt="ContextBench logo"
-            className="h-20 w-auto mb-6 drop-shadow-[0_8px_24px_rgba(238,67,69,0.25)]"
-          />
+          <LogoMark className="h-20 w-20 mb-6 drop-shadow-[0_8px_24px_rgba(11,45,77,0.18)]" />
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-5">
-            Context<span className="text-brand-gradient">Bench</span>
+            <span className="text-brand">Context</span>
+            <span className="text-brand-navy italic">Bench</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
             A scientific benchmark evaluating the dynamics of multi-file context retrieval in LLM agents.
@@ -29,7 +78,7 @@ export const Hero = () => {
           <div className="mt-8 flex items-center justify-center gap-3">
             <Link
               href="https://arxiv.org/abs/2602.05892"
-              className="group inline-flex items-center gap-2 rounded-full bg-primary px-6 h-11 text-sm font-bold text-primary-foreground shadow-lg shadow-primary/20 transition-all hover:shadow-xl hover:shadow-primary/25 hover:-translate-y-0.5"
+              className="group inline-flex items-center gap-2 rounded-full bg-[#0b2d4d] px-6 h-11 text-sm font-bold text-white shadow-lg shadow-[#0b2d4d]/20 transition-all hover:shadow-xl hover:shadow-[#0b2d4d]/25 hover:-translate-y-0.5"
             >
               <FileText className="h-4 w-4 opacity-80" />
               Read the Paper
@@ -37,7 +86,7 @@ export const Hero = () => {
             </Link>
             <Link
               href="https://huggingface.co/datasets/Contextbench/ContextBench"
-              className="group inline-flex items-center gap-2 rounded-full border border-muted-foreground/20 bg-background/60 backdrop-blur px-6 h-11 text-sm font-bold text-foreground transition-all hover:border-foreground/40 hover:-translate-y-0.5"
+              className="group inline-flex items-center gap-2 rounded-full border border-muted-foreground/20 bg-background/60 backdrop-blur px-6 h-11 text-sm font-bold text-foreground transition-all hover:border-[#3b7cb8]/50 hover:-translate-y-0.5"
             >
               <Database className="h-4 w-4 text-amber-500/90" />
               Dataset
@@ -54,13 +103,6 @@ export const Hero = () => {
             ))}
           </div>
         </div>
-      </div>
-
-      {/* Mesh Gradient Background */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10 opacity-40 pointer-events-none">
-        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[60%] rounded-full bg-orange-100/60 blur-[120px]" />
-        <div className="absolute top-[20%] right-[-5%] w-[35%] h-[50%] rounded-full bg-rose-100/50 blur-[100px]" />
-        <div className="absolute bottom-[-10%] left-[20%] w-[45%] h-[50%] rounded-full bg-teal-50/50 blur-[110px]" />
       </div>
     </div>
   );

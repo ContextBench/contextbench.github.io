@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Github, Database, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { LogoMark } from "@/components/LogoMark";
 
 export const Navbar = () => {
   return (
@@ -9,13 +10,9 @@ export const Navbar = () => {
       <div className="container mx-auto flex h-14 items-center justify-between px-4">
         <div className="flex items-center gap-6">
           <Link href="/" className="flex items-center space-x-2.5 group">
-            <img
-              src="/figures/logo.png"
-              alt="ContextBench logo"
-              className="h-7 w-auto transition-transform duration-300 group-hover:scale-110"
-            />
+            <LogoMark className="h-8 w-8 transition-transform duration-300 group-hover:scale-110" />
             <span className="inline-block font-bold text-lg tracking-tight">
-              Context<span className="text-brand-gradient">Bench</span>
+              <span className="text-brand">Context</span><span className="text-brand-navy font-extrabold italic">Bench</span>
             </span>
           </Link>
         </div>
