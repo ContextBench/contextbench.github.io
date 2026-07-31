@@ -45,6 +45,7 @@ import agentData from "@/data/agent_results.json";
 // Define a unified interface for the table data
 export interface BenchmarkResult {
   model: string;
+  isNew?: boolean;
   performance: {
     file: { recall: number; precision: number; f1: number };
     block: { recall: number; precision: number; f1: number };
@@ -66,14 +67,27 @@ export interface BenchmarkResult {
 const PerformanceBar = ({ value, max, color }: { value: number; max: number; color?: string }) => {
   const percentage = (value / max) * 100;
   return (
-    <div className="absolute inset-0 -z-10 opacity-[0.08] pointer-events-none overflow-hidden">
-      <div 
-        className={cn("h-full transition-all duration-700 ease-out", color || "bg-primary")} 
+    <div className="absolute inset-0 -z-10 opacity-[0.14] pointer-events-none overflow-hidden">
+      <div
+        className={cn("h-full rounded-r-md transition-all duration-700 ease-out", color || "bg-primary")}
         style={{ width: `${percentage}%` }}
       />
     </div>
   );
 };
+
+const MissingMetric = () => (
+  <TooltipProvider>
+    <Tooltip delayDuration={300}>
+      <TooltipTrigger asChild>
+        <span className="font-mono text-muted-foreground/25 px-6 cursor-help select-none">--</span>
+      </TooltipTrigger>
+      <TooltipContent className="p-2 text-xs">
+        Not evaluated yet
+      </TooltipContent>
+    </Tooltip>
+  </TooltipProvider>
+);
 
 const HeaderWithTooltip = ({ label, tooltip, column, icon: Icon }: { label: string; tooltip: string; column: any; icon?: any }) => (
   <TooltipProvider>
@@ -165,8 +179,13 @@ export const LeaderboardTable = ({ primaryMetric, systemType }: LeaderboardTable
         </button>
       ),
       cell: ({ row }) => (
-        <span className="font-bold text-foreground tracking-tight text-base group-hover:text-primary transition-colors">
+        <span className="inline-flex items-center gap-2 font-bold text-foreground tracking-tight text-base group-hover:text-primary transition-colors">
           {row.original.model}
+          {row.original.isNew && (
+            <span className="bg-brand-gradient text-white text-[9px] font-extrabold uppercase tracking-widest px-1.5 py-0.5 rounded-full shadow-sm">
+              New
+            </span>
+          )}
         </span>
       ),
     },
@@ -233,7 +252,7 @@ export const LeaderboardTable = ({ primaryMetric, systemType }: LeaderboardTable
       ),
       cell: ({ row }) => {
         const val = row.original.dynamics?.efficiency;
-        if (val === undefined) return <span className="font-mono text-muted-foreground/30 px-6">--</span>;
+        if (val === undefined) return <MissingMetric />;
         const isMax = val === maxEfficiency;
         const isSelected = primaryMetric === "dynamics_efficiency";
         return (
@@ -260,7 +279,7 @@ export const LeaderboardTable = ({ primaryMetric, systemType }: LeaderboardTable
       ),
       cell: ({ row }) => {
         const val = row.original.patterns?.avg_cost_per_instance;
-        if (val === undefined) return <span className="font-mono text-muted-foreground/30 px-6">--</span>;
+        if (val === undefined) return <MissingMetric />;
         return (
           <div className="relative h-full flex items-center px-6 bg-teal-50/20">
             <span className="font-mono text-sm tabular-nums text-teal-700 font-bold">
@@ -290,6 +309,8 @@ export const LeaderboardTable = ({ primaryMetric, systemType }: LeaderboardTable
     state: { sorting, columnFilters },
   });
 
+  const topRowId = table.getSortedRowModel().rows[0]?.id;
+
   return (
     <div className="w-full space-y-6">
       <div className="flex items-center relative max-w-sm group">
@@ -303,7 +324,8 @@ export const LeaderboardTable = ({ primaryMetric, systemType }: LeaderboardTable
       </div>
 
       <div className="rounded-2xl border border-muted/50 bg-card overflow-hidden shadow-sm">
-        <Table>
+        <div className="overflow-x-auto">
+        <Table className="min-w-[760px]">
           <TableHeader className="bg-muted/10 border-b border-muted/50">
             {table.getHeaderGroups().map((headerGroup) => (
               <TableRow key={headerGroup.id} className="hover:bg-transparent">
@@ -323,7 +345,11 @@ export const LeaderboardTable = ({ primaryMetric, systemType }: LeaderboardTable
                   <TableRow
                     className={cn(
                       "group cursor-pointer transition-all duration-200 border-b border-muted/30 last:border-0",
-                      expandedRows[row.id] ? "bg-muted/40" : "hover:bg-muted/20"
+                      expandedRows[row.id]
+                        ? "bg-muted/40"
+                        : row.id === topRowId
+                          ? "bg-amber-50/40 hover:bg-amber-50/60"
+                          : "hover:bg-muted/20"
                     )}
                     onClick={() => toggleRow(row.id)}
                   >
@@ -418,6 +444,7 @@ export const LeaderboardTable = ({ primaryMetric, systemType }: LeaderboardTable
             )}
           </TableBody>
         </Table>
+        </div>
       </div>
     </div>
   );

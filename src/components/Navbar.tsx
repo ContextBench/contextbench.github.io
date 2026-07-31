@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Github, Database, LayoutDashboard, FileText } from "lucide-react";
+import { Github, Database, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const Navbar = () => {
@@ -9,11 +9,13 @@ export const Navbar = () => {
       <div className="container mx-auto flex h-14 items-center justify-between px-4">
         <div className="flex items-center gap-6">
           <Link href="/" className="flex items-center space-x-2.5 group">
-            <div className="bg-primary/10 p-1.5 rounded-md group-hover:bg-primary/20 transition-colors">
-              <LayoutDashboard className="h-4 w-4 text-primary" />
-            </div>
+            <img
+              src="/figures/logo.png"
+              alt="ContextBench logo"
+              className="h-7 w-auto transition-transform duration-300 group-hover:scale-110"
+            />
             <span className="inline-block font-bold text-lg tracking-tight">
-              Context<span className="text-primary">Bench</span>
+              Context<span className="text-brand-gradient">Bench</span>
             </span>
           </Link>
         </div>

@@ -3,19 +3,17 @@
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
+import { SectionTitle } from "@/components/SectionTitle";
 
 export const PipelineSection = () => {
   return (
     <div className="mt-20 space-y-20 pb-10">
       {/* Pipeline Overview */}
       <div className="space-y-10 max-w-5xl mx-auto">
-        <div className="text-center space-y-3">
-          <h2 className="text-3xl font-bold tracking-tight">Construction Pipeline</h2>
-          <p className="text-muted-foreground text-sm leading-relaxed max-w-3xl mx-auto italic">
-            An overview of the ContextBench construction pipeline. ContextBench is curated through three key steps: 
-            Task Deduplication, Task Selection, and Expert Annotation.
-          </p>
-        </div>
+        <SectionTitle
+          title="Construction Pipeline"
+          subtitle="An overview of the ContextBench construction pipeline. ContextBench is curated through three key steps: Task Deduplication, Task Selection, and Expert Annotation."
+        />
         
         <Card className="border-muted/40 shadow-md bg-card/50 overflow-hidden">
           <CardContent className="p-8 space-y-8">

@@ -24,6 +24,7 @@ import agentData from "@/data/agent_results.json";
 // Define a unified interface for the table data
 export interface BenchmarkResult {
   model: string;
+  isNew?: boolean;
   performance: {
     file: { recall: number; precision: number; f1: number };
     block: { recall: number; precision: number; f1: number };
@@ -73,8 +74,13 @@ export const DetailedTable = ({ systemType }: DetailedTableProps) => {
       accessorKey: "model",
       header: "Model",
       cell: ({ row }) => (
-        <span className="font-bold text-sm sticky left-0 bg-background/80 backdrop-blur z-10 px-3 py-1.5 rounded border border-muted/20">
+        <span className="inline-flex items-center gap-1.5 font-bold text-sm sticky left-0 bg-background/80 backdrop-blur z-10 px-3 py-1.5 rounded border border-muted/20">
           {row.original.model}
+          {row.original.isNew && (
+            <span className="bg-brand-gradient text-white text-[8px] font-extrabold uppercase tracking-widest px-1 py-px rounded-full">
+              New
+            </span>
+          )}
         </span>
       ),
     },

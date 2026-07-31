@@ -5,10 +5,12 @@ import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { LeaderboardTable } from "@/components/LeaderboardTable";
 import { DetailedTable } from "@/components/DetailedTable";
+import { InsightsChart } from "@/components/InsightsChart";
 import { StatsCards } from "@/components/StatsCards";
 import { DatasetStats } from "@/components/DatasetStats";
 import { PipelineSection } from "@/components/PipelineSection";
 import { Abstract } from "@/components/Abstract";
+import { SectionTitle } from "@/components/SectionTitle";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { 
   Select, 
@@ -129,7 +131,7 @@ export default function Home() {
         <div className="bg-card rounded-3xl border border-muted/50 p-6 md:p-8 shadow-sm mb-12">
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8 mb-10">
             <div className="space-y-2">
-              <h2 className="text-3xl font-bold tracking-tight">Benchmark Rankings</h2>
+              <h2 className="font-serif text-3xl font-medium tracking-tight">Benchmark Rankings</h2>
               <div className="flex flex-wrap items-center gap-3">
                 <span className="text-sm text-muted-foreground">Sorting by</span>
                 <Select value={primaryMetric} onValueChange={setPrimaryMetric}>
@@ -196,7 +198,9 @@ export default function Home() {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4 }}
+                className="space-y-8"
               >
+                <InsightsChart systemType={systemType} />
                 <DetailedTable systemType={systemType} />
               </motion.div>
             </TabsContent>
@@ -214,15 +218,15 @@ export default function Home() {
                 Note: Evaluations in this category are conducted based on our task-specific adaptations of the mini SWE-agent.
               </p>
             )}
+            <p className="mt-2 text-xs text-muted-foreground/70 italic px-2">
+              &quot;--&quot; marks metrics that have not been evaluated yet for this system.
+            </p>
           </div>
         </div>
 
         <section className="mb-20 max-w-4xl mx-auto px-4">
-          <div className="mb-12 text-center">
-            <h2 className="font-serif text-3xl md:text-5xl text-foreground mb-6 tracking-tight font-medium">
-              Key Findings
-            </h2>
-            <div className="h-1 w-20 bg-foreground/10 mx-auto rounded-full" />
+          <div className="mb-12">
+            <SectionTitle title="Key Findings" />
           </div>
 
           <div className="grid gap-6">
@@ -265,7 +269,7 @@ export default function Home() {
         <DatasetStats />
       </div>
 
-      <footer className="mt-32 py-12 border-t bg-muted/5">
+      <footer className="mt-16 py-12 border-t bg-muted/5">
         <div className="container px-4 mx-auto text-center">
           <div className="max-w-4xl mx-auto text-left mb-8 rounded-2xl border border-muted/50 bg-card/60 shadow-sm p-4 md:p-6">
             <div className="flex items-start justify-between gap-4">

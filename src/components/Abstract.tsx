@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export const Abstract = () => {
   return (
-    <section className="py-24 max-w-4xl mx-auto px-6">
+    <section className="py-16 max-w-4xl mx-auto px-6">
       <motion.div
         initial={{ opacity: 0, scale: 0.98 }}
         whileInView={{ opacity: 1, scale: 1 }}
@@ -22,7 +22,7 @@ export const Abstract = () => {
             <div className="h-1 w-20 bg-gradient-to-r from-transparent via-primary/20 to-transparent rounded-full" />
           </div>
           
-          <div className="space-y-8 text-base md:text-[1.05rem] leading-[1.85] text-muted-foreground/90 font-sans text-justify hyphens-auto max-w-3xl mx-auto">
+          <div className="space-y-8 text-base md:text-[1.05rem] leading-[1.85] text-foreground/70 font-sans text-justify hyphens-auto max-w-3xl mx-auto">
             <p>
               LLM-based coding agents have shown strong performance on automated issue resolution benchmarks, yet existing evaluations largely focus on final task success, providing limited insight into how agents retrieve and use code context during problem solving.
             </p>

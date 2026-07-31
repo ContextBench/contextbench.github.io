@@ -11,16 +11,15 @@ import {
 } from "@/components/ui/table";
 import { cn } from "@/lib/utils";
 import statsData from "@/data/dataset_stats.json";
+import { SectionTitle } from "@/components/SectionTitle";
 
 export const DatasetStats = () => {
   return (
-    <div className="mt-20 mb-24 space-y-8">
-      <div className="text-center max-w-3xl mx-auto space-y-3">
-        <h2 className="text-3xl font-bold tracking-tight">Dataset Statistics</h2>
-        <p className="text-muted-foreground text-sm leading-relaxed">
-          A repository-level benchmark spanning 8 programming languages and introducing human-verified gold contexts to expose intermediate context retrieval signals missing from final task resolution rate evaluation.
-        </p>
-      </div>
+    <div className="mt-20 mb-12 space-y-8">
+      <SectionTitle
+        title="Dataset Statistics"
+        subtitle="A repository-level benchmark spanning 8 programming languages and introducing human-verified gold contexts to expose intermediate context retrieval signals missing from final task resolution rate evaluation."
+      />
 
       <div className="rounded-2xl border border-muted/50 bg-card overflow-hidden shadow-sm max-w-4xl mx-auto">
         <Table>
