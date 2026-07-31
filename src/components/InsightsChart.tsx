@@ -8,7 +8,7 @@ import type { BenchmarkResult } from "./DetailedTable";
 
 const W = 760;
 const H = 500;
-const M = { top: 28, right: 32, bottom: 52, left: 60 };
+const M = { top: 24, right: 40, bottom: 56, left: 64 };
 
 export const InsightsChart = ({ systemType }: { systemType: string }) => {
   const data = useMemo<BenchmarkResult[]>(
@@ -24,6 +24,12 @@ export const InsightsChart = ({ systemType }: { systemType: string }) => {
     return Math.ceil(m * 10) / 10 + 0.05;
   }, [data]);
 
+  const maxPass = useMemo(() => Math.max(...data.map((d) => d.performance.pass_at_1)), [data]);
+  const topIndex = useMemo(
+    () => data.findIndex((d) => d.performance.pass_at_1 === maxPass),
+    [data, maxPass]
+  );
+
   const px = (v: number) => M.left + (v / domain) * (W - M.left - M.right);
   const py = (v: number) => H - M.bottom - (v / domain) * (H - M.top - M.bottom);
 
@@ -34,125 +40,155 @@ export const InsightsChart = ({ systemType }: { systemType: string }) => {
     return arr;
   }, [domain]);
 
-  const diagAngle =
-    (Math.atan2(py(0) - py(domain), px(domain) - px(0)) * 180) / Math.PI;
+  const diagAngle = (Math.atan2(py(0) - py(domain), px(domain) - px(0)) * 180) / Math.PI;
 
   return (
     <div className="rounded-2xl border border-muted/50 bg-card shadow-sm p-6 md:p-8">
-      <div className="flex flex-col md:flex-row md:items-end justify-between gap-2 mb-6">
+      <div className="flex flex-col md:flex-row md:items-end justify-between gap-3 mb-6">
         <div>
           <h3 className="text-lg font-bold tracking-tight">Precision–Recall Trade-off</h3>
           <p className="text-xs text-muted-foreground mt-1">
-            Line-level context retrieval. Bubble size encodes Pass@1 — most systems sit far below the
-            balanced-retrieval diagonal, favoring recall over precision.
+            Line-level context retrieval · bubble area and opacity encode Pass@1
           </p>
         </div>
-        <div className="flex items-center gap-4 text-[11px] text-muted-foreground shrink-0">
-          <span className="flex items-center gap-1.5">
-            <span className="h-2.5 w-2.5 rounded-full bg-[#3b7cb8]/80" /> Line-level retrieval
-          </span>
+        {/* bubble size legend */}
+        <div className="flex items-end gap-3 text-[10px] text-muted-foreground/80 shrink-0">
+          <span className="uppercase tracking-widest font-bold">Pass@1</span>
+          {[0.05, 0.25, 0.55].map((v) => (
+            <span key={v} className="flex flex-col items-center gap-1">
+              <span
+                className="rounded-full border border-[#3b7cb8] bg-[#3b7cb8]/40 inline-block"
+                style={{
+                  width: `${(5 + Math.sqrt(v * 100) * 1.5) * 2}px`,
+                  height: `${(5 + Math.sqrt(v * 100) * 1.5) * 2}px`,
+                }}
+              />
+              <span className="font-mono tabular-nums">{(v * 100).toFixed(0)}%</span>
+            </span>
+          ))}
         </div>
       </div>
 
       <div className="relative">
         <svg viewBox={`0 0 ${W} ${H}`} className="w-full h-auto select-none">
-          {/* below-diagonal region: recall > precision */}
-          <polygon
-            points={`${px(0)},${py(0)} ${px(domain)},${py(0)} ${px(domain)},${py(domain)}`}
-            className="fill-amber-100/40"
-          />
-          <text
-            x={px(domain * 0.66)}
-            y={py(domain * 0.18)}
-            textAnchor="middle"
-            className="fill-amber-700/50 text-[11px] font-medium italic"
-          >
-            recall &gt; precision · over-retrieval
-          </text>
+          <defs>
+            <radialGradient id="bubble" cx="35%" cy="30%" r="75%">
+              <stop offset="0%" stopColor="#9cc3e6" />
+              <stop offset="55%" stopColor="#5b97cb" />
+              <stop offset="100%" stopColor="#2e6da4" />
+            </radialGradient>
+            <filter id="bubble-shadow" x="-40%" y="-40%" width="180%" height="180%">
+              <feDropShadow dx="0" dy="2" stdDeviation="3" floodColor="#0b2d4d" floodOpacity="0.18" />
+            </filter>
+          </defs>
 
-          {/* grid */}
-          {ticks.map((t) => (
-            <g key={t}>
+          {/* horizontal gridlines only */}
+          {ticks
+            .filter((t) => t > 0)
+            .map((t) => (
               <line
-                x1={px(t)}
-                y1={py(0)}
-                x2={px(t)}
-                y2={py(domain)}
-                className="stroke-muted-foreground/10"
-                strokeDasharray={t === 0 ? "" : "2 4"}
-              />
-              <line
+                key={t}
                 x1={px(0)}
                 y1={py(t)}
                 x2={px(domain)}
                 y2={py(t)}
                 className="stroke-muted-foreground/10"
-                strokeDasharray={t === 0 ? "" : "2 4"}
+                strokeWidth={1}
               />
-              <text
-                x={px(t)}
-                y={py(0) + 20}
-                textAnchor="middle"
-                className="fill-muted-foreground/60 text-[11px] tabular-nums"
-              >
+            ))}
+
+          {/* axes */}
+          <line x1={px(0)} y1={py(0)} x2={px(domain)} y2={py(0)} className="stroke-muted-foreground/30" strokeWidth={1.2} />
+          <line x1={px(0)} y1={py(0)} x2={px(0)} y2={py(domain)} className="stroke-muted-foreground/30" strokeWidth={1.2} />
+          {ticks.map((t) => (
+            <g key={t}>
+              <line x1={px(t)} y1={py(0)} x2={px(t)} y2={py(0) + 5} className="stroke-muted-foreground/30" strokeWidth={1.2} />
+              <text x={px(t)} y={py(0) + 22} textAnchor="middle" className="fill-muted-foreground/70 text-[11px] font-mono tabular-nums">
                 {t.toFixed(1)}
               </text>
-              <text
-                x={px(0) - 10}
-                y={py(t) + 4}
-                textAnchor="end"
-                className="fill-muted-foreground/60 text-[11px] tabular-nums"
-              >
+              <line x1={px(0) - 5} y1={py(t)} x2={px(0)} y2={py(t)} className="stroke-muted-foreground/30" strokeWidth={1.2} />
+              <text x={px(0) - 10} y={py(t) + 4} textAnchor="end" className="fill-muted-foreground/70 text-[11px] font-mono tabular-nums">
                 {t.toFixed(1)}
               </text>
             </g>
           ))}
 
-          {/* balanced diagonal */}
+          {/* balanced diagonal: soft dotted line */}
           <line
             x1={px(0)}
             y1={py(0)}
             x2={px(domain)}
             y2={py(domain)}
-            className="stroke-foreground/25"
+            stroke="#94a3b8"
             strokeWidth={1.5}
-            strokeDasharray="6 4"
+            strokeLinecap="round"
+            strokeDasharray="1 7"
           />
           <text
-            x={px(domain * 0.55)}
-            y={py(domain * 0.55) - 8}
+            x={px(domain * 0.86)}
+            y={py(domain * 0.86) - 10}
             textAnchor="middle"
-            transform={`rotate(${-diagAngle} ${px(domain * 0.55)} ${py(domain * 0.55) - 8})`}
-            className="fill-foreground/40 text-[10px] font-medium tracking-wide"
+            transform={`rotate(${-diagAngle} ${px(domain * 0.86)} ${py(domain * 0.86) - 10})`}
+            className="fill-muted-foreground/60 text-[10px] font-semibold tracking-[0.14em] uppercase"
           >
-            balanced retrieval
+            P = R · balanced
+          </text>
+          <text
+            x={px(domain * 0.97)}
+            y={py(domain * 0.62)}
+            textAnchor="end"
+            className="fill-amber-700/50 text-[10px] font-semibold tracking-[0.14em] uppercase"
+          >
+            R &gt; P · over-retrieval
           </text>
 
-          {/* axes labels */}
+          {/* axis titles */}
           <text
             x={px(domain / 2)}
-            y={H - 8}
+            y={H - 10}
             textAnchor="middle"
-            className="fill-foreground/60 text-[12px] font-semibold tracking-wide"
+            className="fill-foreground/60 text-[11px] font-bold uppercase tracking-[0.18em]"
           >
-            Line Recall →
+            Line Recall
           </text>
           <text
-            x={18}
+            x={20}
             y={py(domain / 2)}
             textAnchor="middle"
-            transform={`rotate(-90 18 ${py(domain / 2)})`}
-            className="fill-foreground/60 text-[12px] font-semibold tracking-wide"
+            transform={`rotate(-90 20 ${py(domain / 2)})`}
+            className="fill-foreground/60 text-[11px] font-bold uppercase tracking-[0.18em]"
           >
-            Line Precision →
+            Line Precision
           </text>
 
-          {/* points */}
+          {/* hover crosshair */}
+          {hovered !== null && data[hovered] && (
+            <g className="pointer-events-none">
+              <line
+                x1={px(data[hovered].performance.line.recall)}
+                y1={py(0)}
+                x2={px(data[hovered].performance.line.recall)}
+                y2={py(data[hovered].performance.line.precision)}
+                className="stroke-[#3b7cb8]/40"
+                strokeDasharray="3 3"
+              />
+              <line
+                x1={px(0)}
+                y1={py(data[hovered].performance.line.precision)}
+                x2={px(data[hovered].performance.line.recall)}
+                y2={py(data[hovered].performance.line.precision)}
+                className="stroke-[#3b7cb8]/40"
+                strokeDasharray="3 3"
+              />
+            </g>
+          )}
+
+          {/* points with collision-aware labels */}
           {(() => {
             const labels = data.map((d, i) => {
               const r = d.performance.line.recall;
               const p = d.performance.line.precision;
-              const radius = 6 + Math.sqrt(d.performance.pass_at_1 * 100) * 1.5;
+              const radius = 5 + Math.sqrt(d.performance.pass_at_1 * 100) * 1.5;
               const x = px(r);
               const y = py(p);
               return {
@@ -160,7 +196,6 @@ export const InsightsChart = ({ systemType }: { systemType: string }) => {
                 place: (r > domain * 0.62 ? "left" : "right") as "left" | "right" | "top" | "bottom",
               };
             });
-            // choose a placement that doesn't cover another bubble: right → left → top → bottom
             const overlaps = (x0: number, x1: number, cy: number, self: number) =>
               labels.some((o) => {
                 if (o.i === self) return false;
@@ -181,16 +216,13 @@ export const InsightsChart = ({ systemType }: { systemType: string }) => {
               if (l.place === "left" && hitsLeft(l)) {
                 l.place = !hitsRight(l) ? "right" : !hitsTop(l) ? "top" : "bottom";
               }
-              // keep long labels inside the plot's right edge
               if (l.place === "right" && l.x + l.radius + 6 + l.w > W - 8) {
                 l.place = !hitsLeft(l) ? "left" : !hitsTop(l) ? "top" : "bottom";
               }
-              // and inside the left edge
               if (l.place === "left" && l.x - l.radius - 6 - l.w < 8) {
                 l.place = !hitsRight(l) ? "right" : !hitsTop(l) ? "top" : "bottom";
               }
             }
-            // 1D relaxation: separate overlapping labels sharing horizontal placement
             for (const side of ["left", "right"] as const) {
               const group = labels.filter((l) => l.place === side).sort((a, b) => a.ly - b.ly);
               for (let pass = 0; pass < 8; pass++) {
@@ -223,12 +255,13 @@ export const InsightsChart = ({ systemType }: { systemType: string }) => {
                     ? L.y + L.radius + 14
                     : L.ly + 3.5;
               const anchor = L.place === "left" ? "end" : L.place === "right" ? "start" : "middle";
+              const intensity = 0.35 + 0.6 * (d.performance.pass_at_1 / maxPass);
               return (
                 <motion.g
                   key={d.model}
                   initial={{ opacity: 0, scale: 0 }}
                   animate={{ opacity: dim ? 0.25 : 1, scale: 1 }}
-                  transition={{ delay: i * 0.04, duration: 0.4, ease: "easeOut" }}
+                  transition={{ delay: i * 0.045, duration: 0.45, ease: "easeOut" }}
                   style={{ transformOrigin: `${L.x}px ${L.y}px` }}
                   onMouseEnter={() => setHovered(i)}
                   onMouseLeave={() => setHovered(null)}
@@ -247,15 +280,35 @@ export const InsightsChart = ({ systemType }: { systemType: string }) => {
                   <circle
                     cx={L.x}
                     cy={L.y}
-                    r={L.radius + (hovered === i ? 3 : 0)}
-                    className="fill-[#3b7cb8]/60 stroke-[#3b7cb8] transition-all"
+                    r={L.radius + (hovered === i ? 2.5 : 0)}
+                    fill="url(#bubble)"
+                    fillOpacity={intensity}
+                    stroke="#ffffff"
                     strokeWidth={1.5}
+                    filter="url(#bubble-shadow)"
+                    className="transition-all"
                   />
+                  {i === topIndex && (
+                    <circle
+                      cx={L.x}
+                      cy={L.y}
+                      r={L.radius + 4}
+                      fill="none"
+                      stroke="#d97706"
+                      strokeWidth={1.8}
+                      strokeDasharray="3 3"
+                      className="pointer-events-none"
+                    />
+                  )}
                   <text
                     x={tx}
                     y={ty}
                     textAnchor={anchor}
-                    className="fill-muted-foreground text-[10.5px] font-medium pointer-events-none"
+                    className={
+                      hovered === i
+                        ? "fill-foreground text-[11px] font-semibold pointer-events-none"
+                        : "fill-muted-foreground text-[10.5px] font-medium pointer-events-none"
+                    }
                   >
                     {d.model}
                   </text>
@@ -272,13 +325,13 @@ export const InsightsChart = ({ systemType }: { systemType: string }) => {
             style={{
               left: `${(px(data[hovered].performance.line.recall) / W) * 100}%`,
               top: `${(py(data[hovered].performance.line.precision) / H) * 100}%`,
-              transform: "translate(-50%, calc(-100% - 16px))",
+              transform: "translate(-50%, calc(-100% - 18px))",
             }}
           >
             <div className="font-bold text-foreground whitespace-nowrap mb-1">
               {data[hovered].model}
             </div>
-            <div className="font-mono text-muted-foreground whitespace-nowrap">
+            <div className="font-mono text-muted-foreground whitespace-nowrap tabular-nums">
               R {data[hovered].performance.line.recall.toFixed(3)} · P{" "}
               {data[hovered].performance.line.precision.toFixed(3)} · Pass@1{" "}
               {(data[hovered].performance.pass_at_1 * 100).toFixed(1)}%
