@@ -63,8 +63,11 @@ template's `null` values deliberately fail validation rather than act as scores.
 
 `metadata.system_type` selects the existing leaderboard view:
 
-- `backbone`: a model evaluated using the benchmark's adapted mini SWE-agent.
-- `agent`: an agent + model combination; include both in the display name.
+- `backbone` → **Fixed harness**: a model evaluated using the benchmark's adapted mini SWE-agent.
+- `agent` → **Agent systems**: an agent + model combination; include both in the display name.
+
+The schema keys `backbone` and `agent` are retained for compatibility. A harness
+is the agent execution framework; the underlying model is recorded separately.
 
 `submitter.github` is a GitHub user/organization profile URL. Use `Independent`
 for `submitter.organization` if applicable. `evaluation.dataset_revision` and
@@ -146,7 +149,7 @@ merging an artifact-only PR does not change the rankings.
 ## Maintainer review and publication
 
 1. Check the README, model/agent versions, dataset revision, task population and
-   count against the board's evaluation protocol. Confirm the backbone/agent
+   count against the board's evaluation protocol. Confirm the Fixed harness / Agent systems
    category. Do not mix incomparable task sets.
 2. Inspect/decompress artifacts. Check coverage against the full instance list,
    including failures, timeouts, retries, and all attempts.

@@ -21,20 +21,20 @@ export const Abstract = () => {
             <h2 className="font-serif text-3xl md:text-5xl text-foreground/90 font-medium tracking-tight">Abstract</h2>
             <div className="h-1 w-20 bg-gradient-to-r from-transparent via-primary/20 to-transparent rounded-full" />
           </div>
-          
+
           <div className="space-y-8 text-base md:text-[1.05rem] leading-[1.85] text-foreground/70 font-sans text-justify hyphens-auto max-w-3xl mx-auto">
             <p>
               LLM-based coding agents have shown strong performance on automated issue resolution benchmarks, yet existing evaluations largely focus on final task success, providing limited insight into how agents retrieve and use code context during problem solving.
             </p>
             <p>
-              We introduce <span className="text-foreground/90 font-medium italic decoration-primary/20 underline underline-offset-4">ContextBench</span>, a process-oriented evaluation of context retrieval in coding agents. 
-              ContextBench consists of 1,136 issue-resolution tasks from 66 repositories across eight programming languages, each augmented with human-annotated gold contexts. 
+              We introduce <span className="text-foreground/90 font-medium italic decoration-primary/20 underline underline-offset-4">ContextBench</span>, a process-oriented evaluation of context retrieval in coding agents.
+              ContextBench consists of 1,136 issue-resolution tasks from 66 repositories across eight programming languages, each augmented with human-annotated gold contexts.
               We further implement an automated evaluation framework that tracks agent trajectories and measures context recall, precision, and efficiency throughout issue resolution.
             </p>
             <p>
-              Using ContextBench, we evaluate four frontier LLMs and five coding agents. 
-              Our results show that sophisticated agent scaffolding yields only marginal gains in context retrieval (<span className="text-primary/70 italic">"The Bitter Lesson"</span> of coding agents), 
-              LLMs consistently favor recall over precision, and substantial gaps exist between explored and utilized context. 
+              Using ContextBench, we evaluate four frontier LLMs and five coding agents.
+              Our results show that sophisticated agent scaffolding yields only marginal gains in context retrieval (<span className="text-primary/70 italic">&quot;The Bitter Lesson&quot;</span> of coding agents),
+              LLMs consistently favor recall over precision, and substantial gaps exist between explored and utilized context.
               ContextBench augments existing end-to-end benchmarks with intermediate gold-context metrics that unbox the issue-resolution process, offering valuable signals for guiding LLM reasoning in software tasks.
             </p>
           </div>

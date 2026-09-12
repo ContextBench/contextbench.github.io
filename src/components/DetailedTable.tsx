@@ -1,187 +1,43 @@
 "use client";
 
-import React, { useState, useMemo } from 'react';
-import {
-  ColumnDef,
-  flexRender,
-  getCoreRowModel,
-  useReactTable,
-  getSortedRowModel,
-  SortingState,
-} from "@tanstack/react-table";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
-import { cn } from "@/lib/utils";
-import backboneData from "@/data/backbone_results.json";
-import agentData from "@/data/agent_results.json";
+import { useState } from "react";
+import { ChevronDown } from "lucide-react";
+import { ResultDetails } from "@/components/ResultDetails";
+import { formatMetric, type BenchmarkResult, type SystemType } from "@/lib/leaderboard";
 
-// Define a unified interface for the table data
-export interface BenchmarkResult {
-  model: string;
-  performance: {
-    file: { recall: number; precision: number; f1: number };
-    block: { recall: number; precision: number; f1: number };
-    line: { recall: number; precision: number; f1: number };
-    pass_at_1: number;
-  };
-  patterns?: {
-    avg_steps_per_instance?: number;
-    avg_lines_per_step?: number;
-    avg_cost_per_instance?: number;
-  };
-  dynamics?: {
-    efficiency: number;
-    redundancy: number;
-    usage_drop: number;
-  };
-}
+const levels = ["file", "block", "line"] as const;
+const retrievalMetrics = ["recall", "precision", "f1"] as const;
+const number = (value: number | undefined) => value === undefined ? "—" : value.toFixed(2);
 
-const MetricCell = ({ value, isBold = false, colorClass = "" }: { value: number | string | undefined, isBold?: boolean, colorClass?: string }) => {
-  if (value === undefined) return <span className="font-mono text-[11px] text-muted-foreground/30">--</span>;
+export function DetailedTable({ data, systemType }: { data: BenchmarkResult[]; systemType: SystemType }) {
+  const [level, setLevel] = useState<(typeof levels)[number]>("line");
   return (
-    <span className={cn(
-      "font-mono text-[13px] tabular-nums",
-      isBold ? "font-bold text-sm" : "text-muted-foreground",
-      colorClass
-    )}>
-      {typeof value === 'number' ? value.toFixed(3) : value}
-    </span>
-  );
-};
-
-interface DetailedTableProps {
-  systemType: string;
-}
-
-export const DetailedTable = ({ systemType }: DetailedTableProps) => {
-  const data = useMemo<BenchmarkResult[]>(() => {
-    return (systemType === "agent" ? agentData : backboneData) as BenchmarkResult[];
-  }, [systemType]);
-
-  const [sorting, setSorting] = useState<SortingState>([
-    { id: "performance_pass_at_1", desc: true }
-  ]);
-
-  const columns = useMemo<ColumnDef<BenchmarkResult>[]>(() => [
-    {
-      accessorKey: "model",
-      header: "Model",
-      cell: ({ row }) => (
-        <span className="font-bold text-sm sticky left-0 bg-background/80 backdrop-blur z-10 px-3 py-1.5 rounded border border-muted/20">
-          {row.original.model}
-        </span>
-      ),
-    },
-    // File-Level Group
-    {
-      id: "file_level",
-      header: () => <div className="text-center py-1.5 bg-slate-100/50 rounded-md text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-1.5 border border-slate-200/50">File Level</div>,
-      columns: [
-        { accessorKey: "performance.file.recall", header: "Rec.", cell: ({ row }) => <MetricCell value={row.original.performance.file.recall} /> },
-        { accessorKey: "performance.file.precision", header: "Pre.", cell: ({ row }) => <MetricCell value={row.original.performance.file.precision} /> },
-        { accessorKey: "performance.file.f1", header: "F1", cell: ({ row }) => <MetricCell value={row.original.performance.file.f1} isBold colorClass="text-slate-700" /> },
-      ],
-    },
-    // Block-Level Group
-    {
-      id: "block_level",
-      header: () => <div className="text-center py-1.5 bg-indigo-100/50 rounded-md text-[10px] font-bold uppercase tracking-widest text-indigo-500 mb-1.5 border border-indigo-200/50">Block Level</div>,
-      columns: [
-        { accessorKey: "performance.block.recall", header: "Rec.", cell: ({ row }) => <MetricCell value={row.original.performance.block.recall} /> },
-        { accessorKey: "performance.block.precision", header: "Pre.", cell: ({ row }) => <MetricCell value={row.original.performance.block.precision} /> },
-        { accessorKey: "performance.block.f1", header: "F1", cell: ({ row }) => <MetricCell value={row.original.performance.block.f1} isBold colorClass="text-indigo-700" /> },
-      ],
-    },
-    // Line-Level Group
-    {
-      id: "line_level",
-      header: () => <div className="text-center py-1.5 bg-blue-100/50 rounded-md text-[10px] font-bold uppercase tracking-widest text-blue-500 mb-1.5 border border-blue-200/50">Line Level</div>,
-      columns: [
-        { accessorKey: "performance.line.recall", header: "Rec.", cell: ({ row }) => <MetricCell value={row.original.performance.line.recall} /> },
-        { accessorKey: "performance.line.precision", header: "Pre.", cell: ({ row }) => <MetricCell value={row.original.performance.line.precision} /> },
-        { accessorKey: "performance.line.f1", header: "F1", cell: ({ row }) => <MetricCell value={row.original.performance.line.f1} isBold colorClass="text-blue-700" /> },
-      ],
-    },
-    // End-to-End Group
-    {
-      id: "e2e",
-      header: () => <div className="text-center px-6 py-1.5 bg-emerald-100/50 rounded-md text-[10px] font-bold uppercase tracking-widest text-emerald-500 mb-1.5 border border-emerald-200/50 whitespace-nowrap">End-to-End</div>,
-      columns: [
-        { id: "performance_pass_at_1", accessorKey: "performance.pass_at_1", header: "Pass@1", cell: ({ row }) => <span className="font-mono text-[13px] font-bold text-emerald-700">{(row.original.performance.pass_at_1 * 100).toFixed(1)}%</span> },
-      ],
-    },
-    // Dynamics Group
-    {
-      id: "dynamics",
-      header: () => <div className="text-center py-1.5 bg-amber-100/50 rounded-md text-[10px] font-bold uppercase tracking-widest text-amber-500 mb-1.5 border border-amber-200/50">Dynamics & Cost</div>,
-      columns: [
-        { accessorKey: "patterns.avg_steps_per_instance", header: "Steps", cell: ({ row }) => <MetricCell value={row.original.patterns?.avg_steps_per_instance} />, sortUndefined: -1 },
-        { accessorKey: "patterns.avg_lines_per_step", header: "Lines", cell: ({ row }) => <MetricCell value={row.original.patterns?.avg_lines_per_step} />, sortUndefined: -1 },
-        { accessorKey: "dynamics.efficiency", header: "Eff.", cell: ({ row }) => <MetricCell value={row.original.dynamics?.efficiency} />, sortUndefined: -1 },
-        { accessorKey: "dynamics.redundancy", header: "Red.", cell: ({ row }) => <MetricCell value={row.original.dynamics?.redundancy} colorClass="text-red-400" />, sortUndefined: -1 },
-        { accessorKey: "patterns.avg_cost_per_instance", header: "Cost", cell: ({ row }) => <span className="font-mono text-[13px] font-bold text-amber-600">{row.original.patterns?.avg_cost_per_instance ? `$${row.original.patterns.avg_cost_per_instance.toFixed(2)}` : "--"}</span>, sortUndefined: -1 },
-      ],
-    },
-  ], []);
-
-  const table = useReactTable({
-    data,
-    columns,
-    getCoreRowModel: getCoreRowModel(),
-    onSortingChange: setSorting,
-    getSortedRowModel: getSortedRowModel(),
-    state: { sorting },
-  });
-
-  return (
-    <div className="w-full space-y-6">
-      <div className="rounded-2xl border border-muted/50 bg-card overflow-hidden shadow-sm">
-        <div className="overflow-x-auto">
-          <Table className="min-w-[1200px]">
-            <TableHeader className="bg-muted/10 border-b border-muted/50">
-              {table.getHeaderGroups().map((headerGroup) => (
-                <TableRow key={headerGroup.id} className="hover:bg-transparent border-b-0">
-                  {headerGroup.headers.map((header) => (
-                    <TableHead 
-                      key={header.id} 
-                      colSpan={header.colSpan}
-                      className={cn(
-                        "px-4 text-center align-bottom h-14",
-                        header.id === "model" && "sticky left-0 bg-background/95 backdrop-blur z-20"
-                      )}
-                    >
-                      {header.isPlaceholder ? null : flexRender(header.column.columnDef.header, header.getContext())}
-                    </TableHead>
-                  ))}
-                </TableRow>
-              ))}
-            </TableHeader>
-            <TableBody>
-              {table.getRowModel().rows.map((row) => (
-                <TableRow key={row.id} className="border-b border-muted/30 last:border-0 hover:bg-muted/10 transition-colors">
-                  {row.getVisibleCells().map((cell) => (
-                    <TableCell 
-                      key={cell.id} 
-                      className={cn(
-                        "py-4 px-4 text-center",
-                        cell.column.id === "model" && "sticky left-0 bg-background/95 backdrop-blur z-10 text-left border-r border-muted/20 shadow-[2px_0_5px_-2px_rgba(0,0,0,0.05)]"
-                      )}
-                    >
-                      {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                    </TableCell>
-                  ))}
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </div>
+    <section aria-labelledby="detailed-title" className="min-w-0 rounded-xl border border-border">
+      <div className="p-4 sm:p-5"><h3 id="detailed-title" className="text-base font-semibold">Detailed metrics</h3><p className="mt-1 text-xs leading-relaxed text-muted-foreground">File, block, and line retrieval, plus run statistics. Uses the search and ordering above.</p></div>
+      <div role="region" aria-label="Detailed metrics table, scroll for more columns" tabIndex={0} className="hidden max-h-[600px] overflow-auto md:block">
+        <table className="w-full min-w-[1400px] border-separate border-spacing-0 text-right text-xs">
+          <caption className="sr-only">All retrieval and run metrics, in the selected leaderboard order</caption>
+          <thead className="sticky top-0 z-20 bg-muted">
+            <tr><th rowSpan={2} scope="col" className="sticky left-0 z-30 min-w-60 border-b border-border bg-muted px-4 py-3 text-left">{systemType === "backbone" ? "Model" : "Agent + model"}</th>
+              {levels.map(group => <th key={group} colSpan={3} scope="colgroup" className="border-b border-l border-border px-3 py-2 text-center capitalize">{group} retrieval</th>)}
+              <th rowSpan={2} scope="col" className="border-b border-l border-border px-3">Pass@1</th><th colSpan={3} scope="colgroup" className="border-b border-l border-border px-3 py-2 text-center">Context dynamics</th><th colSpan={3} scope="colgroup" className="border-b border-l border-border px-3 py-2 text-center">Run averages</th>
+            </tr>
+            <tr>{levels.flatMap(group => retrievalMetrics.map(metric => <th key={`${group}-${metric}`} scope="col" className="border-b border-border px-3 py-2 font-medium capitalize text-muted-foreground">{metric === "f1" ? "F1" : metric}</th>))}{["Efficiency", "Redundancy", "Usage drop", "Steps / task", "Lines / step", "Cost / task"].map(label => <th key={label} scope="col" className="border-b border-border px-3 py-2 font-medium">{label}</th>)}</tr>
+          </thead>
+          <tbody>{data.map(result => <tr key={result.model} className="group">
+            <th scope="row" className="sticky left-0 z-10 border-b border-border bg-card px-4 py-3 text-left font-medium group-hover:bg-muted">{result.model}</th>
+            {levels.flatMap(group => retrievalMetrics.map(metric => <td key={`${group}-${metric}`} className={`border-b border-border px-3 py-3 font-mono tabular-nums group-hover:bg-muted/50 ${metric === "f1" ? "font-semibold" : "text-muted-foreground"}`}>{result.performance[group][metric].toFixed(3)}</td>))}
+            {[formatMetric(result.performance.pass_at_1, "pass_at_1"), formatMetric(result.dynamics?.efficiency, "efficiency"), formatMetric(result.dynamics?.redundancy, "efficiency"), formatMetric(result.dynamics?.usage_drop, "efficiency"), number(result.patterns?.avg_steps_per_instance), number(result.patterns?.avg_lines_per_step), formatMetric(result.patterns?.avg_cost_per_instance, "cost")].map((value, index) => <td key={index} className="border-b border-border px-3 py-3 font-mono tabular-nums group-hover:bg-muted/50">{value}</td>)}
+          </tr>)}</tbody>
+        </table>
       </div>
-    </div>
+      <div className="md:hidden">
+        <label className="mx-4 mb-4 flex items-center justify-between gap-3 text-xs">Retrieval level<select aria-label="Retrieval level" value={level} onChange={event => setLevel(event.target.value as typeof level)} className="h-9 rounded-lg border border-border bg-card px-3 text-sm">{levels.map(value => <option key={value} value={value}>{value[0].toUpperCase() + value.slice(1)}</option>)}</select></label>
+        {data.map(result => <details key={result.model} className="group border-t border-border">
+          <summary className="list-none cursor-pointer p-4 [&::-webkit-details-marker]:hidden"><span className="flex items-start justify-between gap-3 text-sm font-medium">{result.model}<ChevronDown className="h-4 w-4 shrink-0 text-muted-foreground group-open:rotate-180" /></span><span className="mt-3 grid grid-cols-3 gap-2 text-xs">{retrievalMetrics.map(metric => <span key={metric}><span className="block capitalize text-muted-foreground">{metric === "f1" ? "F1" : metric}</span><span className="mt-1 block font-mono tabular-nums">{result.performance[level][metric].toFixed(3)}</span></span>)}</span><span className="sr-only">Show all metrics</span></summary>
+          <ResultDetails result={result} systemType={systemType} />
+        </details>)}
+      </div>
+    </section>
   );
-};
+}

@@ -1,8 +1,9 @@
 "use client";
 
 import React from 'react';
+import Image from "next/image";
+import pipeline from "../../public/figures/Pipeline.png";
 import { Card, CardContent } from "@/components/ui/card";
-import { cn } from "@/lib/utils";
 import { SectionTitle } from "@/components/SectionTitle";
 
 export const PipelineSection = () => {
@@ -14,13 +15,13 @@ export const PipelineSection = () => {
           title="Construction Pipeline"
           subtitle="An overview of the ContextBench construction pipeline. ContextBench is curated through three key steps: Task Deduplication, Task Selection, and Expert Annotation."
         />
-        
+
         <Card className="border-muted/40 shadow-md bg-card/50 overflow-hidden">
           <CardContent className="p-8 space-y-8">
             <div className="rounded-xl overflow-hidden border border-muted/20 bg-white p-4">
-                  <img 
-                    src="/figures/Pipeline.png" 
-                    alt="Construction Pipeline" 
+                  <Image
+                    src={pipeline}
+                    alt="Construction Pipeline"
                     className="w-full h-auto object-contain"
                   />
             </div>

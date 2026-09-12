@@ -1,63 +1,21 @@
-import React from 'react';
-import Link from 'next/link';
-import { Github, Database, FileText } from "lucide-react";
+import Link from "next/link";
+import { Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { LogoMark } from "@/components/LogoMark";
 
-export const Navbar = () => {
-  return (
-    <nav className="sticky top-0 z-50 w-full border-b border-muted/30 bg-background/80 backdrop-blur-md">
-      <div className="container mx-auto flex h-14 items-center justify-between px-4">
-        <div className="flex shrink-0 items-center gap-6">
-          <Link href="/" aria-label="ContextBench leaderboard" className="flex items-center space-x-2.5 group">
-            <LogoMark className="h-8 w-8 transition-transform duration-300 group-hover:scale-110" />
-            <span className="hidden min-[360px]:inline-block font-bold text-sm sm:text-lg tracking-tight">
-              <span className="text-brand">Context</span><span className="text-brand-navy font-extrabold italic">Bench</span>
-            </span>
-          </Link>
-        </div>
-        
-        <div className="flex shrink-0 items-center gap-1 sm:gap-2">
-          <Button size="sm" asChild className="rounded-full text-xs font-bold">
-            <Link href="/submit">Submit<span className="hidden md:inline"> a result</span></Link>
-          </Button>
-          <Button variant="ghost" size="sm" asChild className="hidden sm:flex items-center gap-2 text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-all">
-            <Link href="https://github.com/EuniAI/ContextBench">
-                  <Github className="h-4 w-4" />
-                  <span className="text-xs font-bold uppercase tracking-widest">GitHub</span>
-                </Link>
-              </Button>
-              <Button variant="ghost" size="sm" asChild className="hidden sm:flex items-center gap-2 text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-all">
-                <Link href="https://huggingface.co/datasets/Contextbench/ContextBench">
-                  <Database className="h-4 w-4 text-amber-500/80" />
-                  <span className="text-xs font-bold uppercase tracking-widest">Dataset</span>
-                </Link>
-              </Button>
-              <Button variant="ghost" size="sm" asChild className="hidden sm:flex items-center gap-2 text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-all">
-                <Link href="https://arxiv.org/abs/2602.05892">
-                  <FileText className="h-4 w-4 text-primary/80" />
-                  <span className="text-xs font-bold uppercase tracking-widest">Paper</span>
-                </Link>
-              </Button>
-              
-              {/* Mobile view icons */}
-              <Button variant="ghost" size="icon" asChild className="sm:hidden h-8 w-8 text-muted-foreground">
-                <Link href="https://github.com/EuniAI/ContextBench">
-                  <Github className="h-4 w-4" />
-                </Link>
-          </Button>
-          <Button variant="ghost" size="icon" asChild className="sm:hidden h-8 w-8 text-muted-foreground">
-            <Link href="https://huggingface.co/datasets/Contextbench/ContextBench">
-              <Database className="h-4 w-4 text-amber-500/80" />
-            </Link>
-          </Button>
-          <Button variant="ghost" size="icon" asChild className="sm:hidden h-8 w-8 text-muted-foreground">
-            <Link href="https://arxiv.org/abs/2602.05892">
-              <FileText className="h-4 w-4 text-primary/80" />
-            </Link>
-          </Button>
-        </div>
+export const Navbar = () => (
+  <nav aria-label="Main navigation" className="font-sans sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur-md">
+    <div className="mx-auto flex h-14 max-w-7xl items-center justify-between gap-3 px-4 sm:px-6">
+      <Link href="/" aria-label="ContextBench home" className="flex shrink-0 items-center gap-2">
+        <LogoMark className="h-7 w-7" />
+        <span className="hidden text-sm font-bold tracking-tight min-[360px]:inline sm:text-base"><span className="text-brand">Context</span><span className="text-brand-navy italic">Bench</span></span>
+      </Link>
+      <div className="flex items-center gap-2 sm:gap-5">
+        <Link href="/#leaderboard" className="hidden text-sm font-medium text-muted-foreground hover:text-primary sm:block">Leaderboard</Link>
+        <Link href="/#about" className="text-xs font-medium text-muted-foreground hover:text-primary sm:text-sm">About</Link>
+        <a href="https://github.com/EuniAI/ContextBench" aria-label="ContextBench on GitHub" className="hidden rounded p-1 text-muted-foreground hover:text-primary min-[360px]:block"><Github className="h-4 w-4" /></a>
+        <Button asChild size="sm" className="rounded-full px-3 text-xs sm:px-4"><Link href="/submit">Submit<span className="hidden sm:inline"> a result</span></Link></Button>
       </div>
-    </nav>
-  );
-};
+    </div>
+  </nav>
+);

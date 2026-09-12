@@ -6,7 +6,8 @@ This is a template, not a leaderboard result. Replace every TODO before submitti
 
 TODO: Describe your agent, model/provider and exact model version, code repository
 and commit, prompts, tools, sampling settings, context/token limits, timeouts,
-and any ContextBench adaptations. Explain whether this is a backbone or agent entry.
+and any ContextBench adaptations. State whether this belongs to Fixed harness (`system_type: backbone`) or
+Agent systems (`system_type: agent`). Identify the model and harness separately.
 
 ## Evaluation and reproduction
 

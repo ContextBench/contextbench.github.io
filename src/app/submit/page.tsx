@@ -38,7 +38,7 @@ export default function SubmitPage() {
 
         <ol className="my-12 grid gap-5 md:grid-cols-3">
           {steps.map(({ icon: Icon, title, text }, index) => (
-            <li key={title} className="rounded-2xl border border-muted/60 bg-card p-6">
+            <li key={title} className="rounded-2xl border border-border bg-card p-6">
               <div className="mb-5 flex items-center justify-between text-brand"><Icon className="h-6 w-6" /><span className="font-mono text-sm text-muted-foreground">0{index + 1}</span></div>
               <h2 className="text-lg font-bold">{title}</h2>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{text}</p>
@@ -46,7 +46,7 @@ export default function SubmitPage() {
           ))}
         </ol>
 
-        <section className="rounded-3xl border border-muted/60 bg-card p-6 md:p-8" aria-labelledby="submission-files">
+        <section className="rounded-3xl border border-border bg-card p-6 md:p-8" aria-labelledby="submission-files">
           <h2 id="submission-files" className="font-serif text-2xl">What to include</h2>
           <p className="mt-3 text-sm leading-relaxed text-muted-foreground">Create one folder per system and evaluation run. Include failed attempts and disclose any retries or task filtering so reviewers can check coverage and reproduce the scores.</p>
           <pre className="my-6 overflow-x-auto rounded-xl bg-muted/40 p-5 text-xs sm:text-sm leading-7"><code>{`submissions/YYYY-MM-DD_system-name/
@@ -55,7 +55,7 @@ export default function SubmitPage() {
   README.md       # method and reproduction instructions
   logs/          # raw evaluation outputs and execution logs
   trajectories/  # recorded agent interactions per instance`}</code></pre>
-          <p className="text-sm leading-relaxed text-muted-foreground">Choose <strong className="text-foreground">Backbone Only</strong> for a model evaluated with the benchmark&apos;s adapted mini SWE-agent, or <strong className="text-foreground">Agent + Backbone</strong> for an agent and model combination. Use fractions between 0 and 1 for Pass@1 and retrieval scores; omit optional metrics that were not evaluated.</p>
+          <p className="text-sm leading-relaxed text-muted-foreground">Choose <strong className="text-foreground">Fixed harness</strong> for a model evaluated with the benchmark&apos;s adapted mini SWE-agent, or <strong className="text-foreground">Agent systems</strong> for an agent and model combination. Use fractions between 0 and 1 for Pass@1 and retrieval scores; omit optional metrics that were not evaluated.</p>
           <p className="mt-3 text-sm leading-relaxed text-muted-foreground">Keep artifacts in your submission folder. Remove credentials and personal data before committing; document any redactions. The guide covers large logs and the full review checklist.</p>
         </section>
 
