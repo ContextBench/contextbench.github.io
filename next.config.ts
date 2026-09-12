@@ -2,6 +2,8 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: 'export',
+  // Emit /submit/index.html so direct visits work on GitHub Pages.
+  trailingSlash: true,
   images: {
     unoptimized: true,
   },

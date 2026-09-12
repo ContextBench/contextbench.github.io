@@ -41,10 +41,12 @@ import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
 import backboneData from "@/data/backbone_results.json";
 import agentData from "@/data/agent_results.json";
+import { submissionRepository } from "@/lib/submissions";
 
 // Define a unified interface for the table data
 export interface BenchmarkResult {
   model: string;
+  submission?: string;
   performance: {
     file: { recall: number; precision: number; f1: number };
     block: { recall: number; precision: number; f1: number };
@@ -178,9 +180,21 @@ export const LeaderboardTable = ({ primaryMetric, systemType }: LeaderboardTable
         </button>
       ),
       cell: ({ row }) => (
-        <span className="font-bold text-foreground tracking-tight text-base group-hover:text-primary transition-colors">
-          {row.original.model}
-        </span>
+        <div>
+          <span className="font-bold text-foreground tracking-tight text-base group-hover:text-primary transition-colors">
+            {row.original.model}
+          </span>
+          {row.original.submission && (
+            <a
+              href={`${submissionRepository}/tree/main/submissions/${encodeURIComponent(row.original.submission)}`}
+              onClick={(event) => event.stopPropagation()}
+              className="mt-1 block text-xs text-muted-foreground underline underline-offset-4 hover:text-primary"
+              aria-label={`View submission logs for ${row.original.model}`}
+            >
+              Submission &amp; logs
+            </a>
+          )}
+        </div>
       ),
     },
     {

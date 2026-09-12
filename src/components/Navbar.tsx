@@ -8,16 +8,19 @@ export const Navbar = () => {
   return (
     <nav className="sticky top-0 z-50 w-full border-b border-muted/30 bg-background/80 backdrop-blur-md">
       <div className="container mx-auto flex h-14 items-center justify-between px-4">
-        <div className="flex items-center gap-6">
-          <Link href="/" className="flex items-center space-x-2.5 group">
+        <div className="flex shrink-0 items-center gap-6">
+          <Link href="/" aria-label="ContextBench leaderboard" className="flex items-center space-x-2.5 group">
             <LogoMark className="h-8 w-8 transition-transform duration-300 group-hover:scale-110" />
-            <span className="inline-block font-bold text-lg tracking-tight">
+            <span className="hidden min-[360px]:inline-block font-bold text-sm sm:text-lg tracking-tight">
               <span className="text-brand">Context</span><span className="text-brand-navy font-extrabold italic">Bench</span>
             </span>
           </Link>
         </div>
         
-        <div className="flex items-center gap-2">
+        <div className="flex shrink-0 items-center gap-1 sm:gap-2">
+          <Button size="sm" asChild className="rounded-full text-xs font-bold">
+            <Link href="/submit">Submit<span className="hidden md:inline"> a result</span></Link>
+          </Button>
           <Button variant="ghost" size="sm" asChild className="hidden sm:flex items-center gap-2 text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-all">
             <Link href="https://github.com/EuniAI/ContextBench">
                   <Github className="h-4 w-4" />

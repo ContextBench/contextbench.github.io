@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ContextBench leaderboard
 
-## Getting Started
+Source for [contextbench.github.io](https://contextbench.github.io), built with
+Next.js and exported as a static GitHub Pages site.
 
-First, run the development server:
+## Submit a result
+
+See the [submission guide](submissions/README.md) and copy the
+[submission template](submissions/template). Add your results, evaluation logs and
+trajectories under `submissions/YYYY-MM-DD_system-name/`, then open a pull request.
+Maintainers verify the evidence and publish approved scores to the leaderboard.
+
+Benchmark evaluation code and documentation live in
+[EuniAI/ContextBench](https://github.com/EuniAI/ContextBench).
+
+## Website development
+
+Use Node.js 20.9 or newer:
 
 ```bash
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000`. The home page is `src/app/page.tsx`; the submission
+page is `src/app/submit/page.tsx`. Submission URLs live in `src/lib/submissions.ts`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run lint
+npm run test:submissions
+npm run submissions:validate
+npm run build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+`npm run build` exports the website to `out/`. Pushing a reviewed update to `main`
+runs the existing GitHub Pages deployment workflow. Submission PR checks only
+validate formats; they never publish unreviewed scores.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The website reads approved scores from `src/data/backbone_results.json` and
+`src/data/agent_results.json`. The `submissions:publish` command described in the
+submission guide helps maintainers update those files after review.

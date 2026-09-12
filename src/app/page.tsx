@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { LeaderboardTable } from "@/components/LeaderboardTable";
@@ -131,7 +132,12 @@ export default function Home() {
         <div className="bg-card rounded-3xl border border-muted/50 p-6 md:p-8 shadow-sm mb-12">
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8 mb-10">
             <div className="space-y-2">
-              <h2 className="font-serif text-3xl font-medium tracking-tight">Benchmark Rankings</h2>
+              <div className="flex flex-wrap items-center gap-4">
+                <h2 className="font-serif text-3xl font-medium tracking-tight">Benchmark Rankings</h2>
+                <Button variant="outline" size="sm" asChild className="rounded-full">
+                  <Link href="/submit">Submit a result</Link>
+                </Button>
+              </div>
               <div className="flex flex-wrap items-center gap-3">
                 <span className="text-sm text-muted-foreground">Sorting by</span>
                 <Select value={primaryMetric} onValueChange={setPrimaryMetric}>

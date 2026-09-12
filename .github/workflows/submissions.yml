@@ -1,0 +1,26 @@
+name: Submission checks
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Submission checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Test submission validation and publication
+        run: npm run test:submissions
+      - name: Validate submitted artifacts and score formats
+        run: npm run submissions:validate
