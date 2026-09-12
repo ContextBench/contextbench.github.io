@@ -1,0 +1,136 @@
+[16:03:31] Retrieval eval: cli__cli-2250
+  Setting up repository
+  Warning: repo_url mismatch; overriding with /home/andre/workspace/ContextBench/repos/github.com__cli__cli
+  Repo: /home/andre/workspace/ContextBench/repos/github.com__cli__cli
+  Commit: b5366c6ebf22...
+  Checkout ready: /home/andre/workspace/ContextBench/repos/_worktrees/contextbench_worktrees/__home__andre__workspace__ContextBench__repos__github.com__cli__cli/b5366c6ebf22589f62089ea79c349538335a3e99
+  Parsing trajectory
+  Extracted: 19 steps, final has 3 files
+DETAILS:
+instance_id=cli__cli-2250
+  gold_files: n=2
+    - api/queries_pr.go
+    - pkg/cmd/pr/create/create.go
+  pred_files: n=3
+    - api/queries_pr.go
+    - pkg/cmd/pr/create/create.go
+    - pkg/cmd/pr/create/create_test.go
+  hit_files: n=2
+    - api/queries_pr.go
+    - pkg/cmd/pr/create/create.go
+  gold_symbols: n=5
+    - api/queries_pr.go:function_declaration@16311-18609
+    - pkg/cmd/pr/create/create.go:function_declaration@15548-16378
+    - pkg/cmd/pr/create/create.go:function_declaration@1626-4921
+    - pkg/cmd/pr/create/create.go:type_declaration@1145-1624
+    - pkg/cmd/pr/create/create.go:type_declaration@523-1143
+  pred_symbols: n=25
+    - api/queries_pr.go:function_declaration@11109-13203
+    - api/queries_pr.go:function_declaration@13205-16041
+    - api/queries_pr.go:function_declaration@16110-16242
+    - api/queries_pr.go:function_declaration@16311-18609
+    - api/queries_pr.go:function_declaration@18611-18769
+    - api/queries_pr.go:type_declaration@11210-11288
+    - api/queries_pr.go:type_declaration@13349-13454
+    - api/queries_pr.go:type_declaration@684-2330
+    - pkg/cmd/pr/create/create.go:function_declaration@10635-15546
+    - pkg/cmd/pr/create/create.go:function_declaration@15548-16378
+    - pkg/cmd/pr/create/create.go:function_declaration@1626-4921
+    - pkg/cmd/pr/create/create.go:function_declaration@16380-16741
+    - pkg/cmd/pr/create/create.go:function_declaration@16743-19051
+    - pkg/cmd/pr/create/create.go:function_declaration@4923-8287
+    - pkg/cmd/pr/create/create.go:function_declaration@8289-8900
+    - pkg/cmd/pr/create/create.go:function_declaration@8902-9930
+    - pkg/cmd/pr/create/create.go:function_declaration@9932-10633
+    - pkg/cmd/pr/create/create.go:type_declaration@1145-1624
+    - pkg/cmd/pr/create/create.go:type_declaration@523-1143
+    - pkg/cmd/pr/create/create_test.go:function_declaration@3282-5616
+    - pkg/cmd/pr/create/create_test.go:function_declaration@5618-6890
+    - pkg/cmd/pr/create/create_test.go:function_declaration@634-838
+    - pkg/cmd/pr/create/create_test.go:function_declaration@6892-8771
+    - pkg/cmd/pr/create/create_test.go:function_declaration@840-2131
+    - pkg/cmd/pr/create/create_test.go:function_declaration@8773-10681
+  hit_symbols: n=5
+    - api/queries_pr.go:function_declaration@16311-18609
+    - pkg/cmd/pr/create/create.go:function_declaration@15548-16378
+    - pkg/cmd/pr/create/create.go:function_declaration@1626-4921
+    - pkg/cmd/pr/create/create.go:type_declaration@1145-1624
+    - pkg/cmd/pr/create/create.go:type_declaration@523-1143
+
+[16:03:31] Retrieval cli__cli-2250: line_f1=0.070
+[16:03:31] Resolution resume: 0 harness-scored, 1 pending (stable run_id=epimetheus_Multi)
+[16:03:31] Resolution eval (pending=1): /home/andre/workspace/ContextBench/agent-frameworks/epimetheus/.venv/bin/python /home/andre/workspace/ContextBench/scripts/run_resolution_eval.py --input-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Multi --bench Multi --model-name epimetheus__Multi --run-id epimetheus_Multi --predictions /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution_preds.jsonl --report-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet --instance-ids cli__cli-2250 --max-workers 1
+[16:03:31] === Step 1/2: Build SWE-bench predictions ===
+[16:03:31]   Input dir   : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Multi
+[16:03:31] WARNING: duplicate instance_id cli__cli-2250 (cli__cli-2250.json); keeping first.
+[16:03:31] WARNING: duplicate instance_id cli__cli-2785 (cli__cli-2785.json); keeping first.
+[16:03:31] WARNING: duplicate instance_id ponylang__ponyc-2247 (ponylang__ponyc-2247.json); keeping first.
+[16:03:31] WARNING: duplicate instance_id rayon-rs__rayon-986 (rayon-rs__rayon-986.json); keeping first.
+[16:03:31]   Wrote 4 prediction(s) -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution_preds.jsonl
+[16:03:31] === Step 2/2: Run resolution harness ===
+[16:03:31]   Backend     : Multi
+[16:03:31]   Dataset     : ByteDance-Seed/Multi-SWE-bench (split=train)
+[16:03:31]   Run id      : epimetheus_Multi
+[16:03:31]   Report dir  : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet
+
+Fetching 50 files:   0%|          | 0/50 [00:00<?, ?it/s]
+Fetching 50 files: 100%|██████████| 50/50 [00:00<00:00, 2295.05it/s]
+[16:03:48]   Running: /home/andre/workspace/ContextBench/.venvs/resolution/bin/python -m multi_swe_bench.harness.run_evaluation --config /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/multi_eval/epimetheus_Multi/config.json
+[2026-09-10 16:03:49,847] [run_evaluation.py] [INFO]: Initialize logger successfully.
+[2026-09-10 16:03:49,847] [run_evaluation.py] [INFO]: Building images...
+[2026-09-10 16:03:49,848] [run_evaluation.py] [INFO]: Loading repo commits...
+[2026-09-10 16:03:49,848] [run_evaluation.py] [INFO]: Creating instances...
+[2026-09-10 16:03:49,848] [run_evaluation.py] [INFO]: Loading datasets...
+[2026-09-10 16:03:49,929] [run_evaluation.py] [INFO]: Successfully loaded 1 valid datasets from ['/home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/multi_eval/epimetheus_Multi/dataset.jsonl']
+[2026-09-10 16:03:49,930] [run_evaluation.py] [INFO]: Successfully loaded 1 valid instances.
+
+Checking commit hashes:   0%|          | 0/1 [00:00<?, ?it/s]
+
+Checking commit hashes for cli/cli:   0%|          | 0/1 [00:00<?, ?it/s][A
+Checking commit hashes for cli/cli: 100%|██████████| 1/1 [00:00<00:00, 18477.11it/s]
+
+Checking commit hashes: 100%|██████████| 1/1 [00:00<00:00,  2.13it/s]
+Checking commit hashes: 100%|██████████| 1/1 [00:00<00:00,  2.12it/s]
+[2026-09-10 16:03:50,409] [run_evaluation.py] [INFO]: Total images: 2
+
+Building images:   0%|          | 0/2 [00:00<?, ?it/s]
+Building images: 100%|██████████| 2/2 [00:00<00:00, 36.35it/s]
+[2026-09-10 16:03:50,464] [run_evaluation.py] [INFO]: Images built successfully.
+[2026-09-10 16:03:50,464] [run_evaluation.py] [INFO]: Running instances...
+
+Running instances:   0%|          | 0/1 [00:00<?, ?it/s][2026-09-10 16:03:50,466] [run_evaluation.py] [INFO]: Running mswebench/cli_m_cli:pr-2250 with command: bash /home/fix-run.sh...
+
+Running instances: 100%|██████████| 1/1 [00:10<00:00, 10.16s/it]
+Running instances: 100%|██████████| 1/1 [00:10<00:00, 10.16s/it]
+[2026-09-10 16:04:00,622] [run_evaluation.py] [INFO]: Instances run successfully.
+[2026-09-10 16:04:00,622] [run_evaluation.py] [INFO]: Running evaluation...
+[2026-09-10 16:04:00,622] [gen_report.py] [INFO]: Initialize logger successfully.
+[2026-09-10 16:04:00,624] [gen_report.py] [INFO]: Collecting report tasks...
+[2026-09-10 16:04:00,625] [gen_report.py] [INFO]: Successfully collected 4 tasks.
+[2026-09-10 16:04:00,625] [gen_report.py] [INFO]: Loading dataset...
+[2026-09-10 16:04:00,738] [gen_report.py] [INFO]: Successfully loaded 1 valid datasets from ['/home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/multi_eval/epimetheus_Multi/dataset.jsonl']
+
+Generating eval reports:   0%|          | 0/1 [00:00<?, ?it/s]
+Generating eval reports: 100%|██████████| 1/1 [00:00<00:00,  9.13it/s]
+Generating eval reports: 100%|██████████| 1/1 [00:00<00:00,  9.10it/s]
+[2026-09-10 16:04:00,856] [gen_report.py] [INFO]: Successfully generated 1 reports.
+
+Fetching 50 files:   0%|          | 0/50 [00:00<?, ?it/s]
+Fetching 50 files: 100%|██████████| 50/50 [00:00<00:00, 2121.01it/s]
+[16:04:03]   Multi report -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Multi.epimetheus_Multi.json
+[16:04:03] === Issue resolution summary ===
+[16:04:03]   Report            : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Multi.epimetheus_Multi.json
+[16:04:03]   Total (evaluated) : 1
+[16:04:03]   Submitted (preds) : 1
+[16:04:03]   Completed         : 1
+[16:04:03]   Resolved          : 1
+[16:04:03]   Unresolved        : 0
+[16:04:03]   Errored           : 0
+[16:04:03]   Empty patches     : 0
+[16:04:03]   Resolved rate     : 1/1 = 100.0% (of evaluated)
+[16:04:03]   Resolved IDs      : cli__cli-2250
+[16:04:03] Done.
+[16:04:03]   Predictions : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution_preds.jsonl
+[16:04:03]   Report      : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Multi.epimetheus_Multi.json
+[16:04:03] Resolution scores -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution.jsonl
+[16:04:04] Deleted docker image: mswebench/cli_m_cli:pr-2250

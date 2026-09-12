@@ -1,0 +1,132 @@
+[19:08:18] Retrieval eval: huggingface__transformers-29449
+  Setting up repository
+  Warning: repo_url mismatch; overriding with /home/andre/workspace/ContextBench/repos/github.com__huggingface__transformers
+  Repo: /home/andre/workspace/ContextBench/repos/github.com__huggingface__transformers
+  Commit: 17b06e2c6650...
+  Checkout ready: /home/andre/workspace/ContextBench/repos/_worktrees/contextbench_worktrees/__home__andre__workspace__ContextBench__repos__github.com__huggingface__transformers/17b06e2c6650de162e7954babf6224c1975c2852
+  Parsing trajectory
+  Extracted: 14 steps, final has 2 files
+DETAILS:
+instance_id=huggingface__transformers-29449
+  gold_files: n=1
+    - src/transformers/models/idefics/processing_idefics.py
+  pred_files: n=2
+    - src/transformers/models/idefics/processing_idefics.py
+    - tests/models/idefics/test_processor_idefics.py
+  hit_files: n=1
+    - src/transformers/models/idefics/processing_idefics.py
+  gold_symbols: n=4
+    - src/transformers/models/idefics/processing_idefics.py:class_definition@3809-17903
+    - src/transformers/models/idefics/processing_idefics.py:function_definition@12222-12413
+    - src/transformers/models/idefics/processing_idefics.py:function_definition@4739-5658
+    - src/transformers/models/idefics/processing_idefics.py:function_definition@5664-17013
+  pred_symbols: n=20
+    - src/transformers/models/idefics/processing_idefics.py:class_definition@3809-17903
+    - src/transformers/models/idefics/processing_idefics.py:function_definition@1088-1701
+    - src/transformers/models/idefics/processing_idefics.py:function_definition@12222-12413
+    - src/transformers/models/idefics/processing_idefics.py:function_definition@17019-17328
+    - src/transformers/models/idefics/processing_idefics.py:function_definition@17334-17625
+    - src/transformers/models/idefics/processing_idefics.py:function_definition@1738-3520
+    - src/transformers/models/idefics/processing_idefics.py:function_definition@17645-17903
+    - src/transformers/models/idefics/processing_idefics.py:function_definition@3523-3806
+    - src/transformers/models/idefics/processing_idefics.py:function_definition@4739-5658
+    - src/transformers/models/idefics/processing_idefics.py:function_definition@5664-17013
+    - tests/models/idefics/test_processor_idefics.py:class_definition@1090-6475
+    - tests/models/idefics/test_processor_idefics.py:function_definition@1136-1604
+    - tests/models/idefics/test_processor_idefics.py:function_definition@1610-1731
+    - tests/models/idefics/test_processor_idefics.py:function_definition@1737-1870
+    - tests/models/idefics/test_processor_idefics.py:function_definition@1876-3073
+    - tests/models/idefics/test_processor_idefics.py:function_definition@3079-4033
+    - tests/models/idefics/test_processor_idefics.py:function_definition@4039-4494
+    - tests/models/idefics/test_processor_idefics.py:function_definition@4500-4979
+    - tests/models/idefics/test_processor_idefics.py:function_definition@4985-6007
+    - tests/models/idefics/test_processor_idefics.py:function_definition@6013-6475
+  hit_symbols: n=4
+    - src/transformers/models/idefics/processing_idefics.py:class_definition@3809-17903
+    - src/transformers/models/idefics/processing_idefics.py:function_definition@12222-12413
+    - src/transformers/models/idefics/processing_idefics.py:function_definition@4739-5658
+    - src/transformers/models/idefics/processing_idefics.py:function_definition@5664-17013
+
+[19:08:18] Retrieval huggingface__transformers-29449: line_f1=0.475
+[19:08:18] Resolution resume: 0 harness-scored, 1 pending (stable run_id=epimetheus_Poly)
+[19:08:18] Waiting for Docker prefetch Poly huggingface__transformers-29449
+[19:08:18] Docker prefetch Poly huggingface__transformers-29449: ghcr.io/timesler/swe-polybench.eval.x86_64.huggingface__transformers-29449:v1.1, ghcr.io/timesler/swe-polybench.eval.x86_64.huggingface__transformers-29449:latest
+[19:08:19] Docker image already present: ghcr.io/timesler/swe-polybench.eval.x86_64.huggingface__transformers-29449:v1.1
+[19:08:19] Docker image already present: ghcr.io/timesler/swe-polybench.eval.x86_64.huggingface__transformers-29449:latest
+[19:08:19] Resolution eval (pending=1): /home/andre/workspace/ContextBench/agent-frameworks/epimetheus/.venv/bin/python /home/andre/workspace/ContextBench/scripts/run_resolution_eval.py --input-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Poly --bench Poly --model-name epimetheus__Poly --run-id epimetheus_Poly --predictions /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Poly_resolution_preds.jsonl --report-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet --instance-ids huggingface__transformers-29449 --max-workers 1
+[19:08:19] === Step 1/2: Build SWE-bench predictions ===
+[19:08:19]   Input dir   : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Poly
+[19:08:19] WARNING: duplicate instance_id coder__code-server-4923 (coder__code-server-4923.json); keeping first.
+[19:08:19] WARNING: duplicate instance_id coder__code-server-6278 (coder__code-server-6278.json); keeping first.
+[19:08:19] WARNING: duplicate instance_id huggingface__transformers-12981 (huggingface__transformers-12981.json); keeping first.
+[19:08:19] WARNING: duplicate instance_id huggingface__transformers-22458 (huggingface__transformers-22458.json); keeping first.
+[19:08:19] WARNING: duplicate instance_id huggingface__transformers-23223 (huggingface__transformers-23223.json); keeping first.
+[19:08:19] WARNING: duplicate instance_id huggingface__transformers-26839 (huggingface__transformers-26839.json); keeping first.
+[19:08:19] WARNING: duplicate instance_id huggingface__transformers-29449 (huggingface__transformers-29449.json); keeping first.
+[19:08:19] WARNING: duplicate instance_id huggingface__transformers-30556 (huggingface__transformers-30556.json); keeping first.
+[19:08:19] WARNING: duplicate instance_id keras-team__keras-18871 (keras-team__keras-18871.json); keeping first.
+[19:08:19] WARNING: duplicate instance_id keras-team__keras-19838 (keras-team__keras-19838.json); keeping first.
+[19:08:19] WARNING: duplicate instance_id langchain-ai__langchain-4009 (langchain-ai__langchain-4009.json); keeping first.
+[19:08:19] WARNING: duplicate instance_id microsoft__vscode-160342 (microsoft__vscode-160342.json); keeping first.
+[19:08:19] WARNING: duplicate instance_id mui__material-ui-11451 (mui__material-ui-11451.json); keeping first.
+[19:08:19] WARNING: duplicate instance_id mui__material-ui-19072 (mui__material-ui-19072.json); keeping first.
+[19:08:19] WARNING: duplicate instance_id mui__material-ui-19849 (mui__material-ui-19849.json); keeping first.
+[19:08:19] WARNING: duplicate instance_id prettier__prettier-12930 (prettier__prettier-12930.json); keeping first.
+[19:08:19] WARNING: duplicate instance_id serverless__serverless-2576 (serverless__serverless-2576.json); keeping first.
+[19:08:19] WARNING: duplicate instance_id serverless__serverless-2945 (serverless__serverless-2945.json); keeping first.
+[19:08:19] WARNING: duplicate instance_id serverless__serverless-3457 (serverless__serverless-3457.json); keeping first.
+[19:08:19] WARNING: duplicate instance_id sveltejs__svelte-2185 (sveltejs__svelte-2185.json); keeping first.
+[19:08:19] WARNING: duplicate instance_id sveltejs__svelte-6458 (sveltejs__svelte-6458.json); keeping first.
+[19:08:19]   Wrote 26 prediction(s) -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Poly_resolution_preds.jsonl
+[19:08:19] === Step 2/2: Run resolution harness ===
+[19:08:19]   Backend     : Poly
+[19:08:19]   Dataset     : AmazonScience/SWE-PolyBench (split=test)
+[19:08:19]   Run id      : epimetheus_Poly
+[19:08:19]   Report dir  : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet
+[19:08:22]   Poly dataset subset : 1 instance(s)
+[19:08:22]   Running resilient Poly worker: /home/andre/workspace/ContextBench/.venvs/resolution/bin/python /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/poly_eval/epimetheus_Poly/_poly_worker.py /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/poly_eval/epimetheus_Poly/dataset_subset.csv /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/poly_eval/epimetheus_Poly/results /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/poly_eval/epimetheus_Poly/repos 1
+/home/andre/workspace/ContextBench/.venvs/resolution/lib/python3.12/site-packages/tree_sitter/__init__.py:36: FutureWarning: Language(path, name) is deprecated. Use Language(ptr, name) instead.
+  warn("{} is deprecated. Use {} instead.".format(old, new), FutureWarning)
+[poly-worker] evaluate huggingface__transformers-29449
+[poly-worker] using local prebuilt ghcr.io/timesler/swe-polybench.eval.x86_64.huggingface__transformers-29449:v1.1 -> polybench_python_huggingface__transformers-29449
+2026-09-10 19:08:24.280 | INFO     | poly_bench_evaluation.run_evaluation:evaluate_instance:130 - Successfully pulled pre-built image from GHCR: polybench_python_huggingface__transformers-29449
+2026-09-10 19:08:24.884 | INFO     | poly_bench_evaluation.run_evaluation:evaluate_instance:235 - docker running for huggingface__transformers-29449
+2026-09-10 19:08:56.532 | DEBUG    | poly_bench_evaluation.docker_utils:_cleanup:432 - Removed local image tag: polybench_python_huggingface__transformers-29449
+2026-09-10 19:08:56.545 | INFO     | poly_bench_evaluation.scoring:aggregate_logs:256 - Writing aggregated results to result.json
+Total resolved: 12/21
+Total pass rate: 57.14%
+
+Pass rate by language:
+Python: 1/1 (100.0%)
+
+Pass rate by task category:
+Bug Fix: 1/1 (100.0%)
+
+File retrieval metrics by language:
+          file_recall  file_precision  file_f1
+language                                      
+Python            1.0             1.0      1.0
+
+File retrieval metrics overall:
+file_recall       0.73
+file_precision    0.88
+file_f1           0.77
+[poly-worker] done failures=0
+[19:08:56]   Poly report -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Poly.epimetheus_Poly.json
+[19:08:56] === Issue resolution summary ===
+[19:08:56]   Report            : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Poly.epimetheus_Poly.json
+[19:08:56]   Total (evaluated) : 21
+[19:08:56]   Submitted (preds) : 1
+[19:08:56]   Completed         : 21
+[19:08:56]   Resolved          : 12
+[19:08:56]   Unresolved        : 9
+[19:08:56]   Errored           : 0
+[19:08:56]   Empty patches     : 20
+[19:08:56]   Resolved rate     : 12/21 = 57.1% (of evaluated)
+[19:08:56]   Resolved IDs      : mui__material-ui-11451, microsoft__vscode-160342, keras-team__keras-19838, huggingface__transformers-26839, huggingface__transformers-12981, huggingface__transformers-29449, prettier__prettier-12930, huggingface__transformers-30556, mui__material-ui-19849, sveltejs__svelte-2185, serverless__serverless-3457, langchain-ai__langchain-4009
+[19:08:56] Done.
+[19:08:56]   Predictions : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Poly_resolution_preds.jsonl
+[19:08:56]   Report      : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Poly.epimetheus_Poly.json
+[19:08:56] Resolution scores -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Poly_resolution.jsonl
+[19:08:56] Deleted docker image: ghcr.io/timesler/swe-polybench.eval.x86_64.huggingface__transformers-29449:v1.1
+[19:08:57] Deleted docker image: ghcr.io/timesler/swe-polybench.eval.x86_64.huggingface__transformers-29449:latest

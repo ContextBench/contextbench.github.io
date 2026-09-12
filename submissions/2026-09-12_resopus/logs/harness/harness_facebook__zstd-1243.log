@@ -1,0 +1,98 @@
+[17:58:18] Retrieval eval: facebook__zstd-1243
+  Setting up repository
+  Warning: repo_url mismatch; overriding with /home/andre/workspace/ContextBench/repos/github.com__facebook__zstd
+  Repo: /home/andre/workspace/ContextBench/repos/github.com__facebook__zstd
+  Commit: df09d4318f0f...
+  Checkout ready: /home/andre/workspace/ContextBench/repos/_worktrees/contextbench_worktrees/__home__andre__workspace__ContextBench__repos__github.com__facebook__zstd/df09d4318f0f4f06d76c1e288732f5f9b1d9f59a
+  Parsing trajectory
+  Extracted: 35 steps, final has 11 files
+DETAILS:
+instance_id=facebook__zstd-1243
+  gold_files: n=5
+    - appveyor.yml
+    - build/cmake/lib/CMakeLists.txt
+    - lib/Makefile
+    - lib/compress/zstd_compress.c
+    - programs/Makefile
+  pred_files: n=11
+    - Makefile
+    - contrib/linux-kernel/lib/zstd/compress.c
+    - contrib/linux-kernel/lib/zstd/zstd_internal.h
+    - lib/common/zstd_internal.h
+    - lib/compress/zstd_compress.c
+    - lib/compress/zstd_double_fast.c
+    - lib/compress/zstd_fast.c
+    - lib/compress/zstd_lazy.c
+    - lib/compress/zstdmt_compress.c
+    - lib/decompress/zstd_decompress.c
+    - tests/Makefile
+  hit_files: n=1
+    - lib/compress/zstd_compress.c
+  gold_symbols: n=2
+    - lib/compress/zstd_compress.c:function_definition@38297-40204
+    - lib/compress/zstd_compress.c:function_definition@49174-54468
+  pred_symbols: n=27
+    - contrib/linux-kernel/lib/zstd/compress.c:function_definition@13078-13191
+    - contrib/linux-kernel/lib/zstd/compress.c:function_definition@9242-12884
+    - contrib/linux-kernel/lib/zstd/zstd_internal.h:function_definition@7784-7859
+    - lib/common/zstd_internal.h:function_definition@7671-8417
+    - lib/common/zstd_internal.h:struct_specifier@8748-8822
+    - lib/compress/zstd_compress.c:function_definition@115985-120983
+    - lib/compress/zstd_compress.c:function_definition@35399-36037
+    - lib/compress/zstd_compress.c:function_definition@36039-36438
+    - lib/compress/zstd_compress.c:function_definition@36588-36910
+    - lib/compress/zstd_compress.c:function_definition@40900-48769
+    - lib/compress/zstd_compress.c:function_definition@48963-49172
+    - lib/compress/zstd_compress.c:function_definition@49174-54468
+    - lib/compress/zstd_compress.c:function_definition@96369-98152
+    - lib/compress/zstd_compress.c:function_definition@98154-98377
+    - lib/compress/zstd_compress.c:function_definition@98379-98534
+    - lib/compress/zstd_compress.c:function_definition@98536-103109
+    - lib/compress/zstd_double_fast.c:function_definition@13505-14312
+    - lib/compress/zstd_double_fast.c:function_definition@1885-13502
+    - lib/compress/zstd_double_fast.c:function_definition@457-1882
+    - lib/compress/zstd_fast.c:function_definition@10238-11170
+    - lib/compress/zstd_fast.c:function_definition@1596-10235
+    - lib/compress/zstd_fast.c:function_definition@450-1594
+    - lib/compress/zstd_lazy.c:function_definition@10429-17037
+    - lib/compress/zstd_lazy.c:function_definition@26873-39199
+    - lib/compress/zstd_lazy.c:function_definition@6375-10426
+    - lib/compress/zstdmt_compress.c:function_definition@25135-31264
+    - lib/decompress/zstd_decompress.c:function_definition@51367-55268
+  hit_symbols: n=1
+    - lib/compress/zstd_compress.c:function_definition@49174-54468
+
+[17:58:19] Retrieval facebook__zstd-1243: line_f1=0.000
+
+# Harness overwritten from harness_infra_retry.log (failed first-pass resolution dropped)
+[09:26:52] Resolution eval (pending=9): /home/andre/workspace/ContextBench/agent-frameworks/epimetheus/.venv/bin/python /home/andre/workspace/ContextBench/scripts/run_resolution_eval.py --input-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Multi --bench Multi --model-name epimetheus__Multi --run-id epimetheus_Multi --predictions /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution_preds.jsonl --report-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet --instance-ids nlohmann__json-4512,ponylang__ponyc-1486,facebook__zstd-1105,fmtlib__fmt-4286,mui__material-ui-38100,mui__material-ui-37855,mui__material-ui-38188,ponylang__ponyc-2261,facebook__zstd-1243 --max-workers 1
+[09:26:52] WARNING: duplicate instance_id facebook__zstd-1243 (facebook__zstd-1243.json); keeping first.
+Building images:  36%|███▌      | 5/14 [56:00<1:05:56, 439.56s/it][2026-09-11 10:23:36,430] [run_evaluation.py] [INFO]: Building image mswebench/facebook_m_zstd:pr-1243...
+[2026-09-11 10:23:43,976] [run_evaluation.py] [INFO]: Image mswebench/facebook_m_zstd:pr-1243 built successfully.
+
+Building images:  43%|████▎     | 6/14 [56:08<39:01, 292.68s/it]  [2026-09-11 10:23:43,980] [run_evaluation.py] [INFO]: Building image mswebench/mui_m_material-ui:pr-38100...
+Running instances:  22%|██▏       | 2/9 [01:51<06:18, 54.05s/it][2026-09-11 10:39:14,318] [run_evaluation.py] [INFO]: Running mswebench/facebook_m_zstd:pr-1243 with command: bash /home/fix-run.sh...
+
+[2026-09-11 11:06:25,301] [gen_report.py] [ERROR]: Invalid report for facebook/zstd:pr-1243, Test Result Summary:
+Stage Descriptions:
+  run  : Execute the test command without any patches applied.
+  test : Execute the test command after applying the test patch.
+  fix  : Execute the test command after applying both the test patch and the fix patch.
+Each stage is reported as (pass, fail, skip), representing the number of tests that passed, failed, or were skipped, respectively.
+
+Results:
+  run  = (1, 0, 0)
+  test = (0, 1, 0)
+  fix  = (0, 1, 0), After applying the fix patch, no test cases transitioned from failed to passed. A brief summary is as follows: Test Result Summary:
+Stage Descriptions:
+  run  : Execute the test command without any patches applied.
+  test : Execute the test command after applying the test patch.
+  fix  : Execute the test command after applying both the test patch and the fix patch.
+Each stage is reported as (pass, fail, skip), representing the number of tests that passed, failed, or were skipped, respectively.
+
+Results:
+  run  = (1, 0, 0)
+  test = (0, 1, 0)
+  fix  = (0, 1, 0)
+
+Generating eval reports: 100%|██████████| 9/9 [00:06<00:00,  1.30it/s]

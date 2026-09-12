@@ -1,0 +1,131 @@
+[16:40:56] Retrieval eval: matplotlib__matplotlib-23314
+  Setting up repository
+  Warning: repo_url mismatch; overriding with /home/andre/workspace/ContextBench/repos/github.com__matplotlib__matplotlib
+  Repo: /home/andre/workspace/ContextBench/repos/github.com__matplotlib__matplotlib
+  Commit: 97fc1154992f...
+  Checkout ready: /home/andre/workspace/ContextBench/repos/_worktrees/contextbench_worktrees/__home__andre__workspace__ContextBench__repos__github.com__matplotlib__matplotlib/97fc1154992f64cfb2f86321155a7404efeb2d8a
+  Parsing trajectory
+  Extracted: 8 steps, final has 3 files
+DETAILS:
+instance_id=matplotlib__matplotlib-23314
+  gold_files: n=1
+    - lib/mpl_toolkits/mplot3d/axes3d.py
+  pred_files: n=3
+    - lib/matplotlib/axes/_base.py
+    - lib/mpl_toolkits/mplot3d/axes3d.py
+    - lib/mpl_toolkits/mplot3d/axis3d.py
+  hit_files: n=1
+    - lib/mpl_toolkits/mplot3d/axes3d.py
+  gold_symbols: n=5
+    - lib/mpl_toolkits/mplot3d/axes3d.py:class_definition@1286-121064
+    - lib/mpl_toolkits/mplot3d/axes3d.py:function_definition@14697-16826
+    - lib/mpl_toolkits/mplot3d/axes3d.py:function_definition@1497-7436
+    - lib/mpl_toolkits/mplot3d/axes3d.py:function_definition@7442-7522
+    - lib/mpl_toolkits/mplot3d/axes3d.py:function_definition@7528-7606
+  pred_symbols: n=18
+    - lib/matplotlib/axes/_base.py:class_definition@21508-175069
+    - lib/matplotlib/axes/_base.py:function_definition@119119-121727
+    - lib/mpl_toolkits/mplot3d/axes3d.py:class_definition@1286-121064
+    - lib/mpl_toolkits/mplot3d/axes3d.py:function_definition@13920-14658
+    - lib/mpl_toolkits/mplot3d/axes3d.py:function_definition@14697-16826
+    - lib/mpl_toolkits/mplot3d/axes3d.py:function_definition@1497-7436
+    - lib/mpl_toolkits/mplot3d/axes3d.py:function_definition@16832-17079
+    - lib/mpl_toolkits/mplot3d/axis3d.py:class_definition@1044-21271
+    - lib/mpl_toolkits/mplot3d/axis3d.py:function_definition@1735-1871
+    - lib/mpl_toolkits/mplot3d/axis3d.py:function_definition@1877-1959
+    - lib/mpl_toolkits/mplot3d/axis3d.py:function_definition@1965-5106
+    - lib/mpl_toolkits/mplot3d/axis3d.py:function_definition@5267-6240
+    - lib/mpl_toolkits/mplot3d/axis3d.py:function_definition@6288-6386
+    - lib/mpl_toolkits/mplot3d/axis3d.py:function_definition@6392-6687
+    - lib/mpl_toolkits/mplot3d/axis3d.py:function_definition@6693-6988
+    - lib/mpl_toolkits/mplot3d/axis3d.py:function_definition@6994-7130
+    - lib/mpl_toolkits/mplot3d/axis3d.py:function_definition@7136-7395
+    - lib/mpl_toolkits/mplot3d/axis3d.py:function_definition@7401-7652
+  hit_symbols: n=3
+    - lib/mpl_toolkits/mplot3d/axes3d.py:class_definition@1286-121064
+    - lib/mpl_toolkits/mplot3d/axes3d.py:function_definition@14697-16826
+    - lib/mpl_toolkits/mplot3d/axes3d.py:function_definition@1497-7436
+
+[16:40:57] Retrieval matplotlib__matplotlib-23314: line_f1=0.149
+[16:40:57] Resolution resume: 0 harness-scored, 1 pending (stable run_id=epimetheus_Verified)
+[16:40:57] Resolution eval: 1 pending; pull-if-missing → score → delete image (per instance)
+[16:40:57] Resolution [1/1] matplotlib__matplotlib-23314
+[16:40:57] Docker image already present: swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-23314:latest
+[16:40:57] Resolution eval: /home/andre/workspace/ContextBench/agent-frameworks/epimetheus/.venv/bin/python /home/andre/workspace/ContextBench/scripts/run_resolution_eval.py --input-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Verified --bench Verified --model-name epimetheus__Verified --run-id epimetheus_Verified --predictions /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Verified_resolution_preds.jsonl --report-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet --instance-ids matplotlib__matplotlib-23314 --max-workers 1
+[16:40:57] === Step 1/2: Build SWE-bench predictions ===
+[16:40:57]   Input dir   : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Verified
+[16:40:57] WARNING: duplicate instance_id django__django-11163 (django__django-11163.json); keeping first.
+[16:40:57] WARNING: duplicate instance_id django__django-11179 (django__django-11179.json); keeping first.
+[16:40:57] WARNING: duplicate instance_id django__django-11749 (django__django-11749.json); keeping first.
+[16:40:57] WARNING: duplicate instance_id django__django-12125 (django__django-12125.json); keeping first.
+[16:40:57] WARNING: duplicate instance_id django__django-13343 (django__django-13343.json); keeping first.
+[16:40:57] WARNING: duplicate instance_id django__django-14140 (django__django-14140.json); keeping first.
+[16:40:57] WARNING: duplicate instance_id django__django-16454 (django__django-16454.json); keeping first.
+[16:40:57] WARNING: duplicate instance_id django__django-16527 (django__django-16527.json); keeping first.
+[16:40:57] WARNING: duplicate instance_id matplotlib__matplotlib-23299 (matplotlib__matplotlib-23299.json); keeping first.
+[16:40:57] WARNING: duplicate instance_id matplotlib__matplotlib-23314 (matplotlib__matplotlib-23314.json); keeping first.
+[16:40:57] WARNING: duplicate instance_id pydata__xarray-4075 (pydata__xarray-4075.json); keeping first.
+[16:40:57] WARNING: duplicate instance_id pydata__xarray-6461 (pydata__xarray-6461.json); keeping first.
+[16:40:57] WARNING: duplicate instance_id sympy__sympy-12489 (sympy__sympy-12489.json); keeping first.
+[16:40:57]   Wrote 13 prediction(s) -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Verified_resolution_preds.jsonl
+[16:40:57] === Step 2/2: Run resolution harness ===
+[16:40:59]   Backend     : Verified
+[16:40:59]   Dataset     : princeton-nlp/SWE-bench_Verified (split=test)
+[16:40:59]   Run id      : epimetheus_Verified
+[16:40:59]   Report dir  : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet
+[16:41:00]   Running: /home/andre/workspace/ContextBench/.venvs/resolution/bin/python -m swebench.harness.run_evaluation --dataset_name princeton-nlp/SWE-bench_Verified --split test --predictions_path /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Verified_resolution_preds.jsonl --run_id epimetheus_Verified --max_workers 1 --timeout 1800 --report_dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet --cache_level env --instance_ids matplotlib__matplotlib-23314
+<frozen runpy>:128: RuntimeWarning: 'swebench.harness.run_evaluation' found in sys.modules after import of package 'swebench.harness', but prior to execution of 'swebench.harness.run_evaluation'; this may result in unpredictable behaviour
+2026-09-10 16:41:02,969 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-09-10 16:41:03,016 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/princeton-nlp/SWE-bench_Verified/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/README.md "HTTP/1.1 200 OK"
+2026-09-10 16:41:03,212 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-09-10 16:41:03,652 - httpx - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/princeton-nlp/SWE-bench_Verified/princeton-nlp/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-09-10 16:41:03,783 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/princeton-nlp/SWE-bench_Verified/revision/c104f840cc67f8b6eec6f759ebc8b2693d585d4a "HTTP/1.1 200 OK"
+2026-09-10 16:41:03,906 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/.huggingface.yaml "HTTP/1.1 404 Not Found"
+2026-09-10 16:41:04,166 - httpx - INFO - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=princeton-nlp/SWE-bench_Verified "HTTP/1.1 200 OK"
+2026-09-10 16:41:04,296 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/princeton-nlp/SWE-bench_Verified/tree/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/data?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-09-10 16:41:04,427 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/princeton-nlp/SWE-bench_Verified/tree/c104f840cc67f8b6eec6f759ebc8b2693d585d4a?recursive=false&expand=false "HTTP/1.1 200 OK"
+2026-09-10 16:41:04,551 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/dataset_infos.json "HTTP/1.1 404 Not Found"
+2026-09-10 16:41:04,841 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-09-10 16:41:04,872 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/princeton-nlp/SWE-bench_Verified/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/README.md "HTTP/1.1 200 OK"
+2026-09-10 16:41:04,992 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-09-10 16:41:05,104 - httpx - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/princeton-nlp/SWE-bench_Verified/princeton-nlp/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-09-10 16:41:05,225 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/.huggingface.yaml "HTTP/1.1 404 Not Found"
+2026-09-10 16:41:05,362 - httpx - INFO - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=princeton-nlp/SWE-bench_Verified "HTTP/1.1 200 OK"
+2026-09-10 16:41:05,480 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/dataset_infos.json "HTTP/1.1 404 Not Found"
+Found 1 existing instance images. Will reuse them.
+Running 1 instances...
+
+Evaluation:   0%|          | 0/1 [00:00<?, ?it/s, error=0, ✓=0, ✖=0]
+Evaluation:   0%|          | 0/1 [02:10<?, ?it/s, ✓=1, ✖=0, error=0]
+Evaluation: 100%|██████████| 1/1 [02:10<00:00, 130.46s/it, ✓=1, ✖=0, error=0]
+Evaluation: 100%|██████████| 1/1 [02:10<00:00, 130.46s/it, ✓=1, ✖=0, error=0]
+All instances run.
+Cleaning cached images...
+Removed 0 images.
+Total instances: 1
+Instances submitted: 1
+Instances completed: 1
+Instances incomplete: 0
+Instances resolved: 1
+Instances unresolved: 0
+Instances with empty patches: 0
+Instances with errors: 0
+Unstopped containers: 0
+Unremoved images: 1
+Report written to epimetheus__Verified.epimetheus_Verified.json
+[16:43:36] === Issue resolution summary ===
+[16:43:36]   Report            : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Verified.epimetheus_Verified.json
+[16:43:36]   Total (evaluated) : 1
+[16:43:36]   Submitted (preds) : 13
+[16:43:36]   Completed         : 1
+[16:43:36]   Resolved          : 1
+[16:43:36]   Unresolved        : 0
+[16:43:36]   Errored           : 0
+[16:43:36]   Empty patches     : 0
+[16:43:36]   Resolved rate     : 1/1 = 100.0% (of evaluated)
+[16:43:36]   Resolved IDs      : matplotlib__matplotlib-23314
+[16:43:36] Done.
+[16:43:36]   Predictions : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Verified_resolution_preds.jsonl
+[16:43:36]   Report      : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Verified.epimetheus_Verified.json
+[16:43:40] Deleted docker image: swebench/sweb.eval.x86_64.matplotlib_1776_matplotlib-23314:latest
+[16:43:40] Resolution scores -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Verified_resolution.jsonl

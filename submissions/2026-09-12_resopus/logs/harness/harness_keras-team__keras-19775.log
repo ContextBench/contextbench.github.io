@@ -1,0 +1,166 @@
+[03:18:54] Retrieval eval: keras-team__keras-19775
+  Setting up repository
+  Warning: repo_url mismatch; overriding with /home/andre/workspace/ContextBench/repos/github.com__keras-team__keras
+  Repo: /home/andre/workspace/ContextBench/repos/github.com__keras-team__keras
+  Commit: a243d91e43b4...
+  Checkout ready: /home/andre/workspace/ContextBench/repos/_worktrees/contextbench_worktrees/__home__andre__workspace__ContextBench__repos__github.com__keras-team__keras/a243d91e43b4c43fe8d184b541b608b6ddd80f71
+  Parsing trajectory
+  Extracted: 7 steps, final has 3 files
+DETAILS:
+instance_id=keras-team__keras-19775
+  gold_files: n=1
+    - keras/src/backend/tensorflow/numpy.py
+  pred_files: n=3
+    - keras/src/backend/jax/numpy.py
+    - keras/src/backend/tensorflow/numpy.py
+    - keras/src/backend/torch/numpy.py
+  hit_files: n=1
+    - keras/src/backend/tensorflow/numpy.py
+  gold_symbols: n=1
+    - keras/src/backend/tensorflow/numpy.py:function_definition@43244-44650
+  pred_symbols: n=7
+    - keras/src/backend/jax/numpy.py:function_definition@17708-17967
+    - keras/src/backend/jax/numpy.py:function_definition@17995-18140
+    - keras/src/backend/jax/numpy.py:function_definition@18168-18317
+    - keras/src/backend/jax/numpy.py:function_definition@18360-18509
+    - keras/src/backend/tensorflow/numpy.py:function_definition@43016-43241
+    - keras/src/backend/tensorflow/numpy.py:function_definition@43244-44650
+    - keras/src/backend/torch/numpy.py:function_definition@21337-22877
+  hit_symbols: n=1
+    - keras/src/backend/tensorflow/numpy.py:function_definition@43244-44650
+
+[03:18:54] Retrieval keras-team__keras-19775: line_f1=0.405
+[03:18:54] Resolution resume: 0 harness-scored, 1 pending (stable run_id=epimetheus_Poly)
+[03:18:54] Waiting for Docker prefetch Poly keras-team__keras-19775
+[03:18:54] Docker prefetch Poly keras-team__keras-19775: ghcr.io/timesler/swe-polybench.eval.x86_64.keras-team__keras-19775:v1.1, ghcr.io/timesler/swe-polybench.eval.x86_64.keras-team__keras-19775:latest
+[03:18:54] Docker image already present: ghcr.io/timesler/swe-polybench.eval.x86_64.keras-team__keras-19775:v1.1
+[03:18:55] Docker image already present: ghcr.io/timesler/swe-polybench.eval.x86_64.keras-team__keras-19775:latest
+[03:18:55] Resolution eval (pending=1): /home/andre/workspace/ContextBench/agent-frameworks/epimetheus/.venv/bin/python /home/andre/workspace/ContextBench/scripts/run_resolution_eval.py --input-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Poly --bench Poly --model-name epimetheus__Poly --run-id epimetheus_Poly --predictions /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Poly_resolution_preds.jsonl --report-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet --instance-ids keras-team__keras-19775 --max-workers 1
+[03:18:55] === Step 1/2: Build SWE-bench predictions ===
+[03:18:55]   Input dir   : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Poly
+[03:18:55] WARNING: duplicate instance_id coder__code-server-4923 (coder__code-server-4923.json); keeping first.
+[03:18:55] WARNING: duplicate instance_id coder__code-server-6278 (coder__code-server-6278.json); keeping first.
+[03:18:55] WARNING: duplicate instance_id huggingface__transformers-12981 (huggingface__transformers-12981.json); keeping first.
+[03:18:55] WARNING: duplicate instance_id huggingface__transformers-13865 (huggingface__transformers-13865.json); keeping first.
+[03:18:55] WARNING: duplicate instance_id huggingface__transformers-13989 (huggingface__transformers-13989.json); keeping first.
+[03:18:55] WARNING: duplicate instance_id huggingface__transformers-15158 (huggingface__transformers-15158.json); keeping first.
+[03:18:55] WARNING: duplicate instance_id huggingface__transformers-15795 (huggingface__transformers-15795.json); keeping first.
+[03:18:55] WARNING: duplicate instance_id huggingface__transformers-16198 (huggingface__transformers-16198.json); keeping first.
+[03:18:55] WARNING: duplicate instance_id huggingface__transformers-19590 (huggingface__transformers-19590.json); keeping first.
+[03:18:55] WARNING: duplicate instance_id huggingface__transformers-21969 (huggingface__transformers-21969.json); keeping first.
+[03:18:55] WARNING: duplicate instance_id huggingface__transformers-22458 (huggingface__transformers-22458.json); keeping first.
+[03:18:55] WARNING: duplicate instance_id huggingface__transformers-22920 (huggingface__transformers-22920.json); keeping first.
+[03:18:55] WARNING: duplicate instance_id huggingface__transformers-23223 (huggingface__transformers-23223.json); keeping first.
+[03:18:55] WARNING: duplicate instance_id huggingface__transformers-23796 (huggingface__transformers-23796.json); keeping first.
+[03:18:55] WARNING: duplicate instance_id huggingface__transformers-24238 (huggingface__transformers-24238.json); keeping first.
+[03:18:55] WARNING: duplicate instance_id huggingface__transformers-26839 (huggingface__transformers-26839.json); keeping first.
+[03:18:55] WARNING: duplicate instance_id huggingface__transformers-27463 (huggingface__transformers-27463.json); keeping first.
+[03:18:55] WARNING: duplicate instance_id huggingface__transformers-28535 (huggingface__transformers-28535.json); keeping first.
+[03:18:55] WARNING: duplicate instance_id huggingface__transformers-29449 (huggingface__transformers-29449.json); keeping first.
+[03:18:55] WARNING: duplicate instance_id huggingface__transformers-30556 (huggingface__transformers-30556.json); keeping first.
+[03:18:55] WARNING: duplicate instance_id huggingface__transformers-6098 (huggingface__transformers-6098.json); keeping first.
+[03:18:55] WARNING: duplicate instance_id huggingface__transformers-7078 (huggingface__transformers-7078.json); keeping first.
+[03:18:55] WARNING: duplicate instance_id huggingface__transformers-8624 (huggingface__transformers-8624.json); keeping first.
+[03:18:55] WARNING: duplicate instance_id keras-team__keras-18553 (keras-team__keras-18553.json); keeping first.
+[03:18:55] WARNING: duplicate instance_id keras-team__keras-18871 (keras-team__keras-18871.json); keeping first.
+[03:18:55] WARNING: duplicate instance_id keras-team__keras-19484 (keras-team__keras-19484.json); keeping first.
+[03:18:55] WARNING: duplicate instance_id keras-team__keras-19775 (keras-team__keras-19775.json); keeping first.
+[03:18:55] WARNING: duplicate instance_id keras-team__keras-19838 (keras-team__keras-19838.json); keeping first.
+[03:18:55] WARNING: duplicate instance_id keras-team__keras-19844 (keras-team__keras-19844.json); keeping first.
+[03:18:55] WARNING: duplicate instance_id keras-team__keras-19924 (keras-team__keras-19924.json); keeping first.
+[03:18:55] WARNING: duplicate instance_id keras-team__keras-19973 (keras-team__keras-19973.json); keeping first.
+[03:18:55] WARNING: duplicate instance_id langchain-ai__langchain-19331 (langchain-ai__langchain-19331.json); keeping first.
+[03:18:56] WARNING: duplicate instance_id langchain-ai__langchain-4009 (langchain-ai__langchain-4009.json); keeping first.
+[03:18:56] WARNING: duplicate instance_id langchain-ai__langchain-5584 (langchain-ai__langchain-5584.json); keeping first.
+[03:18:56] WARNING: duplicate instance_id microsoft__vscode-109750 (microsoft__vscode-109750.json); keeping first.
+[03:18:56] WARNING: duplicate instance_id microsoft__vscode-135197 (microsoft__vscode-135197.json); keeping first.
+[03:18:56] WARNING: duplicate instance_id microsoft__vscode-153121 (microsoft__vscode-153121.json); keeping first.
+[03:18:56] WARNING: duplicate instance_id microsoft__vscode-160342 (microsoft__vscode-160342.json); keeping first.
+[03:18:56] WARNING: duplicate instance_id microsoft__vscode-177084 (microsoft__vscode-177084.json); keeping first.
+[03:18:56] WARNING: duplicate instance_id mui__material-ui-11451 (mui__material-ui-11451.json); keeping first.
+[03:18:56] WARNING: duplicate instance_id mui__material-ui-11987 (mui__material-ui-11987.json); keeping first.
+[03:18:56] WARNING: duplicate instance_id mui__material-ui-13778 (mui__material-ui-13778.json); keeping first.
+[03:18:56] WARNING: duplicate instance_id mui__material-ui-15526 (mui__material-ui-15526.json); keeping first.
+[03:18:56] WARNING: duplicate instance_id mui__material-ui-18141 (mui__material-ui-18141.json); keeping first.
+[03:18:56] WARNING: duplicate instance_id mui__material-ui-19072 (mui__material-ui-19072.json); keeping first.
+[03:18:56] WARNING: duplicate instance_id mui__material-ui-19849 (mui__material-ui-19849.json); keeping first.
+[03:18:56] WARNING: duplicate instance_id mui__material-ui-26061 (mui__material-ui-26061.json); keeping first.
+[03:18:56] WARNING: duplicate instance_id mui__material-ui-28186 (mui__material-ui-28186.json); keeping first.
+[03:18:56] WARNING: duplicate instance_id prettier__prettier-11000 (prettier__prettier-11000.json); keeping first.
+[03:18:56] WARNING: duplicate instance_id prettier__prettier-12930 (prettier__prettier-12930.json); keeping first.
+[03:18:56] WARNING: duplicate instance_id prettier__prettier-14400 (prettier__prettier-14400.json); keeping first.
+[03:18:56] WARNING: duplicate instance_id prettier__prettier-3723 (prettier__prettier-3723.json); keeping first.
+[03:18:56] WARNING: duplicate instance_id prettier__prettier-6604 (prettier__prettier-6604.json); keeping first.
+[03:18:56] WARNING: duplicate instance_id serverless__serverless-2576 (serverless__serverless-2576.json); keeping first.
+[03:18:56] WARNING: duplicate instance_id serverless__serverless-2945 (serverless__serverless-2945.json); keeping first.
+[03:18:56] WARNING: duplicate instance_id serverless__serverless-3457 (serverless__serverless-3457.json); keeping first.
+[03:18:56] WARNING: duplicate instance_id serverless__serverless-5775 (serverless__serverless-5775.json); keeping first.
+[03:18:56] WARNING: duplicate instance_id sveltejs__svelte-1923 (sveltejs__svelte-1923.json); keeping first.
+[03:18:56] WARNING: duplicate instance_id sveltejs__svelte-2185 (sveltejs__svelte-2185.json); keeping first.
+[03:18:56] WARNING: duplicate instance_id sveltejs__svelte-3151 (sveltejs__svelte-3151.json); keeping first.
+[03:18:56] WARNING: duplicate instance_id sveltejs__svelte-3305 (sveltejs__svelte-3305.json); keeping first.
+[03:18:56] WARNING: duplicate instance_id sveltejs__svelte-3314 (sveltejs__svelte-3314.json); keeping first.
+[03:18:56] WARNING: duplicate instance_id sveltejs__svelte-3403 (sveltejs__svelte-3403.json); keeping first.
+[03:18:56] WARNING: duplicate instance_id sveltejs__svelte-3451 (sveltejs__svelte-3451.json); keeping first.
+[03:18:56] WARNING: duplicate instance_id sveltejs__svelte-3702 (sveltejs__svelte-3702.json); keeping first.
+[03:18:56] WARNING: duplicate instance_id sveltejs__svelte-3749 (sveltejs__svelte-3749.json); keeping first.
+[03:18:56] WARNING: duplicate instance_id sveltejs__svelte-3949 (sveltejs__svelte-3949.json); keeping first.
+[03:18:56] WARNING: duplicate instance_id sveltejs__svelte-4288 (sveltejs__svelte-4288.json); keeping first.
+[03:18:56] WARNING: duplicate instance_id sveltejs__svelte-510 (sveltejs__svelte-510.json); keeping first.
+[03:18:56] WARNING: duplicate instance_id sveltejs__svelte-5875 (sveltejs__svelte-5875.json); keeping first.
+[03:18:56] WARNING: duplicate instance_id sveltejs__svelte-6458 (sveltejs__svelte-6458.json); keeping first.
+[03:18:56] WARNING: duplicate instance_id sveltejs__svelte-728 (sveltejs__svelte-728.json); keeping first.
+[03:18:56] WARNING: duplicate instance_id yt-dlp__yt-dlp-5933 (yt-dlp__yt-dlp-5933.json); keeping first.
+[03:18:56]   Wrote 86 prediction(s) -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Poly_resolution_preds.jsonl
+[03:18:56] === Step 2/2: Run resolution harness ===
+[03:18:56]   Backend     : Poly
+[03:18:56]   Dataset     : AmazonScience/SWE-PolyBench (split=test)
+[03:18:56]   Run id      : epimetheus_Poly
+[03:18:56]   Report dir  : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet
+[03:19:11]   Poly dataset subset : 1 instance(s)
+[03:19:11]   Running resilient Poly worker: /home/andre/workspace/ContextBench/.venvs/resolution/bin/python /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/poly_eval/epimetheus_Poly/_poly_worker.py /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/poly_eval/epimetheus_Poly/dataset_subset.csv /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/poly_eval/epimetheus_Poly/results /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/poly_eval/epimetheus_Poly/repos 1
+/home/andre/workspace/ContextBench/.venvs/resolution/lib/python3.12/site-packages/tree_sitter/__init__.py:36: FutureWarning: Language(path, name) is deprecated. Use Language(ptr, name) instead.
+  warn("{} is deprecated. Use {} instead.".format(old, new), FutureWarning)
+[poly-worker] evaluate keras-team__keras-19775
+[poly-worker] using local prebuilt ghcr.io/timesler/swe-polybench.eval.x86_64.keras-team__keras-19775:v1.1 -> polybench_python_keras-team__keras-19775
+2026-09-11 03:19:14.352 | INFO     | poly_bench_evaluation.run_evaluation:evaluate_instance:130 - Successfully pulled pre-built image from GHCR: polybench_python_keras-team__keras-19775
+2026-09-11 03:19:16.006 | INFO     | poly_bench_evaluation.run_evaluation:evaluate_instance:235 - docker running for keras-team__keras-19775
+2026-09-11 03:22:42.461 | DEBUG    | poly_bench_evaluation.docker_utils:_cleanup:432 - Removed local image tag: polybench_python_keras-team__keras-19775
+2026-09-11 03:22:42.828 | INFO     | poly_bench_evaluation.scoring:aggregate_logs:256 - Writing aggregated results to result.json
+Total resolved: 48/72
+Total pass rate: 66.67%
+
+Pass rate by language:
+Python: 1/1 (100.0%)
+
+Pass rate by task category:
+Bug Fix: 1/1 (100.0%)
+
+File retrieval metrics by language:
+          file_recall  file_precision  file_f1
+language                                      
+Python            1.0             1.0      1.0
+
+File retrieval metrics overall:
+file_recall       0.76
+file_precision    0.84
+file_f1           0.76
+[poly-worker] done failures=0
+[03:22:44]   Poly report -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Poly.epimetheus_Poly.json
+[03:22:44] === Issue resolution summary ===
+[03:22:44]   Report            : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Poly.epimetheus_Poly.json
+[03:22:44]   Total (evaluated) : 72
+[03:22:44]   Submitted (preds) : 1
+[03:22:44]   Completed         : 71
+[03:22:44]   Resolved          : 48
+[03:22:44]   Unresolved        : 24
+[03:22:44]   Errored           : 1
+[03:22:44]   Empty patches     : 71
+[03:22:44]   Resolved rate     : 48/72 = 66.7% (of evaluated)
+[03:22:44]   Resolved IDs      : huggingface__transformers-15795, sveltejs__svelte-3702, huggingface__transformers-24238, mui__material-ui-13778, mui__material-ui-11451, microsoft__vscode-160342, mui__material-ui-18141, huggingface__transformers-8624, keras-team__keras-19838, sveltejs__svelte-3151, sveltejs__svelte-4288, huggingface__transformers-23796, prettier__prettier-11000, huggingface__transformers-19590, huggingface__transformers-27463, microsoft__vscode-135197, keras-team__keras-19844, sveltejs__svelte-3403, huggingface__transformers-26839, sveltejs__svelte-3314, huggingface__transformers-12981, huggingface__transformers-28535, serverless__serverless-5775, sveltejs__svelte-3949, sveltejs__svelte-510, prettier__prettier-6604, huggingface__transformers-29449, mui__material-ui-28186, sveltejs__svelte-3305, keras-team__keras-19924, sveltejs__svelte-1923, sveltejs__svelte-5875, prettier__prettier-12930, sveltejs__svelte-3749, huggingface__transformers-30556, keras-team__keras-19484, huggingface__transformers-6098, mui__material-ui-19849, sveltejs__svelte-2185, serverless__serverless-3457, microsoft__vscode-177084, huggingface__transformers-16198, huggingface__transformers-15158, huggingface__transformers-7078, langchain-ai__langchain-4009, prettier__prettier-14400, prettier__prettier-3723, keras-team__keras-19775
+[03:22:44] Done.
+[03:22:44]   Predictions : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Poly_resolution_preds.jsonl
+[03:22:44]   Report      : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Poly.epimetheus_Poly.json
+[03:22:46] Resolution scores -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Poly_resolution.jsonl
+[03:22:47] Deleted docker image: ghcr.io/timesler/swe-polybench.eval.x86_64.keras-team__keras-19775:v1.1
+[03:22:48] Deleted docker image: ghcr.io/timesler/swe-polybench.eval.x86_64.keras-team__keras-19775:latest

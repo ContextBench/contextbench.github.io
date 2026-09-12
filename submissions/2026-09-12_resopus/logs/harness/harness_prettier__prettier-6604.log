@@ -1,0 +1,198 @@
+[02:53:58] Retrieval eval: prettier__prettier-6604
+  Setting up repository
+  Warning: repo_url mismatch; overriding with /home/andre/workspace/ContextBench/repos/github.com__prettier__prettier
+  Repo: /home/andre/workspace/ContextBench/repos/github.com__prettier__prettier
+  Commit: affa24ce764b...
+  Checkout ready: /home/andre/workspace/ContextBench/repos/_worktrees/contextbench_worktrees/__home__andre__workspace__ContextBench__repos__github.com__prettier__prettier/affa24ce764bd14ac087abeef0603012f5c635d6
+  Parsing trajectory
+  Extracted: 14 steps, final has 2 files
+DETAILS:
+instance_id=prettier__prettier-6604
+  gold_files: n=8
+    - CHANGELOG.unreleased.md
+    - src/language-js/clean.js
+    - src/language-js/needs-parens.js
+    - src/language-js/printer-estree.js
+    - tests/typescript_keyof/__snapshots__/jsfmt.spec.js.snap
+    - tests/typescript_keyof/keyof.ts
+    - tests/typescript_union/__snapshots__/jsfmt.spec.js.snap
+    - tests/typescript_union/union-parens.ts
+  pred_files: n=2
+    - src/language-js/needs-parens.js
+    - src/language-js/printer-estree.js
+  hit_files: n=2
+    - src/language-js/needs-parens.js
+    - src/language-js/printer-estree.js
+  gold_symbols: n=11
+    - src/language-js/clean.js:function_declaration@15-5756
+    - src/language-js/needs-parens.js:function_declaration@2195-21620
+    - src/language-js/needs-parens.js:function_declaration@23540-23688
+    - src/language-js/printer-estree.js:arrow_function@101944-102095
+    - src/language-js/printer-estree.js:arrow_function@102117-102125
+    - src/language-js/printer-estree.js:arrow_function@4499-4769
+    - src/language-js/printer-estree.js:arrow_function@5400-5613
+    - src/language-js/printer-estree.js:function_declaration@12622-105283
+    - src/language-js/printer-estree.js:function_declaration@3144-6366
+    - tests/typescript_union/union-parens.ts:class_declaration@594-635
+    - tests/typescript_union/union-parens.ts:function_declaration@503-537
+  pred_symbols: n=20
+    - src/language-js/needs-parens.js:arrow_function@1533-1568
+    - src/language-js/needs-parens.js:arrow_function@996-1124
+    - src/language-js/needs-parens.js:function_declaration@1147-1419
+    - src/language-js/needs-parens.js:function_declaration@1423-2191
+    - src/language-js/needs-parens.js:function_declaration@21622-23538
+    - src/language-js/needs-parens.js:function_declaration@2195-21620
+    - src/language-js/needs-parens.js:function_declaration@23540-23688
+    - src/language-js/needs-parens.js:function_declaration@23690-23837
+    - src/language-js/needs-parens.js:function_declaration@23839-24970
+    - src/language-js/needs-parens.js:function_declaration@242-2193
+    - src/language-js/needs-parens.js:function_declaration@647-886
+    - src/language-js/needs-parens.js:function_declaration@890-1143
+    - src/language-js/printer-estree.js:arrow_function@101944-102095
+    - src/language-js/printer-estree.js:arrow_function@102117-102125
+    - src/language-js/printer-estree.js:arrow_function@4499-4769
+    - src/language-js/printer-estree.js:arrow_function@5400-5613
+    - src/language-js/printer-estree.js:function_declaration@12622-105283
+    - src/language-js/printer-estree.js:function_declaration@2795-3142
+    - src/language-js/printer-estree.js:function_declaration@3144-6366
+    - src/language-js/printer-estree.js:function_declaration@6368-6614
+  hit_symbols: n=8
+    - src/language-js/needs-parens.js:function_declaration@2195-21620
+    - src/language-js/needs-parens.js:function_declaration@23540-23688
+    - src/language-js/printer-estree.js:arrow_function@101944-102095
+    - src/language-js/printer-estree.js:arrow_function@102117-102125
+    - src/language-js/printer-estree.js:arrow_function@4499-4769
+    - src/language-js/printer-estree.js:arrow_function@5400-5613
+    - src/language-js/printer-estree.js:function_declaration@12622-105283
+    - src/language-js/printer-estree.js:function_declaration@3144-6366
+
+[02:53:58] Retrieval prettier__prettier-6604: line_f1=0.601
+[02:53:58] Resolution resume: 0 harness-scored, 1 pending (stable run_id=epimetheus_Poly)
+[02:53:58] Waiting for Docker prefetch Poly prettier__prettier-6604
+[02:53:58] Docker prefetch Poly prettier__prettier-6604: ghcr.io/timesler/swe-polybench.eval.x86_64.prettier__prettier-6604:v1.1, ghcr.io/timesler/swe-polybench.eval.x86_64.prettier__prettier-6604:latest
+[02:53:58] Docker image already present: ghcr.io/timesler/swe-polybench.eval.x86_64.prettier__prettier-6604:v1.1
+[02:53:58] Docker image already present: ghcr.io/timesler/swe-polybench.eval.x86_64.prettier__prettier-6604:latest
+[02:53:59] Resolution eval (pending=1): /home/andre/workspace/ContextBench/agent-frameworks/epimetheus/.venv/bin/python /home/andre/workspace/ContextBench/scripts/run_resolution_eval.py --input-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Poly --bench Poly --model-name epimetheus__Poly --run-id epimetheus_Poly --predictions /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Poly_resolution_preds.jsonl --report-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet --instance-ids prettier__prettier-6604 --max-workers 1
+[02:53:59] === Step 1/2: Build SWE-bench predictions ===
+[02:53:59]   Input dir   : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Poly
+[02:53:59] WARNING: duplicate instance_id coder__code-server-4923 (coder__code-server-4923.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id coder__code-server-6278 (coder__code-server-6278.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id huggingface__transformers-12981 (huggingface__transformers-12981.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id huggingface__transformers-13865 (huggingface__transformers-13865.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id huggingface__transformers-13989 (huggingface__transformers-13989.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id huggingface__transformers-15158 (huggingface__transformers-15158.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id huggingface__transformers-15795 (huggingface__transformers-15795.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id huggingface__transformers-16198 (huggingface__transformers-16198.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id huggingface__transformers-19590 (huggingface__transformers-19590.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id huggingface__transformers-21969 (huggingface__transformers-21969.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id huggingface__transformers-22458 (huggingface__transformers-22458.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id huggingface__transformers-22920 (huggingface__transformers-22920.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id huggingface__transformers-23223 (huggingface__transformers-23223.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id huggingface__transformers-23796 (huggingface__transformers-23796.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id huggingface__transformers-24238 (huggingface__transformers-24238.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id huggingface__transformers-26839 (huggingface__transformers-26839.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id huggingface__transformers-27463 (huggingface__transformers-27463.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id huggingface__transformers-28535 (huggingface__transformers-28535.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id huggingface__transformers-29449 (huggingface__transformers-29449.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id huggingface__transformers-30556 (huggingface__transformers-30556.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id huggingface__transformers-6098 (huggingface__transformers-6098.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id huggingface__transformers-7078 (huggingface__transformers-7078.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id huggingface__transformers-8624 (huggingface__transformers-8624.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id keras-team__keras-18553 (keras-team__keras-18553.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id keras-team__keras-18871 (keras-team__keras-18871.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id keras-team__keras-19838 (keras-team__keras-19838.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id keras-team__keras-19844 (keras-team__keras-19844.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id keras-team__keras-19924 (keras-team__keras-19924.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id keras-team__keras-19973 (keras-team__keras-19973.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id langchain-ai__langchain-19331 (langchain-ai__langchain-19331.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id langchain-ai__langchain-4009 (langchain-ai__langchain-4009.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id langchain-ai__langchain-5584 (langchain-ai__langchain-5584.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id microsoft__vscode-109750 (microsoft__vscode-109750.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id microsoft__vscode-135197 (microsoft__vscode-135197.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id microsoft__vscode-153121 (microsoft__vscode-153121.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id microsoft__vscode-160342 (microsoft__vscode-160342.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id microsoft__vscode-177084 (microsoft__vscode-177084.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id mui__material-ui-11451 (mui__material-ui-11451.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id mui__material-ui-11987 (mui__material-ui-11987.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id mui__material-ui-13778 (mui__material-ui-13778.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id mui__material-ui-15526 (mui__material-ui-15526.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id mui__material-ui-18141 (mui__material-ui-18141.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id mui__material-ui-19072 (mui__material-ui-19072.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id mui__material-ui-19849 (mui__material-ui-19849.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id mui__material-ui-26061 (mui__material-ui-26061.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id mui__material-ui-28186 (mui__material-ui-28186.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id prettier__prettier-11000 (prettier__prettier-11000.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id prettier__prettier-12930 (prettier__prettier-12930.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id prettier__prettier-3723 (prettier__prettier-3723.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id prettier__prettier-6604 (prettier__prettier-6604.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id serverless__serverless-2576 (serverless__serverless-2576.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id serverless__serverless-2945 (serverless__serverless-2945.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id serverless__serverless-3457 (serverless__serverless-3457.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id serverless__serverless-5775 (serverless__serverless-5775.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id sveltejs__svelte-2185 (sveltejs__svelte-2185.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id sveltejs__svelte-3305 (sveltejs__svelte-3305.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id sveltejs__svelte-3314 (sveltejs__svelte-3314.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id sveltejs__svelte-3403 (sveltejs__svelte-3403.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id sveltejs__svelte-3451 (sveltejs__svelte-3451.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id sveltejs__svelte-3702 (sveltejs__svelte-3702.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id sveltejs__svelte-3749 (sveltejs__svelte-3749.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id sveltejs__svelte-3949 (sveltejs__svelte-3949.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id sveltejs__svelte-4288 (sveltejs__svelte-4288.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id sveltejs__svelte-510 (sveltejs__svelte-510.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id sveltejs__svelte-5875 (sveltejs__svelte-5875.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id sveltejs__svelte-6458 (sveltejs__svelte-6458.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id sveltejs__svelte-728 (sveltejs__svelte-728.json); keeping first.
+[02:53:59] WARNING: duplicate instance_id yt-dlp__yt-dlp-5933 (yt-dlp__yt-dlp-5933.json); keeping first.
+[02:53:59]   Wrote 81 prediction(s) -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Poly_resolution_preds.jsonl
+[02:53:59] === Step 2/2: Run resolution harness ===
+[02:53:59]   Backend     : Poly
+[02:53:59]   Dataset     : AmazonScience/SWE-PolyBench (split=test)
+[02:53:59]   Run id      : epimetheus_Poly
+[02:53:59]   Report dir  : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet
+[02:54:03]   Poly dataset subset : 1 instance(s)
+[02:54:03]   Running resilient Poly worker: /home/andre/workspace/ContextBench/.venvs/resolution/bin/python /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/poly_eval/epimetheus_Poly/_poly_worker.py /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/poly_eval/epimetheus_Poly/dataset_subset.csv /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/poly_eval/epimetheus_Poly/results /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/poly_eval/epimetheus_Poly/repos 1
+/home/andre/workspace/ContextBench/.venvs/resolution/lib/python3.12/site-packages/tree_sitter/__init__.py:36: FutureWarning: Language(path, name) is deprecated. Use Language(ptr, name) instead.
+  warn("{} is deprecated. Use {} instead.".format(old, new), FutureWarning)
+[poly-worker] evaluate prettier__prettier-6604
+[poly-worker] using local prebuilt ghcr.io/timesler/swe-polybench.eval.x86_64.prettier__prettier-6604:v1.1 -> polybench_javascript_prettier__prettier-6604
+2026-09-11 02:54:05.795 | INFO     | poly_bench_evaluation.run_evaluation:evaluate_instance:130 - Successfully pulled pre-built image from GHCR: polybench_javascript_prettier__prettier-6604
+2026-09-11 02:54:06.213 | INFO     | poly_bench_evaluation.run_evaluation:evaluate_instance:235 - docker running for prettier__prettier-6604
+2026-09-11 02:54:20.410 | DEBUG    | poly_bench_evaluation.docker_utils:_cleanup:432 - Removed local image tag: polybench_javascript_prettier__prettier-6604
+2026-09-11 02:54:20.453 | INFO     | poly_bench_evaluation.scoring:aggregate_logs:256 - Writing aggregated results to result.json
+Total resolved: 43/67
+Total pass rate: 64.18%
+
+Pass rate by language:
+JavaScript: 1/1 (100.0%)
+
+Pass rate by task category:
+Bug Fix: 1/1 (100.0%)
+
+File retrieval metrics by language:
+            file_recall  file_precision  file_f1
+language                                        
+JavaScript          0.5             1.0     0.67
+
+File retrieval metrics overall:
+file_recall       0.75
+file_precision    0.84
+file_f1           0.76
+[poly-worker] done failures=0
+[02:54:20]   Poly report -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Poly.epimetheus_Poly.json
+[02:54:20] === Issue resolution summary ===
+[02:54:20]   Report            : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Poly.epimetheus_Poly.json
+[02:54:20]   Total (evaluated) : 67
+[02:54:20]   Submitted (preds) : 1
+[02:54:20]   Completed         : 66
+[02:54:20]   Resolved          : 43
+[02:54:20]   Unresolved        : 24
+[02:54:20]   Errored           : 1
+[02:54:20]   Empty patches     : 66
+[02:54:20]   Resolved rate     : 43/67 = 64.2% (of evaluated)
+[02:54:20]   Resolved IDs      : huggingface__transformers-15795, sveltejs__svelte-3702, huggingface__transformers-24238, mui__material-ui-13778, mui__material-ui-11451, microsoft__vscode-160342, mui__material-ui-18141, huggingface__transformers-8624, keras-team__keras-19838, sveltejs__svelte-4288, huggingface__transformers-23796, prettier__prettier-11000, huggingface__transformers-19590, huggingface__transformers-27463, microsoft__vscode-135197, keras-team__keras-19844, sveltejs__svelte-3403, huggingface__transformers-26839, sveltejs__svelte-3314, huggingface__transformers-12981, huggingface__transformers-28535, serverless__serverless-5775, sveltejs__svelte-3949, sveltejs__svelte-510, prettier__prettier-6604, huggingface__transformers-29449, mui__material-ui-28186, sveltejs__svelte-3305, keras-team__keras-19924, sveltejs__svelte-5875, prettier__prettier-12930, sveltejs__svelte-3749, huggingface__transformers-30556, huggingface__transformers-6098, mui__material-ui-19849, sveltejs__svelte-2185, serverless__serverless-3457, microsoft__vscode-177084, huggingface__transformers-16198, huggingface__transformers-15158, huggingface__transformers-7078, langchain-ai__langchain-4009, prettier__prettier-3723
+[02:54:20] Done.
+[02:54:20]   Predictions : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Poly_resolution_preds.jsonl
+[02:54:20]   Report      : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Poly.epimetheus_Poly.json
+[02:54:21] Resolution scores -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Poly_resolution.jsonl
+[02:54:21] Deleted docker image: ghcr.io/timesler/swe-polybench.eval.x86_64.prettier__prettier-6604:v1.1
+[02:54:23] Deleted docker image: ghcr.io/timesler/swe-polybench.eval.x86_64.prettier__prettier-6604:latest

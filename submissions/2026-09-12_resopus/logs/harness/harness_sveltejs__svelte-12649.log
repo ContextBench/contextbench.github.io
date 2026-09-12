@@ -1,0 +1,188 @@
+[21:19:04] Retrieval eval: sveltejs__svelte-12649
+  Setting up repository
+  Warning: repo_url mismatch; overriding with /home/andre/workspace/ContextBench/repos/github.com__sveltejs__svelte
+  Repo: /home/andre/workspace/ContextBench/repos/github.com__sveltejs__svelte
+  Commit: e417d3a2d281...
+  Checkout ready: /home/andre/workspace/ContextBench/repos/_worktrees/contextbench_worktrees/__home__andre__workspace__ContextBench__repos__github.com__sveltejs__svelte/e417d3a2d281a5ec9b595be5ffbd47efe57b28c3
+  Parsing trajectory
+  Extracted: 13 steps, final has 8 files
+DETAILS:
+instance_id=sveltejs__svelte-12649
+  gold_files: n=4
+    - packages/svelte/package.json
+    - packages/svelte/src/internal/client/dom/operations.js
+    - packages/svelte/src/internal/client/dom/template.js
+    - packages/svelte/src/internal/client/runtime.js
+  pred_files: n=8
+    - packages/svelte/package.json
+    - packages/svelte/src/compiler/phases/3-transform/client/visitors/template.js
+    - packages/svelte/src/compiler/phases/constants.js
+    - packages/svelte/src/constants.js
+    - packages/svelte/src/internal/client/dev/ownership.js
+    - packages/svelte/src/internal/client/dom/elements/attributes.js
+    - packages/svelte/src/internal/server/index.js
+    - packages/svelte/tests/runtime-legacy/samples/set-undefined-attr/_config.js
+  hit_files: n=1
+    - packages/svelte/package.json
+  gold_symbols: n=14
+    - packages/svelte/src/internal/client/dom/operations.js:function_declaration@1266-1323
+    - packages/svelte/src/internal/client/dom/operations.js:function_declaration@1481-1845
+    - packages/svelte/src/internal/client/dom/operations.js:function_declaration@2045-2745
+    - packages/svelte/src/internal/client/dom/operations.js:function_declaration@2931-3506
+    - packages/svelte/src/internal/client/dom/operations.js:function_declaration@3583-3644
+    - packages/svelte/src/internal/client/dom/operations.js:function_declaration@597-1234
+    - packages/svelte/src/internal/client/dom/template.js:function_declaration@522-625
+    - packages/svelte/src/internal/client/dom/template.js:function_declaration@753-1776
+    - packages/svelte/src/internal/client/runtime.js:function_declaration@1358-1429
+    - packages/svelte/src/internal/client/runtime.js:function_declaration@2693-2776
+    - packages/svelte/src/internal/client/runtime.js:function_declaration@3395-3484
+    - packages/svelte/src/internal/client/runtime.js:function_declaration@3845-3934
+    - packages/svelte/src/internal/client/runtime.js:function_declaration@3943-4002
+    - packages/svelte/src/internal/client/runtime.js:function_declaration@4037-4144
+  pred_symbols: n=20
+    - packages/svelte/src/compiler/phases/3-transform/client/visitors/template.js:function_declaration@11215-13568
+    - packages/svelte/src/compiler/phases/3-transform/client/visitors/template.js:function_declaration@14419-16388
+    - packages/svelte/src/compiler/phases/3-transform/client/visitors/template.js:function_declaration@16621-17280
+    - packages/svelte/src/compiler/phases/3-transform/client/visitors/template.js:method_definition@58066-68338
+    - packages/svelte/src/internal/client/dom/elements/attributes.js:arrow_function@1278-1676
+    - packages/svelte/src/internal/client/dom/elements/attributes.js:arrow_function@7981-8064
+    - packages/svelte/src/internal/client/dom/elements/attributes.js:arrow_function@9422-9572
+    - packages/svelte/src/internal/client/dom/elements/attributes.js:function_declaration@10781-11302
+    - packages/svelte/src/internal/client/dom/elements/attributes.js:function_declaration@11397-11756
+    - packages/svelte/src/internal/client/dom/elements/attributes.js:function_declaration@11842-12018
+    - packages/svelte/src/internal/client/dom/elements/attributes.js:function_declaration@1864-2080
+    - packages/svelte/src/internal/client/dom/elements/attributes.js:function_declaration@2153-2383
+    - packages/svelte/src/internal/client/dom/elements/attributes.js:function_declaration@2489-3582
+    - packages/svelte/src/internal/client/dom/elements/attributes.js:function_declaration@3677-3803
+    - packages/svelte/src/internal/client/dom/elements/attributes.js:function_declaration@4613-9597
+    - packages/svelte/src/internal/client/dom/elements/attributes.js:function_declaration@7843-7908
+    - packages/svelte/src/internal/client/dom/elements/attributes.js:function_declaration@810-1797
+    - packages/svelte/src/internal/client/dom/elements/attributes.js:function_declaration@9808-10244
+    - packages/svelte/src/internal/server/index.js:function_declaration@5263-6350
+    - packages/svelte/src/internal/server/index.js:function_declaration@6449-6707
+  hit_symbols: n=0
+
+[21:19:04] Retrieval sveltejs__svelte-12649: line_f1=0.052
+[21:19:04] Resolution resume: 0 harness-scored, 1 pending (stable run_id=epimetheus_Multi)
+[21:19:04] Resolution eval (pending=1): /home/andre/workspace/ContextBench/agent-frameworks/epimetheus/.venv/bin/python /home/andre/workspace/ContextBench/scripts/run_resolution_eval.py --input-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Multi --bench Multi --model-name epimetheus__Multi --run-id epimetheus_Multi --predictions /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution_preds.jsonl --report-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet --instance-ids sveltejs__svelte-12649 --max-workers 1
+[21:19:04] === Step 1/2: Build SWE-bench predictions ===
+[21:19:04]   Input dir   : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Multi
+[21:19:04] WARNING: duplicate instance_id axios__axios-5661 (axios__axios-5661.json); keeping first.
+[21:19:04] WARNING: duplicate instance_id clap-rs__clap-2501 (clap-rs__clap-2501.json); keeping first.
+[21:19:04] WARNING: duplicate instance_id clap-rs__clap-2758 (clap-rs__clap-2758.json); keeping first.
+[21:19:04] WARNING: duplicate instance_id clap-rs__clap-2895 (clap-rs__clap-2895.json); keeping first.
+[21:19:04] WARNING: duplicate instance_id clap-rs__clap-3421 (clap-rs__clap-3421.json); keeping first.
+[21:19:04] WARNING: duplicate instance_id clap-rs__clap-3684 (clap-rs__clap-3684.json); keeping first.
+[21:19:04] WARNING: duplicate instance_id clap-rs__clap-3975 (clap-rs__clap-3975.json); keeping first.
+[21:19:04] WARNING: duplicate instance_id cli__cli-2250 (cli__cli-2250.json); keeping first.
+[21:19:04] WARNING: duplicate instance_id cli__cli-2351 (cli__cli-2351.json); keeping first.
+[21:19:04] WARNING: duplicate instance_id cli__cli-2785 (cli__cli-2785.json); keeping first.
+[21:19:04] WARNING: duplicate instance_id cli__cli-3270 (cli__cli-3270.json); keeping first.
+[21:19:04] WARNING: duplicate instance_id cli__cli-3608 (cli__cli-3608.json); keeping first.
+[21:19:04] WARNING: duplicate instance_id cli__cli-5019 (cli__cli-5019.json); keeping first.
+[21:19:04] WARNING: duplicate instance_id cli__cli-5396 (cli__cli-5396.json); keeping first.
+[21:19:04] WARNING: duplicate instance_id cli__cli-7645 (cli__cli-7645.json); keeping first.
+[21:19:04] WARNING: duplicate instance_id cli__cli-8157 (cli__cli-8157.json); keeping first.
+[21:19:04] WARNING: duplicate instance_id expressjs__express-3870 (expressjs__express-3870.json); keeping first.
+[21:19:04] WARNING: duplicate instance_id facebook__zstd-1243 (facebook__zstd-1243.json); keeping first.
+[21:19:04] WARNING: duplicate instance_id facebook__zstd-1532 (facebook__zstd-1532.json); keeping first.
+[21:19:04] WARNING: duplicate instance_id facebook__zstd-637 (facebook__zstd-637.json); keeping first.
+[21:19:04] WARNING: duplicate instance_id fasterxml__jackson-core-1016 (fasterxml__jackson-core-1016.json); keeping first.
+[21:19:04] WARNING: duplicate instance_id fasterxml__jackson-core-183 (fasterxml__jackson-core-183.json); keeping first.
+[21:19:04] WARNING: duplicate instance_id fasterxml__jackson-databind-3701 (fasterxml__jackson-databind-3701.json); keeping first.
+[21:19:04] WARNING: duplicate instance_id fasterxml__jackson-databind-4641 (fasterxml__jackson-databind-4641.json); keeping first.
+[21:19:04] WARNING: duplicate instance_id google__gson-1391 (google__gson-1391.json); keeping first.
+[21:19:04] WARNING: duplicate instance_id iamkun__dayjs-1611 (iamkun__dayjs-1611.json); keeping first.
+[21:19:04] WARNING: duplicate instance_id iamkun__dayjs-882 (iamkun__dayjs-882.json); keeping first.
+[21:19:04] WARNING: duplicate instance_id jqlang__jq-2654 (jqlang__jq-2654.json); keeping first.
+[21:19:04] WARNING: duplicate instance_id mui__material-ui-29898 (mui__material-ui-29898.json); keeping first.
+[21:19:04] WARNING: duplicate instance_id mui__material-ui-30374 (mui__material-ui-30374.json); keeping first.
+[21:19:04] WARNING: duplicate instance_id mui__material-ui-34159 (mui__material-ui-34159.json); keeping first.
+[21:19:04] WARNING: duplicate instance_id mui__material-ui-34401 (mui__material-ui-34401.json); keeping first.
+[21:19:04] WARNING: duplicate instance_id mui__material-ui-34437 (mui__material-ui-34437.json); keeping first.
+[21:19:04] WARNING: duplicate instance_id mui__material-ui-39108 (mui__material-ui-39108.json); keeping first.
+[21:19:04] WARNING: duplicate instance_id mui__material-ui-39196 (mui__material-ui-39196.json); keeping first.
+[21:19:04] WARNING: duplicate instance_id nlohmann__json-4512 (nlohmann__json-4512.json); keeping first.
+[21:19:04] WARNING: duplicate instance_id nushell__nushell-13357 (nushell__nushell-13357.json); keeping first.
+[21:19:04] WARNING: duplicate instance_id ponylang__ponyc-2201 (ponylang__ponyc-2201.json); keeping first.
+[21:19:04] WARNING: duplicate instance_id ponylang__ponyc-2247 (ponylang__ponyc-2247.json); keeping first.
+[21:19:04] WARNING: duplicate instance_id ponylang__ponyc-2586 (ponylang__ponyc-2586.json); keeping first.
+[21:19:04] WARNING: duplicate instance_id ponylang__ponyc-4595 (ponylang__ponyc-4595.json); keeping first.
+[21:19:04] WARNING: duplicate instance_id rayon-rs__rayon-986 (rayon-rs__rayon-986.json); keeping first.
+[21:19:04] WARNING: duplicate instance_id simdjson__simdjson-1695 (simdjson__simdjson-1695.json); keeping first.
+[21:19:04] WARNING: duplicate instance_id sveltejs__svelte-10608 (sveltejs__svelte-10608.json); keeping first.
+[21:19:04] WARNING: duplicate instance_id sveltejs__svelte-11913 (sveltejs__svelte-11913.json); keeping first.
+[21:19:04] WARNING: duplicate instance_id sveltejs__svelte-12649 (sveltejs__svelte-12649.json); keeping first.
+[21:19:04] WARNING: duplicate instance_id sveltejs__svelte-14629 (sveltejs__svelte-14629.json); keeping first.
+[21:19:04] WARNING: duplicate instance_id sveltejs__svelte-14935 (sveltejs__svelte-14935.json); keeping first.
+[21:19:04] WARNING: duplicate instance_id vuejs__core-10027 (vuejs__core-10027.json); keeping first.
+[21:19:04] WARNING: duplicate instance_id vuejs__core-11517 (vuejs__core-11517.json); keeping first.
+[21:19:04] WARNING: duplicate instance_id vuejs__core-9213 (vuejs__core-9213.json); keeping first.
+[21:19:04]   Wrote 51 prediction(s) -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution_preds.jsonl
+[21:19:04] === Step 2/2: Run resolution harness ===
+[21:19:04]   Backend     : Multi
+[21:19:04]   Dataset     : ByteDance-Seed/Multi-SWE-bench (split=train)
+[21:19:04]   Run id      : epimetheus_Multi
+[21:19:04]   Report dir  : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet
+
+Fetching 50 files:   0%|          | 0/50 [00:00<?, ?it/s]
+Fetching 50 files: 100%|██████████| 50/50 [00:00<00:00, 3288.21it/s]
+[21:19:13]   Running: /home/andre/workspace/ContextBench/.venvs/resolution/bin/python -m multi_swe_bench.harness.run_evaluation --config /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/multi_eval/epimetheus_Multi/config.json
+[2026-09-10 21:19:13,595] [run_evaluation.py] [INFO]: Initialize logger successfully.
+[2026-09-10 21:19:13,595] [run_evaluation.py] [INFO]: Building images...
+[2026-09-10 21:19:13,595] [run_evaluation.py] [INFO]: Loading repo commits...
+[2026-09-10 21:19:13,595] [run_evaluation.py] [INFO]: Creating instances...
+[2026-09-10 21:19:13,595] [run_evaluation.py] [INFO]: Loading datasets...
+[2026-09-10 21:19:13,826] [run_evaluation.py] [INFO]: Successfully loaded 1 valid datasets from ['/home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/multi_eval/epimetheus_Multi/dataset.jsonl']
+[2026-09-10 21:19:13,827] [run_evaluation.py] [INFO]: Successfully loaded 1 valid instances.
+
+Checking commit hashes:   0%|          | 0/1 [00:00<?, ?it/s]
+
+Checking commit hashes for sveltejs/svelte:   0%|          | 0/1 [00:00<?, ?it/s][A
+Checking commit hashes for sveltejs/svelte: 100%|██████████| 1/1 [00:00<00:00, 39945.75it/s]
+
+Checking commit hashes: 100%|██████████| 1/1 [00:00<00:00,  5.24it/s]
+Checking commit hashes: 100%|██████████| 1/1 [00:00<00:00,  5.24it/s]
+[2026-09-10 21:19:14,025] [run_evaluation.py] [INFO]: Total images: 2
+
+Building images:   0%|          | 0/2 [00:00<?, ?it/s]
+Building images: 100%|██████████| 2/2 [00:00<00:00, 41.50it/s]
+[2026-09-10 21:19:14,073] [run_evaluation.py] [INFO]: Images built successfully.
+[2026-09-10 21:19:14,074] [run_evaluation.py] [INFO]: Running instances...
+
+Running instances:   0%|          | 0/1 [00:00<?, ?it/s][2026-09-10 21:19:14,074] [run_evaluation.py] [INFO]: Running mswebench/sveltejs_m_svelte:pr-12649 with command: bash /home/fix-run.sh...
+
+Running instances: 100%|██████████| 1/1 [00:26<00:00, 26.35s/it]
+Running instances: 100%|██████████| 1/1 [00:26<00:00, 26.35s/it]
+[2026-09-10 21:19:40,427] [run_evaluation.py] [INFO]: Instances run successfully.
+[2026-09-10 21:19:40,427] [run_evaluation.py] [INFO]: Running evaluation...
+[2026-09-10 21:19:40,427] [gen_report.py] [INFO]: Initialize logger successfully.
+[2026-09-10 21:19:40,427] [gen_report.py] [INFO]: Collecting report tasks...
+[2026-09-10 21:19:40,429] [gen_report.py] [INFO]: Successfully collected 51 tasks.
+[2026-09-10 21:19:40,429] [gen_report.py] [INFO]: Loading dataset...
+[2026-09-10 21:19:40,692] [gen_report.py] [INFO]: Successfully loaded 1 valid datasets from ['/home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/multi_eval/epimetheus_Multi/dataset.jsonl']
+
+Generating eval reports:   0%|          | 0/1 [00:00<?, ?it/s]
+Generating eval reports: 100%|██████████| 1/1 [00:00<00:00,  2.81it/s]
+Generating eval reports: 100%|██████████| 1/1 [00:00<00:00,  2.80it/s]
+[2026-09-10 21:19:41,050] [gen_report.py] [INFO]: Successfully generated 1 reports.
+
+Fetching 50 files:   0%|          | 0/50 [00:00<?, ?it/s]
+Fetching 50 files: 100%|██████████| 50/50 [00:00<00:00, 3389.56it/s]
+[21:19:44]   Multi report -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Multi.epimetheus_Multi.json
+[21:19:44] === Issue resolution summary ===
+[21:19:44]   Report            : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Multi.epimetheus_Multi.json
+[21:19:44]   Total (evaluated) : 1
+[21:19:44]   Submitted (preds) : 1
+[21:19:44]   Completed         : 1
+[21:19:44]   Resolved          : 1
+[21:19:44]   Unresolved        : 0
+[21:19:44]   Errored           : 0
+[21:19:44]   Empty patches     : 0
+[21:19:44]   Resolved rate     : 1/1 = 100.0% (of evaluated)
+[21:19:44]   Resolved IDs      : sveltejs__svelte-12649
+[21:19:44] Done.
+[21:19:44]   Predictions : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution_preds.jsonl
+[21:19:44]   Report      : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Multi.epimetheus_Multi.json
+[21:19:44] Resolution scores -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution.jsonl
+[21:19:46] Deleted docker image: mswebench/sveltejs_m_svelte:pr-12649

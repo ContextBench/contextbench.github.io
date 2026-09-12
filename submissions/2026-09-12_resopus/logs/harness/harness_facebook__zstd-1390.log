@@ -1,0 +1,100 @@
+[03:07:03] Retrieval eval: facebook__zstd-1390
+  Setting up repository
+  Warning: repo_url mismatch; overriding with /home/andre/workspace/ContextBench/repos/github.com__facebook__zstd
+  Repo: /home/andre/workspace/ContextBench/repos/github.com__facebook__zstd
+  Commit: e26126cacaa9...
+  Checkout ready: /home/andre/workspace/ContextBench/repos/_worktrees/contextbench_worktrees/__home__andre__workspace__ContextBench__repos__github.com__facebook__zstd/e26126cacaa9ac6f1db4021ac3d32f4ac8387c50
+  Parsing trajectory
+  Extracted: 45 steps, final has 10 files
+DETAILS:
+instance_id=facebook__zstd-1390
+  gold_files: n=1
+    - lib/decompress/zstd_decompress.c
+  pred_files: n=10
+    - Makefile
+    - README.md
+    - TESTING.md
+    - build/cmake/CMakeLists.txt
+    - build/cmake/tests/CMakeLists.txt
+    - lib/compress/zstd_compress.c
+    - lib/decompress/zstd_decompress.c
+    - lib/zstd.h
+    - tests/Makefile
+    - tests/fuzzer.c
+  hit_files: n=1
+    - lib/decompress/zstd_decompress.c
+  gold_symbols: n=8
+    - lib/decompress/zstd_decompress.c:function_definition@13571-15096
+    - lib/decompress/zstd_decompress.c:function_definition@15522-15806
+    - lib/decompress/zstd_decompress.c:function_definition@16000-16537
+    - lib/decompress/zstd_decompress.c:function_definition@16788-17399
+    - lib/decompress/zstd_decompress.c:function_definition@17402-17692
+    - lib/decompress/zstd_decompress.c:function_definition@72291-73959
+    - lib/decompress/zstd_decompress.c:function_definition@74032-76944
+    - lib/decompress/zstd_decompress.c:function_definition@76946-80938
+  pred_symbols: n=26
+    - lib/compress/zstd_compress.c:function_definition@131652-133046
+    - lib/compress/zstd_compress.c:function_definition@133048-134212
+    - lib/decompress/zstd_decompress.c:function_definition@105177-119175
+    - lib/decompress/zstd_decompress.c:function_definition@16788-17399
+    - lib/decompress/zstd_decompress.c:function_definition@17402-17692
+    - lib/decompress/zstd_decompress.c:function_definition@17695-18052
+    - lib/decompress/zstd_decompress.c:function_definition@54702-57172
+    - lib/decompress/zstd_decompress.c:function_definition@57174-57550
+    - lib/decompress/zstd_decompress.c:function_definition@68013-68642
+    - lib/decompress/zstd_decompress.c:function_definition@68645-70690
+    - lib/decompress/zstd_decompress.c:function_definition@70693-71068
+    - lib/decompress/zstd_decompress.c:function_definition@71070-71448
+    - lib/decompress/zstd_decompress.c:function_definition@71560-71788
+    - lib/decompress/zstd_decompress.c:function_definition@71791-72000
+    - lib/decompress/zstd_decompress.c:function_definition@74032-76944
+    - lib/decompress/zstd_decompress.c:function_definition@76946-80938
+    - lib/decompress/zstd_decompress.c:function_definition@80940-81277
+    - lib/decompress/zstd_decompress.c:function_definition@81280-81476
+    - lib/decompress/zstd_decompress.c:function_definition@81479-82020
+    - lib/decompress/zstd_decompress.c:function_definition@82260-82895
+    - lib/decompress/zstd_decompress.c:function_definition@82897-82985
+    - lib/decompress/zstd_decompress.c:function_definition@83262-89328
+    - lib/decompress/zstd_decompress.c:function_definition@95508-95779
+    - lib/decompress/zstd_decompress.c:function_definition@95818-96531
+    - lib/zstd.h:struct_specifier@9458-9476
+    - tests/fuzzer.c:function_definition@11257-74438
+  hit_symbols: n=4
+    - lib/decompress/zstd_decompress.c:function_definition@16788-17399
+    - lib/decompress/zstd_decompress.c:function_definition@17402-17692
+    - lib/decompress/zstd_decompress.c:function_definition@74032-76944
+    - lib/decompress/zstd_decompress.c:function_definition@76946-80938
+
+[03:07:04] Retrieval facebook__zstd-1390: line_f1=0.090
+
+# Harness overwritten from harness_rerun_17.log (failed first-pass resolution dropped)
+[14:56:23] Resolution eval (pending=16, workers=4): /home/andre/workspace/ContextBench/agent-frameworks/epimetheus/.venv/bin/python /home/andre/workspace/ContextBench/scripts/run_resolution_eval.py --input-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Multi --bench Multi --model-name epimetheus__Multi --run-id epimetheus_Multi --predictions /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution_preds.jsonl --report-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet --instance-ids cli__cli-8632,mui__material-ui-30374,mui__material-ui-34437,vuejs__core-10004,facebook__zstd-2094,sveltejs__svelte-13097,mui__material-ui-25149,clap-rs__clap-4474,fasterxml__jackson-core-1016,ponylang__ponyc-2168,facebook__zstd-1390,alibaba__fastjson2-2775,sveltejs__svelte-14629,ponylang__ponyc-3973,fmtlib__fmt-2394,cli__cli-5537 --max-workers 4
+[14:56:23] WARNING: duplicate instance_id facebook__zstd-1390 (facebook__zstd-1390.json); keeping first.
+[2026-09-11 15:11:14,200] [run_evaluation.py] [INFO]: Building image mswebench/facebook_m_zstd:pr-1390...
+[2026-09-11 15:11:25,425] [run_evaluation.py] [INFO]: Image mswebench/facebook_m_zstd:pr-1390 built successfully.
+
+Building images:  48%|████▊     | 13/27 [14:51<21:16, 91.17s/it] [2026-09-11 15:11:25,429] [run_evaluation.py] [INFO]: Building image mswebench/alibaba_m_fastjson2:pr-2775...
+Running instances:  44%|████▍     | 7/16 [03:16<06:43, 44.85s/it][2026-09-11 15:30:29,752] [run_evaluation.py] [INFO]: Running mswebench/facebook_m_zstd:pr-1390 with command: bash /home/fix-run.sh...
+
+[16:11:10]   Resolved IDs      : vuejs__core-10004, sveltejs__svelte-13097, fmtlib__fmt-2394, facebook__zstd-1390, cli__cli-8632, clap-rs__clap-4474, alibaba__fastjson2-2775, mui__material-ui-30374, mui__material-ui-34437
+[16:11:10]   Resolved IDs            : cli__cli-8632, mui__material-ui-30374, mui__material-ui-34437, vuejs__core-10004, sveltejs__svelte-13097, clap-rs__clap-4474, facebook__zstd-1390, alibaba__fastjson2-2775, fmtlib__fmt-2394
+[16:12:14] === Issue resolution summary (aggregated) ===
+[16:12:14]   Agent instances         : 17
+[16:12:14]   Empty patches (skipped) : 0
+[16:12:14]   With patch              : 17
+[16:12:14]   Harness scored          : 17
+[16:12:14]   Harness infra errors    : 0
+[16:12:14]   Harness pending         : 0
+[16:12:14]   Resolved                : 10
+[16:12:14]   Resolved rate           : 10/17 = 58.8% (of harness-scored)
+[16:12:14]   Resolved rate           : 10/17 = 58.8% (of agent instances; empty patch = unresolved)
+[16:12:14]   Resolved IDs            : cli__cli-8632, mui__material-ui-30374, mui__material-ui-34437, vuejs__core-10004, sveltejs__svelte-13097, clap-rs__clap-4474, facebook__zstd-1390, alibaba__fastjson2-2775, sveltejs__svelte-3403, fmtlib__fmt-2394
+[16:12:14] Done.
+===== harness exit=0 2026-09-11T16:12:14+01:00; rebuilding shuffled jsonl from natives =====
+native Verified: 174
+native Multi: 152
+native Poly: 116
+native Pro: 54
+wrote epimetheus_Shuffled_resolution.jsonl: 496 rows resolved=300 infra=1 empty_skip=4
+[16:12:14] Wrote 500 pred record(s) -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Shuffled_pred.jsonl
+restored shuffled pred: 500

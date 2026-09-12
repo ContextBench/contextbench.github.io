@@ -1,0 +1,184 @@
+[20:01:12] Retrieval eval: ponylang__ponyc-4595
+  Setting up repository
+  Warning: repo_url mismatch; overriding with /home/andre/workspace/ContextBench/repos/github.com__ponylang__ponyc
+  Repo: /home/andre/workspace/ContextBench/repos/github.com__ponylang__ponyc
+  Commit: f8a2feebba3a...
+  Checkout ready: /home/andre/workspace/ContextBench/repos/_worktrees/contextbench_worktrees/__home__andre__workspace__ContextBench__repos__github.com__ponylang__ponyc/f8a2feebba3aea298bde89d445ad35ca48602ca7
+  Parsing trajectory
+  Extracted: 36 steps, final has 9 files
+DETAILS:
+instance_id=ponylang__ponyc-4595
+  gold_files: n=1
+    - src/libponyc/codegen/genmatch.c
+  pred_files: n=9
+    - BUILD.md
+    - CMakeLists.txt
+    - Makefile
+    - src/libponyc/ast/parser.c
+    - src/libponyc/codegen/genexpr.c
+    - src/libponyc/codegen/genmatch.c
+    - test/libponyc/CMakeLists.txt
+    - test/libponyc/codegen.cc
+    - test/libponyc/util.cc
+  hit_files: n=1
+    - src/libponyc/codegen/genmatch.c
+  gold_symbols: n=1
+    - src/libponyc/codegen/genmatch.c:function_definition@9872-10586
+  pred_symbols: n=21
+    - src/libponyc/codegen/genexpr.c:function_definition@315-4207
+    - src/libponyc/codegen/genmatch.c:function_definition@1003-1556
+    - src/libponyc/codegen/genmatch.c:function_definition@10588-11878
+    - src/libponyc/codegen/genmatch.c:function_definition@11880-13367
+    - src/libponyc/codegen/genmatch.c:function_definition@13369-14285
+    - src/libponyc/codegen/genmatch.c:function_definition@14287-15210
+    - src/libponyc/codegen/genmatch.c:function_definition@15212-16393
+    - src/libponyc/codegen/genmatch.c:function_definition@16395-17486
+    - src/libponyc/codegen/genmatch.c:function_definition@17488-18549
+    - src/libponyc/codegen/genmatch.c:function_definition@18551-19396
+    - src/libponyc/codegen/genmatch.c:function_definition@19398-19985
+    - src/libponyc/codegen/genmatch.c:function_definition@19987-20815
+    - src/libponyc/codegen/genmatch.c:function_definition@20817-22156
+    - src/libponyc/codegen/genmatch.c:function_definition@22158-22648
+    - src/libponyc/codegen/genmatch.c:function_definition@7070-7873
+    - src/libponyc/codegen/genmatch.c:function_definition@7875-9870
+    - src/libponyc/codegen/genmatch.c:function_definition@9872-10586
+    - test/libponyc/codegen.cc:class_specifier@310-349
+    - test/libponyc/codegen.cc:function_definition@353-811
+    - test/libponyc/codegen.cc:function_definition@814-1267
+    - test/libponyc/util.cc:function_definition@12426-15150
+  hit_symbols: n=1
+    - src/libponyc/codegen/genmatch.c:function_definition@9872-10586
+
+[20:01:12] Retrieval ponylang__ponyc-4595: line_f1=0.048
+[20:01:12] Resolution resume: 0 harness-scored, 1 pending (stable run_id=epimetheus_Multi)
+[20:01:12] Resolution eval (pending=1): /home/andre/workspace/ContextBench/agent-frameworks/epimetheus/.venv/bin/python /home/andre/workspace/ContextBench/scripts/run_resolution_eval.py --input-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Multi --bench Multi --model-name epimetheus__Multi --run-id epimetheus_Multi --predictions /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution_preds.jsonl --report-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet --instance-ids ponylang__ponyc-4595 --max-workers 1
+[20:01:12] === Step 1/2: Build SWE-bench predictions ===
+[20:01:12]   Input dir   : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Multi
+[20:01:12] WARNING: duplicate instance_id axios__axios-5661 (axios__axios-5661.json); keeping first.
+[20:01:12] WARNING: duplicate instance_id clap-rs__clap-2501 (clap-rs__clap-2501.json); keeping first.
+[20:01:12] WARNING: duplicate instance_id clap-rs__clap-2895 (clap-rs__clap-2895.json); keeping first.
+[20:01:12] WARNING: duplicate instance_id clap-rs__clap-3421 (clap-rs__clap-3421.json); keeping first.
+[20:01:12] WARNING: duplicate instance_id clap-rs__clap-3684 (clap-rs__clap-3684.json); keeping first.
+[20:01:12] WARNING: duplicate instance_id clap-rs__clap-3975 (clap-rs__clap-3975.json); keeping first.
+[20:01:12] WARNING: duplicate instance_id cli__cli-2250 (cli__cli-2250.json); keeping first.
+[20:01:12] WARNING: duplicate instance_id cli__cli-2351 (cli__cli-2351.json); keeping first.
+[20:01:12] WARNING: duplicate instance_id cli__cli-2785 (cli__cli-2785.json); keeping first.
+[20:01:12] WARNING: duplicate instance_id cli__cli-3270 (cli__cli-3270.json); keeping first.
+[20:01:12] WARNING: duplicate instance_id cli__cli-5019 (cli__cli-5019.json); keeping first.
+[20:01:12] WARNING: duplicate instance_id cli__cli-7645 (cli__cli-7645.json); keeping first.
+[20:01:12] WARNING: duplicate instance_id cli__cli-8157 (cli__cli-8157.json); keeping first.
+[20:01:12] WARNING: duplicate instance_id expressjs__express-3870 (expressjs__express-3870.json); keeping first.
+[20:01:12] WARNING: duplicate instance_id facebook__zstd-1243 (facebook__zstd-1243.json); keeping first.
+[20:01:12] WARNING: duplicate instance_id facebook__zstd-637 (facebook__zstd-637.json); keeping first.
+[20:01:12] WARNING: duplicate instance_id fasterxml__jackson-core-1016 (fasterxml__jackson-core-1016.json); keeping first.
+[20:01:12] WARNING: duplicate instance_id fasterxml__jackson-core-183 (fasterxml__jackson-core-183.json); keeping first.
+[20:01:12] WARNING: duplicate instance_id google__gson-1391 (google__gson-1391.json); keeping first.
+[20:01:12] WARNING: duplicate instance_id iamkun__dayjs-1611 (iamkun__dayjs-1611.json); keeping first.
+[20:01:12] WARNING: duplicate instance_id iamkun__dayjs-882 (iamkun__dayjs-882.json); keeping first.
+[20:01:12] WARNING: duplicate instance_id jqlang__jq-2654 (jqlang__jq-2654.json); keeping first.
+[20:01:12] WARNING: duplicate instance_id mui__material-ui-29898 (mui__material-ui-29898.json); keeping first.
+[20:01:12] WARNING: duplicate instance_id mui__material-ui-30374 (mui__material-ui-30374.json); keeping first.
+[20:01:12] WARNING: duplicate instance_id mui__material-ui-34159 (mui__material-ui-34159.json); keeping first.
+[20:01:12] WARNING: duplicate instance_id mui__material-ui-34401 (mui__material-ui-34401.json); keeping first.
+[20:01:12] WARNING: duplicate instance_id mui__material-ui-34437 (mui__material-ui-34437.json); keeping first.
+[20:01:12] WARNING: duplicate instance_id mui__material-ui-39108 (mui__material-ui-39108.json); keeping first.
+[20:01:12] WARNING: duplicate instance_id mui__material-ui-39196 (mui__material-ui-39196.json); keeping first.
+[20:01:12] WARNING: duplicate instance_id nlohmann__json-4512 (nlohmann__json-4512.json); keeping first.
+[20:01:12] WARNING: duplicate instance_id ponylang__ponyc-2201 (ponylang__ponyc-2201.json); keeping first.
+[20:01:12] WARNING: duplicate instance_id ponylang__ponyc-2247 (ponylang__ponyc-2247.json); keeping first.
+[20:01:12] WARNING: duplicate instance_id ponylang__ponyc-2586 (ponylang__ponyc-2586.json); keeping first.
+[20:01:12] WARNING: duplicate instance_id ponylang__ponyc-4595 (ponylang__ponyc-4595.json); keeping first.
+[20:01:12] WARNING: duplicate instance_id rayon-rs__rayon-986 (rayon-rs__rayon-986.json); keeping first.
+[20:01:12] WARNING: duplicate instance_id sveltejs__svelte-10608 (sveltejs__svelte-10608.json); keeping first.
+[20:01:12] WARNING: duplicate instance_id sveltejs__svelte-11913 (sveltejs__svelte-11913.json); keeping first.
+[20:01:12] WARNING: duplicate instance_id sveltejs__svelte-14629 (sveltejs__svelte-14629.json); keeping first.
+[20:01:12] WARNING: duplicate instance_id sveltejs__svelte-14935 (sveltejs__svelte-14935.json); keeping first.
+[20:01:12] WARNING: duplicate instance_id vuejs__core-10027 (vuejs__core-10027.json); keeping first.
+[20:01:12] WARNING: duplicate instance_id vuejs__core-9213 (vuejs__core-9213.json); keeping first.
+[20:01:12]   Wrote 41 prediction(s) -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution_preds.jsonl
+[20:01:12] === Step 2/2: Run resolution harness ===
+[20:01:12]   Backend     : Multi
+[20:01:12]   Dataset     : ByteDance-Seed/Multi-SWE-bench (split=train)
+[20:01:12]   Run id      : epimetheus_Multi
+[20:01:12]   Report dir  : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet
+
+Fetching 50 files:   0%|          | 0/50 [00:00<?, ?it/s]
+Fetching 50 files: 100%|██████████| 50/50 [00:00<00:00, 3550.58it/s]
+[20:01:20]   Running: /home/andre/workspace/ContextBench/.venvs/resolution/bin/python -m multi_swe_bench.harness.run_evaluation --config /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/multi_eval/epimetheus_Multi/config.json
+[2026-09-10 20:01:21,332] [run_evaluation.py] [INFO]: Initialize logger successfully.
+[2026-09-10 20:01:21,332] [run_evaluation.py] [INFO]: Building images...
+[2026-09-10 20:01:21,332] [run_evaluation.py] [INFO]: Loading repo commits...
+[2026-09-10 20:01:21,332] [run_evaluation.py] [INFO]: Creating instances...
+[2026-09-10 20:01:21,332] [run_evaluation.py] [INFO]: Loading datasets...
+[2026-09-10 20:01:21,435] [run_evaluation.py] [INFO]: Successfully loaded 1 valid datasets from ['/home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/multi_eval/epimetheus_Multi/dataset.jsonl']
+[2026-09-10 20:01:21,436] [run_evaluation.py] [INFO]: Successfully loaded 1 valid instances.
+
+Checking commit hashes:   0%|          | 0/1 [00:00<?, ?it/s]
+
+Checking commit hashes for ponylang/ponyc:   0%|          | 0/1 [00:00<?, ?it/s][A
+Checking commit hashes for ponylang/ponyc: 100%|██████████| 1/1 [00:00<00:00, 26886.56it/s]
+
+Checking commit hashes: 100%|██████████| 1/1 [00:00<00:00,  8.12it/s]
+Checking commit hashes: 100%|██████████| 1/1 [00:00<00:00,  8.11it/s]
+[2026-09-10 20:01:21,563] [run_evaluation.py] [INFO]: Total images: 2
+
+Building images:   0%|          | 0/2 [00:00<?, ?it/s]
+Building images: 100%|██████████| 2/2 [00:00<00:00, 37.43it/s]
+[2026-09-10 20:01:21,617] [run_evaluation.py] [INFO]: Images built successfully.
+[2026-09-10 20:01:21,617] [run_evaluation.py] [INFO]: Running instances...
+
+Running instances:   0%|          | 0/1 [00:00<?, ?it/s][2026-09-10 20:01:21,618] [run_evaluation.py] [INFO]: Running mswebench/ponylang_m_ponyc:pr-4595 with command: bash /home/fix-run.sh...
+
+Running instances: 100%|██████████| 1/1 [1:01:01<00:00, 3661.75s/it]
+Running instances: 100%|██████████| 1/1 [1:01:01<00:00, 3661.75s/it]
+[2026-09-10 21:02:23,374] [run_evaluation.py] [INFO]: Instances run successfully.
+[2026-09-10 21:02:23,383] [run_evaluation.py] [INFO]: Running evaluation...
+[2026-09-10 21:02:23,400] [gen_report.py] [INFO]: Initialize logger successfully.
+[2026-09-10 21:02:23,401] [gen_report.py] [INFO]: Collecting report tasks...
+[2026-09-10 21:02:23,413] [gen_report.py] [INFO]: Successfully collected 46 tasks.
+[2026-09-10 21:02:23,421] [gen_report.py] [INFO]: Loading dataset...
+[2026-09-10 21:02:23,514] [gen_report.py] [INFO]: Successfully loaded 1 valid datasets from ['/home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/multi_eval/epimetheus_Multi/dataset.jsonl']
+
+Generating eval reports:   0%|          | 0/1 [00:00<?, ?it/s][2026-09-10 21:02:23,570] [gen_report.py] [ERROR]: Invalid report for nushell/nushell:pr-13357, Test Result Summary:
+Stage Descriptions:
+  run  : Execute the test command without any patches applied.
+  test : Execute the test command after applying the test patch.
+  fix  : Execute the test command after applying both the test patch and the fix patch.
+Each stage is reported as (pass, fail, skip), representing the number of tests that passed, failed, or were skipped, respectively.
+
+Results:
+  run  = (1302, 0, 24)
+  test = (1305, 2, 24)
+  fix  = (0, 0, 0), After applying the fix patch, no test results were captured when executing the test command. A brief summary is as follows: Test Result Summary:
+Stage Descriptions:
+  run  : Execute the test command without any patches applied.
+  test : Execute the test command after applying the test patch.
+  fix  : Execute the test command after applying both the test patch and the fix patch.
+Each stage is reported as (pass, fail, skip), representing the number of tests that passed, failed, or were skipped, respectively.
+
+Results:
+  run  = (1302, 0, 24)
+  test = (1305, 2, 24)
+  fix  = (0, 0, 0)
+
+Generating eval reports: 100%|██████████| 1/1 [00:00<00:00, 19.92it/s]
+[2026-09-10 21:02:23,571] [gen_report.py] [INFO]: Successfully generated 0 reports.
+
+Fetching 50 files:   0%|          | 0/50 [00:00<?, ?it/s]
+Fetching 50 files: 100%|██████████| 50/50 [00:00<00:00, 1138.18it/s]
+[21:02:29]   Multi report -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Multi.epimetheus_Multi.json
+[21:02:29] === Issue resolution summary ===
+[21:02:29]   Report            : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Multi.epimetheus_Multi.json
+[21:02:29]   Total (evaluated) : 2
+[21:02:29]   Submitted (preds) : 1
+[21:02:29]   Completed         : 2
+[21:02:29]   Resolved          : 0
+[21:02:29]   Unresolved        : 2
+[21:02:29]   Errored           : 0
+[21:02:29]   Empty patches     : 0
+[21:02:29]   Resolved rate     : 0/2 = 0.0% (of evaluated)
+[21:02:29] Done.
+[21:02:29]   Predictions : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution_preds.jsonl
+[21:02:29]   Report      : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Multi.epimetheus_Multi.json
+[21:02:29] Resolution scores -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution.jsonl
+[21:02:30] Deleted docker image: mswebench/ponylang_m_ponyc:pr-4595

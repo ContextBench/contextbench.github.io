@@ -1,0 +1,82 @@
+[12:29:31] Retrieval eval: cli__cli-3832
+  Setting up repository
+  Warning: repo_url mismatch; overriding with /home/andre/workspace/ContextBench/repos/github.com__cli__cli
+  Repo: /home/andre/workspace/ContextBench/repos/github.com__cli__cli
+  Commit: aecfc01e6911...
+  Checkout ready: /home/andre/workspace/ContextBench/repos/_worktrees/contextbench_worktrees/__home__andre__workspace__ContextBench__repos__github.com__cli__cli/aecfc01e6911e0ed58e91f5072305f5441cc76fe
+  Parsing trajectory
+  Extracted: 16 steps, final has 6 files
+DETAILS:
+instance_id=cli__cli-3832
+  gold_files: n=2
+    - pkg/cmd/secret/set/http.go
+    - pkg/cmd/secret/set/set.go
+  pred_files: n=6
+    - Makefile
+    - README.md
+    - go.mod
+    - pkg/cmd/secret/set/http.go
+    - pkg/cmd/secret/set/set.go
+    - pkg/cmd/secret/set/set_test.go
+  hit_files: n=2
+    - pkg/cmd/secret/set/http.go
+    - pkg/cmd/secret/set/set.go
+  gold_symbols: n=3
+    - pkg/cmd/secret/set/http.go:function_declaration@1167-1369
+    - pkg/cmd/secret/set/http.go:function_declaration@1371-1677
+    - pkg/cmd/secret/set/set.go:function_declaration@4061-5749
+  pred_symbols: n=21
+    - pkg/cmd/secret/set/http.go:function_declaration@1167-1369
+    - pkg/cmd/secret/set/http.go:function_declaration@1371-1677
+    - pkg/cmd/secret/set/http.go:function_declaration@1679-2435
+    - pkg/cmd/secret/set/http.go:function_declaration@2437-2805
+    - pkg/cmd/secret/set/http.go:function_declaration@2807-3143
+    - pkg/cmd/secret/set/http.go:function_declaration@3224-4394
+    - pkg/cmd/secret/set/http.go:function_declaration@520-988
+    - pkg/cmd/secret/set/http.go:function_declaration@990-1165
+    - pkg/cmd/secret/set/http.go:type_declaration@205-440
+    - pkg/cmd/secret/set/http.go:type_declaration@442-518
+    - pkg/cmd/secret/set/set.go:function_declaration@4061-5749
+    - pkg/cmd/secret/set/set.go:function_declaration@5751-6313
+    - pkg/cmd/secret/set/set.go:function_declaration@6315-6790
+    - pkg/cmd/secret/set/set.go:function_declaration@854-4059
+    - pkg/cmd/secret/set/set.go:type_declaration@491-852
+    - pkg/cmd/secret/set/set_test.go:function_declaration@10090-10418
+    - pkg/cmd/secret/set/set_test.go:function_declaration@4097-5502
+    - pkg/cmd/secret/set/set_test.go:function_declaration@418-4095
+    - pkg/cmd/secret/set/set_test.go:function_declaration@5504-6954
+    - pkg/cmd/secret/set/set_test.go:function_declaration@6956-9435
+    - pkg/cmd/secret/set/set_test.go:function_declaration@9437-10088
+  hit_symbols: n=3
+    - pkg/cmd/secret/set/http.go:function_declaration@1167-1369
+    - pkg/cmd/secret/set/http.go:function_declaration@1371-1677
+    - pkg/cmd/secret/set/set.go:function_declaration@4061-5749
+
+[12:29:31] Retrieval cli__cli-3832: line_f1=0.026
+
+# Harness overwritten from harness_rerun_4.log (failed first-pass resolution dropped)
+[16:35:08] Resolution eval (pending=4, workers=4): /home/andre/workspace/ContextBench/agent-frameworks/epimetheus/.venv/bin/python /home/andre/workspace/ContextBench/scripts/run_resolution_eval.py --input-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Multi --bench Multi --model-name epimetheus__Multi --run-id epimetheus_Multi --predictions /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution_preds.jsonl --report-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet --instance-ids cli__cli-3832,elastic__logstash-14027,zeromicro__go-zero-1969,mui__material-ui-37850 --max-workers 4
+[16:35:08] WARNING: duplicate instance_id cli__cli-3832 (cli__cli-3832.json); keeping first.
+[2026-09-11 16:35:17,948] [run_evaluation.py] [INFO]: Running mswebench/cli_m_cli:pr-3832 with command: bash /home/fix-run.sh...
+[16:38:50]   Resolved IDs      : zeromicro__go-zero-1969, cli__cli-3832
+[16:38:50]   Resolved IDs            : cli__cli-3832, zeromicro__go-zero-1969
+[16:38:50] === Issue resolution summary (aggregated) ===
+[16:38:50]   Agent instances         : 4
+[16:38:50]   Empty patches (skipped) : 0
+[16:38:50]   With patch              : 4
+[16:38:50]   Harness scored          : 4
+[16:38:50]   Harness infra errors    : 0
+[16:38:50]   Harness pending         : 0
+[16:38:50]   Resolved                : 2
+[16:38:50]   Resolved rate           : 2/4 = 50.0% (of harness-scored)
+[16:38:50]   Resolved rate           : 2/4 = 50.0% (of agent instances; empty patch = unresolved)
+[16:38:50]   Resolved IDs            : cli__cli-3832, zeromicro__go-zero-1969
+[16:38:50] Done.
+===== harness exit=0 2026-09-11T16:38:50+01:00; rebuilding shuffled jsonl from natives =====
+native Verified: 174
+native Multi: 156
+native Poly: 116
+native Pro: 54
+wrote epimetheus_Shuffled_resolution.jsonl: 500 rows resolved=302 infra=1 empty_skip=4
+[16:38:50] Wrote 500 pred record(s) -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Shuffled_pred.jsonl
+restored shuffled pred: 500

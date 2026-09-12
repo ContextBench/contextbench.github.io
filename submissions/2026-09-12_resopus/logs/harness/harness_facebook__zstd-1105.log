@@ -1,0 +1,116 @@
+[05:04:51] Retrieval eval: facebook__zstd-1105
+  Setting up repository
+  Warning: repo_url mismatch; overriding with /home/andre/workspace/ContextBench/repos/github.com__facebook__zstd
+  Repo: /home/andre/workspace/ContextBench/repos/github.com__facebook__zstd
+  Commit: 04212178b501...
+  Checkout ready: /home/andre/workspace/ContextBench/repos/_worktrees/contextbench_worktrees/__home__andre__workspace__ContextBench__repos__github.com__facebook__zstd/04212178b50131ecbbf7bc2ffcce4d5ddcfd8e11
+  Parsing trajectory
+  Extracted: 45 steps, final has 14 files
+DETAILS:
+instance_id=facebook__zstd-1105
+  gold_files: n=2
+    - lib/compress/zstd_compress.c
+    - lib/zstd.h
+  pred_files: n=14
+    - Makefile
+    - TESTING.md
+    - build/cmake/tests/CMakeLists.txt
+    - circle.yml
+    - contrib/docker/Dockerfile
+    - lib/compress/zstd_compress.c
+    - lib/compress/zstd_compress_internal.h
+    - lib/compress/zstdmt_compress.c
+    - lib/zstd.h
+    - tests/Makefile
+    - tests/README.md
+    - tests/fuzz/zstd_helpers.c
+    - tests/roundTripCrash.c
+    - tests/zstreamtest.c
+  hit_files: n=2
+    - lib/compress/zstd_compress.c
+    - lib/zstd.h
+  gold_symbols: n=2
+    - lib/compress/zstd_compress.c:function_definition@11572-17063
+    - lib/compress/zstd_compress.c:function_definition@17433-17707
+  pred_symbols: n=59
+    - lib/compress/zstd_compress.c:function_definition@1118-1203
+    - lib/compress/zstd_compress.c:function_definition@11572-17063
+    - lib/compress/zstd_compress.c:function_definition@17433-17707
+    - lib/compress/zstd_compress.c:function_definition@17709-18025
+    - lib/compress/zstd_compress.c:function_definition@18027-19199
+    - lib/compress/zstd_compress.c:function_definition@19201-19431
+    - lib/compress/zstd_compress.c:function_definition@19433-19645
+    - lib/compress/zstd_compress.c:function_definition@19648-19902
+    - lib/compress/zstd_compress.c:function_definition@19904-20078
+    - lib/compress/zstd_compress.c:function_definition@20080-20505
+    - lib/compress/zstd_compress.c:function_definition@20507-20636
+    - lib/compress/zstd_compress.c:function_definition@20691-20792
+    - lib/compress/zstd_compress.c:function_definition@20955-21612
+    - lib/compress/zstd_compress.c:function_definition@24726-25822
+    - lib/compress/zstd_compress.c:function_definition@25824-27176
+    - lib/compress/zstd_compress.c:function_definition@4705-5701
+    - lib/compress/zstd_compress.c:function_definition@5703-6155
+    - lib/compress/zstd_compress.c:function_definition@6157-6626
+    - lib/compress/zstd_compress.c:function_definition@6628-6738
+    - lib/compress/zstd_compress.c:function_definition@6740-6890
+    - lib/compress/zstd_compress.c:function_definition@6892-7012
+    - lib/compress/zstd_compress.c:function_definition@7014-7305
+    - lib/compress/zstd_compress.c:function_definition@7307-7821
+    - lib/compress/zstd_compress.c:function_definition@7905-8315
+    - lib/compress/zstd_compress.c:function_definition@8466-9273
+    - lib/compress/zstd_compress.c:function_definition@9275-11570
+    - lib/compress/zstd_compress_internal.h:struct_specifier@5113-5247
+    - lib/compress/zstd_compress_internal.h:struct_specifier@5276-5320
+    - lib/compress/zstd_compress_internal.h:struct_specifier@5342-5667
+    - lib/compress/zstd_compress_internal.h:struct_specifier@5689-6086
+    - lib/compress/zstd_compress_internal.h:struct_specifier@6109-6175
+    - lib/compress/zstd_compress_internal.h:struct_specifier@6193-6447
+    - lib/compress/zstd_compress_internal.h:struct_specifier@6464-7108
+    - lib/compress/zstd_compress_internal.h:struct_specifier@7164-8939
+    - lib/compress/zstdmt_compress.c:function_definition@32101-32872
+    - lib/compress/zstdmt_compress.c:function_definition@32934-33234
+    - lib/compress/zstdmt_compress.c:function_definition@33236-34682
+    - lib/compress/zstdmt_compress.c:function_definition@34684-34806
+    - lib/compress/zstdmt_compress.c:function_definition@34897-35553
+    - lib/compress/zstdmt_compress.c:function_definition@35555-36283
+    - lib/compress/zstdmt_compress.c:function_definition@36285-36975
+    - lib/compress/zstdmt_compress.c:function_definition@36977-37476
+    - lib/compress/zstdmt_compress.c:function_definition@37498-38325
+    - lib/compress/zstdmt_compress.c:function_definition@38327-38800
+    - lib/compress/zstdmt_compress.c:function_definition@38899-39298
+    - lib/zstd.h:struct_specifier@22294-23006
+    - tests/fuzz/zstd_helpers.c:function_definition@1576-1886
+    - tests/fuzz/zstd_helpers.c:function_definition@1888-2110
+    - tests/fuzz/zstd_helpers.c:function_definition@2112-3327
+    - tests/fuzz/zstd_helpers.c:function_definition@412-549
+    ... (9 more)
+  hit_symbols: n=2
+    - lib/compress/zstd_compress.c:function_definition@11572-17063
+    - lib/compress/zstd_compress.c:function_definition@17433-17707
+
+[05:04:52] Retrieval facebook__zstd-1105: line_f1=0.032
+
+# Harness overwritten from harness_infra_retry.log (failed first-pass resolution dropped)
+[09:26:52] Resolution eval (pending=9): /home/andre/workspace/ContextBench/agent-frameworks/epimetheus/.venv/bin/python /home/andre/workspace/ContextBench/scripts/run_resolution_eval.py --input-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Multi --bench Multi --model-name epimetheus__Multi --run-id epimetheus_Multi --predictions /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution_preds.jsonl --report-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet --instance-ids nlohmann__json-4512,ponylang__ponyc-1486,facebook__zstd-1105,fmtlib__fmt-4286,mui__material-ui-38100,mui__material-ui-37855,mui__material-ui-38188,ponylang__ponyc-2261,facebook__zstd-1243 --max-workers 1
+[09:26:52] WARNING: duplicate instance_id facebook__zstd-1105 (facebook__zstd-1105.json); keeping first.
+Building images:  93%|█████████▎| 13/14 [1:09:40<01:55, 115.58s/it][2026-09-11 10:37:16,144] [run_evaluation.py] [INFO]: Building image mswebench/facebook_m_zstd:pr-1105...
+[2026-09-11 10:37:22,819] [run_evaluation.py] [INFO]: Image mswebench/facebook_m_zstd:pr-1105 built successfully.
+
+Building images: 100%|██████████| 14/14 [1:09:46<00:00, 82.69s/it] 
+Building images: 100%|██████████| 14/14 [1:09:46<00:00, 299.07s/it]
+Running instances:  33%|███▎      | 3/9 [03:36<07:44, 77.39s/it][2026-09-11 10:40:59,485] [run_evaluation.py] [INFO]: Running mswebench/facebook_m_zstd:pr-1105 with command: bash /home/fix-run.sh...
+
+[11:06:33]   Resolved IDs      : nlohmann__json-4512, mui__material-ui-38100, mui__material-ui-37855, facebook__zstd-1105
+[11:06:33]   Resolved IDs            : nlohmann__json-4512, facebook__zstd-1105, mui__material-ui-38100, mui__material-ui-37855
+[11:08:13] === Issue resolution summary (aggregated) ===
+[11:08:13]   Agent instances         : 10
+[11:08:13]   Empty patches (skipped) : 0
+[11:08:13]   With patch              : 10
+[11:08:13]   Harness scored          : 10
+[11:08:13]   Harness infra errors    : 0
+[11:08:13]   Harness pending         : 0
+[11:08:13]   Resolved                : 5
+[11:08:13]   Resolved rate           : 5/10 = 50.0% (of harness-scored)
+[11:08:13]   Resolved rate           : 5/10 = 50.0% (of agent instances; empty patch = unresolved)
+[11:08:13]   Resolved IDs            : nlohmann__json-4512, facebook__zstd-1105, mui__material-ui-38100, mui__material-ui-37855, langchain-ai__langchain-19331
+[11:08:13] Done.

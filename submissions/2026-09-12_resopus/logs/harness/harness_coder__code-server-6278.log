@@ -1,0 +1,133 @@
+[17:02:14] Retrieval eval: coder__code-server-6278
+  Setting up repository
+  Warning: repo_url mismatch; overriding with /home/andre/workspace/ContextBench/repos/github.com__coder__code-server
+  Repo: /home/andre/workspace/ContextBench/repos/github.com__coder__code-server
+  Commit: 5d3c9edce436...
+  Checkout ready: /home/andre/workspace/ContextBench/repos/_worktrees/contextbench_worktrees/__home__andre__workspace__ContextBench__repos__github.com__coder__code-server/5d3c9edce436d11d51aa1e586c11eaa49d626dc2
+  Parsing trajectory
+  Extracted: 16 steps, final has 9 files
+DETAILS:
+instance_id=coder__code-server-6278
+  gold_files: n=4
+    - src/node/app.ts
+    - src/node/main.ts
+    - src/node/util.ts
+    - src/node/vscodeSocket.ts
+  pred_files: n=9
+    - ci/dev/test-unit.sh
+    - package.json
+    - src/node/app.ts
+    - src/node/cli.ts
+    - src/node/util.ts
+    - src/node/vscodeSocket.ts
+    - test/package.json
+    - test/unit/node/cli.test.ts
+    - test/unit/node/vscodeSocket.test.ts
+  hit_files: n=3
+    - src/node/app.ts
+    - src/node/util.ts
+    - src/node/vscodeSocket.ts
+  gold_symbols: n=3
+    - src/node/util.ts:function_declaration@1885-2944
+    - src/node/vscodeSocket.ts:function_declaration@743-2165
+    - src/node/vscodeSocket.ts:interface_declaration@407-560
+  pred_symbols: n=23
+    - src/node/app.ts:interface_declaration@703-1019
+    - src/node/cli.ts:class_declaration@527-599
+    - src/node/cli.ts:class_declaration@725-773
+    - src/node/cli.ts:interface_declaration@826-1396
+    - src/node/cli.ts:method_definition@549-597
+    - src/node/util.ts:function_declaration@1885-2944
+    - src/node/util.ts:function_declaration@3137-3268
+    - src/node/util.ts:interface_declaration@406-475
+    - src/node/vscodeSocket.ts:class_declaration@2174-4064
+    - src/node/vscodeSocket.ts:class_declaration@4073-5761
+    - src/node/vscodeSocket.ts:function_declaration@743-2165
+    - src/node/vscodeSocket.ts:interface_declaration@407-560
+    - src/node/vscodeSocket.ts:interface_declaration@562-617
+    - src/node/vscodeSocket.ts:interface_declaration@619-678
+    - src/node/vscodeSocket.ts:interface_declaration@680-734
+    - src/node/vscodeSocket.ts:method_definition@2313-2484
+    - src/node/vscodeSocket.ts:method_definition@2488-3347
+    - src/node/vscodeSocket.ts:method_definition@3351-3506
+    - src/node/vscodeSocket.ts:method_definition@3638-4062
+    - src/node/vscodeSocket.ts:method_definition@4110-4162
+    - src/node/vscodeSocket.ts:method_definition@4166-4239
+    - src/node/vscodeSocket.ts:method_definition@4243-5193
+    - src/node/vscodeSocket.ts:method_definition@5233-5759
+  hit_symbols: n=3
+    - src/node/util.ts:function_declaration@1885-2944
+    - src/node/vscodeSocket.ts:function_declaration@743-2165
+    - src/node/vscodeSocket.ts:interface_declaration@407-560
+
+[17:02:14] Retrieval coder__code-server-6278: line_f1=0.275
+[17:02:14] Resolution resume: 0 harness-scored, 1 pending (stable run_id=epimetheus_Poly)
+[17:02:14] Waiting for Docker prefetch Poly coder__code-server-6278
+[17:02:14] Docker prefetch Poly coder__code-server-6278: ghcr.io/timesler/swe-polybench.eval.x86_64.coder__code-server-6278:v1.1, ghcr.io/timesler/swe-polybench.eval.x86_64.coder__code-server-6278:latest
+[17:02:14] Docker image already present: ghcr.io/timesler/swe-polybench.eval.x86_64.coder__code-server-6278:v1.1
+[17:02:14] Docker image already present: ghcr.io/timesler/swe-polybench.eval.x86_64.coder__code-server-6278:latest
+[17:02:14] Resolution eval (pending=1): /home/andre/workspace/ContextBench/agent-frameworks/epimetheus/.venv/bin/python /home/andre/workspace/ContextBench/scripts/run_resolution_eval.py --input-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Poly --bench Poly --model-name epimetheus__Poly --run-id epimetheus_Poly --predictions /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Poly_resolution_preds.jsonl --report-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet --instance-ids coder__code-server-6278 --max-workers 1
+[17:02:14] === Step 1/2: Build SWE-bench predictions ===
+[17:02:14]   Input dir   : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Poly
+[17:02:14] WARNING: duplicate instance_id coder__code-server-6278 (coder__code-server-6278.json); keeping first.
+[17:02:14] WARNING: duplicate instance_id huggingface__transformers-12981 (huggingface__transformers-12981.json); keeping first.
+[17:02:14] WARNING: duplicate instance_id huggingface__transformers-22458 (huggingface__transformers-22458.json); keeping first.
+[17:02:14] WARNING: duplicate instance_id huggingface__transformers-23223 (huggingface__transformers-23223.json); keeping first.
+[17:02:14] WARNING: duplicate instance_id langchain-ai__langchain-4009 (langchain-ai__langchain-4009.json); keeping first.
+[17:02:14] WARNING: duplicate instance_id mui__material-ui-19072 (mui__material-ui-19072.json); keeping first.
+[17:02:14] WARNING: duplicate instance_id mui__material-ui-19849 (mui__material-ui-19849.json); keeping first.
+[17:02:14] WARNING: duplicate instance_id serverless__serverless-2945 (serverless__serverless-2945.json); keeping first.
+[17:02:14] WARNING: duplicate instance_id serverless__serverless-3457 (serverless__serverless-3457.json); keeping first.
+[17:02:14]   Wrote 11 prediction(s) -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Poly_resolution_preds.jsonl
+[17:02:14] === Step 2/2: Run resolution harness ===
+[17:02:14]   Backend     : Poly
+[17:02:14]   Dataset     : AmazonScience/SWE-PolyBench (split=test)
+[17:02:14]   Run id      : epimetheus_Poly
+[17:02:14]   Report dir  : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet
+[17:02:27]   Poly dataset subset : 1 instance(s)
+[17:02:27]   Running resilient Poly worker: /home/andre/workspace/ContextBench/.venvs/resolution/bin/python /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/poly_eval/epimetheus_Poly/_poly_worker.py /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/poly_eval/epimetheus_Poly/dataset_subset.csv /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/poly_eval/epimetheus_Poly/results /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/poly_eval/epimetheus_Poly/repos 1
+/home/andre/workspace/ContextBench/.venvs/resolution/lib/python3.12/site-packages/tree_sitter/__init__.py:36: FutureWarning: Language(path, name) is deprecated. Use Language(ptr, name) instead.
+  warn("{} is deprecated. Use {} instead.".format(old, new), FutureWarning)
+[poly-worker] evaluate coder__code-server-6278
+[poly-worker] using local prebuilt ghcr.io/timesler/swe-polybench.eval.x86_64.coder__code-server-6278:v1.1 -> polybench_typescript_coder__code-server-6278
+2026-09-10 17:02:29.925 | INFO     | poly_bench_evaluation.run_evaluation:evaluate_instance:130 - Successfully pulled pre-built image from GHCR: polybench_typescript_coder__code-server-6278
+2026-09-10 17:02:30.276 | INFO     | poly_bench_evaluation.run_evaluation:evaluate_instance:235 - docker running for coder__code-server-6278
+2026-09-10 17:03:15.143 | DEBUG    | poly_bench_evaluation.docker_utils:_cleanup:432 - Removed local image tag: polybench_typescript_coder__code-server-6278
+2026-09-10 17:03:15.174 | INFO     | poly_bench_evaluation.scoring:aggregate_logs:256 - Writing aggregated results to result.json
+Total resolved: 4/9
+Total pass rate: 44.44%
+
+Pass rate by language:
+TypeScript: 0/1 (0.0%)
+
+Pass rate by task category:
+Bug Fix: 0/1 (0.0%)
+
+File retrieval metrics by language:
+            file_recall  file_precision  file_f1
+language                                        
+TypeScript          0.5             1.0     0.67
+
+File retrieval metrics overall:
+file_recall       0.70
+file_precision    0.83
+file_f1           0.72
+[poly-worker] done failures=0
+[17:03:15]   Poly report -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Poly.epimetheus_Poly.json
+[17:03:15] === Issue resolution summary ===
+[17:03:15]   Report            : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Poly.epimetheus_Poly.json
+[17:03:15]   Total (evaluated) : 9
+[17:03:15]   Submitted (preds) : 1
+[17:03:15]   Completed         : 9
+[17:03:15]   Resolved          : 4
+[17:03:15]   Unresolved        : 5
+[17:03:15]   Errored           : 0
+[17:03:15]   Empty patches     : 8
+[17:03:15]   Resolved rate     : 4/9 = 44.4% (of evaluated)
+[17:03:15]   Resolved IDs      : huggingface__transformers-12981, mui__material-ui-19849, serverless__serverless-3457, langchain-ai__langchain-4009
+[17:03:15] Done.
+[17:03:15]   Predictions : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Poly_resolution_preds.jsonl
+[17:03:15]   Report      : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Poly.epimetheus_Poly.json
+[17:03:15] Resolution scores -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Poly_resolution.jsonl
+[17:03:15] Deleted docker image: ghcr.io/timesler/swe-polybench.eval.x86_64.coder__code-server-6278:v1.1
+[17:03:22] Deleted docker image: ghcr.io/timesler/swe-polybench.eval.x86_64.coder__code-server-6278:latest

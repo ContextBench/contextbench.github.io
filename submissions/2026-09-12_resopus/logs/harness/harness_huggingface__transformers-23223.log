@@ -1,0 +1,139 @@
+[16:23:42] Retrieval eval: huggingface__transformers-23223
+  Setting up repository
+  Warning: repo_url mismatch; overriding with /home/andre/workspace/ContextBench/repos/github.com__huggingface__transformers
+  Repo: /home/andre/workspace/ContextBench/repos/github.com__huggingface__transformers
+  Commit: 9088fcae82f4...
+  Checkout ready: /home/andre/workspace/ContextBench/repos/_worktrees/contextbench_worktrees/__home__andre__workspace__ContextBench__repos__github.com__huggingface__transformers/9088fcae82f4e23021e600966626188ce6fbe6df
+  Parsing trajectory
+  Extracted: 16 steps, final has 7 files
+DETAILS:
+instance_id=huggingface__transformers-23223
+  gold_files: n=3
+    - src/transformers/feature_extraction_sequence_utils.py
+    - src/transformers/models/wav2vec2/feature_extraction_wav2vec2.py
+    - src/transformers/models/wav2vec2/tokenization_wav2vec2.py
+  pred_files: n=7
+    - src/transformers/feature_extraction_sequence_utils.py
+    - src/transformers/models/audio_spectrogram_transformer/feature_extraction_audio_spectrogram_transformer.py
+    - src/transformers/models/clap/feature_extraction_clap.py
+    - src/transformers/models/wav2vec2/feature_extraction_wav2vec2.py
+    - src/transformers/models/whisper/feature_extraction_whisper.py
+    - tests/models/wav2vec2/test_feature_extraction_wav2vec2.py
+    - tests/test_sequence_feature_extraction_common.py
+  hit_files: n=2
+    - src/transformers/feature_extraction_sequence_utils.py
+    - src/transformers/models/wav2vec2/feature_extraction_wav2vec2.py
+  gold_symbols: n=6
+    - src/transformers/feature_extraction_sequence_utils.py:class_definition@985-18300
+    - src/transformers/feature_extraction_sequence_utils.py:function_definition@1877-10660
+    - src/transformers/models/wav2vec2/feature_extraction_wav2vec2.py:class_definition@940-11206
+    - src/transformers/models/wav2vec2/feature_extraction_wav2vec2.py:function_definition@4208-11206
+    - src/transformers/models/wav2vec2/tokenization_wav2vec2.py:class_definition@28663-39256
+    - src/transformers/models/wav2vec2/tokenization_wav2vec2.py:function_definition@33977-36084
+  pred_symbols: n=31
+    - src/transformers/feature_extraction_sequence_utils.py:class_definition@985-18300
+    - src/transformers/feature_extraction_sequence_utils.py:function_definition@1877-10660
+    - src/transformers/models/audio_spectrogram_transformer/feature_extraction_audio_spectrogram_transformer.py:class_definition@1005-8309
+    - src/transformers/models/audio_spectrogram_transformer/feature_extraction_audio_spectrogram_transformer.py:function_definition@4790-8309
+    - src/transformers/models/clap/feature_extraction_clap.py:class_definition@1049-18365
+    - src/transformers/models/clap/feature_extraction_clap.py:function_definition@13186-18365
+    - src/transformers/models/wav2vec2/feature_extraction_wav2vec2.py:class_definition@940-11206
+    - src/transformers/models/wav2vec2/feature_extraction_wav2vec2.py:function_definition@3301-4202
+    - src/transformers/models/wav2vec2/feature_extraction_wav2vec2.py:function_definition@4208-11206
+    - src/transformers/models/whisper/feature_extraction_whisper.py:class_definition@1017-11935
+    - src/transformers/models/whisper/feature_extraction_whisper.py:function_definition@5324-11480
+    - tests/models/wav2vec2/test_feature_extraction_wav2vec2.py:class_definition@1288-3094
+    - tests/models/wav2vec2/test_feature_extraction_wav2vec2.py:class_definition@3097-9801
+    - tests/models/wav2vec2/test_feature_extraction_wav2vec2.py:function_definition@1350-2105
+    - tests/models/wav2vec2/test_feature_extraction_wav2vec2.py:function_definition@3557-4671
+    - tests/models/wav2vec2/test_feature_extraction_wav2vec2.py:function_definition@4677-5594
+    - tests/models/wav2vec2/test_feature_extraction_wav2vec2.py:function_definition@5600-6391
+    - tests/models/wav2vec2/test_feature_extraction_wav2vec2.py:function_definition@6397-7042
+    - tests/models/wav2vec2/test_feature_extraction_wav2vec2.py:function_definition@7048-8425
+    - tests/models/wav2vec2/test_feature_extraction_wav2vec2.py:function_definition@8450-9151
+    - tests/models/wav2vec2/test_feature_extraction_wav2vec2.py:function_definition@9186-9801
+    - tests/models/wav2vec2/test_feature_extraction_wav2vec2.py:function_definition@957-1285
+    - tests/test_sequence_feature_extraction_common.py:class_definition@800-18040
+    - tests/test_sequence_feature_extraction_common.py:function_definition@1020-1116
+    - tests/test_sequence_feature_extraction_common.py:function_definition@1122-1438
+    - tests/test_sequence_feature_extraction_common.py:function_definition@1444-2421
+    - tests/test_sequence_feature_extraction_common.py:function_definition@2446-3166
+    - tests/test_sequence_feature_extraction_common.py:function_definition@3188-3908
+    - tests/test_sequence_feature_extraction_common.py:function_definition@3914-9155
+    - tests/test_sequence_feature_extraction_common.py:function_definition@3963-4181
+    - tests/test_sequence_feature_extraction_common.py:function_definition@4191-4535
+  hit_symbols: n=4
+    - src/transformers/feature_extraction_sequence_utils.py:class_definition@985-18300
+    - src/transformers/feature_extraction_sequence_utils.py:function_definition@1877-10660
+    - src/transformers/models/wav2vec2/feature_extraction_wav2vec2.py:class_definition@940-11206
+    - src/transformers/models/wav2vec2/feature_extraction_wav2vec2.py:function_definition@4208-11206
+
+[16:23:42] Retrieval huggingface__transformers-23223: line_f1=0.181
+[16:23:42] Resolution resume: 0 harness-scored, 1 pending (stable run_id=epimetheus_Poly)
+[16:23:42] Waiting for Docker prefetch Poly huggingface__transformers-23223
+[16:23:42] Docker prefetch Poly huggingface__transformers-23223: ghcr.io/timesler/swe-polybench.eval.x86_64.huggingface__transformers-23223:v1.1, ghcr.io/timesler/swe-polybench.eval.x86_64.huggingface__transformers-23223:latest
+[16:23:42] Docker image already present: ghcr.io/timesler/swe-polybench.eval.x86_64.huggingface__transformers-23223:v1.1
+[16:23:42] Docker image already present: ghcr.io/timesler/swe-polybench.eval.x86_64.huggingface__transformers-23223:latest
+[16:23:42] Resolution eval (pending=1): /home/andre/workspace/ContextBench/agent-frameworks/epimetheus/.venv/bin/python /home/andre/workspace/ContextBench/scripts/run_resolution_eval.py --input-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Poly --bench Poly --model-name epimetheus__Poly --run-id epimetheus_Poly --predictions /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Poly_resolution_preds.jsonl --report-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet --instance-ids huggingface__transformers-23223 --max-workers 1
+[16:23:42] === Step 1/2: Build SWE-bench predictions ===
+[16:23:42]   Input dir   : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Poly
+[16:23:42] WARNING: duplicate instance_id huggingface__transformers-12981 (huggingface__transformers-12981.json); keeping first.
+[16:23:42] WARNING: duplicate instance_id huggingface__transformers-22458 (huggingface__transformers-22458.json); keeping first.
+[16:23:42] WARNING: duplicate instance_id huggingface__transformers-23223 (huggingface__transformers-23223.json); keeping first.
+[16:23:42] WARNING: duplicate instance_id langchain-ai__langchain-4009 (langchain-ai__langchain-4009.json); keeping first.
+[16:23:43] WARNING: duplicate instance_id mui__material-ui-19072 (mui__material-ui-19072.json); keeping first.
+[16:23:43] WARNING: duplicate instance_id mui__material-ui-19849 (mui__material-ui-19849.json); keeping first.
+[16:23:43] WARNING: duplicate instance_id serverless__serverless-3457 (serverless__serverless-3457.json); keeping first.
+[16:23:43]   Wrote 9 prediction(s) -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Poly_resolution_preds.jsonl
+[16:23:43] === Step 2/2: Run resolution harness ===
+[16:23:43]   Backend     : Poly
+[16:23:43]   Dataset     : AmazonScience/SWE-PolyBench (split=test)
+[16:23:43]   Run id      : epimetheus_Poly
+[16:23:43]   Report dir  : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet
+[16:23:47]   Poly dataset subset : 1 instance(s)
+[16:23:47]   Running resilient Poly worker: /home/andre/workspace/ContextBench/.venvs/resolution/bin/python /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/poly_eval/epimetheus_Poly/_poly_worker.py /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/poly_eval/epimetheus_Poly/dataset_subset.csv /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/poly_eval/epimetheus_Poly/results /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/poly_eval/epimetheus_Poly/repos 1
+/home/andre/workspace/ContextBench/.venvs/resolution/lib/python3.12/site-packages/tree_sitter/__init__.py:36: FutureWarning: Language(path, name) is deprecated. Use Language(ptr, name) instead.
+  warn("{} is deprecated. Use {} instead.".format(old, new), FutureWarning)
+[poly-worker] evaluate huggingface__transformers-23223
+[poly-worker] using local prebuilt ghcr.io/timesler/swe-polybench.eval.x86_64.huggingface__transformers-23223:v1.1 -> polybench_python_huggingface__transformers-23223
+2026-09-10 16:23:49.101 | INFO     | poly_bench_evaluation.run_evaluation:evaluate_instance:130 - Successfully pulled pre-built image from GHCR: polybench_python_huggingface__transformers-23223
+2026-09-10 16:23:49.456 | INFO     | poly_bench_evaluation.run_evaluation:evaluate_instance:235 - docker running for huggingface__transformers-23223
+2026-09-10 16:24:10.084 | DEBUG    | poly_bench_evaluation.docker_utils:_cleanup:432 - Removed local image tag: polybench_python_huggingface__transformers-23223
+2026-09-10 16:24:10.097 | INFO     | poly_bench_evaluation.scoring:aggregate_logs:256 - Writing aggregated results to result.json
+Total resolved: 4/7
+Total pass rate: 57.14%
+
+Pass rate by language:
+Python: 0/1 (0.0%)
+
+Pass rate by task category:
+Bug Fix: 0/1 (0.0%)
+
+File retrieval metrics by language:
+          file_recall  file_precision  file_f1
+language                                      
+Python           0.33             1.0      0.5
+
+File retrieval metrics overall:
+file_recall       0.69
+file_precision    0.79
+file_f1           0.69
+[poly-worker] done failures=0
+[16:24:10]   Poly report -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Poly.epimetheus_Poly.json
+[16:24:10] === Issue resolution summary ===
+[16:24:10]   Report            : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Poly.epimetheus_Poly.json
+[16:24:10]   Total (evaluated) : 7
+[16:24:10]   Submitted (preds) : 1
+[16:24:10]   Completed         : 7
+[16:24:10]   Resolved          : 4
+[16:24:10]   Unresolved        : 3
+[16:24:10]   Errored           : 0
+[16:24:10]   Empty patches     : 6
+[16:24:10]   Resolved rate     : 4/7 = 57.1% (of evaluated)
+[16:24:10]   Resolved IDs      : huggingface__transformers-12981, mui__material-ui-19849, serverless__serverless-3457, langchain-ai__langchain-4009
+[16:24:10] Done.
+[16:24:10]   Predictions : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Poly_resolution_preds.jsonl
+[16:24:10]   Report      : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Poly.epimetheus_Poly.json
+[16:24:10] Resolution scores -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Poly_resolution.jsonl
+[16:24:10] Deleted docker image: ghcr.io/timesler/swe-polybench.eval.x86_64.huggingface__transformers-23223:v1.1
+[16:24:11] Deleted docker image: ghcr.io/timesler/swe-polybench.eval.x86_64.huggingface__transformers-23223:latest

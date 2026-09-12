@@ -1,0 +1,325 @@
+[12:23:51] Retrieval eval: BurntSushi__ripgrep-1367
+  Setting up repository
+  Warning: repo_url mismatch; overriding with /home/andre/workspace/ContextBench/repos/github.com__BurntSushi__ripgrep
+  Repo: /home/andre/workspace/ContextBench/repos/github.com__BurntSushi__ripgrep
+  Commit: 4858267f3b97...
+  Checkout ready: /home/andre/workspace/ContextBench/repos/_worktrees/contextbench_worktrees/__home__andre__workspace__ContextBench__repos__github.com__BurntSushi__ripgrep/4858267f3b97fe2823d2ce104c1f90ec93eee8d7
+  Parsing trajectory
+  Extracted: 23 steps, final has 9 files
+DETAILS:
+instance_id=BurntSushi__ripgrep-1367
+  gold_files: n=1
+    - grep-regex/src/literal.rs
+  pred_files: n=9
+    - CHANGELOG.md
+    - Cargo.lock
+    - Cargo.toml
+    - ci/script.sh
+    - grep-regex/Cargo.toml
+    - grep-regex/src/config.rs
+    - grep-regex/src/literal.rs
+    - grep-regex/src/matcher.rs
+    - tests/regression.rs
+  hit_files: n=1
+    - grep-regex/src/literal.rs
+  gold_symbols: n=2
+    - grep-regex/src/literal.rs:function_item@11882-12104
+    - grep-regex/src/literal.rs:function_item@7726-8677
+  pred_symbols: n=30
+    - grep-regex/src/config.rs:function_item@6353-6463
+    - grep-regex/src/config.rs:function_item@6531-6636
+    - grep-regex/src/config.rs:function_item@6772-6965
+    - grep-regex/src/config.rs:function_item@7318-7503
+    - grep-regex/src/config.rs:function_item@8447-8791
+    - grep-regex/src/config.rs:function_item@8875-10756
+    - grep-regex/src/config.rs:impl_item@5735-11711
+    - grep-regex/src/literal.rs:function_item@10286-10414
+    - grep-regex/src/literal.rs:function_item@10467-10590
+    - grep-regex/src/literal.rs:function_item@10680-10813
+    - grep-regex/src/literal.rs:function_item@10819-10911
+    - grep-regex/src/literal.rs:function_item@10995-11085
+    - grep-regex/src/literal.rs:function_item@11103-11864
+    - grep-regex/src/literal.rs:function_item@1124-1420
+    - grep-regex/src/literal.rs:function_item@11882-12104
+    - grep-regex/src/literal.rs:function_item@1867-4954
+    - grep-regex/src/literal.rs:function_item@4958-7724
+    - grep-regex/src/literal.rs:function_item@7726-8677
+    - grep-regex/src/literal.rs:function_item@8679-9873
+    - grep-regex/src/literal.rs:function_item@9875-10228
+    - grep-regex/src/literal.rs:impl_item@1037-4956
+    - grep-regex/src/literal.rs:struct_item@716-1035
+    - grep-regex/src/matcher.rs:function_item@1059-1181
+    - grep-regex/src/matcher.rs:function_item@1406-2071
+    - grep-regex/src/matcher.rs:function_item@2344-3934
+    - grep-regex/src/matcher.rs:function_item@4112-4250
+    - grep-regex/src/matcher.rs:function_item@884-962
+    - grep-regex/src/matcher.rs:impl_item@841-964
+    - grep-regex/src/matcher.rs:impl_item@966-14410
+    - grep-regex/src/matcher.rs:struct_item@785-839
+  hit_symbols: n=2
+    - grep-regex/src/literal.rs:function_item@11882-12104
+    - grep-regex/src/literal.rs:function_item@7726-8677
+
+[12:23:51] Retrieval BurntSushi__ripgrep-1367: line_f1=0.071
+
+# Harness spliced from run_llmretry_6.log.gz (shard-level tail assigned to this instance)
+[12:36:25] Resolution resume: 0 harness-scored, 1 pending (stable run_id=epimetheus_Multi)
+[12:36:25] Resolution eval (pending=1): /home/andre/workspace/ContextBench/agent-frameworks/epimetheus/.venv/bin/python /home/andre/workspace/ContextBench/scripts/run_resolution_eval.py --input-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Multi --bench Multi --model-name epimetheus__Multi --run-id epimetheus_Multi --predictions /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution_preds.jsonl --report-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet --instance-ids BurntSushi__ripgrep-1367 --max-workers 1
+[12:36:25] === Step 1/2: Build SWE-bench predictions ===
+[12:36:25]   Input dir   : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Multi
+[12:36:25] WARNING: duplicate instance_id BurntSushi__ripgrep-1367 (BurntSushi__ripgrep-1367.json); keeping first.
+[12:36:25] WARNING: duplicate instance_id alibaba__fastjson2-2559 (alibaba__fastjson2-2559.json); keeping first.
+[12:36:25] WARNING: duplicate instance_id alibaba__fastjson2-2775 (alibaba__fastjson2-2775.json); keeping first.
+[12:36:25] WARNING: duplicate instance_id axios__axios-5661 (axios__axios-5661.json); keeping first.
+[12:36:25] WARNING: duplicate instance_id catchorg__Catch2-1608 (catchorg__Catch2-1608.json); keeping first.
+[12:36:25] WARNING: duplicate instance_id clap-rs__clap-1869 (clap-rs__clap-1869.json); keeping first.
+[12:36:25] WARNING: duplicate instance_id clap-rs__clap-2501 (clap-rs__clap-2501.json); keeping first.
+[12:36:25] WARNING: duplicate instance_id clap-rs__clap-2529 (clap-rs__clap-2529.json); keeping first.
+[12:36:25] WARNING: duplicate instance_id clap-rs__clap-2534 (clap-rs__clap-2534.json); keeping first.
+[12:36:25] WARNING: duplicate instance_id clap-rs__clap-2758 (clap-rs__clap-2758.json); keeping first.
+[12:36:25] WARNING: duplicate instance_id clap-rs__clap-2895 (clap-rs__clap-2895.json); keeping first.
+[12:36:25] WARNING: duplicate instance_id clap-rs__clap-3179 (clap-rs__clap-3179.json); keeping first.
+[12:36:25] WARNING: duplicate instance_id clap-rs__clap-3420 (clap-rs__clap-3420.json); keeping first.
+[12:36:25] WARNING: duplicate instance_id clap-rs__clap-3421 (clap-rs__clap-3421.json); keeping first.
+[12:36:25] WARNING: duplicate instance_id clap-rs__clap-3684 (clap-rs__clap-3684.json); keeping first.
+[12:36:25] WARNING: duplicate instance_id clap-rs__clap-3975 (clap-rs__clap-3975.json); keeping first.
+[12:36:25] WARNING: duplicate instance_id clap-rs__clap-4248 (clap-rs__clap-4248.json); keeping first.
+[12:36:25] WARNING: duplicate instance_id clap-rs__clap-4474 (clap-rs__clap-4474.json); keeping first.
+[12:36:25] WARNING: duplicate instance_id cli__cli-10048 (cli__cli-10048.json); keeping first.
+[12:36:25] WARNING: duplicate instance_id cli__cli-1387 (cli__cli-1387.json); keeping first.
+[12:36:25] WARNING: duplicate instance_id cli__cli-1457 (cli__cli-1457.json); keeping first.
+[12:36:25] WARNING: duplicate instance_id cli__cli-1567 (cli__cli-1567.json); keeping first.
+[12:36:25] WARNING: duplicate instance_id cli__cli-1580 (cli__cli-1580.json); keeping first.
+[12:36:25] WARNING: duplicate instance_id cli__cli-2250 (cli__cli-2250.json); keeping first.
+[12:36:25] WARNING: duplicate instance_id cli__cli-2351 (cli__cli-2351.json); keeping first.
+[12:36:25] WARNING: duplicate instance_id cli__cli-2466 (cli__cli-2466.json); keeping first.
+[12:36:25] WARNING: duplicate instance_id cli__cli-2785 (cli__cli-2785.json); keeping first.
+[12:36:25] WARNING: duplicate instance_id cli__cli-2888 (cli__cli-2888.json); keeping first.
+[12:36:25] WARNING: duplicate instance_id cli__cli-3270 (cli__cli-3270.json); keeping first.
+[12:36:25] WARNING: duplicate instance_id cli__cli-3608 (cli__cli-3608.json); keeping first.
+[12:36:25] WARNING: duplicate instance_id cli__cli-3832 (cli__cli-3832.json); keeping first.
+[12:36:25] WARNING: duplicate instance_id cli__cli-3982 (cli__cli-3982.json); keeping first.
+[12:36:25] WARNING: duplicate instance_id cli__cli-4253 (cli__cli-4253.json); keeping first.
+[12:36:25] WARNING: duplicate instance_id cli__cli-4676 (cli__cli-4676.json); keeping first.
+[12:36:25] WARNING: duplicate instance_id cli__cli-495 (cli__cli-495.json); keeping first.
+[12:36:25] WARNING: duplicate instance_id cli__cli-5019 (cli__cli-5019.json); keeping first.
+[12:36:25] WARNING: duplicate instance_id cli__cli-5047 (cli__cli-5047.json); keeping first.
+[12:36:25] WARNING: duplicate instance_id cli__cli-513 (cli__cli-513.json); keeping first.
+[12:36:25] WARNING: duplicate instance_id cli__cli-5396 (cli__cli-5396.json); keeping first.
+[12:36:25] WARNING: duplicate instance_id cli__cli-5537 (cli__cli-5537.json); keeping first.
+[12:36:25] WARNING: duplicate instance_id cli__cli-5648 (cli__cli-5648.json); keeping first.
+[12:36:25] WARNING: duplicate instance_id cli__cli-5698 (cli__cli-5698.json); keeping first.
+[12:36:25] WARNING: duplicate instance_id cli__cli-5973 (cli__cli-5973.json); keeping first.
+[12:36:25] WARNING: duplicate instance_id cli__cli-6122 (cli__cli-6122.json); keeping first.
+[12:36:25] WARNING: duplicate instance_id cli__cli-6706 (cli__cli-6706.json); keeping first.
+[12:36:25] WARNING: duplicate instance_id cli__cli-7110 (cli__cli-7110.json); keeping first.
+[12:36:25] WARNING: duplicate instance_id cli__cli-7180 (cli__cli-7180.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id cli__cli-7645 (cli__cli-7645.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id cli__cli-8157 (cli__cli-8157.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id cli__cli-8632 (cli__cli-8632.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id darkreader__darkreader-7241 (darkreader__darkreader-7241.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id elastic__logstash-14970 (elastic__logstash-14970.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id expressjs__express-3870 (expressjs__express-3870.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id facebook__zstd-1105 (facebook__zstd-1105.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id facebook__zstd-1243 (facebook__zstd-1243.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id facebook__zstd-1390 (facebook__zstd-1390.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id facebook__zstd-1532 (facebook__zstd-1532.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id facebook__zstd-1733 (facebook__zstd-1733.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id facebook__zstd-2094 (facebook__zstd-2094.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id facebook__zstd-637 (facebook__zstd-637.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id fasterxml__jackson-core-1016 (fasterxml__jackson-core-1016.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id fasterxml__jackson-core-183 (fasterxml__jackson-core-183.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id fasterxml__jackson-core-964 (fasterxml__jackson-core-964.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id fasterxml__jackson-databind-3701 (fasterxml__jackson-databind-3701.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id fasterxml__jackson-databind-4015 (fasterxml__jackson-databind-4015.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id fasterxml__jackson-databind-4050 (fasterxml__jackson-databind-4050.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id fasterxml__jackson-databind-4469 (fasterxml__jackson-databind-4469.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id fasterxml__jackson-databind-4641 (fasterxml__jackson-databind-4641.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id fasterxml__jackson-dataformat-xml-638 (fasterxml__jackson-dataformat-xml-638.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id fmtlib__fmt-1663 (fmtlib__fmt-1663.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id fmtlib__fmt-2394 (fmtlib__fmt-2394.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id fmtlib__fmt-4286 (fmtlib__fmt-4286.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id google__gson-1391 (google__gson-1391.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id grpc__grpc-go-2996 (grpc__grpc-go-2996.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id iamkun__dayjs-1319 (iamkun__dayjs-1319.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id iamkun__dayjs-1414 (iamkun__dayjs-1414.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id iamkun__dayjs-1611 (iamkun__dayjs-1611.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id iamkun__dayjs-1725 (iamkun__dayjs-1725.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id iamkun__dayjs-734 (iamkun__dayjs-734.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id iamkun__dayjs-882 (iamkun__dayjs-882.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id iamkun__dayjs-938 (iamkun__dayjs-938.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id jqlang__jq-1793 (jqlang__jq-1793.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id jqlang__jq-2654 (jqlang__jq-2654.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id jqlang__jq-2919 (jqlang__jq-2919.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id mockito__mockito-3220 (mockito__mockito-3220.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id mui__material-ui-23884 (mui__material-ui-23884.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id mui__material-ui-24202 (mui__material-ui-24202.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id mui__material-ui-25149 (mui__material-ui-25149.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id mui__material-ui-29898 (mui__material-ui-29898.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id mui__material-ui-30374 (mui__material-ui-30374.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id mui__material-ui-31998 (mui__material-ui-31998.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id mui__material-ui-32626 (mui__material-ui-32626.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id mui__material-ui-33692 (mui__material-ui-33692.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id mui__material-ui-34159 (mui__material-ui-34159.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id mui__material-ui-34229 (mui__material-ui-34229.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id mui__material-ui-34337 (mui__material-ui-34337.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id mui__material-ui-34401 (mui__material-ui-34401.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id mui__material-ui-34437 (mui__material-ui-34437.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id mui__material-ui-35086 (mui__material-ui-35086.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id mui__material-ui-36088 (mui__material-ui-36088.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id mui__material-ui-36659 (mui__material-ui-36659.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id mui__material-ui-37850 (mui__material-ui-37850.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id mui__material-ui-37855 (mui__material-ui-37855.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id mui__material-ui-38100 (mui__material-ui-38100.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id mui__material-ui-38188 (mui__material-ui-38188.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id mui__material-ui-39108 (mui__material-ui-39108.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id mui__material-ui-39196 (mui__material-ui-39196.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id mui__material-ui-39775 (mui__material-ui-39775.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id nlohmann__json-2989 (nlohmann__json-2989.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id nlohmann__json-3601 (nlohmann__json-3601.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id nlohmann__json-4512 (nlohmann__json-4512.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id nushell__nushell-13357 (nushell__nushell-13357.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id ponylang__ponyc-1057 (ponylang__ponyc-1057.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id ponylang__ponyc-1124 (ponylang__ponyc-1124.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id ponylang__ponyc-1486 (ponylang__ponyc-1486.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id ponylang__ponyc-2168 (ponylang__ponyc-2168.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id ponylang__ponyc-2201 (ponylang__ponyc-2201.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id ponylang__ponyc-2205 (ponylang__ponyc-2205.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id ponylang__ponyc-2247 (ponylang__ponyc-2247.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id ponylang__ponyc-2261 (ponylang__ponyc-2261.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id ponylang__ponyc-2532 (ponylang__ponyc-2532.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id ponylang__ponyc-2586 (ponylang__ponyc-2586.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id ponylang__ponyc-3973 (ponylang__ponyc-3973.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id ponylang__ponyc-4595 (ponylang__ponyc-4595.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id rayon-rs__rayon-986 (rayon-rs__rayon-986.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id simdjson__simdjson-1695 (simdjson__simdjson-1695.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id simdjson__simdjson-2016 (simdjson__simdjson-2016.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id sveltejs__svelte-10608 (sveltejs__svelte-10608.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id sveltejs__svelte-11913 (sveltejs__svelte-11913.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id sveltejs__svelte-12098 (sveltejs__svelte-12098.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id sveltejs__svelte-12649 (sveltejs__svelte-12649.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id sveltejs__svelte-13097 (sveltejs__svelte-13097.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id sveltejs__svelte-14007 (sveltejs__svelte-14007.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id sveltejs__svelte-14276 (sveltejs__svelte-14276.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id sveltejs__svelte-14629 (sveltejs__svelte-14629.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id sveltejs__svelte-14935 (sveltejs__svelte-14935.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id sveltejs__svelte-9962 (sveltejs__svelte-9962.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id tokio-rs__bytes-721 (tokio-rs__bytes-721.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id tokio-rs__tokio-4519 (tokio-rs__tokio-4519.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id tokio-rs__tracing-1236 (tokio-rs__tracing-1236.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id tokio-rs__tracing-2897 (tokio-rs__tracing-2897.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id vuejs__core-10004 (vuejs__core-10004.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id vuejs__core-10027 (vuejs__core-10027.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id vuejs__core-10250 (vuejs__core-10250.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id vuejs__core-10289 (vuejs__core-10289.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id vuejs__core-11201 (vuejs__core-11201.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id vuejs__core-11338 (vuejs__core-11338.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id vuejs__core-11517 (vuejs__core-11517.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id vuejs__core-11899 (vuejs__core-11899.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id vuejs__core-9213 (vuejs__core-9213.json); keeping first.
+[12:36:26] WARNING: duplicate instance_id vuejs__core-9572 (vuejs__core-9572.json); keeping first.
+[12:36:26] Skipped 4 instance(s) with empty patch (use --include-empty to keep).
+[12:36:26]   Wrote 152 prediction(s) -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution_preds.jsonl
+[12:36:26] === Step 2/2: Run resolution harness ===
+[12:36:26]   Backend     : Multi
+[12:36:26]   Dataset     : ByteDance-Seed/Multi-SWE-bench (split=train)
+[12:36:26]   Run id      : epimetheus_Multi
+[12:36:26]   Report dir  : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet
+
+Fetching 50 files:   0%|          | 0/50 [00:00<?, ?it/s]
+Fetching 50 files: 100%|██████████| 50/50 [00:00<00:00, 3193.03it/s]
+[12:36:34]   Running: /home/andre/workspace/ContextBench/.venvs/resolution/bin/python -m multi_swe_bench.harness.run_evaluation --config /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/multi_eval/epimetheus_Multi/config.json
+[2026-09-11 12:36:34,729] [run_evaluation.py] [INFO]: Initialize logger successfully.
+[2026-09-11 12:36:34,730] [run_evaluation.py] [INFO]: Building images...
+[2026-09-11 12:36:34,730] [run_evaluation.py] [INFO]: Loading repo commits...
+[2026-09-11 12:36:34,730] [run_evaluation.py] [INFO]: Creating instances...
+[2026-09-11 12:36:34,730] [run_evaluation.py] [INFO]: Loading datasets...
+[2026-09-11 12:36:34,750] [run_evaluation.py] [INFO]: Successfully loaded 1 valid datasets from ['/home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/multi_eval/epimetheus_Multi/dataset.jsonl']
+[2026-09-11 12:36:34,751] [run_evaluation.py] [INFO]: Successfully loaded 1 valid instances.
+
+Checking commit hashes:   0%|          | 0/1 [00:00<?, ?it/s][2026-09-11 12:36:34,757] [run_evaluation.py] [WARNING]: Repository not found: /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/multi_eval/epimetheus_Multi/repos/BurntSushi/ripgrep
+Cloning into '/home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/multi_eval/epimetheus_Multi/repos/BurntSushi/ripgrep'...
+
+
+Checking commit hashes for BurntSushi/ripgrep:   0%|          | 0/1 [00:00<?, ?it/s][A
+Checking commit hashes for BurntSushi/ripgrep: 100%|██████████| 1/1 [00:00<00:00, 39199.10it/s]
+
+Checking commit hashes: 100%|██████████| 1/1 [00:01<00:00,  1.85s/it]
+Checking commit hashes: 100%|██████████| 1/1 [00:01<00:00,  1.85s/it]
+[2026-09-11 12:36:36,609] [run_evaluation.py] [INFO]: Total images: 2
+
+Building images:   0%|          | 0/2 [00:00<?, ?it/s][2026-09-11 12:36:36,612] [run_evaluation.py] [INFO]: Building image mswebench/burntsushi_m_ripgrep:base...
+[2026-09-11 12:37:05,693] [run_evaluation.py] [INFO]: Image mswebench/burntsushi_m_ripgrep:base built successfully.
+
+Building images:  50%|█████     | 1/2 [00:29<00:29, 29.08s/it]
+Building images: 100%|██████████| 2/2 [00:29<00:00, 14.55s/it]
+[2026-09-11 12:37:05,713] [run_evaluation.py] [INFO]: Images built successfully.
+[2026-09-11 12:37:05,713] [run_evaluation.py] [INFO]: Running instances...
+
+Running instances:   0%|          | 0/1 [00:00<?, ?it/s][2026-09-11 12:37:05,714] [run_evaluation.py] [INFO]: Running mswebench/burntsushi_m_ripgrep:pr-1367 with command: bash /home/fix-run.sh...
+
+Running instances: 100%|██████████| 1/1 [00:03<00:00,  3.93s/it]
+Running instances: 100%|██████████| 1/1 [00:03<00:00,  3.93s/it]
+[2026-09-11 12:37:09,646] [run_evaluation.py] [INFO]: Instances run successfully.
+[2026-09-11 12:37:09,647] [run_evaluation.py] [INFO]: Running evaluation...
+[2026-09-11 12:37:09,647] [gen_report.py] [INFO]: Initialize logger successfully.
+[2026-09-11 12:37:09,648] [gen_report.py] [INFO]: Collecting report tasks...
+[2026-09-11 12:37:09,660] [gen_report.py] [INFO]: Successfully collected 141 tasks.
+[2026-09-11 12:37:09,660] [gen_report.py] [INFO]: Loading dataset...
+[2026-09-11 12:37:09,672] [gen_report.py] [INFO]: Successfully loaded 1 valid datasets from ['/home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/multi_eval/epimetheus_Multi/dataset.jsonl']
+
+Generating eval reports:   0%|          | 0/1 [00:00<?, ?it/s][2026-09-11 12:37:09,680] [gen_report.py] [ERROR]: Invalid report for BurntSushi/ripgrep:pr-1367, Test Result Summary:
+Stage Descriptions:
+  run  : Execute the test command without any patches applied.
+  test : Execute the test command after applying the test patch.
+  fix  : Execute the test command after applying both the test patch and the fix patch.
+Each stage is reported as (pass, fail, skip), representing the number of tests that passed, failed, or were skipped, respectively.
+
+Results:
+  run  = (227, 11, 0)
+  test = (227, 12, 0)
+  fix  = (227, 12, 0), Before applying the fix patch, the test passed; however, after applying the fix patch, the test failed. A brief summary is as follows: Test Result Summary:
+Stage Descriptions:
+  run  : Execute the test command without any patches applied.
+  test : Execute the test command after applying the test patch.
+  fix  : Execute the test command after applying both the test patch and the fix patch.
+Each stage is reported as (pass, fail, skip), representing the number of tests that passed, failed, or were skipped, respectively.
+
+Results:
+  run  = (227, 11, 0)
+  test = (227, 12, 0)
+  fix  = (227, 12, 0). `regression::r93`: Test(run=<TestStatus.PASS: 'PASS'>, test=<TestStatus.PASS: 'PASS'>, fix=<TestStatus.FAIL: 'FAIL'>)
+
+Generating eval reports: 100%|██████████| 1/1 [00:00<00:00, 128.17it/s]
+[2026-09-11 12:37:09,680] [gen_report.py] [INFO]: Successfully generated 0 reports.
+
+Fetching 50 files:   0%|          | 0/50 [00:00<?, ?it/s]
+Fetching 50 files: 100%|██████████| 50/50 [00:00<00:00, 2851.29it/s]
+[12:37:14]   Multi report -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Multi.epimetheus_Multi.json
+[12:37:14] === Issue resolution summary ===
+[12:37:14]   Report            : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Multi.epimetheus_Multi.json
+[12:37:14]   Total (evaluated) : 1
+[12:37:14]   Submitted (preds) : 1
+[12:37:14]   Completed         : 1
+[12:37:14]   Resolved          : 0
+[12:37:14]   Unresolved        : 1
+[12:37:14]   Errored           : 0
+[12:37:14]   Empty patches     : 0
+[12:37:14]   Resolved rate     : 0/1 = 0.0% (of evaluated)
+[12:37:14] Done.
+[12:37:14]   Predictions : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution_preds.jsonl
+[12:37:14]   Report      : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Multi.epimetheus_Multi.json
+[12:37:14] Resolution scores -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution.jsonl
+[12:37:14] === Issue resolution summary (aggregated) ===
+[12:37:14]   Agent instances         : 1
+[12:37:14]   Empty patches (skipped) : 0
+[12:37:14]   With patch              : 1
+[12:37:14]   Harness scored          : 1
+[12:37:14]   Harness infra errors    : 0
+[12:37:14]   Harness pending         : 0
+[12:37:14]   Resolved                : 0
+[12:37:14]   Resolved rate           : 0/1 = 0.0% (of harness-scored)
+[12:37:14]   Resolved rate           : 0/1 = 0.0% (of agent instances; empty patch = unresolved)
+[12:37:14] Shuffled resolution [Poly]: 2 agent instance(s)
+[12:37:14] Resolution invalidate keras-team__keras-19201: empty→patch
+[12:37:14] Resolution invalidate prettier__prettier-3515: empty→patch

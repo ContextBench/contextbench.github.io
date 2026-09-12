@@ -1,0 +1,156 @@
+[15:53:52] Retrieval eval: ponylang__ponyc-2247
+  Setting up repository
+  Warning: repo_url mismatch; overriding with /home/andre/workspace/ContextBench/repos/github.com__ponylang__ponyc
+  Repo: /home/andre/workspace/ContextBench/repos/github.com__ponylang__ponyc
+  Commit: 9e26f0ac4b65...
+  Checkout ready: /home/andre/workspace/ContextBench/repos/_worktrees/contextbench_worktrees/__home__andre__workspace__ContextBench__repos__github.com__ponylang__ponyc/9e26f0ac4b65462fda4cadbb80cc2fa53e3042b3
+  Parsing trajectory
+  Extracted: 22 steps, final has 5 files
+DETAILS:
+instance_id=ponylang__ponyc-2247
+  gold_files: n=1
+    - src/libponyc/codegen/genprim.c
+  pred_files: n=5
+    - Makefile
+    - src/libponyc/codegen/genprim.c
+    - src/libponyc/codegen/genserialise.c
+    - src/libponyrt/gc/serialise.c
+    - test/libponyc/compiler_serialisation.cc
+  hit_files: n=1
+    - src/libponyc/codegen/genprim.c
+  gold_symbols: n=2
+    - src/libponyc/codegen/genprim.c:function_definition@35197-36748
+    - src/libponyc/codegen/genprim.c:function_definition@36750-39336
+  pred_symbols: n=55
+    - src/libponyc/codegen/genprim.c:function_definition@24534-26480
+    - src/libponyc/codegen/genprim.c:function_definition@26482-31764
+    - src/libponyc/codegen/genprim.c:function_definition@31766-35195
+    - src/libponyc/codegen/genprim.c:function_definition@35197-36748
+    - src/libponyc/codegen/genprim.c:function_definition@36750-39336
+    - src/libponyc/codegen/genprim.c:function_definition@39338-40592
+    - src/libponyc/codegen/genprim.c:function_definition@40594-40907
+    - src/libponyc/codegen/genprim.c:function_definition@40909-41228
+    - src/libponyc/codegen/genprim.c:function_definition@41230-41537
+    - src/libponyc/codegen/genserialise.c:function_definition@11912-13479
+    - src/libponyrt/gc/serialise.c:function_definition@1052-1242
+    - src/libponyrt/gc/serialise.c:function_definition@1244-1399
+    - src/libponyrt/gc/serialise.c:function_definition@1401-1769
+    - src/libponyrt/gc/serialise.c:function_definition@1771-2404
+    - src/libponyrt/gc/serialise.c:function_definition@2406-3494
+    - src/libponyrt/gc/serialise.c:function_definition@3496-3657
+    - src/libponyrt/gc/serialise.c:function_definition@3659-4414
+    - src/libponyrt/gc/serialise.c:function_definition@4416-5037
+    - src/libponyrt/gc/serialise.c:function_definition@451-550
+    - src/libponyrt/gc/serialise.c:function_definition@5039-6032
+    - src/libponyrt/gc/serialise.c:function_definition@6034-8354
+    - src/libponyrt/gc/serialise.c:function_definition@680-764
+    - src/libponyrt/gc/serialise.c:function_definition@766-854
+    - src/libponyrt/gc/serialise.c:function_definition@8356-8791
+    - src/libponyrt/gc/serialise.c:function_definition@856-931
+    - src/libponyrt/gc/serialise.c:function_definition@8793-9719
+    - src/libponyrt/gc/serialise.c:function_definition@9721-10312
+    - src/libponyrt/gc/serialise.c:struct_specifier@569-677
+    - test/libponyc/compiler_serialisation.cc:class_specifier@290-434
+    - test/libponyc/compiler_serialisation.cc:function_definition@1077-1150
+    - test/libponyc/compiler_serialisation.cc:function_definition@1155-1343
+    - test/libponyc/compiler_serialisation.cc:function_definition@1385-1458
+    - test/libponyc/compiler_serialisation.cc:function_definition@1486-1540
+    - test/libponyc/compiler_serialisation.cc:function_definition@1570-1628
+    - test/libponyc/compiler_serialisation.cc:function_definition@1633-2541
+    - test/libponyc/compiler_serialisation.cc:function_definition@2543-3451
+    - test/libponyc/compiler_serialisation.cc:function_definition@3453-3537
+    - test/libponyc/compiler_serialisation.cc:function_definition@3539-3623
+    - test/libponyc/compiler_serialisation.cc:function_definition@3625-3711
+    - test/libponyc/compiler_serialisation.cc:function_definition@3713-3795
+    - test/libponyc/compiler_serialisation.cc:function_definition@3797-3885
+    - test/libponyc/compiler_serialisation.cc:function_definition@3887-3973
+    - test/libponyc/compiler_serialisation.cc:function_definition@3975-4059
+    - test/libponyc/compiler_serialisation.cc:function_definition@4061-4143
+    - test/libponyc/compiler_serialisation.cc:function_definition@4145-4231
+    - test/libponyc/compiler_serialisation.cc:function_definition@4233-4317
+    - test/libponyc/compiler_serialisation.cc:function_definition@4319-4405
+    - test/libponyc/compiler_serialisation.cc:function_definition@4407-4493
+    - test/libponyc/compiler_serialisation.cc:function_definition@753-863
+    - test/libponyc/compiler_serialisation.cc:function_definition@865-919
+    ... (5 more)
+  hit_symbols: n=2
+    - src/libponyc/codegen/genprim.c:function_definition@35197-36748
+    - src/libponyc/codegen/genprim.c:function_definition@36750-39336
+
+[15:53:52] Retrieval ponylang__ponyc-2247: line_f1=0.144
+[15:53:52] Resolution resume: 0 harness-scored, 1 pending (stable run_id=epimetheus_Multi)
+[15:53:52] Resolution eval (pending=1): /home/andre/workspace/ContextBench/agent-frameworks/epimetheus/.venv/bin/python /home/andre/workspace/ContextBench/scripts/run_resolution_eval.py --input-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Multi --bench Multi --model-name epimetheus__Multi --run-id epimetheus_Multi --predictions /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution_preds.jsonl --report-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet --instance-ids ponylang__ponyc-2247 --max-workers 1
+[15:53:52] === Step 1/2: Build SWE-bench predictions ===
+[15:53:52]   Input dir   : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Multi
+[15:53:52] WARNING: duplicate instance_id ponylang__ponyc-2247 (ponylang__ponyc-2247.json); keeping first.
+[15:53:52] WARNING: duplicate instance_id rayon-rs__rayon-986 (rayon-rs__rayon-986.json); keeping first.
+[15:53:52]   Wrote 2 prediction(s) -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution_preds.jsonl
+[15:53:52] === Step 2/2: Run resolution harness ===
+[15:53:52]   Backend     : Multi
+[15:53:52]   Dataset     : ByteDance-Seed/Multi-SWE-bench (split=train)
+[15:53:52]   Run id      : epimetheus_Multi
+[15:53:52]   Report dir  : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet
+
+Fetching 50 files:   0%|          | 0/50 [00:00<?, ?it/s]
+Fetching 50 files: 100%|██████████| 50/50 [00:00<00:00, 2766.62it/s]
+[15:54:05]   Running: /home/andre/workspace/ContextBench/.venvs/resolution/bin/python -m multi_swe_bench.harness.run_evaluation --config /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/multi_eval/epimetheus_Multi/config.json
+[2026-09-10 15:54:07,107] [run_evaluation.py] [INFO]: Initialize logger successfully.
+[2026-09-10 15:54:07,108] [run_evaluation.py] [INFO]: Building images...
+[2026-09-10 15:54:07,109] [run_evaluation.py] [INFO]: Loading repo commits...
+[2026-09-10 15:54:07,109] [run_evaluation.py] [INFO]: Creating instances...
+[2026-09-10 15:54:07,109] [run_evaluation.py] [INFO]: Loading datasets...
+[2026-09-10 15:54:07,272] [run_evaluation.py] [INFO]: Successfully loaded 1 valid datasets from ['/home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/multi_eval/epimetheus_Multi/dataset.jsonl']
+[2026-09-10 15:54:07,273] [run_evaluation.py] [INFO]: Successfully loaded 1 valid instances.
+
+Checking commit hashes:   0%|          | 0/1 [00:00<?, ?it/s][2026-09-10 15:54:07,281] [run_evaluation.py] [WARNING]: Repository not found: /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/multi_eval/epimetheus_Multi/repos/ponylang/ponyc
+Cloning into '/home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/multi_eval/epimetheus_Multi/repos/ponylang/ponyc'...
+
+
+Checking commit hashes for ponylang/ponyc:   0%|          | 0/1 [00:00<?, ?it/s][A
+Checking commit hashes for ponylang/ponyc: 100%|██████████| 1/1 [00:00<00:00, 22919.69it/s]
+
+Checking commit hashes: 100%|██████████| 1/1 [00:14<00:00, 14.27s/it]
+Checking commit hashes: 100%|██████████| 1/1 [00:14<00:00, 14.27s/it]
+[2026-09-10 15:54:21,547] [run_evaluation.py] [INFO]: Total images: 2
+
+Building images:   0%|          | 0/2 [00:00<?, ?it/s]
+Building images: 100%|██████████| 2/2 [00:00<00:00, 31.89it/s]
+[2026-09-10 15:54:21,610] [run_evaluation.py] [INFO]: Images built successfully.
+[2026-09-10 15:54:21,610] [run_evaluation.py] [INFO]: Running instances...
+
+Running instances:   0%|          | 0/1 [00:00<?, ?it/s][2026-09-10 15:54:21,612] [run_evaluation.py] [INFO]: Running mswebench/ponylang_m_ponyc:pr-2247 with command: bash /home/fix-run.sh...
+
+Running instances: 100%|██████████| 1/1 [01:59<00:00, 119.79s/it]
+Running instances: 100%|██████████| 1/1 [01:59<00:00, 119.79s/it]
+[2026-09-10 15:56:21,399] [run_evaluation.py] [INFO]: Instances run successfully.
+[2026-09-10 15:56:21,399] [run_evaluation.py] [INFO]: Running evaluation...
+[2026-09-10 15:56:21,399] [gen_report.py] [INFO]: Initialize logger successfully.
+[2026-09-10 15:56:21,400] [gen_report.py] [INFO]: Collecting report tasks...
+[2026-09-10 15:56:21,401] [gen_report.py] [INFO]: Successfully collected 2 tasks.
+[2026-09-10 15:56:21,401] [gen_report.py] [INFO]: Loading dataset...
+[2026-09-10 15:56:21,589] [gen_report.py] [INFO]: Successfully loaded 1 valid datasets from ['/home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/multi_eval/epimetheus_Multi/dataset.jsonl']
+
+Generating eval reports:   0%|          | 0/1 [00:00<?, ?it/s][2026-09-10 15:56:21,736] [gen_report.py] [ERROR]: Invalid p2p_tests for ponylang/ponyc:pr-2247: missing MatchTypeTest.SimpleTypes
+
+Generating eval reports: 100%|██████████| 1/1 [00:00<00:00,  6.80it/s]
+Generating eval reports: 100%|██████████| 1/1 [00:00<00:00,  6.79it/s]
+[2026-09-10 15:56:21,737] [gen_report.py] [INFO]: Successfully generated 0 reports.
+
+Fetching 50 files:   0%|          | 0/50 [00:00<?, ?it/s]
+Fetching 50 files: 100%|██████████| 50/50 [00:00<00:00, 1789.38it/s]
+[15:56:33]   Multi report -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Multi.epimetheus_Multi.json
+[15:56:33] === Issue resolution summary ===
+[15:56:33]   Report            : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Multi.epimetheus_Multi.json
+[15:56:33]   Total (evaluated) : 1
+[15:56:33]   Submitted (preds) : 1
+[15:56:33]   Completed         : 1
+[15:56:33]   Resolved          : 0
+[15:56:33]   Unresolved        : 1
+[15:56:33]   Errored           : 0
+[15:56:33]   Empty patches     : 0
+[15:56:33]   Resolved rate     : 0/1 = 0.0% (of evaluated)
+[15:56:33] Done.
+[15:56:33]   Predictions : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution_preds.jsonl
+[15:56:33]   Report      : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Multi.epimetheus_Multi.json
+[15:56:33] Resolution scores -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution.jsonl
+[15:56:34] Deleted docker image: mswebench/ponylang_m_ponyc:pr-2247

@@ -1,0 +1,118 @@
+[13:05:36] Retrieval eval: zeromicro__go-zero-1969
+  Setting up repository
+  Warning: repo_url mismatch; overriding with /home/andre/workspace/ContextBench/repos/github.com__zeromicro__go-zero
+  Repo: /home/andre/workspace/ContextBench/repos/github.com__zeromicro__go-zero
+  Commit: af05219b70c5...
+  Checkout ready: /home/andre/workspace/ContextBench/repos/_worktrees/contextbench_worktrees/__home__andre__workspace__ContextBench__repos__github.com__zeromicro__go-zero/af05219b70c5e18542ebb499b18a1dff6ffacc6d
+  Parsing trajectory
+  Extracted: 26 steps, final has 11 files
+DETAILS:
+instance_id=zeromicro__go-zero-1969
+  gold_files: n=2
+    - core/mapping/unmarshaler.go
+    - core/mapping/utils.go
+  pred_files: n=11
+    - core/conf/config.go
+    - core/conf/options.go
+    - core/jsonx/json.go
+    - core/mapping/fieldoptions.go
+    - core/mapping/jsonunmarshaler.go
+    - core/mapping/marshaler.go
+    - core/mapping/marshaler_test.go
+    - core/mapping/unmarshaler.go
+    - core/mapping/unmarshaler_test.go
+    - core/mapping/utils.go
+    - go.mod
+  hit_files: n=2
+    - core/mapping/unmarshaler.go
+    - core/mapping/utils.go
+  gold_symbols: n=3
+    - core/mapping/unmarshaler.go:method_declaration@5624-6523
+    - core/mapping/unmarshaler.go:method_declaration@6525-7591
+    - core/mapping/utils.go:function_declaration@13276-13716
+  pred_symbols: n=115
+    - core/conf/config.go:function_declaration@1086-1196
+    - core/conf/config.go:function_declaration@1316-1423
+    - core/conf/config.go:function_declaration@1491-1601
+    - core/conf/config.go:function_declaration@1669-1779
+    - core/conf/config.go:function_declaration@1899-2006
+    - core/conf/config.go:function_declaration@2067-2240
+    - core/conf/config.go:function_declaration@378-800
+    - core/conf/config.go:function_declaration@918-1018
+    - core/conf/options.go:function_declaration@209-282
+    - core/conf/options.go:type_declaration@14-145
+    - core/jsonx/json.go:function_declaration@1048-1166
+    - core/jsonx/json.go:function_declaration@116-187
+    - core/jsonx/json.go:function_declaration@1168-1271
+    - core/jsonx/json.go:function_declaration@232-447
+    - core/jsonx/json.go:function_declaration@495-711
+    - core/jsonx/json.go:function_declaration@762-1046
+    - core/mapping/fieldoptions.go:method_declaration@1033-2102
+    - core/mapping/fieldoptions.go:method_declaration@504-592
+    - core/mapping/fieldoptions.go:method_declaration@594-735
+    - core/mapping/fieldoptions.go:method_declaration@737-821
+    - core/mapping/fieldoptions.go:method_declaration@823-929
+    - core/mapping/fieldoptions.go:method_declaration@931-1031
+    - core/mapping/fieldoptions.go:type_declaration@54-502
+    - core/mapping/jsonunmarshaler.go:function_declaration@205-325
+    - core/mapping/jsonunmarshaler.go:function_declaration@381-493
+    - core/mapping/jsonunmarshaler.go:function_declaration@557-680
+    - core/mapping/jsonunmarshaler.go:function_declaration@682-909
+    - core/mapping/jsonunmarshaler.go:function_declaration@911-1150
+    - core/mapping/marshaler.go:function_declaration@1626-2129
+    - core/mapping/marshaler.go:function_declaration@2131-2498
+    - core/mapping/marshaler.go:function_declaration@2500-2796
+    - core/mapping/marshaler.go:function_declaration@2798-3708
+    - core/mapping/marshaler.go:function_declaration@974-1624
+    - core/mapping/marshaler_test.go:function_declaration@1122-1329
+    - core/mapping/marshaler_test.go:function_declaration@1331-1470
+    - core/mapping/marshaler_test.go:function_declaration@1472-1638
+    - core/mapping/marshaler_test.go:function_declaration@1640-1814
+    - core/mapping/marshaler_test.go:function_declaration@1816-1985
+    - core/mapping/marshaler_test.go:function_declaration@1987-2188
+    - core/mapping/marshaler_test.go:function_declaration@2190-2738
+    - core/mapping/marshaler_test.go:function_declaration@2740-3296
+    - core/mapping/marshaler_test.go:function_declaration@598-1120
+    - core/mapping/marshaler_test.go:function_declaration@79-596
+    - core/mapping/marshaler_test.go:type_declaration@2231-2320
+    - core/mapping/marshaler_test.go:type_declaration@2784-2873
+    - core/mapping/unmarshaler.go:function_declaration@1163-1262
+    - core/mapping/unmarshaler.go:function_declaration@1305-1501
+    - core/mapping/unmarshaler.go:function_declaration@1553-1660
+    - core/mapping/unmarshaler.go:function_declaration@18057-18165
+    - core/mapping/unmarshaler.go:function_declaration@18240-18372
+    ... (65 more)
+  hit_symbols: n=3
+    - core/mapping/unmarshaler.go:method_declaration@5624-6523
+    - core/mapping/unmarshaler.go:method_declaration@6525-7591
+    - core/mapping/utils.go:function_declaration@13276-13716
+
+[13:05:36] Retrieval zeromicro__go-zero-1969: line_f1=0.085
+[13:05:37] Wrote 5 pred record(s) -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Shuffled_pred.jsonl
+
+# Harness overwritten from harness_rerun_4.log (failed first-pass resolution dropped)
+[16:35:08] Resolution eval (pending=4, workers=4): /home/andre/workspace/ContextBench/agent-frameworks/epimetheus/.venv/bin/python /home/andre/workspace/ContextBench/scripts/run_resolution_eval.py --input-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Multi --bench Multi --model-name epimetheus__Multi --run-id epimetheus_Multi --predictions /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution_preds.jsonl --report-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet --instance-ids cli__cli-3832,elastic__logstash-14027,zeromicro__go-zero-1969,mui__material-ui-37850 --max-workers 4
+[16:35:08] WARNING: duplicate instance_id zeromicro__go-zero-1969 (zeromicro__go-zero-1969.json); keeping first.
+Running instances:   0%|          | 0/4 [00:00<?, ?it/s][2026-09-11 16:35:17,947] [run_evaluation.py] [INFO]: Running mswebench/zeromicro_m_go-zero:pr-1969 with command: bash /home/fix-run.sh...
+[16:38:50]   Resolved IDs      : zeromicro__go-zero-1969, cli__cli-3832
+[16:38:50]   Resolved IDs            : cli__cli-3832, zeromicro__go-zero-1969
+[16:38:50] === Issue resolution summary (aggregated) ===
+[16:38:50]   Agent instances         : 4
+[16:38:50]   Empty patches (skipped) : 0
+[16:38:50]   With patch              : 4
+[16:38:50]   Harness scored          : 4
+[16:38:50]   Harness infra errors    : 0
+[16:38:50]   Harness pending         : 0
+[16:38:50]   Resolved                : 2
+[16:38:50]   Resolved rate           : 2/4 = 50.0% (of harness-scored)
+[16:38:50]   Resolved rate           : 2/4 = 50.0% (of agent instances; empty patch = unresolved)
+[16:38:50]   Resolved IDs            : cli__cli-3832, zeromicro__go-zero-1969
+[16:38:50] Done.
+===== harness exit=0 2026-09-11T16:38:50+01:00; rebuilding shuffled jsonl from natives =====
+native Verified: 174
+native Multi: 156
+native Poly: 116
+native Pro: 54
+wrote epimetheus_Shuffled_resolution.jsonl: 500 rows resolved=302 infra=1 empty_skip=4
+[16:38:50] Wrote 500 pred record(s) -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Shuffled_pred.jsonl
+restored shuffled pred: 500

@@ -1,0 +1,157 @@
+[17:52:21] Retrieval eval: scikit-learn__scikit-learn-13142
+  Setting up repository
+  Warning: repo_url mismatch; overriding with /home/andre/workspace/ContextBench/repos/github.com__scikit-learn__scikit-learn
+  Repo: /home/andre/workspace/ContextBench/repos/github.com__scikit-learn__scikit-learn
+  Commit: 1c8668b0a021...
+  Checkout ready: /home/andre/workspace/ContextBench/repos/_worktrees/contextbench_worktrees/__home__andre__workspace__ContextBench__repos__github.com__scikit-learn__scikit-learn/1c8668b0a021832386470ddf740d834e02c66f69
+  Parsing trajectory
+  Extracted: 7 steps, final has 2 files
+DETAILS:
+instance_id=scikit-learn__scikit-learn-13142
+  gold_files: n=2
+    - sklearn/mixture/base.py
+    - sklearn/mixture/gaussian_mixture.py
+  pred_files: n=2
+    - sklearn/mixture/base.py
+    - sklearn/mixture/tests/test_gaussian_mixture.py
+  hit_files: n=1
+    - sklearn/mixture/base.py
+  gold_symbols: n=12
+    - sklearn/mixture/base.py:class_definition@1808-18166
+    - sklearn/mixture/base.py:function_definition@5491-6469
+    - sklearn/mixture/base.py:function_definition@6475-9625
+    - sklearn/mixture/base.py:function_definition@9631-10219
+    - sklearn/mixture/gaussian_mixture.py:class_definition@14619-27861
+    - sklearn/mixture/gaussian_mixture.py:function_definition@21116-21907
+    - sklearn/mixture/gaussian_mixture.py:function_definition@21913-23064
+    - sklearn/mixture/gaussian_mixture.py:function_definition@23070-24385
+    - sklearn/mixture/gaussian_mixture.py:function_definition@24391-25117
+    - sklearn/mixture/gaussian_mixture.py:function_definition@25123-25276
+    - sklearn/mixture/gaussian_mixture.py:function_definition@25282-25351
+    - sklearn/mixture/gaussian_mixture.py:function_definition@25357-25435
+  pred_symbols: n=17
+    - sklearn/mixture/base.py:class_definition@1808-18166
+    - sklearn/mixture/base.py:function_definition@10245-10598
+    - sklearn/mixture/base.py:function_definition@10624-10664
+    - sklearn/mixture/base.py:function_definition@10690-10729
+    - sklearn/mixture/base.py:function_definition@10755-10802
+    - sklearn/mixture/base.py:function_definition@10808-11408
+    - sklearn/mixture/base.py:function_definition@2056-2581
+    - sklearn/mixture/base.py:function_definition@2587-3993
+    - sklearn/mixture/base.py:function_definition@4019-4227
+    - sklearn/mixture/base.py:function_definition@4233-5184
+    - sklearn/mixture/base.py:function_definition@490-905
+    - sklearn/mixture/base.py:function_definition@5210-5485
+    - sklearn/mixture/base.py:function_definition@5491-6469
+    - sklearn/mixture/base.py:function_definition@6475-9625
+    - sklearn/mixture/base.py:function_definition@908-1805
+    - sklearn/mixture/base.py:function_definition@9631-10219
+    - sklearn/mixture/tests/test_gaussian_mixture.py:function_definition@23411-24306
+  hit_symbols: n=4
+    - sklearn/mixture/base.py:class_definition@1808-18166
+    - sklearn/mixture/base.py:function_definition@5491-6469
+    - sklearn/mixture/base.py:function_definition@6475-9625
+    - sklearn/mixture/base.py:function_definition@9631-10219
+
+[17:52:21] Retrieval scikit-learn__scikit-learn-13142: line_f1=0.421
+[17:52:21] Resolution resume: 0 harness-scored, 1 pending (stable run_id=epimetheus_Verified)
+[17:52:21] Resolution eval: 1 pending; pull-if-missing → score → delete image (per instance)
+[17:52:21] Resolution [1/1] scikit-learn__scikit-learn-13142
+[17:52:21] Docker image already present: swebench/sweb.eval.x86_64.scikit-learn_1776_scikit-learn-13142:latest
+[17:52:21] Resolution eval: /home/andre/workspace/ContextBench/agent-frameworks/epimetheus/.venv/bin/python /home/andre/workspace/ContextBench/scripts/run_resolution_eval.py --input-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Verified --bench Verified --model-name epimetheus__Verified --run-id epimetheus_Verified --predictions /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Verified_resolution_preds.jsonl --report-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet --instance-ids scikit-learn__scikit-learn-13142 --max-workers 1
+[17:52:21] === Step 1/2: Build SWE-bench predictions ===
+[17:52:21]   Input dir   : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Verified
+[17:52:21] WARNING: duplicate instance_id django__django-11163 (django__django-11163.json); keeping first.
+[17:52:21] WARNING: duplicate instance_id django__django-11179 (django__django-11179.json); keeping first.
+[17:52:21] WARNING: duplicate instance_id django__django-11749 (django__django-11749.json); keeping first.
+[17:52:21] WARNING: duplicate instance_id django__django-11820 (django__django-11820.json); keeping first.
+[17:52:21] WARNING: duplicate instance_id django__django-12125 (django__django-12125.json); keeping first.
+[17:52:21] WARNING: duplicate instance_id django__django-12143 (django__django-12143.json); keeping first.
+[17:52:21] WARNING: duplicate instance_id django__django-12858 (django__django-12858.json); keeping first.
+[17:52:21] WARNING: duplicate instance_id django__django-13343 (django__django-13343.json); keeping first.
+[17:52:21] WARNING: duplicate instance_id django__django-14140 (django__django-14140.json); keeping first.
+[17:52:21] WARNING: duplicate instance_id django__django-14351 (django__django-14351.json); keeping first.
+[17:52:21] WARNING: duplicate instance_id django__django-14404 (django__django-14404.json); keeping first.
+[17:52:21] WARNING: duplicate instance_id django__django-15252 (django__django-15252.json); keeping first.
+[17:52:21] WARNING: duplicate instance_id django__django-15987 (django__django-15987.json); keeping first.
+[17:52:21] WARNING: duplicate instance_id django__django-16032 (django__django-16032.json); keeping first.
+[17:52:21] WARNING: duplicate instance_id django__django-16454 (django__django-16454.json); keeping first.
+[17:52:22] WARNING: duplicate instance_id django__django-16485 (django__django-16485.json); keeping first.
+[17:52:22] WARNING: duplicate instance_id django__django-16527 (django__django-16527.json); keeping first.
+[17:52:22] WARNING: duplicate instance_id matplotlib__matplotlib-20826 (matplotlib__matplotlib-20826.json); keeping first.
+[17:52:22] WARNING: duplicate instance_id matplotlib__matplotlib-23299 (matplotlib__matplotlib-23299.json); keeping first.
+[17:52:22] WARNING: duplicate instance_id matplotlib__matplotlib-23314 (matplotlib__matplotlib-23314.json); keeping first.
+[17:52:22] WARNING: duplicate instance_id matplotlib__matplotlib-25479 (matplotlib__matplotlib-25479.json); keeping first.
+[17:52:22] WARNING: duplicate instance_id pydata__xarray-4075 (pydata__xarray-4075.json); keeping first.
+[17:52:22] WARNING: duplicate instance_id pydata__xarray-4966 (pydata__xarray-4966.json); keeping first.
+[17:52:22] WARNING: duplicate instance_id pydata__xarray-6461 (pydata__xarray-6461.json); keeping first.
+[17:52:22] WARNING: duplicate instance_id scikit-learn__scikit-learn-13142 (scikit-learn__scikit-learn-13142.json); keeping first.
+[17:52:22] WARNING: duplicate instance_id sphinx-doc__sphinx-7910 (sphinx-doc__sphinx-7910.json); keeping first.
+[17:52:22] WARNING: duplicate instance_id sphinx-doc__sphinx-8265 (sphinx-doc__sphinx-8265.json); keeping first.
+[17:52:22] WARNING: duplicate instance_id sympy__sympy-12489 (sympy__sympy-12489.json); keeping first.
+[17:52:22] WARNING: duplicate instance_id sympy__sympy-13551 (sympy__sympy-13551.json); keeping first.
+[17:52:22] WARNING: duplicate instance_id sympy__sympy-13877 (sympy__sympy-13877.json); keeping first.
+[17:52:22] WARNING: duplicate instance_id sympy__sympy-17318 (sympy__sympy-17318.json); keeping first.
+[17:52:22]   Wrote 31 prediction(s) -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Verified_resolution_preds.jsonl
+[17:52:22] === Step 2/2: Run resolution harness ===
+[17:52:24]   Backend     : Verified
+[17:52:24]   Dataset     : princeton-nlp/SWE-bench_Verified (split=test)
+[17:52:24]   Run id      : epimetheus_Verified
+[17:52:24]   Report dir  : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet
+[17:52:26]   Running: /home/andre/workspace/ContextBench/.venvs/resolution/bin/python -m swebench.harness.run_evaluation --dataset_name princeton-nlp/SWE-bench_Verified --split test --predictions_path /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Verified_resolution_preds.jsonl --run_id epimetheus_Verified --max_workers 1 --timeout 1800 --report_dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet --cache_level env --instance_ids scikit-learn__scikit-learn-13142
+<frozen runpy>:128: RuntimeWarning: 'swebench.harness.run_evaluation' found in sys.modules after import of package 'swebench.harness', but prior to execution of 'swebench.harness.run_evaluation'; this may result in unpredictable behaviour
+2026-09-10 17:52:29,983 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-09-10 17:52:30,632 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/princeton-nlp/SWE-bench_Verified/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/README.md "HTTP/1.1 200 OK"
+2026-09-10 17:52:31,320 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-09-10 17:52:34,386 - httpx - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/princeton-nlp/SWE-bench_Verified/princeton-nlp/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-09-10 17:52:35,104 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/princeton-nlp/SWE-bench_Verified/revision/c104f840cc67f8b6eec6f759ebc8b2693d585d4a "HTTP/1.1 200 OK"
+2026-09-10 17:52:35,795 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/.huggingface.yaml "HTTP/1.1 404 Not Found"
+2026-09-10 17:52:38,658 - httpx - INFO - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=princeton-nlp/SWE-bench_Verified "HTTP/1.1 200 OK"
+2026-09-10 17:52:39,369 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/princeton-nlp/SWE-bench_Verified/tree/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/data?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-09-10 17:52:39,492 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/princeton-nlp/SWE-bench_Verified/tree/c104f840cc67f8b6eec6f759ebc8b2693d585d4a?recursive=false&expand=false "HTTP/1.1 200 OK"
+2026-09-10 17:52:39,677 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/dataset_infos.json "HTTP/1.1 404 Not Found"
+2026-09-10 17:52:40,040 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-09-10 17:52:40,295 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/princeton-nlp/SWE-bench_Verified/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/README.md "HTTP/1.1 200 OK"
+2026-09-10 17:52:41,062 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-09-10 17:52:43,956 - httpx - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/princeton-nlp/SWE-bench_Verified/princeton-nlp/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-09-10 17:52:44,493 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/.huggingface.yaml "HTTP/1.1 404 Not Found"
+2026-09-10 17:52:46,695 - httpx - INFO - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=princeton-nlp/SWE-bench_Verified "HTTP/1.1 200 OK"
+2026-09-10 17:52:47,406 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/dataset_infos.json "HTTP/1.1 404 Not Found"
+Found 1 existing instance images. Will reuse them.
+Running 1 instances...
+
+Evaluation:   0%|          | 0/1 [00:00<?, ?it/s, error=0, ✓=0, ✖=0]
+Evaluation:   0%|          | 0/1 [00:52<?, ?it/s, ✓=1, ✖=0, error=0]
+Evaluation: 100%|██████████| 1/1 [00:52<00:00, 52.86s/it, ✓=1, ✖=0, error=0]
+Evaluation: 100%|██████████| 1/1 [00:52<00:00, 52.86s/it, ✓=1, ✖=0, error=0]
+All instances run.
+Cleaning cached images...
+Removed 0 images.
+Total instances: 1
+Instances submitted: 1
+Instances completed: 1
+Instances incomplete: 0
+Instances resolved: 1
+Instances unresolved: 0
+Instances with empty patches: 0
+Instances with errors: 0
+Unstopped containers: 0
+Unremoved images: 1
+Report written to epimetheus__Verified.epimetheus_Verified.json
+[17:54:10] Pulled docker image: mswebench/mui_m_material-ui:pr-29898
+[17:54:10] === Issue resolution summary ===
+[17:54:10]   Report            : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Verified.epimetheus_Verified.json
+[17:54:10]   Total (evaluated) : 1
+[17:54:10]   Submitted (preds) : 31
+[17:54:10]   Completed         : 1
+[17:54:10]   Resolved          : 1
+[17:54:10]   Unresolved        : 0
+[17:54:10]   Errored           : 0
+[17:54:10]   Empty patches     : 0
+[17:54:10]   Resolved rate     : 1/1 = 100.0% (of evaluated)
+[17:54:10]   Resolved IDs      : scikit-learn__scikit-learn-13142
+[17:54:10] Done.
+[17:54:10]   Predictions : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Verified_resolution_preds.jsonl
+[17:54:10]   Report      : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Verified.epimetheus_Verified.json
+[17:54:12] Deleted docker image: swebench/sweb.eval.x86_64.scikit-learn_1776_scikit-learn-13142:latest
+[17:54:12] Resolution scores -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Verified_resolution.jsonl

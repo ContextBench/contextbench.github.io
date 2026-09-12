@@ -1,0 +1,152 @@
+[12:18:11] Retrieval eval: huggingface__transformers-21768
+  Setting up repository
+  Warning: repo_url mismatch; overriding with /home/andre/workspace/ContextBench/repos/github.com__huggingface__transformers
+  Repo: /home/andre/workspace/ContextBench/repos/github.com__huggingface__transformers
+  Commit: 99ba36e72fe7...
+  Checkout ready: /home/andre/workspace/ContextBench/repos/_worktrees/contextbench_worktrees/__home__andre__workspace__ContextBench__repos__github.com__huggingface__transformers/99ba36e72fe7d1528e2c6572373a425967ee544f
+  Parsing trajectory
+  Extracted: 20 steps, final has 2 files
+DETAILS:
+instance_id=huggingface__transformers-21768
+  gold_files: n=1
+    - src/transformers/optimization.py
+  pred_files: n=2
+    - src/transformers/optimization.py
+    - tests/optimization/test_optimization.py
+  hit_files: n=1
+    - src/transformers/optimization.py
+  gold_symbols: n=14
+    - src/transformers/optimization.py:function_definition@10221-10505
+    - src/transformers/optimization.py:function_definition@1049-1631
+    - src/transformers/optimization.py:function_definition@11077-12946
+    - src/transformers/optimization.py:function_definition@1634-2605
+    - src/transformers/optimization.py:function_definition@2368-2539
+    - src/transformers/optimization.py:function_definition@2608-3806
+    - src/transformers/optimization.py:function_definition@3458-3751
+    - src/transformers/optimization.py:function_definition@3809-5381
+    - src/transformers/optimization.py:function_definition@4974-5326
+    - src/transformers/optimization.py:function_definition@5384-6947
+    - src/transformers/optimization.py:function_definition@6485-6892
+    - src/transformers/optimization.py:function_definition@6950-9110
+    - src/transformers/optimization.py:function_definition@8453-9055
+    - src/transformers/optimization.py:function_definition@9113-10571
+  pred_symbols: n=24
+    - src/transformers/optimization.py:class_definition@12949-18191
+    - src/transformers/optimization.py:function_definition@10221-10505
+    - src/transformers/optimization.py:function_definition@1049-1631
+    - src/transformers/optimization.py:function_definition@11077-12946
+    - src/transformers/optimization.py:function_definition@1634-2605
+    - src/transformers/optimization.py:function_definition@2368-2539
+    - src/transformers/optimization.py:function_definition@2608-3806
+    - src/transformers/optimization.py:function_definition@3458-3751
+    - src/transformers/optimization.py:function_definition@3809-5381
+    - src/transformers/optimization.py:function_definition@4974-5326
+    - src/transformers/optimization.py:function_definition@5384-6947
+    - src/transformers/optimization.py:function_definition@6485-6892
+    - src/transformers/optimization.py:function_definition@6950-9110
+    - src/transformers/optimization.py:function_definition@8453-9055
+    - src/transformers/optimization.py:function_definition@9113-10571
+    - tests/optimization/test_optimization.py:class_definition@1924-3676
+    - tests/optimization/test_optimization.py:class_definition@3694-6291
+    - tests/optimization/test_optimization.py:function_definition@1208-1379
+    - tests/optimization/test_optimization.py:function_definition@1382-1906
+    - tests/optimization/test_optimization.py:function_definition@1971-2162
+    - tests/optimization/test_optimization.py:function_definition@2168-2784
+    - tests/optimization/test_optimization.py:function_definition@2790-3676
+    - tests/optimization/test_optimization.py:function_definition@3902-4112
+    - tests/optimization/test_optimization.py:function_definition@4118-6291
+  hit_symbols: n=14
+    - src/transformers/optimization.py:function_definition@10221-10505
+    - src/transformers/optimization.py:function_definition@1049-1631
+    - src/transformers/optimization.py:function_definition@11077-12946
+    - src/transformers/optimization.py:function_definition@1634-2605
+    - src/transformers/optimization.py:function_definition@2368-2539
+    - src/transformers/optimization.py:function_definition@2608-3806
+    - src/transformers/optimization.py:function_definition@3458-3751
+    - src/transformers/optimization.py:function_definition@3809-5381
+    - src/transformers/optimization.py:function_definition@4974-5326
+    - src/transformers/optimization.py:function_definition@5384-6947
+    - src/transformers/optimization.py:function_definition@6485-6892
+    - src/transformers/optimization.py:function_definition@6950-9110
+    - src/transformers/optimization.py:function_definition@8453-9055
+    - src/transformers/optimization.py:function_definition@9113-10571
+
+[12:18:12] Retrieval huggingface__transformers-21768: line_f1=0.523
+
+# Harness spliced from run_llmretry_2.log.gz (shard-level tail assigned to this instance)
+[12:41:13] Resolution resume: 0 harness-scored, 3 pending (stable run_id=epimetheus_Poly)
+[12:41:17] Docker prefetch Poly huggingface__transformers-21768: ghcr.io/timesler/swe-polybench.eval.x86_64.huggingface__transformers-21768:v1.1, ghcr.io/timesler/swe-polybench.eval.x86_64.huggingface__transformers-21768:latest
+[12:41:17] Resolution eval (pending=3): /home/andre/workspace/ContextBench/agent-frameworks/epimetheus/.venv/bin/python /home/andre/workspace/ContextBench/scripts/run_resolution_eval.py --input-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Poly --bench Poly --model-name epimetheus__Poly --run-id epimetheus_Poly --predictions /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Poly_resolution_preds.jsonl --report-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet --instance-ids prettier__prettier-361,huggingface__transformers-21768,huggingface__transformers-28517 --max-workers 1
+[12:41:17] Docker image already present: ghcr.io/timesler/swe-polybench.eval.x86_64.huggingface__transformers-21768:v1.1
+[12:41:17] Docker image already present: ghcr.io/timesler/swe-polybench.eval.x86_64.huggingface__transformers-21768:latest
+[12:41:17] === Step 1/2: Build SWE-bench predictions ===
+[12:41:17]   Input dir   : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Poly
+[12:41:17] WARNING: duplicate instance_id huggingface__transformers-21768 (huggingface__transformers-21768.json); keeping first.
+[12:41:19] Skipped 4 instance(s) with empty patch (use --include-empty to keep).
+[12:41:19]   Wrote 135 prediction(s) -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Poly_resolution_preds.jsonl
+[12:41:19] === Step 2/2: Run resolution harness ===
+[12:41:19]   Backend     : Poly
+[12:41:19]   Dataset     : AmazonScience/SWE-PolyBench (split=test)
+[12:41:19]   Run id      : epimetheus_Poly
+[12:41:19]   Report dir  : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet
+[12:41:33]   Poly dataset subset : 3 instance(s)
+[12:41:33]   Running resilient Poly worker: /home/andre/workspace/ContextBench/.venvs/resolution/bin/python /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/poly_eval/epimetheus_Poly/_poly_worker.py /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/poly_eval/epimetheus_Poly/dataset_subset.csv /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/poly_eval/epimetheus_Poly/results /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/poly_eval/epimetheus_Poly/repos 1
+/home/andre/workspace/ContextBench/.venvs/resolution/lib/python3.12/site-packages/tree_sitter/__init__.py:36: FutureWarning: Language(path, name) is deprecated. Use Language(ptr, name) instead.
+  warn("{} is deprecated. Use {} instead.".format(old, new), FutureWarning)
+[poly-worker] evaluate huggingface__transformers-21768
+[poly-worker] using local prebuilt ghcr.io/timesler/swe-polybench.eval.x86_64.huggingface__transformers-21768:v1.1 -> polybench_python_huggingface__transformers-21768
+2026-09-11 12:41:49.836 | INFO     | poly_bench_evaluation.run_evaluation:evaluate_instance:130 - Successfully pulled pre-built image from GHCR: polybench_python_huggingface__transformers-21768
+2026-09-11 12:41:50.131 | INFO     | poly_bench_evaluation.run_evaluation:evaluate_instance:235 - docker running for huggingface__transformers-21768
+2026-09-11 12:42:05.365 | DEBUG    | poly_bench_evaluation.docker_utils:_cleanup:432 - Removed local image tag: polybench_python_huggingface__transformers-21768
+2026-09-11 12:42:32.648 | INFO     | poly_bench_evaluation.scoring:aggregate_logs:256 - Writing aggregated results to result.json
+Total resolved: 74/110
+Total pass rate: 67.27%
+
+Pass rate by language:
+Python: 2/2 (100.0%)
+JavaScript: 0/1 (0.0%)
+
+Pass rate by task category:
+Feature: 2/2 (100.0%)
+Bug Fix: 0/1 (0.0%)
+
+File retrieval metrics by language:
+            file_recall  file_precision  file_f1
+language                                        
+JavaScript          1.0             1.0      1.0
+Python              1.0             1.0      1.0
+
+File retrieval metrics overall:
+file_recall       0.76
+file_precision    0.85
+file_f1           0.77
+[poly-worker] done failures=0
+[12:42:33]   Poly report -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Poly.epimetheus_Poly.json
+[12:42:33] === Issue resolution summary ===
+[12:42:33]   Report            : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Poly.epimetheus_Poly.json
+[12:42:33]   Total (evaluated) : 110
+[12:42:33]   Submitted (preds) : 3
+[12:42:33]   Completed         : 109
+[12:42:33]   Resolved          : 74
+[12:42:33]   Unresolved        : 36
+[12:42:33]   Errored           : 1
+[12:42:33]   Empty patches     : 107
+[12:42:33]   Resolved rate     : 74/110 = 67.3% (of evaluated)
+[12:42:33]   Resolved IDs      : huggingface__transformers-29311, huggingface__transformers-15795, sveltejs__svelte-3702, mui__material-ui-18683, prettier__prettier-3515, huggingface__transformers-24238, mui__material-ui-13778, mui__material-ui-11451, mui__material-ui-34610, huggingface__transformers-28071, microsoft__vscode-160342, microsoft__vscode-153857, keras-team__keras-19201, mui__material-ui-18141, huggingface__transformers-8624, keras-team__keras-19838, sveltejs__svelte-3151, sveltejs__svelte-4288, keras-team__keras-19636, huggingface__transformers-23796, prettier__prettier-11000, huggingface__transformers-19590, sveltejs__svelte-1310, huggingface__transformers-27463, microsoft__vscode-135197, huggingface__transformers-17082, keras-team__keras-19844, mui__material-ui-26807, sveltejs__svelte-3403, huggingface__transformers-29688, huggingface__transformers-13693, huggingface__transformers-26839, sveltejs__svelte-3314, huggingface__transformers-12981, huggingface__transformers-28535, huggingface__transformers-3716, serverless__serverless-5775, sveltejs__svelte-3949, sveltejs__svelte-510, prettier__prettier-6604, huggingface__transformers-29449, mui__material-ui-28186, mui__material-ui-20252, sveltejs__svelte-3305, serverless__serverless-7374, langchain-ai__langchain-19331, mui__material-ui-42412, keras-team__keras-19924, sveltejs__svelte-1923, sveltejs__svelte-5875, huggingface__transformers-5122, huggingface__transformers-28517, prettier__prettier-12930, sveltejs__svelte-3749, huggingface__transformers-30556, keras-team__keras-19484, mui__material-ui-18257, huggingface__transformers-6098, mui__material-ui-19849, sveltejs__svelte-1227, serverless__serverless-5571, sveltejs__svelte-2185, yt-dlp__yt-dlp-9862, serverless__serverless-3457, microsoft__vscode-177084, huggingface__transformers-16198, huggingface__transformers-15158, huggingface__transformers-7078, huggingface__transformers-23126, langchain-ai__langchain-4009, prettier__prettier-14400, huggingface__transformers-21768, prettier__prettier-3723, keras-team__keras-19775
+[12:42:33] Done.
+[12:42:33]   Predictions : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Poly_resolution_preds.jsonl
+[12:42:33]   Report      : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Poly.epimetheus_Poly.json
+[12:42:34] Resolution scores -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Poly_resolution.jsonl
+[12:42:34] === Issue resolution summary (aggregated) ===
+[12:42:34]   Agent instances         : 3
+[12:42:34]   Empty patches (skipped) : 0
+[12:42:34]   With patch              : 3
+[12:42:34]   Harness scored          : 3
+[12:42:34]   Harness infra errors    : 0
+[12:42:34]   Harness pending         : 0
+[12:42:34]   Resolved                : 2
+[12:42:34]   Resolved rate           : 2/3 = 66.7% (of harness-scored)
+[12:42:34]   Resolved rate           : 2/3 = 66.7% (of agent instances; empty patch = unresolved)
+[12:42:34]   Resolved IDs            : huggingface__transformers-21768, huggingface__transformers-28517
+[12:42:34] Shuffled resolution [Pro]: 1 agent instance(s)
+[12:42:34] Resolution invalidate instance_internetarchive__openlibrary-bb152d23c004f3d68986877143bb0f83531fe401-ve8c8d62a2b60610a3c4631f5f23ed866bada9818: empty→patch

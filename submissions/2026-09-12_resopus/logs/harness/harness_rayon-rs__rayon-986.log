@@ -1,0 +1,175 @@
+[15:45:43] Retrieval eval: rayon-rs__rayon-986
+  Setting up repository
+  Warning: repo_url mismatch; overriding with /home/andre/workspace/ContextBench/repos/github.com__rayon-rs__rayon
+  Repo: /home/andre/workspace/ContextBench/repos/github.com__rayon-rs__rayon
+  Commit: 2de810e97d5c...
+  Checkout ready: /home/andre/workspace/ContextBench/repos/_worktrees/contextbench_worktrees/__home__andre__workspace__ContextBench__repos__github.com__rayon-rs__rayon/2de810e97d5ce832ff98023a4a9cf215a86244ea
+  Parsing trajectory
+  Extracted: 12 steps, final has 6 files
+DETAILS:
+instance_id=rayon-rs__rayon-986
+  gold_files: n=1
+    - src/vec.rs
+  pred_files: n=6
+    - src/collections/binary_heap.rs
+    - src/collections/mod.rs
+    - src/collections/vec_deque.rs
+    - src/math.rs
+    - src/string.rs
+    - src/vec.rs
+  hit_files: n=1
+    - src/vec.rs
+  gold_symbols: n=12
+    - src/vec.rs:function_item@2157-2367
+    - src/vec.rs:function_item@2681-2829
+    - src/vec.rs:function_item@2835-2902
+    - src/vec.rs:function_item@2977-3106
+    - src/vec.rs:function_item@3112-3167
+    - src/vec.rs:function_item@3173-3735
+    - src/vec.rs:function_item@3791-4726
+    - src/vec.rs:impl_item@2029-2369
+    - src/vec.rs:impl_item@2597-2904
+    - src/vec.rs:impl_item@2906-3737
+    - src/vec.rs:impl_item@3739-4728
+    - src/vec.rs:struct_item@2485-2595
+  pred_symbols: n=61
+    - src/collections/binary_heap.rs:function_item@2191-2245
+    - src/collections/binary_heap.rs:function_item@2251-2475
+    - src/collections/binary_heap.rs:function_item@2531-2724
+    - src/collections/binary_heap.rs:impl_item@1985-2477
+    - src/collections/binary_heap.rs:impl_item@2479-2726
+    - src/collections/mod.rs:function_item@1803-2058
+    - src/collections/mod.rs:function_item@2139-2316
+    - src/collections/mod.rs:function_item@2538-2653
+    - src/collections/mod.rs:impl_item@1683-2064
+    - src/collections/mod.rs:impl_item@2070-2322
+    - src/collections/mod.rs:impl_item@2328-2659
+    - src/collections/mod.rs:struct_item@1565-1677
+    - src/collections/vec_deque.rs:function_item@3331-3652
+    - src/collections/vec_deque.rs:function_item@3702-4002
+    - src/collections/vec_deque.rs:impl_item@3070-3654
+    - src/collections/vec_deque.rs:impl_item@3656-4004
+    - src/math.rs:function_item@1251-1573
+    - src/math.rs:function_item@148-342
+    - src/math.rs:function_item@395-1189
+    - src/string.rs:function_item@1153-1263
+    - src/string.rs:function_item@431-610
+    - src/string.rs:function_item@894-1115
+    - src/string.rs:impl_item@1119-1265
+    - src/string.rs:impl_item@321-612
+    - src/string.rs:impl_item@825-1117
+    - src/string.rs:struct_item@746-823
+    - src/vec.rs:function_item@1768-2025
+    - src/vec.rs:function_item@2157-2367
+    - src/vec.rs:function_item@2681-2829
+    - src/vec.rs:function_item@2835-2902
+    - src/vec.rs:function_item@2977-3106
+    - src/vec.rs:function_item@3112-3167
+    - src/vec.rs:function_item@3173-3735
+    - src/vec.rs:function_item@3791-4726
+    - src/vec.rs:function_item@5093-5198
+    - src/vec.rs:function_item@5461-5869
+    - src/vec.rs:function_item@6007-6225
+    - src/vec.rs:function_item@6231-6521
+    - src/vec.rs:function_item@6593-6700
+    - src/vec.rs:function_item@6999-7236
+    - src/vec.rs:function_item@7242-7325
+    - src/vec.rs:function_item@7331-7386
+    - src/vec.rs:function_item@7463-7719
+    - src/vec.rs:function_item@7794-7848
+    - src/vec.rs:function_item@7981-8190
+    - src/vec.rs:impl_item@1514-2027
+    - src/vec.rs:impl_item@2029-2369
+    - src/vec.rs:impl_item@2597-2904
+    - src/vec.rs:impl_item@2906-3737
+    - src/vec.rs:impl_item@3739-4728
+    ... (11 more)
+  hit_symbols: n=12
+    - src/vec.rs:function_item@2157-2367
+    - src/vec.rs:function_item@2681-2829
+    - src/vec.rs:function_item@2835-2902
+    - src/vec.rs:function_item@2977-3106
+    - src/vec.rs:function_item@3112-3167
+    - src/vec.rs:function_item@3173-3735
+    - src/vec.rs:function_item@3791-4726
+    - src/vec.rs:impl_item@2029-2369
+    - src/vec.rs:impl_item@2597-2904
+    - src/vec.rs:impl_item@2906-3737
+    - src/vec.rs:impl_item@3739-4728
+    - src/vec.rs:struct_item@2485-2595
+
+[15:45:43] Retrieval rayon-rs__rayon-986: line_f1=0.331
+[15:45:43] Resolution resume: 0 harness-scored, 1 pending (stable run_id=epimetheus_Multi)
+[15:45:43] Resolution eval (pending=1): /home/andre/workspace/ContextBench/agent-frameworks/epimetheus/.venv/bin/python /home/andre/workspace/ContextBench/scripts/run_resolution_eval.py --input-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Multi --bench Multi --model-name epimetheus__Multi --run-id epimetheus_Multi --predictions /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution_preds.jsonl --report-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet --instance-ids rayon-rs__rayon-986 --max-workers 1
+[15:45:43] === Step 1/2: Build SWE-bench predictions ===
+[15:45:43]   Input dir   : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Multi
+[15:45:43] WARNING: duplicate instance_id rayon-rs__rayon-986 (rayon-rs__rayon-986.json); keeping first.
+[15:45:43]   Wrote 1 prediction(s) -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution_preds.jsonl
+[15:45:43] === Step 2/2: Run resolution harness ===
+[15:45:43]   Backend     : Multi
+[15:45:43]   Dataset     : ByteDance-Seed/Multi-SWE-bench (split=train)
+[15:45:43]   Run id      : epimetheus_Multi
+[15:45:43]   Report dir  : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet
+
+Fetching 50 files:   0%|          | 0/50 [00:00<?, ?it/s]
+Fetching 50 files: 100%|██████████| 50/50 [00:00<00:00, 2575.91it/s]
+[15:45:55]   Running: /home/andre/workspace/ContextBench/.venvs/resolution/bin/python -m multi_swe_bench.harness.run_evaluation --config /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/multi_eval/epimetheus_Multi/config.json
+[2026-09-10 15:45:59,388] [run_evaluation.py] [INFO]: Initialize logger successfully.
+[2026-09-10 15:45:59,388] [run_evaluation.py] [INFO]: Building images...
+[2026-09-10 15:45:59,388] [run_evaluation.py] [INFO]: Loading repo commits...
+[2026-09-10 15:45:59,388] [run_evaluation.py] [INFO]: Creating instances...
+[2026-09-10 15:45:59,388] [run_evaluation.py] [INFO]: Loading datasets...
+[2026-09-10 15:45:59,409] [run_evaluation.py] [INFO]: Successfully loaded 1 valid datasets from ['/home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/multi_eval/epimetheus_Multi/dataset.jsonl']
+[2026-09-10 15:45:59,410] [run_evaluation.py] [INFO]: Successfully loaded 1 valid instances.
+
+Checking commit hashes:   0%|          | 0/1 [00:00<?, ?it/s][2026-09-10 15:45:59,417] [run_evaluation.py] [WARNING]: Repository not found: /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/multi_eval/epimetheus_Multi/repos/rayon-rs/rayon
+Cloning into '/home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/multi_eval/epimetheus_Multi/repos/rayon-rs/rayon'...
+
+
+Checking commit hashes for rayon-rs/rayon:   0%|          | 0/1 [00:00<?, ?it/s][A
+Checking commit hashes for rayon-rs/rayon: 100%|██████████| 1/1 [00:00<00:00, 23431.87it/s]
+
+Checking commit hashes: 100%|██████████| 1/1 [00:05<00:00,  5.35s/it]
+Checking commit hashes: 100%|██████████| 1/1 [00:05<00:00,  5.35s/it]
+[2026-09-10 15:46:04,770] [run_evaluation.py] [INFO]: Total images: 2
+
+Building images:   0%|          | 0/2 [00:00<?, ?it/s]
+Building images: 100%|██████████| 2/2 [00:00<00:00, 40.62it/s]
+[2026-09-10 15:46:04,819] [run_evaluation.py] [INFO]: Images built successfully.
+[2026-09-10 15:46:04,819] [run_evaluation.py] [INFO]: Running instances...
+
+Running instances:   0%|          | 0/1 [00:00<?, ?it/s][2026-09-10 15:46:04,822] [run_evaluation.py] [INFO]: Running mswebench/rayon-rs_m_rayon:pr-986 with command: bash /home/fix-run.sh...
+
+Running instances: 100%|██████████| 1/1 [00:54<00:00, 54.23s/it]
+Running instances: 100%|██████████| 1/1 [00:54<00:00, 54.23s/it]
+[2026-09-10 15:46:59,053] [run_evaluation.py] [INFO]: Instances run successfully.
+[2026-09-10 15:46:59,053] [run_evaluation.py] [INFO]: Running evaluation...
+[2026-09-10 15:46:59,053] [gen_report.py] [INFO]: Initialize logger successfully.
+[2026-09-10 15:46:59,053] [gen_report.py] [INFO]: Collecting report tasks...
+[2026-09-10 15:46:59,054] [gen_report.py] [INFO]: Successfully collected 1 tasks.
+[2026-09-10 15:46:59,054] [gen_report.py] [INFO]: Loading dataset...
+[2026-09-10 15:46:59,077] [gen_report.py] [INFO]: Successfully loaded 1 valid datasets from ['/home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/multi_eval/epimetheus_Multi/dataset.jsonl']
+
+Generating eval reports:   0%|          | 0/1 [00:00<?, ?it/s]
+Generating eval reports: 100%|██████████| 1/1 [00:00<00:00, 66.85it/s]
+[2026-09-10 15:46:59,099] [gen_report.py] [INFO]: Successfully generated 1 reports.
+
+Fetching 50 files:   0%|          | 0/50 [00:00<?, ?it/s]
+Fetching 50 files: 100%|██████████| 50/50 [00:00<00:00, 3194.98it/s]
+[15:47:08]   Multi report -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Multi.epimetheus_Multi.json
+[15:47:08] === Issue resolution summary ===
+[15:47:08]   Report            : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Multi.epimetheus_Multi.json
+[15:47:08]   Total (evaluated) : 1
+[15:47:08]   Submitted (preds) : 1
+[15:47:08]   Completed         : 1
+[15:47:08]   Resolved          : 1
+[15:47:08]   Unresolved        : 0
+[15:47:08]   Errored           : 0
+[15:47:08]   Empty patches     : 0
+[15:47:08]   Resolved rate     : 1/1 = 100.0% (of evaluated)
+[15:47:08]   Resolved IDs      : rayon-rs__rayon-986
+[15:47:08] Done.
+[15:47:08]   Predictions : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution_preds.jsonl
+[15:47:08]   Report      : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Multi.epimetheus_Multi.json
+[15:47:08] Resolution scores -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution.jsonl
+[15:47:09] Deleted docker image: mswebench/rayon-rs_m_rayon:pr-986

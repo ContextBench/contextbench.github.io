@@ -1,0 +1,187 @@
+[19:13:27] Retrieval eval: mui__material-ui-34159
+  Setting up repository
+  Warning: repo_url mismatch; overriding with /home/andre/workspace/ContextBench/repos/github.com__mui__material-ui
+  Repo: /home/andre/workspace/ContextBench/repos/github.com__mui__material-ui
+  Commit: 43a929dda5a0...
+  Checkout ready: /home/andre/workspace/ContextBench/repos/_worktrees/contextbench_worktrees/__home__andre__workspace__ContextBench__repos__github.com__mui__material-ui/43a929dda5a0776bcc05f4624a5648441d44c7b2
+  Parsing trajectory
+  Extracted: 33 steps, final has 13 files
+DETAILS:
+instance_id=mui__material-ui-34159
+  gold_files: n=1
+    - packages/mui-material/src/ListItemButton/ListItemButton.js
+  pred_files: n=13
+    - packages/mui-base/src/useButton/useButton.ts
+    - packages/mui-joy/src/ListItemButton/ListItemButton.test.js
+    - packages/mui-joy/src/ListItemButton/ListItemButton.tsx
+    - packages/mui-joy/src/ListItemButton/ListItemButtonProps.ts
+    - packages/mui-joy/src/MenuItem/MenuItem.tsx
+    - packages/mui-joy/src/styles/components.d.ts
+    - packages/mui-joy/src/styles/extendTheme.spec.ts
+    - packages/mui-joy/src/styles/useThemeProps.ts
+    - packages/mui-material-next/src/Button/Button.tsx
+    - packages/mui-material-next/src/Button/Button.types.ts
+    - packages/mui-material/src/ButtonBase/ButtonBase.js
+    - packages/mui-material/src/ButtonBase/ButtonBase.test.js
+    - packages/mui-material/src/ListItemButton/ListItemButton.js
+  hit_files: n=1
+    - packages/mui-material/src/ListItemButton/ListItemButton.js
+  gold_symbols: n=0
+  pred_symbols: n=30
+    - packages/mui-base/src/useButton/useButton.ts:function_declaration@550-6790
+    - packages/mui-base/src/useButton/useButton.ts:interface_declaration@4798-5036
+    - packages/mui-joy/src/ListItemButton/ListItemButton.test.js:arrow_function@1061-1217
+    - packages/mui-joy/src/ListItemButton/ListItemButton.test.js:arrow_function@1268-1418
+    - packages/mui-joy/src/ListItemButton/ListItemButton.test.js:arrow_function@1459-1603
+    - packages/mui-joy/src/ListItemButton/ListItemButton.test.js:arrow_function@1634-1774
+    - packages/mui-joy/src/ListItemButton/ListItemButton.test.js:arrow_function@1812-1942
+    - packages/mui-joy/src/ListItemButton/ListItemButton.test.js:arrow_function@1988-2352
+    - packages/mui-joy/src/ListItemButton/ListItemButton.test.js:arrow_function@2039-2346
+    - packages/mui-joy/src/ListItemButton/ListItemButton.test.js:arrow_function@2156-2279
+    - packages/mui-joy/src/ListItemButton/ListItemButton.test.js:arrow_function@360-2356
+    - packages/mui-joy/src/ListItemButton/ListItemButton.test.js:arrow_function@450-730
+    - packages/mui-joy/src/ListItemButton/ListItemButton.test.js:arrow_function@873-1012
+    - packages/mui-joy/src/ListItemButton/ListItemButtonProps.ts:interface_declaration@2659-2827
+    - packages/mui-joy/src/ListItemButton/ListItemButtonProps.ts:interface_declaration@296-344
+    - packages/mui-joy/src/ListItemButton/ListItemButtonProps.ts:interface_declaration@3044-3448
+    - packages/mui-joy/src/ListItemButton/ListItemButtonProps.ts:interface_declaration@353-399
+    - packages/mui-joy/src/ListItemButton/ListItemButtonProps.ts:interface_declaration@408-2650
+    - packages/mui-joy/src/styles/components.d.ts:interface_declaration@6604-16063
+    - packages/mui-joy/src/styles/useThemeProps.ts:function_declaration@127-325
+    - packages/mui-material/src/ButtonBase/ButtonBase.js:arrow_function@7051-7819
+    - packages/mui-material/src/ButtonBase/ButtonBase.js:arrow_function@8479-8787
+    - packages/mui-material/src/ButtonBase/ButtonBase.test.js:arrow_function@1251-5952
+    - packages/mui-material/src/ButtonBase/ButtonBase.test.js:arrow_function@2818-3199
+    - packages/mui-material/src/ButtonBase/ButtonBase.test.js:arrow_function@3272-4107
+    - packages/mui-material/src/ButtonBase/ButtonBase.test.js:arrow_function@3322-3479
+    - packages/mui-material/src/ButtonBase/ButtonBase.test.js:arrow_function@510-39191
+    - packages/mui-material/src/ListItemButton/ListItemButton.js:arrow_function@1695-4341
+    - packages/mui-material/src/ListItemButton/ListItemButton.js:arrow_function@4850-4951
+    - packages/mui-material/src/ListItemButton/ListItemButton.js:arrow_function@5077-5382
+  hit_symbols: n=0
+
+[19:13:27] Retrieval mui__material-ui-34159: line_f1=0.011
+[19:13:27] Resolution resume: 0 harness-scored, 1 pending (stable run_id=epimetheus_Multi)
+[19:13:27] Resolution eval (pending=1): /home/andre/workspace/ContextBench/agent-frameworks/epimetheus/.venv/bin/python /home/andre/workspace/ContextBench/scripts/run_resolution_eval.py --input-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Multi --bench Multi --model-name epimetheus__Multi --run-id epimetheus_Multi --predictions /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution_preds.jsonl --report-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet --instance-ids mui__material-ui-34159 --max-workers 1
+[19:13:28] === Step 1/2: Build SWE-bench predictions ===
+[19:13:28]   Input dir   : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Multi
+[19:13:28] WARNING: duplicate instance_id axios__axios-5661 (axios__axios-5661.json); keeping first.
+[19:13:28] WARNING: duplicate instance_id clap-rs__clap-2501 (clap-rs__clap-2501.json); keeping first.
+[19:13:28] WARNING: duplicate instance_id clap-rs__clap-2895 (clap-rs__clap-2895.json); keeping first.
+[19:13:28] WARNING: duplicate instance_id clap-rs__clap-3421 (clap-rs__clap-3421.json); keeping first.
+[19:13:28] WARNING: duplicate instance_id clap-rs__clap-3684 (clap-rs__clap-3684.json); keeping first.
+[19:13:28] WARNING: duplicate instance_id cli__cli-2250 (cli__cli-2250.json); keeping first.
+[19:13:28] WARNING: duplicate instance_id cli__cli-2785 (cli__cli-2785.json); keeping first.
+[19:13:28] WARNING: duplicate instance_id cli__cli-8157 (cli__cli-8157.json); keeping first.
+[19:13:28] WARNING: duplicate instance_id expressjs__express-3870 (expressjs__express-3870.json); keeping first.
+[19:13:28] WARNING: duplicate instance_id facebook__zstd-1243 (facebook__zstd-1243.json); keeping first.
+[19:13:28] WARNING: duplicate instance_id facebook__zstd-637 (facebook__zstd-637.json); keeping first.
+[19:13:28] WARNING: duplicate instance_id fasterxml__jackson-core-1016 (fasterxml__jackson-core-1016.json); keeping first.
+[19:13:28] WARNING: duplicate instance_id fasterxml__jackson-core-183 (fasterxml__jackson-core-183.json); keeping first.
+[19:13:28] WARNING: duplicate instance_id iamkun__dayjs-1611 (iamkun__dayjs-1611.json); keeping first.
+[19:13:28] WARNING: duplicate instance_id iamkun__dayjs-882 (iamkun__dayjs-882.json); keeping first.
+[19:13:28] WARNING: duplicate instance_id jqlang__jq-2654 (jqlang__jq-2654.json); keeping first.
+[19:13:28] WARNING: duplicate instance_id mui__material-ui-29898 (mui__material-ui-29898.json); keeping first.
+[19:13:28] WARNING: duplicate instance_id mui__material-ui-34159 (mui__material-ui-34159.json); keeping first.
+[19:13:28] WARNING: duplicate instance_id mui__material-ui-34401 (mui__material-ui-34401.json); keeping first.
+[19:13:28] WARNING: duplicate instance_id mui__material-ui-39108 (mui__material-ui-39108.json); keeping first.
+[19:13:28] WARNING: duplicate instance_id mui__material-ui-39196 (mui__material-ui-39196.json); keeping first.
+[19:13:28] WARNING: duplicate instance_id nlohmann__json-4512 (nlohmann__json-4512.json); keeping first.
+[19:13:28] WARNING: duplicate instance_id ponylang__ponyc-2201 (ponylang__ponyc-2201.json); keeping first.
+[19:13:28] WARNING: duplicate instance_id ponylang__ponyc-2247 (ponylang__ponyc-2247.json); keeping first.
+[19:13:28] WARNING: duplicate instance_id ponylang__ponyc-2586 (ponylang__ponyc-2586.json); keeping first.
+[19:13:28] WARNING: duplicate instance_id rayon-rs__rayon-986 (rayon-rs__rayon-986.json); keeping first.
+[19:13:28] WARNING: duplicate instance_id sveltejs__svelte-10608 (sveltejs__svelte-10608.json); keeping first.
+[19:13:28] WARNING: duplicate instance_id sveltejs__svelte-11913 (sveltejs__svelte-11913.json); keeping first.
+[19:13:28] WARNING: duplicate instance_id sveltejs__svelte-14629 (sveltejs__svelte-14629.json); keeping first.
+[19:13:28] WARNING: duplicate instance_id sveltejs__svelte-14935 (sveltejs__svelte-14935.json); keeping first.
+[19:13:28] WARNING: duplicate instance_id vuejs__core-10027 (vuejs__core-10027.json); keeping first.
+[19:13:28] WARNING: duplicate instance_id vuejs__core-9213 (vuejs__core-9213.json); keeping first.
+[19:13:28]   Wrote 32 prediction(s) -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution_preds.jsonl
+[19:13:28] === Step 2/2: Run resolution harness ===
+[19:13:28]   Backend     : Multi
+[19:13:28]   Dataset     : ByteDance-Seed/Multi-SWE-bench (split=train)
+[19:13:28]   Run id      : epimetheus_Multi
+[19:13:28]   Report dir  : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet
+
+Fetching 50 files:   0%|          | 0/50 [00:00<?, ?it/s]
+Fetching 50 files: 100%|██████████| 50/50 [00:00<00:00, 2489.94it/s]
+[19:13:46]   Running: /home/andre/workspace/ContextBench/.venvs/resolution/bin/python -m multi_swe_bench.harness.run_evaluation --config /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/multi_eval/epimetheus_Multi/config.json
+[2026-09-10 19:13:47,899] [run_evaluation.py] [INFO]: Initialize logger successfully.
+[2026-09-10 19:13:47,899] [run_evaluation.py] [INFO]: Building images...
+[2026-09-10 19:13:47,899] [run_evaluation.py] [INFO]: Loading repo commits...
+[2026-09-10 19:13:47,900] [run_evaluation.py] [INFO]: Creating instances...
+[2026-09-10 19:13:47,900] [run_evaluation.py] [INFO]: Loading datasets...
+[2026-09-10 19:13:48,722] [run_evaluation.py] [INFO]: Successfully loaded 1 valid datasets from ['/home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/multi_eval/epimetheus_Multi/dataset.jsonl']
+[2026-09-10 19:13:48,724] [run_evaluation.py] [INFO]: Successfully loaded 1 valid instances.
+
+Checking commit hashes:   0%|          | 0/1 [00:00<?, ?it/s]
+
+Checking commit hashes for mui/material-ui:   0%|          | 0/1 [00:00<?, ?it/s][A
+Checking commit hashes for mui/material-ui: 100%|██████████| 1/1 [00:00<00:00, 13066.37it/s]
+
+Checking commit hashes: 100%|██████████| 1/1 [00:00<00:00,  1.42it/s]
+Checking commit hashes: 100%|██████████| 1/1 [00:00<00:00,  1.42it/s]
+[2026-09-10 19:13:49,435] [run_evaluation.py] [INFO]: Total images: 2
+
+Building images:   0%|          | 0/2 [00:00<?, ?it/s]
+Building images: 100%|██████████| 2/2 [00:00<00:00, 26.90it/s]
+[2026-09-10 19:13:49,510] [run_evaluation.py] [INFO]: Images built successfully.
+[2026-09-10 19:13:49,510] [run_evaluation.py] [INFO]: Running instances...
+
+Running instances:   0%|          | 0/1 [00:00<?, ?it/s][2026-09-10 19:13:49,511] [run_evaluation.py] [INFO]: Running mswebench/mui_m_material-ui:pr-34159 with command: bash /home/fix-run.sh...
+
+Running instances: 100%|██████████| 1/1 [03:30<00:00, 210.46s/it]
+Running instances: 100%|██████████| 1/1 [03:30<00:00, 210.46s/it]
+[2026-09-10 19:17:19,975] [run_evaluation.py] [INFO]: Instances run successfully.
+[2026-09-10 19:17:19,978] [run_evaluation.py] [INFO]: Running evaluation...
+[2026-09-10 19:17:19,981] [gen_report.py] [INFO]: Initialize logger successfully.
+[2026-09-10 19:17:19,983] [gen_report.py] [INFO]: Collecting report tasks...
+[2026-09-10 19:17:19,991] [gen_report.py] [INFO]: Successfully collected 32 tasks.
+[2026-09-10 19:17:19,994] [gen_report.py] [INFO]: Loading dataset...
+[2026-09-10 19:17:20,639] [gen_report.py] [INFO]: Successfully loaded 1 valid datasets from ['/home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/multi_eval/epimetheus_Multi/dataset.jsonl']
+
+Generating eval reports:   0%|          | 0/1 [00:00<?, ?it/s][2026-09-10 19:17:23,102] [gen_report.py] [ERROR]: Invalid report for mui/material-ui:pr-34159, Test Result Summary:
+Stage Descriptions:
+  run  : Execute the test command without any patches applied.
+  test : Execute the test command after applying the test patch.
+  fix  : Execute the test command after applying both the test patch and the fix patch.
+Each stage is reported as (pass, fail, skip), representing the number of tests that passed, failed, or were skipped, respectively.
+
+Results:
+  run  = (7257, 5, 1022)
+  test = (7258, 9, 1022)
+  fix  = (7258, 9, 1022), After applying the fix patch, no test cases transitioned from failed to passed. A brief summary is as follows: Test Result Summary:
+Stage Descriptions:
+  run  : Execute the test command without any patches applied.
+  test : Execute the test command after applying the test patch.
+  fix  : Execute the test command after applying both the test patch and the fix patch.
+Each stage is reported as (pass, fail, skip), representing the number of tests that passed, failed, or were skipped, respectively.
+
+Results:
+  run  = (7257, 5, 1022)
+  test = (7258, 9, 1022)
+  fix  = (7258, 9, 1022)
+
+Generating eval reports: 100%|██████████| 1/1 [00:02<00:00,  2.46s/it]
+Generating eval reports: 100%|██████████| 1/1 [00:02<00:00,  2.46s/it]
+[2026-09-10 19:17:23,102] [gen_report.py] [INFO]: Successfully generated 0 reports.
+
+Fetching 50 files:   0%|          | 0/50 [00:00<?, ?it/s]
+Fetching 50 files: 100%|██████████| 50/50 [00:00<00:00, 1988.27it/s]
+[19:17:32]   Multi report -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Multi.epimetheus_Multi.json
+[19:17:32] === Issue resolution summary ===
+[19:17:32]   Report            : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Multi.epimetheus_Multi.json
+[19:17:32]   Total (evaluated) : 1
+[19:17:32]   Submitted (preds) : 1
+[19:17:32]   Completed         : 1
+[19:17:32]   Resolved          : 0
+[19:17:32]   Unresolved        : 1
+[19:17:32]   Errored           : 0
+[19:17:32]   Empty patches     : 0
+[19:17:32]   Resolved rate     : 0/1 = 0.0% (of evaluated)
+[19:17:32] Done.
+[19:17:32]   Predictions : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution_preds.jsonl
+[19:17:32]   Report      : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Multi.epimetheus_Multi.json
+[19:17:32] Resolution scores -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution.jsonl
+[19:17:37] Deleted docker image: mswebench/mui_m_material-ui:pr-34159

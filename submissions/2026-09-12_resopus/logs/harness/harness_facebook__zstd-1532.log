@@ -1,0 +1,196 @@
+[20:10:33] Retrieval eval: facebook__zstd-1532
+  Setting up repository
+  Warning: repo_url mismatch; overriding with /home/andre/workspace/ContextBench/repos/github.com__facebook__zstd
+  Repo: /home/andre/workspace/ContextBench/repos/github.com__facebook__zstd
+  Commit: eb3a7a38270d...
+  Checkout ready: /home/andre/workspace/ContextBench/repos/_worktrees/contextbench_worktrees/__home__andre__workspace__ContextBench__repos__github.com__facebook__zstd/eb3a7a38270dc2a1f533c1b347f8b9b56e789f8f
+  Parsing trajectory
+  Extracted: 40 steps, final has 7 files
+DETAILS:
+instance_id=facebook__zstd-1532
+  gold_files: n=4
+    - CHANGELOG
+    - lib/compress/zstd_compress.c
+    - lib/compress/zstdmt_compress.c
+    - lib/zstd.h
+  pred_files: n=7
+    - Makefile
+    - TESTING.md
+    - doc/zstd_manual.html
+    - lib/compress/zstd_compress.c
+    - lib/compress/zstdmt_compress.c
+    - lib/zstd.h
+    - tests/Makefile
+  hit_files: n=3
+    - lib/compress/zstd_compress.c
+    - lib/compress/zstdmt_compress.c
+    - lib/zstd.h
+  gold_symbols: n=10
+    - lib/compress/zstd_compress.c:function_definition@13529-15321
+    - lib/compress/zstd_compress.c:function_definition@15323-21694
+    - lib/compress/zstd_compress.c:function_definition@21696-21859
+    - lib/compress/zstd_compress.c:function_definition@21861-24816
+    - lib/compress/zstdmt_compress.c:function_definition@25323-31213
+    - lib/compress/zstdmt_compress.c:function_definition@35069-35237
+    - lib/compress/zstdmt_compress.c:function_definition@35239-36685
+    - lib/compress/zstdmt_compress.c:function_definition@39501-40343
+    - lib/compress/zstdmt_compress.c:function_definition@40345-40565
+    - lib/compress/zstdmt_compress.c:function_definition@40567-41091
+  pred_symbols: n=11
+    - lib/compress/zstd_compress.c:function_definition@13529-15321
+    - lib/compress/zstd_compress.c:function_definition@15323-21694
+    - lib/compress/zstd_compress.c:function_definition@21696-21859
+    - lib/compress/zstd_compress.c:function_definition@21861-24816
+    - lib/compress/zstdmt_compress.c:function_definition@25323-31213
+    - lib/compress/zstdmt_compress.c:function_definition@34430-35006
+    - lib/compress/zstdmt_compress.c:function_definition@35069-35237
+    - lib/compress/zstdmt_compress.c:function_definition@35239-36685
+    - lib/compress/zstdmt_compress.c:function_definition@39501-40343
+    - lib/compress/zstdmt_compress.c:function_definition@40345-40565
+    - lib/compress/zstdmt_compress.c:function_definition@40567-41091
+  hit_symbols: n=10
+    - lib/compress/zstd_compress.c:function_definition@13529-15321
+    - lib/compress/zstd_compress.c:function_definition@15323-21694
+    - lib/compress/zstd_compress.c:function_definition@21696-21859
+    - lib/compress/zstd_compress.c:function_definition@21861-24816
+    - lib/compress/zstdmt_compress.c:function_definition@25323-31213
+    - lib/compress/zstdmt_compress.c:function_definition@35069-35237
+    - lib/compress/zstdmt_compress.c:function_definition@35239-36685
+    - lib/compress/zstdmt_compress.c:function_definition@39501-40343
+    - lib/compress/zstdmt_compress.c:function_definition@40345-40565
+    - lib/compress/zstdmt_compress.c:function_definition@40567-41091
+
+[20:10:35] Retrieval facebook__zstd-1532: line_f1=0.313
+[20:10:35] Resolution resume: 0 harness-scored, 1 pending (stable run_id=epimetheus_Multi)
+[20:10:35] Resolution eval (pending=1): /home/andre/workspace/ContextBench/agent-frameworks/epimetheus/.venv/bin/python /home/andre/workspace/ContextBench/scripts/run_resolution_eval.py --input-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Multi --bench Multi --model-name epimetheus__Multi --run-id epimetheus_Multi --predictions /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution_preds.jsonl --report-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet --instance-ids facebook__zstd-1532 --max-workers 1
+[20:10:35] === Step 1/2: Build SWE-bench predictions ===
+[20:10:35]   Input dir   : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Multi
+[20:10:35] WARNING: duplicate instance_id axios__axios-5661 (axios__axios-5661.json); keeping first.
+[20:10:35] WARNING: duplicate instance_id clap-rs__clap-2501 (clap-rs__clap-2501.json); keeping first.
+[20:10:35] WARNING: duplicate instance_id clap-rs__clap-2895 (clap-rs__clap-2895.json); keeping first.
+[20:10:35] WARNING: duplicate instance_id clap-rs__clap-3421 (clap-rs__clap-3421.json); keeping first.
+[20:10:35] WARNING: duplicate instance_id clap-rs__clap-3684 (clap-rs__clap-3684.json); keeping first.
+[20:10:35] WARNING: duplicate instance_id clap-rs__clap-3975 (clap-rs__clap-3975.json); keeping first.
+[20:10:35] WARNING: duplicate instance_id cli__cli-2250 (cli__cli-2250.json); keeping first.
+[20:10:35] WARNING: duplicate instance_id cli__cli-2351 (cli__cli-2351.json); keeping first.
+[20:10:35] WARNING: duplicate instance_id cli__cli-2785 (cli__cli-2785.json); keeping first.
+[20:10:35] WARNING: duplicate instance_id cli__cli-3270 (cli__cli-3270.json); keeping first.
+[20:10:35] WARNING: duplicate instance_id cli__cli-5019 (cli__cli-5019.json); keeping first.
+[20:10:35] WARNING: duplicate instance_id cli__cli-7645 (cli__cli-7645.json); keeping first.
+[20:10:35] WARNING: duplicate instance_id cli__cli-8157 (cli__cli-8157.json); keeping first.
+[20:10:35] WARNING: duplicate instance_id expressjs__express-3870 (expressjs__express-3870.json); keeping first.
+[20:10:35] WARNING: duplicate instance_id facebook__zstd-1243 (facebook__zstd-1243.json); keeping first.
+[20:10:35] WARNING: duplicate instance_id facebook__zstd-1532 (facebook__zstd-1532.json); keeping first.
+[20:10:35] WARNING: duplicate instance_id facebook__zstd-637 (facebook__zstd-637.json); keeping first.
+[20:10:35] WARNING: duplicate instance_id fasterxml__jackson-core-1016 (fasterxml__jackson-core-1016.json); keeping first.
+[20:10:35] WARNING: duplicate instance_id fasterxml__jackson-core-183 (fasterxml__jackson-core-183.json); keeping first.
+[20:10:35] WARNING: duplicate instance_id google__gson-1391 (google__gson-1391.json); keeping first.
+[20:10:35] WARNING: duplicate instance_id iamkun__dayjs-1611 (iamkun__dayjs-1611.json); keeping first.
+[20:10:35] WARNING: duplicate instance_id iamkun__dayjs-882 (iamkun__dayjs-882.json); keeping first.
+[20:10:35] WARNING: duplicate instance_id jqlang__jq-2654 (jqlang__jq-2654.json); keeping first.
+[20:10:35] WARNING: duplicate instance_id mui__material-ui-29898 (mui__material-ui-29898.json); keeping first.
+[20:10:35] WARNING: duplicate instance_id mui__material-ui-30374 (mui__material-ui-30374.json); keeping first.
+[20:10:35] WARNING: duplicate instance_id mui__material-ui-34159 (mui__material-ui-34159.json); keeping first.
+[20:10:35] WARNING: duplicate instance_id mui__material-ui-34401 (mui__material-ui-34401.json); keeping first.
+[20:10:35] WARNING: duplicate instance_id mui__material-ui-34437 (mui__material-ui-34437.json); keeping first.
+[20:10:35] WARNING: duplicate instance_id mui__material-ui-39108 (mui__material-ui-39108.json); keeping first.
+[20:10:35] WARNING: duplicate instance_id mui__material-ui-39196 (mui__material-ui-39196.json); keeping first.
+[20:10:35] WARNING: duplicate instance_id nlohmann__json-4512 (nlohmann__json-4512.json); keeping first.
+[20:10:35] WARNING: duplicate instance_id ponylang__ponyc-2201 (ponylang__ponyc-2201.json); keeping first.
+[20:10:35] WARNING: duplicate instance_id ponylang__ponyc-2247 (ponylang__ponyc-2247.json); keeping first.
+[20:10:35] WARNING: duplicate instance_id ponylang__ponyc-2586 (ponylang__ponyc-2586.json); keeping first.
+[20:10:35] WARNING: duplicate instance_id ponylang__ponyc-4595 (ponylang__ponyc-4595.json); keeping first.
+[20:10:35] WARNING: duplicate instance_id rayon-rs__rayon-986 (rayon-rs__rayon-986.json); keeping first.
+[20:10:35] WARNING: duplicate instance_id sveltejs__svelte-10608 (sveltejs__svelte-10608.json); keeping first.
+[20:10:35] WARNING: duplicate instance_id sveltejs__svelte-11913 (sveltejs__svelte-11913.json); keeping first.
+[20:10:35] WARNING: duplicate instance_id sveltejs__svelte-14629 (sveltejs__svelte-14629.json); keeping first.
+[20:10:35] WARNING: duplicate instance_id sveltejs__svelte-14935 (sveltejs__svelte-14935.json); keeping first.
+[20:10:35] WARNING: duplicate instance_id vuejs__core-10027 (vuejs__core-10027.json); keeping first.
+[20:10:35] WARNING: duplicate instance_id vuejs__core-9213 (vuejs__core-9213.json); keeping first.
+[20:10:35]   Wrote 42 prediction(s) -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution_preds.jsonl
+[20:10:35] === Step 2/2: Run resolution harness ===
+[20:10:35]   Backend     : Multi
+[20:10:35]   Dataset     : ByteDance-Seed/Multi-SWE-bench (split=train)
+[20:10:35]   Run id      : epimetheus_Multi
+[20:10:35]   Report dir  : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet
+
+Fetching 50 files:   0%|          | 0/50 [00:00<?, ?it/s]
+Fetching 50 files: 100%|██████████| 50/50 [00:00<00:00, 2274.25it/s]
+[20:10:45]   Running: /home/andre/workspace/ContextBench/.venvs/resolution/bin/python -m multi_swe_bench.harness.run_evaluation --config /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/multi_eval/epimetheus_Multi/config.json
+[2026-09-10 20:10:46,659] [run_evaluation.py] [INFO]: Initialize logger successfully.
+[2026-09-10 20:10:46,659] [run_evaluation.py] [INFO]: Building images...
+[2026-09-10 20:10:46,659] [run_evaluation.py] [INFO]: Loading repo commits...
+[2026-09-10 20:10:46,659] [run_evaluation.py] [INFO]: Creating instances...
+[2026-09-10 20:10:46,659] [run_evaluation.py] [INFO]: Loading datasets...
+[2026-09-10 20:10:46,660] [run_evaluation.py] [INFO]: Successfully loaded 1 valid datasets from ['/home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/multi_eval/epimetheus_Multi/dataset.jsonl']
+[2026-09-10 20:10:46,661] [run_evaluation.py] [INFO]: Successfully loaded 1 valid instances.
+
+Checking commit hashes:   0%|          | 0/1 [00:00<?, ?it/s]
+
+Checking commit hashes for facebook/zstd:   0%|          | 0/1 [00:00<?, ?it/s][A
+Checking commit hashes for facebook/zstd: 100%|██████████| 1/1 [00:00<00:00, 32768.00it/s]
+
+Checking commit hashes: 100%|██████████| 1/1 [00:00<00:00,  8.48it/s]
+Checking commit hashes: 100%|██████████| 1/1 [00:00<00:00,  8.48it/s]
+[2026-09-10 20:10:46,784] [run_evaluation.py] [INFO]: Total images: 2
+
+Building images:   0%|          | 0/2 [00:00<?, ?it/s]
+Building images: 100%|██████████| 2/2 [00:00<00:00, 33.63it/s]
+[2026-09-10 20:10:46,844] [run_evaluation.py] [INFO]: Images built successfully.
+[2026-09-10 20:10:46,844] [run_evaluation.py] [INFO]: Running instances...
+
+Running instances:   0%|          | 0/1 [00:00<?, ?it/s][2026-09-10 20:10:46,845] [run_evaluation.py] [INFO]: Running mswebench/facebook_m_zstd:pr-1532 with command: bash /home/fix-run.sh...
+
+Running instances: 100%|██████████| 1/1 [18:36<00:00, 1116.03s/it]
+Running instances: 100%|██████████| 1/1 [18:36<00:00, 1116.04s/it]
+[2026-09-10 20:29:22,884] [run_evaluation.py] [INFO]: Instances run successfully.
+[2026-09-10 20:29:22,893] [run_evaluation.py] [INFO]: Running evaluation...
+[2026-09-10 20:29:22,910] [gen_report.py] [INFO]: Initialize logger successfully.
+[2026-09-10 20:29:22,910] [gen_report.py] [INFO]: Collecting report tasks...
+[2026-09-10 20:29:22,923] [gen_report.py] [INFO]: Successfully collected 43 tasks.
+[2026-09-10 20:29:22,930] [gen_report.py] [INFO]: Loading dataset...
+[2026-09-10 20:29:23,068] [gen_report.py] [INFO]: Successfully loaded 1 valid datasets from ['/home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/multi_eval/epimetheus_Multi/dataset.jsonl']
+
+Generating eval reports:   0%|          | 0/1 [00:00<?, ?it/s][2026-09-10 20:29:23,141] [gen_report.py] [ERROR]: Invalid report for cli/cli:pr-3608, Test Result Summary:
+Stage Descriptions:
+  run  : Execute the test command without any patches applied.
+  test : Execute the test command after applying the test patch.
+  fix  : Execute the test command after applying both the test patch and the fix patch.
+Each stage is reported as (pass, fail, skip), representing the number of tests that passed, failed, or were skipped, respectively.
+
+Results:
+  run  = (1391, 2, 0)
+  test = (1359, 3, 0)
+  fix  = (1314, 9, 0), After applying the fix patch, no test cases transitioned from failed to passed. A brief summary is as follows: Test Result Summary:
+Stage Descriptions:
+  run  : Execute the test command without any patches applied.
+  test : Execute the test command after applying the test patch.
+  fix  : Execute the test command after applying both the test patch and the fix patch.
+Each stage is reported as (pass, fail, skip), representing the number of tests that passed, failed, or were skipped, respectively.
+
+Results:
+  run  = (1391, 2, 0)
+  test = (1359, 3, 0)
+  fix  = (1314, 9, 0)
+
+Generating eval reports: 100%|██████████| 1/1 [00:00<00:00, 14.71it/s]
+[2026-09-10 20:29:23,141] [gen_report.py] [INFO]: Successfully generated 0 reports.
+
+Fetching 50 files:   0%|          | 0/50 [00:00<?, ?it/s]
+Fetching 50 files: 100%|██████████| 50/50 [00:00<00:00, 1627.47it/s]
+[20:29:29]   Multi report -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Multi.epimetheus_Multi.json
+[20:29:29] === Issue resolution summary ===
+[20:29:29]   Report            : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Multi.epimetheus_Multi.json
+[20:29:29]   Total (evaluated) : 2
+[20:29:29]   Submitted (preds) : 1
+[20:29:29]   Completed         : 1
+[20:29:29]   Resolved          : 0
+[20:29:29]   Unresolved        : 2
+[20:29:29]   Errored           : 1
+[20:29:29]   Empty patches     : 0
+[20:29:29]   Resolved rate     : 0/2 = 0.0% (of evaluated)
+[20:29:29] Done.
+[20:29:29]   Predictions : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution_preds.jsonl
+[20:29:29]   Report      : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Multi.epimetheus_Multi.json
+[20:29:29] Resolution scores -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution.jsonl
+[20:29:29] Deleted docker image: mswebench/facebook_m_zstd:pr-1532

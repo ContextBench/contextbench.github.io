@@ -1,0 +1,173 @@
+[16:34:56] Retrieval eval: clap-rs__clap-2501
+  Setting up repository
+  Warning: repo_url mismatch; overriding with /home/andre/workspace/ContextBench/repos/github.com__clap-rs__clap
+  Repo: /home/andre/workspace/ContextBench/repos/github.com__clap-rs__clap
+  Commit: 750aba282f1a...
+  Checkout ready: /home/andre/workspace/ContextBench/repos/_worktrees/contextbench_worktrees/__home__andre__workspace__ContextBench__repos__github.com__clap-rs__clap/750aba282f1ad4ed623ef32dfe9fb04588e6dd42
+  Parsing trajectory
+  Extracted: 27 steps, final has 5 files
+DETAILS:
+instance_id=clap-rs__clap-2501
+  gold_files: n=1
+    - src/parse/parser.rs
+  pred_files: n=5
+    - Cargo.toml
+    - src/build/app/mod.rs
+    - src/parse/parser.rs
+    - src/util/argstr.rs
+    - tests/flag_subcommands.rs
+  hit_files: n=1
+    - src/parse/parser.rs
+  gold_symbols: n=10
+    - src/parse/parser.rs:function_item@10812-24442
+    - src/parse/parser.rs:function_item@2243-2740
+    - src/parse/parser.rs:function_item@27899-29047
+    - src/parse/parser.rs:function_item@32824-35632
+    - src/parse/parser.rs:function_item@38529-40506
+    - src/parse/parser.rs:function_item@40512-44021
+    - src/parse/parser.rs:function_item@50275-50962
+    - src/parse/parser.rs:impl_item@10690-58851
+    - src/parse/parser.rs:impl_item@2199-10669
+    - src/parse/parser.rs:struct_item@1913-2173
+  pred_symbols: n=80
+    - src/build/app/mod.rs:function_item@101153-102409
+    - src/build/app/mod.rs:function_item@102477-102668
+    - src/build/app/mod.rs:function_item@102735-102933
+    - src/build/app/mod.rs:function_item@5058-5264
+    - src/build/app/mod.rs:function_item@5383-5491
+    - src/build/app/mod.rs:function_item@5616-5751
+    - src/build/app/mod.rs:function_item@5875-6014
+    - src/build/app/mod.rs:function_item@97817-98001
+    - src/build/app/mod.rs:function_item@98201-98587
+    - src/build/app/mod.rs:function_item@98622-98766
+    - src/build/app/mod.rs:function_item@98830-99153
+    - src/build/app/mod.rs:impl_item@3520-11936
+    - src/build/app/mod.rs:impl_item@95868-102935
+    - src/parse/parser.rs:function_item@10812-24442
+    - src/parse/parser.rs:function_item@24448-26502
+    - src/parse/parser.rs:function_item@26541-26763
+    - src/parse/parser.rs:function_item@26856-27796
+    - src/parse/parser.rs:function_item@27899-29047
+    - src/parse/parser.rs:function_item@29053-31578
+    - src/parse/parser.rs:function_item@31584-32818
+    - src/parse/parser.rs:function_item@32824-35632
+    - src/parse/parser.rs:function_item@35783-36715
+    - src/parse/parser.rs:function_item@36721-37654
+    - src/parse/parser.rs:function_item@38529-40506
+    - src/parse/parser.rs:function_item@40512-44021
+    - src/parse/parser.rs:impl_item@10690-58851
+    - src/parse/parser.rs:impl_item@2199-10669
+    - src/util/argstr.rs:function_item@1367-1815
+    - src/util/argstr.rs:function_item@1904-2125
+    - src/util/argstr.rs:function_item@203-281
+    - src/util/argstr.rs:function_item@2131-2325
+    - src/util/argstr.rs:function_item@2331-2577
+    - src/util/argstr.rs:function_item@2607-2673
+    - src/util/argstr.rs:function_item@2679-2741
+    - src/util/argstr.rs:function_item@2747-2818
+    - src/util/argstr.rs:function_item@2824-2912
+    - src/util/argstr.rs:function_item@287-385
+    - src/util/argstr.rs:function_item@2918-3019
+    - src/util/argstr.rs:function_item@3025-3122
+    - src/util/argstr.rs:function_item@3128-3242
+    - src/util/argstr.rs:function_item@3282-3392
+    - src/util/argstr.rs:function_item@3441-3517
+    - src/util/argstr.rs:function_item@3567-3633
+    - src/util/argstr.rs:function_item@3682-3753
+    - src/util/argstr.rs:function_item@3803-3874
+    - src/util/argstr.rs:function_item@391-486
+    - src/util/argstr.rs:function_item@4081-4665
+    - src/util/argstr.rs:function_item@492-569
+    - src/util/argstr.rs:function_item@575-701
+    - src/util/argstr.rs:function_item@707-1040
+    ... (30 more)
+  hit_symbols: n=7
+    - src/parse/parser.rs:function_item@10812-24442
+    - src/parse/parser.rs:function_item@27899-29047
+    - src/parse/parser.rs:function_item@32824-35632
+    - src/parse/parser.rs:function_item@38529-40506
+    - src/parse/parser.rs:function_item@40512-44021
+    - src/parse/parser.rs:impl_item@10690-58851
+    - src/parse/parser.rs:impl_item@2199-10669
+
+[16:34:57] Retrieval clap-rs__clap-2501: line_f1=0.550
+[16:34:57] Resolution resume: 0 harness-scored, 1 pending (stable run_id=epimetheus_Multi)
+[16:34:57] Resolution eval (pending=1): /home/andre/workspace/ContextBench/agent-frameworks/epimetheus/.venv/bin/python /home/andre/workspace/ContextBench/scripts/run_resolution_eval.py --input-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Multi --bench Multi --model-name epimetheus__Multi --run-id epimetheus_Multi --predictions /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution_preds.jsonl --report-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet --instance-ids clap-rs__clap-2501 --max-workers 1
+[16:34:57] === Step 1/2: Build SWE-bench predictions ===
+[16:34:57]   Input dir   : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Multi
+[16:34:57] WARNING: duplicate instance_id clap-rs__clap-2501 (clap-rs__clap-2501.json); keeping first.
+[16:34:57] WARNING: duplicate instance_id cli__cli-2250 (cli__cli-2250.json); keeping first.
+[16:34:57] WARNING: duplicate instance_id cli__cli-2785 (cli__cli-2785.json); keeping first.
+[16:34:57] WARNING: duplicate instance_id jqlang__jq-2654 (jqlang__jq-2654.json); keeping first.
+[16:34:57] WARNING: duplicate instance_id mui__material-ui-34401 (mui__material-ui-34401.json); keeping first.
+[16:34:57] WARNING: duplicate instance_id ponylang__ponyc-2247 (ponylang__ponyc-2247.json); keeping first.
+[16:34:57] WARNING: duplicate instance_id rayon-rs__rayon-986 (rayon-rs__rayon-986.json); keeping first.
+[16:34:57]   Wrote 7 prediction(s) -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution_preds.jsonl
+[16:34:57] === Step 2/2: Run resolution harness ===
+[16:34:57]   Backend     : Multi
+[16:34:57]   Dataset     : ByteDance-Seed/Multi-SWE-bench (split=train)
+[16:34:57]   Run id      : epimetheus_Multi
+[16:34:57]   Report dir  : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet
+
+Fetching 50 files:   0%|          | 0/50 [00:00<?, ?it/s]
+Fetching 50 files: 100%|██████████| 50/50 [00:00<00:00, 2638.72it/s]
+[16:35:06]   Running: /home/andre/workspace/ContextBench/.venvs/resolution/bin/python -m multi_swe_bench.harness.run_evaluation --config /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/multi_eval/epimetheus_Multi/config.json
+[2026-09-10 16:35:07,588] [run_evaluation.py] [INFO]: Initialize logger successfully.
+[2026-09-10 16:35:07,588] [run_evaluation.py] [INFO]: Building images...
+[2026-09-10 16:35:07,588] [run_evaluation.py] [INFO]: Loading repo commits...
+[2026-09-10 16:35:07,588] [run_evaluation.py] [INFO]: Creating instances...
+[2026-09-10 16:35:07,588] [run_evaluation.py] [INFO]: Loading datasets...
+[2026-09-10 16:35:07,651] [run_evaluation.py] [INFO]: Successfully loaded 1 valid datasets from ['/home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/multi_eval/epimetheus_Multi/dataset.jsonl']
+[2026-09-10 16:35:07,653] [run_evaluation.py] [INFO]: Successfully loaded 1 valid instances.
+
+Checking commit hashes:   0%|          | 0/1 [00:00<?, ?it/s][2026-09-10 16:35:07,658] [run_evaluation.py] [WARNING]: Repository not found: /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/multi_eval/epimetheus_Multi/repos/clap-rs/clap
+Cloning into '/home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/multi_eval/epimetheus_Multi/repos/clap-rs/clap'...
+
+
+Checking commit hashes for clap-rs/clap:   0%|          | 0/1 [00:00<?, ?it/s][A
+Checking commit hashes for clap-rs/clap: 100%|██████████| 1/1 [00:00<00:00, 19418.07it/s]
+
+Checking commit hashes: 100%|██████████| 1/1 [00:05<00:00,  5.09s/it]
+Checking commit hashes: 100%|██████████| 1/1 [00:05<00:00,  5.09s/it]
+[2026-09-10 16:35:12,747] [run_evaluation.py] [INFO]: Total images: 2
+
+Building images:   0%|          | 0/2 [00:00<?, ?it/s]
+Building images: 100%|██████████| 2/2 [00:00<00:00, 23.19it/s]
+[2026-09-10 16:35:12,834] [run_evaluation.py] [INFO]: Images built successfully.
+[2026-09-10 16:35:12,834] [run_evaluation.py] [INFO]: Running instances...
+
+Running instances:   0%|          | 0/1 [00:00<?, ?it/s][2026-09-10 16:35:12,835] [run_evaluation.py] [INFO]: Running mswebench/clap-rs_m_clap:pr-2501 with command: bash /home/fix-run.sh...
+
+Running instances: 100%|██████████| 1/1 [00:33<00:00, 33.04s/it]
+Running instances: 100%|██████████| 1/1 [00:33<00:00, 33.04s/it]
+[2026-09-10 16:35:45,871] [run_evaluation.py] [INFO]: Instances run successfully.
+[2026-09-10 16:35:45,871] [run_evaluation.py] [INFO]: Running evaluation...
+[2026-09-10 16:35:45,871] [gen_report.py] [INFO]: Initialize logger successfully.
+[2026-09-10 16:35:45,881] [gen_report.py] [INFO]: Collecting report tasks...
+[2026-09-10 16:35:45,883] [gen_report.py] [INFO]: Successfully collected 7 tasks.
+[2026-09-10 16:35:45,883] [gen_report.py] [INFO]: Loading dataset...
+[2026-09-10 16:35:45,945] [gen_report.py] [INFO]: Successfully loaded 1 valid datasets from ['/home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/multi_eval/epimetheus_Multi/dataset.jsonl']
+
+Generating eval reports:   0%|          | 0/1 [00:00<?, ?it/s][2026-09-10 16:35:45,975] [gen_report.py] [ERROR]: Invalid n2p_tests for clap-rs/clap:pr-2501: missing flag_subcommand_short_normal_usage_string
+
+Generating eval reports: 100%|██████████| 1/1 [00:00<00:00, 33.75it/s]
+[2026-09-10 16:35:45,976] [gen_report.py] [INFO]: Successfully generated 0 reports.
+
+Fetching 50 files:   0%|          | 0/50 [00:00<?, ?it/s]
+Fetching 50 files: 100%|██████████| 50/50 [00:00<00:00, 1246.01it/s]
+[16:35:50]   Multi report -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Multi.epimetheus_Multi.json
+[16:35:50] === Issue resolution summary ===
+[16:35:50]   Report            : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Multi.epimetheus_Multi.json
+[16:35:50]   Total (evaluated) : 1
+[16:35:50]   Submitted (preds) : 1
+[16:35:50]   Completed         : 1
+[16:35:50]   Resolved          : 0
+[16:35:50]   Unresolved        : 1
+[16:35:50]   Errored           : 0
+[16:35:50]   Empty patches     : 0
+[16:35:50]   Resolved rate     : 0/1 = 0.0% (of evaluated)
+[16:35:50] Done.
+[16:35:50]   Predictions : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution_preds.jsonl
+[16:35:50]   Report      : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Multi.epimetheus_Multi.json
+[16:35:50] Resolution scores -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution.jsonl
+[16:35:51] Deleted docker image: mswebench/clap-rs_m_clap:pr-2501
