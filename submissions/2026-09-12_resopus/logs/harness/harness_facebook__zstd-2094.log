@@ -1,0 +1,168 @@
+[01:23:34] Retrieval eval: facebook__zstd-2094
+  Setting up repository
+  Warning: repo_url mismatch; overriding with /home/andre/workspace/ContextBench/repos/github.com__facebook__zstd
+  Repo: /home/andre/workspace/ContextBench/repos/github.com__facebook__zstd
+  Commit: 6b4a3e019f8e...
+  Checkout ready: /home/andre/workspace/ContextBench/repos/_worktrees/contextbench_worktrees/__home__andre__workspace__ContextBench__repos__github.com__facebook__zstd/6b4a3e019f8eeb3423065f7b24d790358e8cbc59
+  Parsing trajectory
+  Extracted: 62 steps, final has 13 files
+DETAILS:
+instance_id=facebook__zstd-2094
+  gold_files: n=5
+    - lib/common/error_private.c
+    - lib/common/zstd_errors.h
+    - lib/decompress/zstd_decompress.c
+    - lib/decompress/zstd_decompress_internal.h
+    - lib/zstd.h
+  pred_files: n=13
+    - Makefile
+    - TESTING.md
+    - contrib/linux-kernel/lib/zstd/decompress.c
+    - lib/common/error_private.c
+    - lib/common/zstd_errors.h
+    - lib/common/zstd_internal.h
+    - lib/decompress/zstd_decompress.c
+    - lib/decompress/zstd_decompress_internal.h
+    - lib/zstd.h
+    - tests/Makefile
+    - tests/fuzz/fuzz.py
+    - tests/fuzz/stream_round_trip.c
+    - tests/fuzzer.c
+  hit_files: n=5
+    - lib/common/error_private.c
+    - lib/common/zstd_errors.h
+    - lib/decompress/zstd_decompress.c
+    - lib/decompress/zstd_decompress_internal.h
+    - lib/zstd.h
+  gold_symbols: n=8
+    - lib/common/error_private.c:function_definition@507-2869
+    - lib/decompress/zstd_decompress.c:function_definition@3191-3907
+    - lib/decompress/zstd_decompress.c:function_definition@3909-4298
+    - lib/decompress/zstd_decompress.c:function_definition@54691-55314
+    - lib/decompress/zstd_decompress.c:function_definition@55825-56443
+    - lib/decompress/zstd_decompress.c:function_definition@59140-59275
+    - lib/decompress/zstd_decompress.c:function_definition@59277-74331
+    - lib/decompress/zstd_decompress_internal.h:struct_specifier@4093-6175
+  pred_symbols: n=70
+    - contrib/linux-kernel/lib/zstd/decompress.c:function_definition@73906-74100
+    - contrib/linux-kernel/lib/zstd/decompress.c:function_definition@74102-80998
+    - lib/common/error_private.c:function_definition@507-2869
+    - lib/decompress/zstd_decompress.c:function_definition@11972-12138
+    - lib/decompress/zstd_decompress.c:function_definition@25768-29724
+    - lib/decompress/zstd_decompress.c:function_definition@29726-30063
+    - lib/decompress/zstd_decompress.c:function_definition@30066-30464
+    - lib/decompress/zstd_decompress.c:function_definition@30466-30675
+    - lib/decompress/zstd_decompress.c:function_definition@3191-3907
+    - lib/decompress/zstd_decompress.c:function_definition@33217-40148
+    - lib/decompress/zstd_decompress.c:function_definition@3909-4298
+    - lib/decompress/zstd_decompress.c:function_definition@40151-40502
+    - lib/decompress/zstd_decompress.c:function_definition@40637-44944
+    - lib/decompress/zstd_decompress.c:function_definition@4300-4652
+    - lib/decompress/zstd_decompress.c:function_definition@4654-4781
+    - lib/decompress/zstd_decompress.c:function_definition@4783-4957
+    - lib/decompress/zstd_decompress.c:function_definition@49447-49916
+    - lib/decompress/zstd_decompress.c:function_definition@4959-5553
+    - lib/decompress/zstd_decompress.c:function_definition@50028-50167
+    - lib/decompress/zstd_decompress.c:function_definition@50169-50306
+    - lib/decompress/zstd_decompress.c:function_definition@50308-50427
+    - lib/decompress/zstd_decompress.c:function_definition@50429-50506
+    - lib/decompress/zstd_decompress.c:function_definition@50541-50627
+    - lib/decompress/zstd_decompress.c:function_definition@50628-50691
+    - lib/decompress/zstd_decompress.c:function_definition@50693-51407
+    - lib/decompress/zstd_decompress.c:function_definition@51409-51607
+    - lib/decompress/zstd_decompress.c:function_definition@51609-51796
+    - lib/decompress/zstd_decompress.c:function_definition@51798-52099
+    - lib/decompress/zstd_decompress.c:function_definition@52101-52275
+    - lib/decompress/zstd_decompress.c:function_definition@52403-52733
+    - lib/decompress/zstd_decompress.c:function_definition@52772-52906
+    - lib/decompress/zstd_decompress.c:function_definition@53048-53311
+    - lib/decompress/zstd_decompress.c:function_definition@53429-53598
+    - lib/decompress/zstd_decompress.c:function_definition@53601-53878
+    - lib/decompress/zstd_decompress.c:function_definition@54044-54554
+    - lib/decompress/zstd_decompress.c:function_definition@54556-54689
+    - lib/decompress/zstd_decompress.c:function_definition@54691-55314
+    - lib/decompress/zstd_decompress.c:function_definition@55410-55696
+    - lib/decompress/zstd_decompress.c:function_definition@55825-56443
+    - lib/decompress/zstd_decompress.c:function_definition@56445-57014
+    - lib/decompress/zstd_decompress.c:function_definition@57017-57108
+    - lib/decompress/zstd_decompress.c:function_definition@57110-57655
+    - lib/decompress/zstd_decompress.c:function_definition@57657-58009
+    - lib/decompress/zstd_decompress.c:function_definition@58011-58573
+    - lib/decompress/zstd_decompress.c:function_definition@58613-58853
+    - lib/decompress/zstd_decompress.c:function_definition@58855-59138
+    - lib/decompress/zstd_decompress.c:function_definition@59140-59275
+    - lib/decompress/zstd_decompress.c:function_definition@59277-74331
+    - lib/decompress/zstd_decompress.c:function_definition@74333-74896
+    - lib/decompress/zstd_decompress.c:function_definition@8261-11626
+    ... (20 more)
+  hit_symbols: n=8
+    - lib/common/error_private.c:function_definition@507-2869
+    - lib/decompress/zstd_decompress.c:function_definition@3191-3907
+    - lib/decompress/zstd_decompress.c:function_definition@3909-4298
+    - lib/decompress/zstd_decompress.c:function_definition@54691-55314
+    - lib/decompress/zstd_decompress.c:function_definition@55825-56443
+    - lib/decompress/zstd_decompress.c:function_definition@59140-59275
+    - lib/decompress/zstd_decompress.c:function_definition@59277-74331
+    - lib/decompress/zstd_decompress_internal.h:struct_specifier@4093-6175
+
+[01:23:35] Retrieval facebook__zstd-2094: line_f1=0.101
+
+# Harness overwritten from harness_rerun_17.log (failed first-pass resolution dropped)
+[14:56:23] Resolution eval (pending=16, workers=4): /home/andre/workspace/ContextBench/agent-frameworks/epimetheus/.venv/bin/python /home/andre/workspace/ContextBench/scripts/run_resolution_eval.py --input-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Multi --bench Multi --model-name epimetheus__Multi --run-id epimetheus_Multi --predictions /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution_preds.jsonl --report-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet --instance-ids cli__cli-8632,mui__material-ui-30374,mui__material-ui-34437,vuejs__core-10004,facebook__zstd-2094,sveltejs__svelte-13097,mui__material-ui-25149,clap-rs__clap-4474,fasterxml__jackson-core-1016,ponylang__ponyc-2168,facebook__zstd-1390,alibaba__fastjson2-2775,sveltejs__svelte-14629,ponylang__ponyc-3973,fmtlib__fmt-2394,cli__cli-5537 --max-workers 4
+[14:56:23] WARNING: duplicate instance_id facebook__zstd-2094 (facebook__zstd-2094.json); keeping first.
+Building images:  52%|█████▏    | 14/27 [14:53<15:48, 72.94s/it][2026-09-11 15:11:27,453] [run_evaluation.py] [INFO]: Building image mswebench/facebook_m_zstd:pr-2094...
+[2026-09-11 15:11:42,681] [run_evaluation.py] [INFO]: Image mswebench/facebook_m_zstd:pr-2094 built successfully.
+Running instances:  38%|███▊      | 6/16 [01:33<02:45, 16.57s/it][2026-09-11 15:28:46,697] [run_evaluation.py] [INFO]: Running mswebench/facebook_m_zstd:pr-2094 with command: bash /home/fix-run.sh...
+
+[2026-09-11 16:10:58,683] [gen_report.py] [ERROR]: Invalid report for facebook/zstd:pr-2094, Test Result Summary:
+Stage Descriptions:
+  run  : Execute the test command without any patches applied.
+  test : Execute the test command after applying the test patch.
+  fix  : Execute the test command after applying both the test patch and the fix patch.
+Each stage is reported as (pass, fail, skip), representing the number of tests that passed, failed, or were skipped, respectively.
+
+Results:
+  run  = (1, 0, 0)
+  test = (0, 1, 0)
+  fix  = (0, 1, 0), After applying the fix patch, no test cases transitioned from failed to passed. A brief summary is as follows: Test Result Summary:
+Stage Descriptions:
+  run  : Execute the test command without any patches applied.
+  test : Execute the test command after applying the test patch.
+  fix  : Execute the test command after applying both the test patch and the fix patch.
+Each stage is reported as (pass, fail, skip), representing the number of tests that passed, failed, or were skipped, respectively.
+
+Results:
+  run  = (1, 0, 0)
+  test = (0, 1, 0)
+  fix  = (0, 1, 0)
+
+Generating eval reports:  44%|████▍     | 7/16 [00:01<00:01,  5.18it/s][2026-09-11 16:10:59,673] [gen_report.py] [ERROR]: Invalid report for cli/cli:pr-5537, Test Result Summary:
+Stage Descriptions:
+  run  : Execute the test command without any patches applied.
+  test : Execute the test command after applying the test patch.
+  fix  : Execute the test command after applying both the test patch and the fix patch.
+Each stage is reported as (pass, fail, skip), representing the number of tests that passed, failed, or were skipped, respectively.
+
+Results:
+  run  = (2168, 4, 0)
+  test = (2139, 5, 0)
+  fix  = (2148, 7, 0), Before applying the fix patch, the test passed; however, after applying the fix patch, the test failed. A brief summary is as follows: Test Result Summary:
+Stage Descriptions:
+  run  : Execute the test command without any patches applied.
+  test : Execute the test command after applying the test patch.
+  fix  : Execute the test command after applying both the test patch and the fix patch.
+Each stage is reported as (pass, fail, skip), representing the number of tests that passed, failed, or were skipped, respectively.
+
+Results:
+  run  = (2168, 4, 0)
+  test = (2139, 5, 0)
+  fix  = (2148, 7, 0). `TestNewCmdCreate`: Test(run=<TestStatus.PASS: 'PASS'>, test=<TestStatus.PASS: 'PASS'>, fix=<TestStatus.FAIL: 'FAIL'>)
+
+Generating eval reports:  62%|██████▎   | 10/16 [00:02<00:01,  3.67it/s]
+Generating eval reports:  75%|███████▌  | 12/16 [00:02<00:00,  5.06it/s]
+Generating eval reports:  81%|████████▏ | 13/16 [00:03<00:00,  3.94it/s][2026-09-11 16:11:01,090] [gen_report.py] [ERROR]: Invalid n2p_tests for mui/material-ui:pr-25149: missing /home/material-ui/packages/material-ui/src/Stack/Stack.test.js:<Stack /> should handle breakpoints with a missing key
+
+Generating eval reports:  88%|████████▊ | 14/16 [00:03<00:00,  2.65it/s]
+Generating eval reports:  94%|█████████▍| 15/16 [00:04<00:00,  2.77it/s]
+Generating eval reports: 100%|██████████| 16/16 [00:04<00:00,  2.35it/s]
+Generating eval reports: 100%|██████████| 16/16 [00:04<00:00,  3.33it/s]

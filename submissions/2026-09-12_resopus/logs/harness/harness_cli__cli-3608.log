@@ -1,0 +1,229 @@
+[20:17:59] Retrieval eval: cli__cli-3608
+  Setting up repository
+  Warning: repo_url mismatch; overriding with /home/andre/workspace/ContextBench/repos/github.com__cli__cli
+  Repo: /home/andre/workspace/ContextBench/repos/github.com__cli__cli
+  Commit: 026b07d1cfbf...
+  Checkout ready: /home/andre/workspace/ContextBench/repos/_worktrees/contextbench_worktrees/__home__andre__workspace__ContextBench__repos__github.com__cli__cli/026b07d1cfbf23a3ccb4d4703a2496d65e177fcc
+  Parsing trajectory
+  Extracted: 33 steps, final has 8 files
+DETAILS:
+instance_id=cli__cli-3608
+  gold_files: n=3
+    - api/queries_repo.go
+    - pkg/cmd/pr/create/create.go
+    - pkg/cmd/repo/fork/fork.go
+  pred_files: n=8
+    - api/queries_repo.go
+    - api/queries_repo_test.go
+    - go.mod
+    - internal/ghrepo/repo.go
+    - pkg/cmd/pr/create/create.go
+    - pkg/cmd/repo/fork/fork.go
+    - pkg/cmd/repo/fork/forkResult.json
+    - pkg/cmd/repo/fork/fork_test.go
+  hit_files: n=3
+    - api/queries_repo.go
+    - pkg/cmd/pr/create/create.go
+    - pkg/cmd/repo/fork/fork.go
+  gold_symbols: n=6
+    - api/queries_repo.go:function_declaration@7435-8013
+    - api/queries_repo.go:type_declaration@7176-7359
+    - pkg/cmd/pr/create/create.go:function_declaration@18699-21076
+    - pkg/cmd/repo/fork/fork.go:function_declaration@3073-8427
+    - pkg/cmd/repo/fork/fork.go:function_declaration@928-3071
+    - pkg/cmd/repo/fork/fork.go:type_declaration@462-855
+  pred_symbols: n=53
+    - api/queries_repo.go:function_declaration@4347-6939
+    - api/queries_repo.go:function_declaration@6941-7114
+    - api/queries_repo.go:function_declaration@7435-8013
+    - api/queries_repo.go:function_declaration@8092-9192
+    - api/queries_repo.go:type_declaration@234-710
+    - api/queries_repo.go:type_declaration@7176-7359
+    - api/queries_repo.go:type_declaration@767-812
+    - api/queries_repo.go:type_declaration@869-907
+    - api/queries_repo_test.go:function_declaration@139-3888
+    - api/queries_repo_test.go:function_declaration@3890-4559
+    - api/queries_repo_test.go:function_declaration@4561-5783
+    - api/queries_repo_test.go:function_declaration@5785-8276
+    - api/queries_repo_test.go:function_declaration@8278-8436
+    - api/queries_repo_test.go:function_declaration@8438-9481
+    - internal/ghrepo/repo.go:function_declaration@1121-1185
+    - internal/ghrepo/repo.go:function_declaration@1326-1917
+    - internal/ghrepo/repo.go:function_declaration@1995-2346
+    - internal/ghrepo/repo.go:function_declaration@2348-2446
+    - internal/ghrepo/repo.go:function_declaration@2491-2706
+    - internal/ghrepo/repo.go:function_declaration@353-450
+    - internal/ghrepo/repo.go:function_declaration@506-664
+    - internal/ghrepo/repo.go:function_declaration@737-832
+    - internal/ghrepo/repo.go:function_declaration@866-988
+    - internal/ghrepo/repo.go:type_declaration@195-281
+    - pkg/cmd/pr/create/create.go:function_declaration@18454-18697
+    - pkg/cmd/pr/create/create.go:function_declaration@18699-21076
+    - pkg/cmd/pr/create/create.go:function_declaration@21078-21458
+    - pkg/cmd/repo/fork/fork.go:function_declaration@3073-8427
+    - pkg/cmd/repo/fork/fork.go:function_declaration@928-3071
+    - pkg/cmd/repo/fork/fork.go:type_declaration@462-855
+    - pkg/cmd/repo/fork/fork_test.go:function_declaration@10567-11286
+    - pkg/cmd/repo/fork/fork_test.go:function_declaration@11288-12070
+    - pkg/cmd/repo/fork/fork_test.go:function_declaration@12072-12860
+    - pkg/cmd/repo/fork/fork_test.go:function_declaration@12862-13678
+    - pkg/cmd/repo/fork/fork_test.go:function_declaration@13680-14358
+    - pkg/cmd/repo/fork/fork_test.go:function_declaration@14360-15113
+    - pkg/cmd/repo/fork/fork_test.go:function_declaration@15115-15791
+    - pkg/cmd/repo/fork/fork_test.go:function_declaration@15793-16488
+    - pkg/cmd/repo/fork/fork_test.go:function_declaration@16490-16736
+    - pkg/cmd/repo/fork/fork_test.go:function_declaration@16738-17641
+    - pkg/cmd/repo/fork/fork_test.go:function_declaration@17643-17810
+    - pkg/cmd/repo/fork/fork_test.go:function_declaration@2814-3946
+    - pkg/cmd/repo/fork/fork_test.go:function_declaration@3948-4435
+    - pkg/cmd/repo/fork/fork_test.go:function_declaration@4437-5201
+    - pkg/cmd/repo/fork/fork_test.go:function_declaration@485-2812
+    - pkg/cmd/repo/fork/fork_test.go:function_declaration@5203-5678
+    - pkg/cmd/repo/fork/fork_test.go:function_declaration@5680-6375
+    - pkg/cmd/repo/fork/fork_test.go:function_declaration@6376-7019
+    - pkg/cmd/repo/fork/fork_test.go:function_declaration@7021-7701
+    - pkg/cmd/repo/fork/fork_test.go:function_declaration@7703-8270
+    ... (3 more)
+  hit_symbols: n=6
+    - api/queries_repo.go:function_declaration@7435-8013
+    - api/queries_repo.go:type_declaration@7176-7359
+    - pkg/cmd/pr/create/create.go:function_declaration@18699-21076
+    - pkg/cmd/repo/fork/fork.go:function_declaration@3073-8427
+    - pkg/cmd/repo/fork/fork.go:function_declaration@928-3071
+    - pkg/cmd/repo/fork/fork.go:type_declaration@462-855
+
+[20:17:59] Retrieval cli__cli-3608: line_f1=0.037
+[20:18:00] Resolution resume: 0 harness-scored, 1 pending (stable run_id=epimetheus_Multi)
+[20:18:00] Resolution eval (pending=1): /home/andre/workspace/ContextBench/agent-frameworks/epimetheus/.venv/bin/python /home/andre/workspace/ContextBench/scripts/run_resolution_eval.py --input-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Multi --bench Multi --model-name epimetheus__Multi --run-id epimetheus_Multi --predictions /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution_preds.jsonl --report-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet --instance-ids cli__cli-3608 --max-workers 1
+[20:18:00] === Step 1/2: Build SWE-bench predictions ===
+[20:18:00]   Input dir   : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Multi
+[20:18:00] WARNING: duplicate instance_id axios__axios-5661 (axios__axios-5661.json); keeping first.
+[20:18:00] WARNING: duplicate instance_id clap-rs__clap-2501 (clap-rs__clap-2501.json); keeping first.
+[20:18:00] WARNING: duplicate instance_id clap-rs__clap-2895 (clap-rs__clap-2895.json); keeping first.
+[20:18:00] WARNING: duplicate instance_id clap-rs__clap-3421 (clap-rs__clap-3421.json); keeping first.
+[20:18:00] WARNING: duplicate instance_id clap-rs__clap-3684 (clap-rs__clap-3684.json); keeping first.
+[20:18:00] WARNING: duplicate instance_id clap-rs__clap-3975 (clap-rs__clap-3975.json); keeping first.
+[20:18:00] WARNING: duplicate instance_id cli__cli-2250 (cli__cli-2250.json); keeping first.
+[20:18:00] WARNING: duplicate instance_id cli__cli-2351 (cli__cli-2351.json); keeping first.
+[20:18:00] WARNING: duplicate instance_id cli__cli-2785 (cli__cli-2785.json); keeping first.
+[20:18:00] WARNING: duplicate instance_id cli__cli-3270 (cli__cli-3270.json); keeping first.
+[20:18:00] WARNING: duplicate instance_id cli__cli-3608 (cli__cli-3608.json); keeping first.
+[20:18:00] WARNING: duplicate instance_id cli__cli-5019 (cli__cli-5019.json); keeping first.
+[20:18:00] WARNING: duplicate instance_id cli__cli-7645 (cli__cli-7645.json); keeping first.
+[20:18:00] WARNING: duplicate instance_id cli__cli-8157 (cli__cli-8157.json); keeping first.
+[20:18:00] WARNING: duplicate instance_id expressjs__express-3870 (expressjs__express-3870.json); keeping first.
+[20:18:00] WARNING: duplicate instance_id facebook__zstd-1243 (facebook__zstd-1243.json); keeping first.
+[20:18:00] WARNING: duplicate instance_id facebook__zstd-1532 (facebook__zstd-1532.json); keeping first.
+[20:18:00] WARNING: duplicate instance_id facebook__zstd-637 (facebook__zstd-637.json); keeping first.
+[20:18:00] WARNING: duplicate instance_id fasterxml__jackson-core-1016 (fasterxml__jackson-core-1016.json); keeping first.
+[20:18:00] WARNING: duplicate instance_id fasterxml__jackson-core-183 (fasterxml__jackson-core-183.json); keeping first.
+[20:18:00] WARNING: duplicate instance_id google__gson-1391 (google__gson-1391.json); keeping first.
+[20:18:00] WARNING: duplicate instance_id iamkun__dayjs-1611 (iamkun__dayjs-1611.json); keeping first.
+[20:18:00] WARNING: duplicate instance_id iamkun__dayjs-882 (iamkun__dayjs-882.json); keeping first.
+[20:18:00] WARNING: duplicate instance_id jqlang__jq-2654 (jqlang__jq-2654.json); keeping first.
+[20:18:00] WARNING: duplicate instance_id mui__material-ui-29898 (mui__material-ui-29898.json); keeping first.
+[20:18:00] WARNING: duplicate instance_id mui__material-ui-30374 (mui__material-ui-30374.json); keeping first.
+[20:18:00] WARNING: duplicate instance_id mui__material-ui-34159 (mui__material-ui-34159.json); keeping first.
+[20:18:00] WARNING: duplicate instance_id mui__material-ui-34401 (mui__material-ui-34401.json); keeping first.
+[20:18:00] WARNING: duplicate instance_id mui__material-ui-34437 (mui__material-ui-34437.json); keeping first.
+[20:18:00] WARNING: duplicate instance_id mui__material-ui-39108 (mui__material-ui-39108.json); keeping first.
+[20:18:00] WARNING: duplicate instance_id mui__material-ui-39196 (mui__material-ui-39196.json); keeping first.
+[20:18:00] WARNING: duplicate instance_id nlohmann__json-4512 (nlohmann__json-4512.json); keeping first.
+[20:18:00] WARNING: duplicate instance_id ponylang__ponyc-2201 (ponylang__ponyc-2201.json); keeping first.
+[20:18:00] WARNING: duplicate instance_id ponylang__ponyc-2247 (ponylang__ponyc-2247.json); keeping first.
+[20:18:00] WARNING: duplicate instance_id ponylang__ponyc-2586 (ponylang__ponyc-2586.json); keeping first.
+[20:18:00] WARNING: duplicate instance_id ponylang__ponyc-4595 (ponylang__ponyc-4595.json); keeping first.
+[20:18:00] WARNING: duplicate instance_id rayon-rs__rayon-986 (rayon-rs__rayon-986.json); keeping first.
+[20:18:00] WARNING: duplicate instance_id sveltejs__svelte-10608 (sveltejs__svelte-10608.json); keeping first.
+[20:18:00] WARNING: duplicate instance_id sveltejs__svelte-11913 (sveltejs__svelte-11913.json); keeping first.
+[20:18:00] WARNING: duplicate instance_id sveltejs__svelte-14629 (sveltejs__svelte-14629.json); keeping first.
+[20:18:00] WARNING: duplicate instance_id sveltejs__svelte-14935 (sveltejs__svelte-14935.json); keeping first.
+[20:18:00] WARNING: duplicate instance_id vuejs__core-10027 (vuejs__core-10027.json); keeping first.
+[20:18:00] WARNING: duplicate instance_id vuejs__core-9213 (vuejs__core-9213.json); keeping first.
+[20:18:00]   Wrote 43 prediction(s) -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution_preds.jsonl
+[20:18:00] === Step 2/2: Run resolution harness ===
+[20:18:00]   Backend     : Multi
+[20:18:00]   Dataset     : ByteDance-Seed/Multi-SWE-bench (split=train)
+[20:18:00]   Run id      : epimetheus_Multi
+[20:18:00]   Report dir  : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet
+
+Fetching 50 files:   0%|          | 0/50 [00:00<?, ?it/s]
+Fetching 50 files: 100%|██████████| 50/50 [00:00<00:00, 2425.13it/s]
+[20:18:11]   Running: /home/andre/workspace/ContextBench/.venvs/resolution/bin/python -m multi_swe_bench.harness.run_evaluation --config /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/multi_eval/epimetheus_Multi/config.json
+[2026-09-10 20:18:12,602] [run_evaluation.py] [INFO]: Initialize logger successfully.
+[2026-09-10 20:18:12,603] [run_evaluation.py] [INFO]: Building images...
+[2026-09-10 20:18:12,603] [run_evaluation.py] [INFO]: Loading repo commits...
+[2026-09-10 20:18:12,603] [run_evaluation.py] [INFO]: Creating instances...
+[2026-09-10 20:18:12,603] [run_evaluation.py] [INFO]: Loading datasets...
+[2026-09-10 20:18:12,684] [run_evaluation.py] [INFO]: Successfully loaded 1 valid datasets from ['/home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/multi_eval/epimetheus_Multi/dataset.jsonl']
+[2026-09-10 20:18:12,685] [run_evaluation.py] [INFO]: Successfully loaded 1 valid instances.
+
+Checking commit hashes:   0%|          | 0/1 [00:00<?, ?it/s]
+
+Checking commit hashes for cli/cli:   0%|          | 0/1 [00:00<?, ?it/s][A
+Checking commit hashes for cli/cli: 100%|██████████| 1/1 [00:00<00:00, 23431.87it/s]
+
+Checking commit hashes: 100%|██████████| 1/1 [00:00<00:00,  4.82it/s]
+Checking commit hashes: 100%|██████████| 1/1 [00:00<00:00,  4.81it/s]
+[2026-09-10 20:18:12,898] [run_evaluation.py] [INFO]: Total images: 2
+
+Building images:   0%|          | 0/2 [00:00<?, ?it/s]
+Building images: 100%|██████████| 2/2 [00:00<00:00, 41.03it/s]
+[2026-09-10 20:18:12,948] [run_evaluation.py] [INFO]: Images built successfully.
+[2026-09-10 20:18:12,948] [run_evaluation.py] [INFO]: Running instances...
+
+Running instances:   0%|          | 0/1 [00:00<?, ?it/s][2026-09-10 20:18:12,949] [run_evaluation.py] [INFO]: Running mswebench/cli_m_cli:pr-3608 with command: bash /home/fix-run.sh...
+
+Running instances: 100%|██████████| 1/1 [00:17<00:00, 17.63s/it]
+Running instances: 100%|██████████| 1/1 [00:17<00:00, 17.63s/it]
+[2026-09-10 20:18:30,579] [run_evaluation.py] [INFO]: Instances run successfully.
+[2026-09-10 20:18:30,579] [run_evaluation.py] [INFO]: Running evaluation...
+[2026-09-10 20:18:30,580] [gen_report.py] [INFO]: Initialize logger successfully.
+[2026-09-10 20:18:30,581] [gen_report.py] [INFO]: Collecting report tasks...
+[2026-09-10 20:18:30,591] [gen_report.py] [INFO]: Successfully collected 43 tasks.
+[2026-09-10 20:18:30,591] [gen_report.py] [INFO]: Loading dataset...
+[2026-09-10 20:18:30,681] [gen_report.py] [INFO]: Successfully loaded 1 valid datasets from ['/home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/multi_eval/epimetheus_Multi/dataset.jsonl']
+
+Generating eval reports:   0%|          | 0/1 [00:00<?, ?it/s][2026-09-10 20:18:30,740] [gen_report.py] [ERROR]: Invalid report for cli/cli:pr-3608, Test Result Summary:
+Stage Descriptions:
+  run  : Execute the test command without any patches applied.
+  test : Execute the test command after applying the test patch.
+  fix  : Execute the test command after applying both the test patch and the fix patch.
+Each stage is reported as (pass, fail, skip), representing the number of tests that passed, failed, or were skipped, respectively.
+
+Results:
+  run  = (1391, 2, 0)
+  test = (1359, 3, 0)
+  fix  = (1314, 9, 0), After applying the fix patch, no test cases transitioned from failed to passed. A brief summary is as follows: Test Result Summary:
+Stage Descriptions:
+  run  : Execute the test command without any patches applied.
+  test : Execute the test command after applying the test patch.
+  fix  : Execute the test command after applying both the test patch and the fix patch.
+Each stage is reported as (pass, fail, skip), representing the number of tests that passed, failed, or were skipped, respectively.
+
+Results:
+  run  = (1391, 2, 0)
+  test = (1359, 3, 0)
+  fix  = (1314, 9, 0)
+
+Generating eval reports: 100%|██████████| 1/1 [00:00<00:00, 17.09it/s]
+[2026-09-10 20:18:30,741] [gen_report.py] [INFO]: Successfully generated 0 reports.
+
+Fetching 50 files:   0%|          | 0/50 [00:00<?, ?it/s]
+Fetching 50 files: 100%|██████████| 50/50 [00:00<00:00, 2131.49it/s]
+[20:18:32]   Multi report -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Multi.epimetheus_Multi.json
+[20:18:32] === Issue resolution summary ===
+[20:18:32]   Report            : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Multi.epimetheus_Multi.json
+[20:18:32]   Total (evaluated) : 1
+[20:18:32]   Submitted (preds) : 1
+[20:18:32]   Completed         : 1
+[20:18:32]   Resolved          : 0
+[20:18:32]   Unresolved        : 1
+[20:18:32]   Errored           : 0
+[20:18:32]   Empty patches     : 0
+[20:18:32]   Resolved rate     : 0/1 = 0.0% (of evaluated)
+[20:18:32] Done.
+[20:18:32]   Predictions : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution_preds.jsonl
+[20:18:32]   Report      : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Multi.epimetheus_Multi.json
+[20:18:32] Resolution scores -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution.jsonl
+[20:18:33] Deleted docker image: mswebench/cli_m_cli:pr-3608

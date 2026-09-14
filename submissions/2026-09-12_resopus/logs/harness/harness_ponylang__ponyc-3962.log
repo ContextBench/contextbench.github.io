@@ -1,0 +1,195 @@
+[12:36:44] Retrieval eval: ponylang__ponyc-3962
+  Setting up repository
+  Warning: repo_url mismatch; overriding with /home/andre/workspace/ContextBench/repos/github.com__ponylang__ponyc
+  Repo: /home/andre/workspace/ContextBench/repos/github.com__ponylang__ponyc
+  Commit: 12466227bb25...
+  Checkout ready: /home/andre/workspace/ContextBench/repos/_worktrees/contextbench_worktrees/__home__andre__workspace__ContextBench__repos__github.com__ponylang__ponyc/12466227bb253b600b7a3ee995b56b442d02b6e2
+  Parsing trajectory
+  Extracted: 75 steps, final has 27 files
+DETAILS:
+instance_id=ponylang__ponyc-3962
+  gold_files: n=17
+    - examples/echo/echo.pony
+    - examples/files/files.pony
+    - examples/mandelbrot/mandelbrot.pony
+    - examples/net/listener.pony
+    - examples/net/net.pony
+    - examples/net/pong.pony
+    - examples/under_pressure/main.pony
+    - minimal-cases/issue-629/629.pony
+    - packages/backpressure/backpressure.pony
+    - packages/builtin/env.pony
+    - packages/files/files.pony
+    - packages/ini/ini.pony
+    - packages/net/proxy.pony
+    - packages/net/tcp_connection.pony
+    - packages/net/tcp_listener.pony
+    - packages/net/udp_socket.pony
+    - packages/process/process.pony
+  pred_files: n=27
+    - Makefile
+    - packages/backpressure/backpressure.pony
+    - packages/builtin/ambient_auth.pony
+    - packages/builtin/env.pony
+    - packages/builtin_test/_test.pony
+    - packages/files/_test.pony
+    - packages/files/file_caps.pony
+    - packages/files/file_path.pony
+    - packages/files/files.pony
+    - packages/ini/ini.pony
+    - packages/net/proxy.pony
+    - packages/net/tcp_connection.pony
+    - packages/net/tcp_listener.pony
+    - packages/net/udp_socket.pony
+    - packages/ponytest/_test_runner.pony
+    - packages/ponytest/ponytest.pony
+    - packages/ponytest/test_helper.pony
+    - packages/process/_test.pony
+    - packages/process/process.pony
+    - packages/serialise/_test.pony
+    - packages/serialise/serialise.pony
+    - packages/stdlib/_test.pony
+    - src/libponyc/codegen/genexe.c
+    - src/libponyc/expr/operator.c
+    - src/libponyc/pass/expr.c
+    - src/libponyc/pkg/package.c
+    - test/libponyc/util.cc
+  hit_files: n=9
+    - packages/backpressure/backpressure.pony
+    - packages/builtin/env.pony
+    - packages/files/files.pony
+    - packages/ini/ini.pony
+    - packages/net/proxy.pony
+    - packages/net/tcp_connection.pony
+    - packages/net/tcp_listener.pony
+    - packages/net/udp_socket.pony
+    - packages/process/process.pony
+  gold_symbols: n=0
+  pred_symbols: n=5
+    - src/libponyc/codegen/genexe.c:function_definition@2665-7626
+    - src/libponyc/expr/operator.c:function_definition@14646-16641
+    - src/libponyc/pass/expr.c:function_definition@13505-17730
+    - src/libponyc/pkg/package.c:struct_specifier@1618-2057
+    - src/libponyc/pkg/package.c:struct_specifier@2129-2231
+  hit_symbols: n=0
+
+[12:36:44] Retrieval ponylang__ponyc-3962: line_f1=0.075
+
+# Harness spliced from run_llmretry_8.log.gz (shard-level tail assigned to this instance)
+[13:14:54] Resolution resume: 0 harness-scored, 2 pending (stable run_id=epimetheus_Multi)
+[13:14:54] Resolution eval (pending=2): /home/andre/workspace/ContextBench/agent-frameworks/epimetheus/.venv/bin/python /home/andre/workspace/ContextBench/scripts/run_resolution_eval.py --input-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Multi --bench Multi --model-name epimetheus__Multi --run-id epimetheus_Multi --predictions /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution_preds.jsonl --report-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet --instance-ids ponylang__ponyc-3962,vuejs__core-8538 --max-workers 1
+[13:14:54] === Step 1/2: Build SWE-bench predictions ===
+[13:14:54]   Input dir   : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Multi
+[13:14:55] WARNING: duplicate instance_id ponylang__ponyc-3962 (ponylang__ponyc-3962.json); keeping first.
+[13:14:55]   Wrote 157 prediction(s) -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution_preds.jsonl
+[13:14:55] === Step 2/2: Run resolution harness ===
+[13:14:55]   Backend     : Multi
+[13:14:55]   Dataset     : ByteDance-Seed/Multi-SWE-bench (split=train)
+[13:14:55]   Run id      : epimetheus_Multi
+[13:14:55]   Report dir  : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet
+
+Fetching 50 files:   0%|          | 0/50 [00:00<?, ?it/s]
+Fetching 50 files: 100%|██████████| 50/50 [00:00<00:00, 2275.73it/s]
+[13:15:04]   Running: /home/andre/workspace/ContextBench/.venvs/resolution/bin/python -m multi_swe_bench.harness.run_evaluation --config /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/multi_eval/epimetheus_Multi/config.json
+[2026-09-11 13:15:05,350] [run_evaluation.py] [INFO]: Initialize logger successfully.
+[2026-09-11 13:15:05,350] [run_evaluation.py] [INFO]: Building images...
+[2026-09-11 13:15:05,350] [run_evaluation.py] [INFO]: Loading repo commits...
+[2026-09-11 13:15:05,350] [run_evaluation.py] [INFO]: Creating instances...
+[2026-09-11 13:15:05,350] [run_evaluation.py] [INFO]: Loading datasets...
+[2026-09-11 13:15:05,679] [run_evaluation.py] [INFO]: Successfully loaded 2 valid datasets from ['/home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/multi_eval/epimetheus_Multi/dataset.jsonl']
+[2026-09-11 13:15:05,680] [run_evaluation.py] [INFO]: Successfully loaded 2 valid instances.
+
+Checking commit hashes:   0%|          | 0/2 [00:00<?, ?it/s]
+
+Checking commit hashes for ponylang/ponyc:   0%|          | 0/1 [00:00<?, ?it/s][A
+Checking commit hashes for ponylang/ponyc: 100%|██████████| 1/1 [00:00<00:00, 24966.10it/s]
+
+Checking commit hashes:  50%|█████     | 1/2 [00:00<00:00,  8.28it/s]
+
+Checking commit hashes for vuejs/core:   0%|          | 0/1 [00:00<?, ?it/s][A
+Checking commit hashes for vuejs/core: 100%|██████████| 1/1 [00:00<00:00, 18808.54it/s]
+
+Checking commit hashes: 100%|██████████| 2/2 [00:00<00:00,  6.99it/s]
+Checking commit hashes: 100%|██████████| 2/2 [00:00<00:00,  7.15it/s]
+[2026-09-11 13:15:05,966] [run_evaluation.py] [INFO]: Total images: 4
+
+Building images:   0%|          | 0/4 [00:00<?, ?it/s][2026-09-11 13:15:05,975] [run_evaluation.py] [INFO]: Building image mswebench/vuejs_m_core:base...
+[2026-09-11 13:16:02,964] [run_evaluation.py] [INFO]: Image mswebench/vuejs_m_core:base built successfully.
+
+Building images:  25%|██▌       | 1/4 [00:56<02:50, 57.00s/it][2026-09-11 13:16:02,967] [run_evaluation.py] [INFO]: Building image mswebench/ponylang_m_ponyc:base-18...
+[2026-09-11 13:22:51,036] [run_evaluation.py] [ERROR]: Error building image mswebench/ponylang_m_ponyc:base-18: Docker build failed: The command '/bin/sh -c apt update && apt install -y git llvm clang build-essential wget tar python3 python3-dev python3-pip' returned a non-zero code: 100
+
+Building images:  50%|█████     | 2/4 [07:45<08:47, 263.51s/it]
+Building images:  75%|███████▌  | 3/4 [07:45<02:35, 155.03s/it]
+[2026-09-11 13:22:51,066] [run_evaluation.py] [INFO]: Images built successfully.
+[2026-09-11 13:22:51,066] [run_evaluation.py] [INFO]: Running instances...
+
+Running instances:   0%|          | 0/2 [00:00<?, ?it/s][2026-09-11 13:22:51,067] [run_evaluation.py] [INFO]: Running mswebench/ponylang_m_ponyc:pr-3962 with command: bash /home/fix-run.sh...
+
+Running instances:  50%|█████     | 1/2 [00:00<00:00,  3.59it/s][2026-09-11 13:22:51,345] [run_evaluation.py] [INFO]: Running mswebench/vuejs_m_core:pr-8538 with command: bash /home/fix-run.sh...
+
+Running instances: 100%|██████████| 2/2 [00:16<00:00,  9.93s/it]
+Running instances: 100%|██████████| 2/2 [00:16<00:00,  8.48s/it]
+[2026-09-11 13:23:08,034] [run_evaluation.py] [INFO]: Instances run successfully.
+[2026-09-11 13:23:08,034] [run_evaluation.py] [INFO]: Running evaluation...
+[2026-09-11 13:23:08,035] [gen_report.py] [INFO]: Initialize logger successfully.
+[2026-09-11 13:23:08,035] [gen_report.py] [INFO]: Collecting report tasks...
+[2026-09-11 13:23:08,044] [gen_report.py] [INFO]: Successfully collected 153 tasks.
+[2026-09-11 13:23:08,044] [gen_report.py] [INFO]: Loading dataset...
+[2026-09-11 13:23:08,399] [gen_report.py] [INFO]: Successfully loaded 2 valid datasets from ['/home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/multi_eval/epimetheus_Multi/dataset.jsonl']
+
+Generating eval reports:   0%|          | 0/2 [00:00<?, ?it/s]
+Generating eval reports:  50%|█████     | 1/2 [00:00<00:00,  3.14it/s][2026-09-11 13:23:08,772] [gen_report.py] [ERROR]: Invalid report for ponylang/ponyc:pr-3962, Test Result Summary:
+Stage Descriptions:
+  run  : Execute the test command without any patches applied.
+  test : Execute the test command after applying the test patch.
+  fix  : Execute the test command after applying both the test patch and the fix patch.
+Each stage is reported as (pass, fail, skip), representing the number of tests that passed, failed, or were skipped, respectively.
+
+Results:
+  run  = (1708, 0, 0)
+  test = (0, 0, 0)
+  fix  = (0, 0, 0), After applying the fix patch, no test results were captured when executing the test command. A brief summary is as follows: Test Result Summary:
+Stage Descriptions:
+  run  : Execute the test command without any patches applied.
+  test : Execute the test command after applying the test patch.
+  fix  : Execute the test command after applying both the test patch and the fix patch.
+Each stage is reported as (pass, fail, skip), representing the number of tests that passed, failed, or were skipped, respectively.
+
+Results:
+  run  = (1708, 0, 0)
+  test = (0, 0, 0)
+  fix  = (0, 0, 0)
+
+Generating eval reports: 100%|██████████| 2/2 [00:00<00:00,  5.35it/s]
+[2026-09-11 13:23:08,774] [gen_report.py] [INFO]: Successfully generated 1 reports.
+
+Fetching 50 files:   0%|          | 0/50 [00:00<?, ?it/s]
+Fetching 50 files: 100%|██████████| 50/50 [00:00<00:00, 1623.96it/s]
+[13:23:13]   Multi report -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Multi.epimetheus_Multi.json
+[13:23:13] === Issue resolution summary ===
+[13:23:13]   Report            : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Multi.epimetheus_Multi.json
+[13:23:13]   Total (evaluated) : 2
+[13:23:13]   Submitted (preds) : 2
+[13:23:13]   Completed         : 2
+[13:23:13]   Resolved          : 1
+[13:23:13]   Unresolved        : 1
+[13:23:13]   Errored           : 0
+[13:23:13]   Empty patches     : 0
+[13:23:13]   Resolved rate     : 1/2 = 50.0% (of evaluated)
+[13:23:13] Done.
+[13:23:13]   Predictions : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution_preds.jsonl
+[13:23:13]   Report      : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Multi.epimetheus_Multi.json
+[13:23:14] Resolution scores -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution.jsonl
+[13:23:14] === Issue resolution summary (aggregated) ===
+[13:23:14]   Agent instances         : 2
+[13:23:14]   Empty patches (skipped) : 0
+[13:23:14]   With patch              : 2
+[13:23:14]   Harness scored          : 2
+[13:23:14]   Harness infra errors    : 0
+[13:23:14]   Harness pending         : 0
+[13:23:14]   Resolved                : 1
+[13:23:14]   Resolved rate           : 1/2 = 50.0% (of harness-scored)
+[13:23:14]   Resolved rate           : 1/2 = 50.0% (of agent instances; empty patch = unresolved)
+[13:23:14] Shuffled resolution [Poly]: 1 agent instance(s)
+[13:23:14] Resolution invalidate mui__material-ui-23229: empty→patch

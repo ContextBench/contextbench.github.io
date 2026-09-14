@@ -1,0 +1,301 @@
+[00:33:13] Retrieval eval: facebook__zstd-1733
+  Setting up repository
+  Warning: repo_url mismatch; overriding with /home/andre/workspace/ContextBench/repos/github.com__facebook__zstd
+  Repo: /home/andre/workspace/ContextBench/repos/github.com__facebook__zstd
+  Commit: a505463710aa...
+From https://github.com/facebook/zstd
+ * branch              a505463710aa34bccafd268c44064c129cdfb3e2 -> FETCH_HEAD
+Preparing worktree (detached HEAD a5054637)
+HEAD is now at a5054637 Merge pull request #1726 from nmagerko/stream-size
+  Checkout ready: /home/andre/workspace/ContextBench/repos/_worktrees/contextbench_worktrees/__home__andre__workspace__ContextBench__repos__github.com__facebook__zstd/a505463710aa34bccafd268c44064c129cdfb3e2
+  Parsing trajectory
+  Extracted: 91 steps, final has 7 files
+DETAILS:
+instance_id=facebook__zstd-1733
+  gold_files: n=2
+    - programs/fileio.c
+    - programs/zstdcli.c
+  pred_files: n=7
+    - lib/compress/zstd_compress.c
+    - lib/compress/zstd_compress_internal.h
+    - lib/zstd.h
+    - programs/fileio.c
+    - programs/fileio.h
+    - programs/zstdcli.c
+    - tests/playTests.sh
+  hit_files: n=2
+    - programs/fileio.c
+    - programs/zstdcli.c
+  gold_symbols: n=40
+    - programs/fileio.c:function_definition@10442-11524
+    - programs/fileio.c:function_definition@11526-11597
+    - programs/fileio.c:function_definition@11714-11794
+    - programs/fileio.c:function_definition@11796-11884
+    - programs/fileio.c:function_definition@11993-12131
+    - programs/fileio.c:function_definition@12133-12207
+    - programs/fileio.c:function_definition@12209-12314
+    - programs/fileio.c:function_definition@12316-12416
+    - programs/fileio.c:function_definition@12418-12526
+    - programs/fileio.c:function_definition@12528-12631
+    - programs/fileio.c:function_definition@12633-12730
+    - programs/fileio.c:function_definition@12732-12945
+    - programs/fileio.c:function_definition@12947-13172
+    - programs/fileio.c:function_definition@13174-13403
+    - programs/fileio.c:function_definition@13405-13636
+    - programs/fileio.c:function_definition@13638-13871
+    - programs/fileio.c:function_definition@13873-13992
+    - programs/fileio.c:function_definition@13994-14125
+    - programs/fileio.c:function_definition@14127-14286
+    - programs/fileio.c:function_definition@14288-14465
+    - programs/fileio.c:function_definition@14467-14570
+    - programs/fileio.c:function_definition@14572-14673
+    - programs/fileio.c:function_definition@14675-14779
+    - programs/fileio.c:function_definition@14781-14889
+    - programs/fileio.c:function_definition@14891-15019
+    - programs/fileio.c:function_definition@15022-15142
+    - programs/fileio.c:function_definition@15317-15697
+    - programs/fileio.c:function_definition@15831-16624
+    - programs/fileio.c:function_definition@35331-46441
+    - programs/fileio.c:function_definition@46668-49655
+    - programs/fileio.c:function_definition@4917-5246
+    - programs/fileio.c:function_definition@5247-5457
+    - programs/fileio.c:function_definition@5475-5577
+    - programs/fileio.c:function_definition@6590-7652
+    - programs/fileio.c:function_definition@7661-7886
+    - programs/fileio.c:function_definition@8588-9065
+    - programs/fileio.c:function_definition@9070-9330
+    - programs/fileio.c:struct_specifier@2532-2716
+    - programs/fileio.c:struct_specifier@9507-10253
+    - programs/zstdcli.c:function_definition@23938-56150
+  pred_symbols: n=58
+    - lib/compress/zstd_compress.c:function_definition@102711-105260
+    - lib/compress/zstd_compress.c:function_definition@105262-105625
+    - lib/compress/zstd_compress.c:function_definition@12608-12946
+    - lib/compress/zstd_compress.c:function_definition@13094-13985
+    - lib/compress/zstd_compress.c:function_definition@137649-137746
+    - lib/compress/zstd_compress.c:function_definition@137788-137851
+    - lib/compress/zstd_compress.c:function_definition@137853-137987
+    - lib/compress/zstd_compress.c:function_definition@137989-139452
+    - lib/compress/zstd_compress.c:function_definition@139520-140125
+    - lib/compress/zstd_compress.c:function_definition@13987-15418
+    - lib/compress/zstd_compress.c:function_definition@152307-156617
+    - lib/compress/zstd_compress.c:function_definition@15420-22021
+    - lib/compress/zstd_compress.c:function_definition@156619-157239
+    - lib/compress/zstd_compress.c:function_definition@157241-158057
+    - lib/compress/zstd_compress.c:function_definition@165731-166816
+    - lib/compress/zstd_compress.c:function_definition@167026-167458
+    - lib/compress/zstd_compress.c:function_definition@22023-22187
+    - lib/compress/zstd_compress.c:function_definition@22189-25262
+    - lib/compress/zstd_compress.c:function_definition@25632-25963
+    - lib/compress/zstd_compress.c:function_definition@25965-26280
+    - lib/compress/zstd_compress.c:function_definition@26458-27441
+    - lib/compress/zstd_compress.c:function_definition@29847-30391
+    - lib/compress/zstd_compress.c:function_definition@34180-34520
+    - lib/compress/zstd_compress.c:function_definition@34522-35599
+    - lib/compress/zstd_compress.c:function_definition@35601-36640
+    - lib/compress/zstd_compress.c:function_definition@36642-38000
+    - lib/compress/zstd_compress.c:function_definition@38002-38219
+    - lib/compress/zstd_compress.c:function_definition@38221-38435
+    - lib/compress/zstd_compress.c:function_definition@38437-38755
+    - lib/compress/zstd_compress.c:function_definition@38757-39508
+    - lib/compress/zstd_compress.c:function_definition@6694-6814
+    - lib/compress/zstd_compress.c:function_definition@6816-7102
+    - lib/compress/zstd_compress.c:function_definition@7104-7622
+    - lib/compress/zstd_compress.c:function_definition@7706-8116
+    - lib/compress/zstd_compress.c:function_definition@8118-12530
+    - lib/compress/zstd_compress_internal.h:struct_specifier@7692-8661
+    - lib/compress/zstd_compress_internal.h:struct_specifier@8717-10531
+    - lib/zstd.h:struct_specifier@24062-24130
+    - lib/zstd.h:struct_specifier@31833-32070
+    - lib/zstd.h:struct_specifier@32095-32335
+    - lib/zstd.h:struct_specifier@63682-63707
+    - lib/zstd.h:struct_specifier@63735-64498
+    - lib/zstd.h:struct_specifier@64536-64884
+    - lib/zstd.h:struct_specifier@64916-65000
+    - programs/fileio.c:function_definition@10442-11524
+    - programs/fileio.c:function_definition@11526-11597
+    - programs/fileio.c:function_definition@13638-13871
+    - programs/fileio.c:function_definition@13873-13992
+    - programs/fileio.c:function_definition@13994-14125
+    - programs/fileio.c:function_definition@14127-14286
+    ... (8 more)
+  hit_symbols: n=9
+    - programs/fileio.c:function_definition@10442-11524
+    - programs/fileio.c:function_definition@11526-11597
+    - programs/fileio.c:function_definition@13638-13871
+    - programs/fileio.c:function_definition@13873-13992
+    - programs/fileio.c:function_definition@13994-14125
+    - programs/fileio.c:function_definition@14127-14286
+    - programs/fileio.c:function_definition@35331-46441
+    - programs/fileio.c:struct_specifier@9507-10253
+    - programs/zstdcli.c:function_definition@23938-56150
+
+[00:33:17] Retrieval facebook__zstd-1733: line_f1=0.142
+[00:33:17] Resolution resume: 0 harness-scored, 1 pending (stable run_id=epimetheus_Multi)
+[00:33:17] Resolution eval (pending=1): /home/andre/workspace/ContextBench/agent-frameworks/epimetheus/.venv/bin/python /home/andre/workspace/ContextBench/scripts/run_resolution_eval.py --input-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Multi --bench Multi --model-name epimetheus__Multi --run-id epimetheus_Multi --predictions /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution_preds.jsonl --report-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet --instance-ids facebook__zstd-1733 --max-workers 1
+[00:33:17] === Step 1/2: Build SWE-bench predictions ===
+[00:33:17]   Input dir   : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Multi
+[00:33:17] WARNING: duplicate instance_id axios__axios-5661 (axios__axios-5661.json); keeping first.
+[00:33:17] WARNING: duplicate instance_id clap-rs__clap-2501 (clap-rs__clap-2501.json); keeping first.
+[00:33:17] WARNING: duplicate instance_id clap-rs__clap-2534 (clap-rs__clap-2534.json); keeping first.
+[00:33:17] WARNING: duplicate instance_id clap-rs__clap-2758 (clap-rs__clap-2758.json); keeping first.
+[00:33:17] WARNING: duplicate instance_id clap-rs__clap-2895 (clap-rs__clap-2895.json); keeping first.
+[00:33:17] WARNING: duplicate instance_id clap-rs__clap-3420 (clap-rs__clap-3420.json); keeping first.
+[00:33:17] WARNING: duplicate instance_id clap-rs__clap-3421 (clap-rs__clap-3421.json); keeping first.
+[00:33:17] WARNING: duplicate instance_id clap-rs__clap-3684 (clap-rs__clap-3684.json); keeping first.
+[00:33:17] WARNING: duplicate instance_id clap-rs__clap-3975 (clap-rs__clap-3975.json); keeping first.
+[00:33:17] WARNING: duplicate instance_id cli__cli-1387 (cli__cli-1387.json); keeping first.
+[00:33:17] WARNING: duplicate instance_id cli__cli-1457 (cli__cli-1457.json); keeping first.
+[00:33:17] WARNING: duplicate instance_id cli__cli-2250 (cli__cli-2250.json); keeping first.
+[00:33:17] WARNING: duplicate instance_id cli__cli-2351 (cli__cli-2351.json); keeping first.
+[00:33:17] WARNING: duplicate instance_id cli__cli-2466 (cli__cli-2466.json); keeping first.
+[00:33:17] WARNING: duplicate instance_id cli__cli-2785 (cli__cli-2785.json); keeping first.
+[00:33:17] WARNING: duplicate instance_id cli__cli-3270 (cli__cli-3270.json); keeping first.
+[00:33:17] WARNING: duplicate instance_id cli__cli-3608 (cli__cli-3608.json); keeping first.
+[00:33:17] WARNING: duplicate instance_id cli__cli-3982 (cli__cli-3982.json); keeping first.
+[00:33:17] WARNING: duplicate instance_id cli__cli-4253 (cli__cli-4253.json); keeping first.
+[00:33:17] WARNING: duplicate instance_id cli__cli-5019 (cli__cli-5019.json); keeping first.
+[00:33:17] WARNING: duplicate instance_id cli__cli-513 (cli__cli-513.json); keeping first.
+[00:33:17] WARNING: duplicate instance_id cli__cli-5396 (cli__cli-5396.json); keeping first.
+[00:33:17] WARNING: duplicate instance_id cli__cli-7645 (cli__cli-7645.json); keeping first.
+[00:33:17] WARNING: duplicate instance_id cli__cli-8157 (cli__cli-8157.json); keeping first.
+[00:33:17] WARNING: duplicate instance_id cli__cli-8632 (cli__cli-8632.json); keeping first.
+[00:33:17] WARNING: duplicate instance_id expressjs__express-3870 (expressjs__express-3870.json); keeping first.
+[00:33:17] WARNING: duplicate instance_id facebook__zstd-1243 (facebook__zstd-1243.json); keeping first.
+[00:33:17] WARNING: duplicate instance_id facebook__zstd-1532 (facebook__zstd-1532.json); keeping first.
+[00:33:17] WARNING: duplicate instance_id facebook__zstd-1733 (facebook__zstd-1733.json); keeping first.
+[00:33:17] WARNING: duplicate instance_id facebook__zstd-637 (facebook__zstd-637.json); keeping first.
+[00:33:17] WARNING: duplicate instance_id fasterxml__jackson-core-1016 (fasterxml__jackson-core-1016.json); keeping first.
+[00:33:17] WARNING: duplicate instance_id fasterxml__jackson-core-183 (fasterxml__jackson-core-183.json); keeping first.
+[00:33:17] WARNING: duplicate instance_id fasterxml__jackson-core-964 (fasterxml__jackson-core-964.json); keeping first.
+[00:33:17] WARNING: duplicate instance_id fasterxml__jackson-databind-3701 (fasterxml__jackson-databind-3701.json); keeping first.
+[00:33:17] WARNING: duplicate instance_id fasterxml__jackson-databind-4015 (fasterxml__jackson-databind-4015.json); keeping first.
+[00:33:17] WARNING: duplicate instance_id fasterxml__jackson-databind-4050 (fasterxml__jackson-databind-4050.json); keeping first.
+[00:33:17] WARNING: duplicate instance_id fasterxml__jackson-databind-4469 (fasterxml__jackson-databind-4469.json); keeping first.
+[00:33:17] WARNING: duplicate instance_id fasterxml__jackson-databind-4641 (fasterxml__jackson-databind-4641.json); keeping first.
+[00:33:17] WARNING: duplicate instance_id fasterxml__jackson-dataformat-xml-638 (fasterxml__jackson-dataformat-xml-638.json); keeping first.
+[00:33:17] WARNING: duplicate instance_id google__gson-1391 (google__gson-1391.json); keeping first.
+[00:33:17] WARNING: duplicate instance_id iamkun__dayjs-1611 (iamkun__dayjs-1611.json); keeping first.
+[00:33:17] WARNING: duplicate instance_id iamkun__dayjs-882 (iamkun__dayjs-882.json); keeping first.
+[00:33:17] WARNING: duplicate instance_id iamkun__dayjs-938 (iamkun__dayjs-938.json); keeping first.
+[00:33:17] WARNING: duplicate instance_id jqlang__jq-2654 (jqlang__jq-2654.json); keeping first.
+[00:33:17] WARNING: duplicate instance_id jqlang__jq-2919 (jqlang__jq-2919.json); keeping first.
+[00:33:18] WARNING: duplicate instance_id mui__material-ui-29898 (mui__material-ui-29898.json); keeping first.
+[00:33:18] WARNING: duplicate instance_id mui__material-ui-30374 (mui__material-ui-30374.json); keeping first.
+[00:33:18] WARNING: duplicate instance_id mui__material-ui-34159 (mui__material-ui-34159.json); keeping first.
+[00:33:18] WARNING: duplicate instance_id mui__material-ui-34337 (mui__material-ui-34337.json); keeping first.
+[00:33:18] WARNING: duplicate instance_id mui__material-ui-34401 (mui__material-ui-34401.json); keeping first.
+[00:33:18] WARNING: duplicate instance_id mui__material-ui-34437 (mui__material-ui-34437.json); keeping first.
+[00:33:18] WARNING: duplicate instance_id mui__material-ui-38188 (mui__material-ui-38188.json); keeping first.
+[00:33:18] WARNING: duplicate instance_id mui__material-ui-39108 (mui__material-ui-39108.json); keeping first.
+[00:33:18] WARNING: duplicate instance_id mui__material-ui-39196 (mui__material-ui-39196.json); keeping first.
+[00:33:18] WARNING: duplicate instance_id nlohmann__json-2989 (nlohmann__json-2989.json); keeping first.
+[00:33:18] WARNING: duplicate instance_id nlohmann__json-4512 (nlohmann__json-4512.json); keeping first.
+[00:33:18] WARNING: duplicate instance_id nushell__nushell-13357 (nushell__nushell-13357.json); keeping first.
+[00:33:18] WARNING: duplicate instance_id ponylang__ponyc-1486 (ponylang__ponyc-1486.json); keeping first.
+[00:33:18] WARNING: duplicate instance_id ponylang__ponyc-2168 (ponylang__ponyc-2168.json); keeping first.
+[00:33:18] WARNING: duplicate instance_id ponylang__ponyc-2201 (ponylang__ponyc-2201.json); keeping first.
+[00:33:18] WARNING: duplicate instance_id ponylang__ponyc-2247 (ponylang__ponyc-2247.json); keeping first.
+[00:33:18] WARNING: duplicate instance_id ponylang__ponyc-2586 (ponylang__ponyc-2586.json); keeping first.
+[00:33:18] WARNING: duplicate instance_id ponylang__ponyc-4595 (ponylang__ponyc-4595.json); keeping first.
+[00:33:18] WARNING: duplicate instance_id rayon-rs__rayon-986 (rayon-rs__rayon-986.json); keeping first.
+[00:33:18] WARNING: duplicate instance_id simdjson__simdjson-1695 (simdjson__simdjson-1695.json); keeping first.
+[00:33:18] WARNING: duplicate instance_id sveltejs__svelte-10608 (sveltejs__svelte-10608.json); keeping first.
+[00:33:18] WARNING: duplicate instance_id sveltejs__svelte-11913 (sveltejs__svelte-11913.json); keeping first.
+[00:33:18] WARNING: duplicate instance_id sveltejs__svelte-12649 (sveltejs__svelte-12649.json); keeping first.
+[00:33:18] WARNING: duplicate instance_id sveltejs__svelte-14629 (sveltejs__svelte-14629.json); keeping first.
+[00:33:18] WARNING: duplicate instance_id sveltejs__svelte-14935 (sveltejs__svelte-14935.json); keeping first.
+[00:33:18] WARNING: duplicate instance_id tokio-rs__bytes-721 (tokio-rs__bytes-721.json); keeping first.
+[00:33:18] WARNING: duplicate instance_id tokio-rs__tokio-4519 (tokio-rs__tokio-4519.json); keeping first.
+[00:33:18] WARNING: duplicate instance_id vuejs__core-10004 (vuejs__core-10004.json); keeping first.
+[00:33:18] WARNING: duplicate instance_id vuejs__core-10027 (vuejs__core-10027.json); keeping first.
+[00:33:18] WARNING: duplicate instance_id vuejs__core-11517 (vuejs__core-11517.json); keeping first.
+[00:33:18] WARNING: duplicate instance_id vuejs__core-9213 (vuejs__core-9213.json); keeping first.
+[00:33:18] WARNING: duplicate instance_id vuejs__core-9572 (vuejs__core-9572.json); keeping first.
+[00:33:18]   Wrote 77 prediction(s) -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution_preds.jsonl
+[00:33:18] === Step 2/2: Run resolution harness ===
+[00:33:18]   Backend     : Multi
+[00:33:18]   Dataset     : ByteDance-Seed/Multi-SWE-bench (split=train)
+[00:33:18]   Run id      : epimetheus_Multi
+[00:33:18]   Report dir  : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet
+
+Fetching 50 files:   0%|          | 0/50 [00:00<?, ?it/s]
+Fetching 50 files: 100%|██████████| 50/50 [00:00<00:00, 1541.45it/s]
+[00:33:27]   Running: /home/andre/workspace/ContextBench/.venvs/resolution/bin/python -m multi_swe_bench.harness.run_evaluation --config /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/multi_eval/epimetheus_Multi/config.json
+[2026-09-11 00:33:28,398] [run_evaluation.py] [INFO]: Initialize logger successfully.
+[2026-09-11 00:33:28,398] [run_evaluation.py] [INFO]: Building images...
+[2026-09-11 00:33:28,398] [run_evaluation.py] [INFO]: Loading repo commits...
+[2026-09-11 00:33:28,398] [run_evaluation.py] [INFO]: Creating instances...
+[2026-09-11 00:33:28,398] [run_evaluation.py] [INFO]: Loading datasets...
+[2026-09-11 00:33:28,399] [run_evaluation.py] [INFO]: Successfully loaded 1 valid datasets from ['/home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/multi_eval/epimetheus_Multi/dataset.jsonl']
+[2026-09-11 00:33:28,399] [run_evaluation.py] [INFO]: Successfully loaded 1 valid instances.
+
+Checking commit hashes:   0%|          | 0/1 [00:00<?, ?it/s]
+
+Checking commit hashes for facebook/zstd:   0%|          | 0/1 [00:00<?, ?it/s][A
+Checking commit hashes for facebook/zstd: 100%|██████████| 1/1 [00:00<00:00, 25731.93it/s]
+
+Checking commit hashes: 100%|██████████| 1/1 [00:00<00:00,  8.63it/s]
+Checking commit hashes: 100%|██████████| 1/1 [00:00<00:00,  8.62it/s]
+[2026-09-11 00:33:28,521] [run_evaluation.py] [INFO]: Total images: 2
+
+Building images:   0%|          | 0/2 [00:00<?, ?it/s]
+Building images: 100%|██████████| 2/2 [00:00<00:00, 54.34it/s]
+[2026-09-11 00:33:28,558] [run_evaluation.py] [INFO]: Images built successfully.
+[2026-09-11 00:33:28,558] [run_evaluation.py] [INFO]: Running instances...
+
+Running instances:   0%|          | 0/1 [00:00<?, ?it/s][2026-09-11 00:33:28,559] [run_evaluation.py] [INFO]: Running mswebench/facebook_m_zstd:pr-1733 with command: bash /home/fix-run.sh...
+
+Running instances: 100%|██████████| 1/1 [00:01<00:00,  1.75s/it]
+Running instances: 100%|██████████| 1/1 [00:01<00:00,  1.75s/it]
+[2026-09-11 00:33:30,312] [run_evaluation.py] [INFO]: Instances run successfully.
+[2026-09-11 00:33:30,313] [run_evaluation.py] [INFO]: Running evaluation...
+[2026-09-11 00:33:30,313] [gen_report.py] [INFO]: Initialize logger successfully.
+[2026-09-11 00:33:30,314] [gen_report.py] [INFO]: Collecting report tasks...
+[2026-09-11 00:33:30,325] [gen_report.py] [INFO]: Successfully collected 75 tasks.
+[2026-09-11 00:33:30,325] [gen_report.py] [INFO]: Loading dataset...
+[2026-09-11 00:33:30,326] [gen_report.py] [INFO]: Successfully loaded 1 valid datasets from ['/home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/multi_eval/epimetheus_Multi/dataset.jsonl']
+
+Generating eval reports:   0%|          | 0/1 [00:00<?, ?it/s][2026-09-11 00:33:30,329] [gen_report.py] [ERROR]: Invalid report for facebook/zstd:pr-1733, Test Result Summary:
+Stage Descriptions:
+  run  : Execute the test command without any patches applied.
+  test : Execute the test command after applying the test patch.
+  fix  : Execute the test command after applying both the test patch and the fix patch.
+Each stage is reported as (pass, fail, skip), representing the number of tests that passed, failed, or were skipped, respectively.
+
+Results:
+  run  = (1, 0, 0)
+  test = (0, 1, 0)
+  fix  = (0, 1, 0), After applying the fix patch, no test cases transitioned from failed to passed. A brief summary is as follows: Test Result Summary:
+Stage Descriptions:
+  run  : Execute the test command without any patches applied.
+  test : Execute the test command after applying the test patch.
+  fix  : Execute the test command after applying both the test patch and the fix patch.
+Each stage is reported as (pass, fail, skip), representing the number of tests that passed, failed, or were skipped, respectively.
+
+Results:
+  run  = (1, 0, 0)
+  test = (0, 1, 0)
+  fix  = (0, 1, 0)
+
+Generating eval reports: 100%|██████████| 1/1 [00:00<00:00, 514.83it/s]
+[2026-09-11 00:33:30,329] [gen_report.py] [INFO]: Successfully generated 0 reports.
+
+Fetching 50 files:   0%|          | 0/50 [00:00<?, ?it/s]
+Fetching 50 files: 100%|██████████| 50/50 [00:00<00:00, 3051.78it/s]
+[00:33:35]   Multi report -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Multi.epimetheus_Multi.json
+[00:33:35] === Issue resolution summary ===
+[00:33:35]   Report            : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Multi.epimetheus_Multi.json
+[00:33:35]   Total (evaluated) : 1
+[00:33:35]   Submitted (preds) : 1
+[00:33:35]   Completed         : 1
+[00:33:35]   Resolved          : 0
+[00:33:35]   Unresolved        : 1
+[00:33:35]   Errored           : 0
+[00:33:35]   Empty patches     : 0
+[00:33:35]   Resolved rate     : 0/1 = 0.0% (of evaluated)
+[00:33:35] Done.
+[00:33:35]   Predictions : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution_preds.jsonl
+[00:33:35]   Report      : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Multi.epimetheus_Multi.json
+[00:33:35] Resolution scores -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution.jsonl
+[00:33:35] Deleted docker image: mswebench/facebook_m_zstd:pr-1733

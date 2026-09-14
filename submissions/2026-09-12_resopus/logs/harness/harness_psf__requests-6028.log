@@ -1,0 +1,268 @@
+[02:48:32] Retrieval eval: psf__requests-6028
+  Setting up repository
+  Warning: repo_url mismatch; overriding with /home/andre/workspace/ContextBench/repos/github.com__psf__requests
+  Repo: /home/andre/workspace/ContextBench/repos/github.com__psf__requests
+  Commit: 0192aac24123...
+  Checkout ready: /home/andre/workspace/ContextBench/repos/_worktrees/contextbench_worktrees/__home__andre__workspace__ContextBench__repos__github.com__psf__requests/0192aac24123735b3eaf9b08df46429bb770c283
+  Parsing trajectory
+  Extracted: 22 steps, final has 11 files
+DETAILS:
+instance_id=psf__requests-6028
+  gold_files: n=3
+    - requests/adapters.py
+    - requests/utils.py
+    - tests/test_utils.py
+  pred_files: n=11
+    - HISTORY.md
+    - requests/__version__.py
+    - requests/adapters.py
+    - requests/auth.py
+    - requests/compat.py
+    - requests/models.py
+    - requests/sessions.py
+    - requests/utils.py
+    - tests/conftest.py
+    - tests/test_requests.py
+    - tests/test_utils.py
+  hit_files: n=3
+    - requests/adapters.py
+    - requests/utils.py
+    - tests/test_utils.py
+  gold_symbols: n=6
+    - requests/adapters.py:class_definition@3174-21644
+    - requests/adapters.py:function_definition@11626-12760
+    - requests/adapters.py:function_definition@14827-15656
+    - requests/utils.py:function_definition@29980-30836
+    - requests/utils.py:function_definition@32090-32481
+    - tests/test_utils.py:function_definition@19405-19519
+  pred_symbols: n=62
+    - requests/adapters.py:class_definition@1942-3171
+    - requests/adapters.py:class_definition@3174-21644
+    - requests/adapters.py:function_definition@10296-11620
+    - requests/adapters.py:function_definition@11626-12760
+    - requests/adapters.py:function_definition@12766-13068
+    - requests/adapters.py:function_definition@13074-14200
+    - requests/adapters.py:function_definition@14206-14821
+    - requests/adapters.py:function_definition@14827-15656
+    - requests/adapters.py:function_definition@15662-21644
+    - requests/adapters.py:function_definition@1732-1842
+    - requests/adapters.py:function_definition@2011-2074
+    - requests/adapters.py:function_definition@5726-6680
+    - requests/adapters.py:function_definition@6686-8142
+    - requests/adapters.py:function_definition@8148-10290
+    - requests/auth.py:class_definition@2254-2847
+    - requests/auth.py:class_definition@2850-3091
+    - requests/auth.py:class_definition@3094-10206
+    - requests/auth.py:function_definition@2475-2656
+    - requests/auth.py:function_definition@2662-2719
+    - requests/auth.py:function_definition@2725-2847
+    - requests/auth.py:function_definition@2963-3091
+    - requests/auth.py:function_definition@3206-3407
+    - requests/auth.py:function_definition@3413-3828
+    - requests/auth.py:function_definition@3834-7376
+    - requests/models.py:class_definition@9066-20925
+    - requests/models.py:function_definition@18274-18940
+    - requests/models.py:function_definition@18946-19674
+    - requests/sessions.py:class_definition@3062-12977
+    - requests/sessions.py:function_definition@10188-11027
+    - requests/sessions.py:function_definition@11033-12104
+    - requests/sessions.py:function_definition@12110-12977
+    - requests/utils.py:function_definition@18454-19366
+    - requests/utils.py:function_definition@19521-20237
+    - requests/utils.py:function_definition@20240-21060
+    - requests/utils.py:function_definition@21063-21647
+    - requests/utils.py:function_definition@21650-21913
+    - requests/utils.py:function_definition@23241-25418
+    - requests/utils.py:function_definition@25421-25651
+    - requests/utils.py:function_definition@25654-26339
+    - requests/utils.py:function_definition@26342-27320
+    - requests/utils.py:function_definition@27323-27501
+    - requests/utils.py:function_definition@27504-27791
+    - requests/utils.py:function_definition@27794-28626
+    - requests/utils.py:function_definition@28805-29977
+    - requests/utils.py:function_definition@29980-30836
+    - requests/utils.py:function_definition@30839-31186
+    - requests/utils.py:function_definition@32090-32481
+    - requests/utils.py:function_definition@32484-33127
+    - tests/conftest.py:function_definition@341-572
+    - tests/conftest.py:function_definition@481-554
+    ... (12 more)
+  hit_symbols: n=5
+    - requests/adapters.py:class_definition@3174-21644
+    - requests/adapters.py:function_definition@11626-12760
+    - requests/adapters.py:function_definition@14827-15656
+    - requests/utils.py:function_definition@29980-30836
+    - requests/utils.py:function_definition@32090-32481
+
+[02:48:32] Retrieval psf__requests-6028: line_f1=0.171
+[02:48:32] Resolution resume: 0 harness-scored, 1 pending (stable run_id=epimetheus_Verified)
+[02:48:32] Resolution eval: 1 pending; pull-if-missing → score → delete image (per instance)
+[02:48:32] Resolution [1/1] psf__requests-6028
+[02:48:32] Docker image already present: swebench/sweb.eval.x86_64.psf_1776_requests-6028:latest
+[02:48:32] Resolution eval: /home/andre/workspace/ContextBench/agent-frameworks/epimetheus/.venv/bin/python /home/andre/workspace/ContextBench/scripts/run_resolution_eval.py --input-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Verified --bench Verified --model-name epimetheus__Verified --run-id epimetheus_Verified --predictions /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Verified_resolution_preds.jsonl --report-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet --instance-ids psf__requests-6028 --max-workers 1
+[02:48:32] === Step 1/2: Build SWE-bench predictions ===
+[02:48:32]   Input dir   : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Verified
+[02:48:32] WARNING: duplicate instance_id astropy__astropy-13398 (astropy__astropy-13398.json); keeping first.
+[02:48:32] WARNING: duplicate instance_id astropy__astropy-13579 (astropy__astropy-13579.json); keeping first.
+[02:48:32] WARNING: duplicate instance_id astropy__astropy-14096 (astropy__astropy-14096.json); keeping first.
+[02:48:32] WARNING: duplicate instance_id astropy__astropy-14539 (astropy__astropy-14539.json); keeping first.
+[02:48:32] WARNING: duplicate instance_id astropy__astropy-14598 (astropy__astropy-14598.json); keeping first.
+[02:48:32] WARNING: duplicate instance_id django__django-10880 (django__django-10880.json); keeping first.
+[02:48:32] WARNING: duplicate instance_id django__django-11099 (django__django-11099.json); keeping first.
+[02:48:32] WARNING: duplicate instance_id django__django-11163 (django__django-11163.json); keeping first.
+[02:48:32] WARNING: duplicate instance_id django__django-11179 (django__django-11179.json); keeping first.
+[02:48:32] WARNING: duplicate instance_id django__django-11400 (django__django-11400.json); keeping first.
+[02:48:32] WARNING: duplicate instance_id django__django-11749 (django__django-11749.json); keeping first.
+[02:48:32] WARNING: duplicate instance_id django__django-11790 (django__django-11790.json); keeping first.
+[02:48:32] WARNING: duplicate instance_id django__django-11820 (django__django-11820.json); keeping first.
+[02:48:32] WARNING: duplicate instance_id django__django-12125 (django__django-12125.json); keeping first.
+[02:48:32] WARNING: duplicate instance_id django__django-12143 (django__django-12143.json); keeping first.
+[02:48:32] WARNING: duplicate instance_id django__django-12193 (django__django-12193.json); keeping first.
+[02:48:32] WARNING: duplicate instance_id django__django-12262 (django__django-12262.json); keeping first.
+[02:48:32] WARNING: duplicate instance_id django__django-12406 (django__django-12406.json); keeping first.
+[02:48:32] WARNING: duplicate instance_id django__django-12663 (django__django-12663.json); keeping first.
+[02:48:32] WARNING: duplicate instance_id django__django-12858 (django__django-12858.json); keeping first.
+[02:48:32] WARNING: duplicate instance_id django__django-13023 (django__django-13023.json); keeping first.
+[02:48:32] WARNING: duplicate instance_id django__django-13343 (django__django-13343.json); keeping first.
+[02:48:32] WARNING: duplicate instance_id django__django-13417 (django__django-13417.json); keeping first.
+[02:48:32] WARNING: duplicate instance_id django__django-13551 (django__django-13551.json); keeping first.
+[02:48:32] WARNING: duplicate instance_id django__django-14140 (django__django-14140.json); keeping first.
+[02:48:32] WARNING: duplicate instance_id django__django-14349 (django__django-14349.json); keeping first.
+[02:48:32] WARNING: duplicate instance_id django__django-14351 (django__django-14351.json); keeping first.
+[02:48:32] WARNING: duplicate instance_id django__django-14404 (django__django-14404.json); keeping first.
+[02:48:32] WARNING: duplicate instance_id django__django-14434 (django__django-14434.json); keeping first.
+[02:48:32] WARNING: duplicate instance_id django__django-14500 (django__django-14500.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id django__django-14539 (django__django-14539.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id django__django-14765 (django__django-14765.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id django__django-15022 (django__django-15022.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id django__django-15103 (django__django-15103.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id django__django-15252 (django__django-15252.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id django__django-15467 (django__django-15467.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id django__django-15563 (django__django-15563.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id django__django-15569 (django__django-15569.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id django__django-15695 (django__django-15695.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id django__django-15814 (django__django-15814.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id django__django-15930 (django__django-15930.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id django__django-15987 (django__django-15987.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id django__django-16032 (django__django-16032.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id django__django-16454 (django__django-16454.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id django__django-16485 (django__django-16485.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id django__django-16527 (django__django-16527.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id django__django-16631 (django__django-16631.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id django__django-7530 (django__django-7530.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id matplotlib__matplotlib-14623 (matplotlib__matplotlib-14623.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id matplotlib__matplotlib-20826 (matplotlib__matplotlib-20826.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id matplotlib__matplotlib-22719 (matplotlib__matplotlib-22719.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id matplotlib__matplotlib-22865 (matplotlib__matplotlib-22865.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id matplotlib__matplotlib-22871 (matplotlib__matplotlib-22871.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id matplotlib__matplotlib-23299 (matplotlib__matplotlib-23299.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id matplotlib__matplotlib-23314 (matplotlib__matplotlib-23314.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id matplotlib__matplotlib-24627 (matplotlib__matplotlib-24627.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id matplotlib__matplotlib-25311 (matplotlib__matplotlib-25311.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id matplotlib__matplotlib-25332 (matplotlib__matplotlib-25332.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id matplotlib__matplotlib-25479 (matplotlib__matplotlib-25479.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id matplotlib__matplotlib-26113 (matplotlib__matplotlib-26113.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id matplotlib__matplotlib-26208 (matplotlib__matplotlib-26208.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id matplotlib__matplotlib-26342 (matplotlib__matplotlib-26342.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id psf__requests-1142 (psf__requests-1142.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id psf__requests-6028 (psf__requests-6028.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id pydata__xarray-4075 (pydata__xarray-4075.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id pydata__xarray-4966 (pydata__xarray-4966.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id pydata__xarray-6461 (pydata__xarray-6461.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id pylint-dev__pylint-8898 (pylint-dev__pylint-8898.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id pytest-dev__pytest-10081 (pytest-dev__pytest-10081.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id pytest-dev__pytest-10356 (pytest-dev__pytest-10356.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id pytest-dev__pytest-7205 (pytest-dev__pytest-7205.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id pytest-dev__pytest-7324 (pytest-dev__pytest-7324.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id pytest-dev__pytest-7432 (pytest-dev__pytest-7432.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id scikit-learn__scikit-learn-10844 (scikit-learn__scikit-learn-10844.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id scikit-learn__scikit-learn-13142 (scikit-learn__scikit-learn-13142.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id scikit-learn__scikit-learn-14141 (scikit-learn__scikit-learn-14141.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id scikit-learn__scikit-learn-15100 (scikit-learn__scikit-learn-15100.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id scikit-learn__scikit-learn-25931 (scikit-learn__scikit-learn-25931.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id sphinx-doc__sphinx-10449 (sphinx-doc__sphinx-10449.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id sphinx-doc__sphinx-10614 (sphinx-doc__sphinx-10614.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id sphinx-doc__sphinx-11445 (sphinx-doc__sphinx-11445.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id sphinx-doc__sphinx-7462 (sphinx-doc__sphinx-7462.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id sphinx-doc__sphinx-7910 (sphinx-doc__sphinx-7910.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id sphinx-doc__sphinx-8120 (sphinx-doc__sphinx-8120.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id sphinx-doc__sphinx-8265 (sphinx-doc__sphinx-8265.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id sympy__sympy-12096 (sympy__sympy-12096.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id sympy__sympy-12419 (sympy__sympy-12419.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id sympy__sympy-12489 (sympy__sympy-12489.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id sympy__sympy-13551 (sympy__sympy-13551.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id sympy__sympy-13615 (sympy__sympy-13615.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id sympy__sympy-13647 (sympy__sympy-13647.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id sympy__sympy-13852 (sympy__sympy-13852.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id sympy__sympy-13877 (sympy__sympy-13877.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id sympy__sympy-14976 (sympy__sympy-14976.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id sympy__sympy-15976 (sympy__sympy-15976.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id sympy__sympy-16597 (sympy__sympy-16597.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id sympy__sympy-16886 (sympy__sympy-16886.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id sympy__sympy-17318 (sympy__sympy-17318.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id sympy__sympy-20428 (sympy__sympy-20428.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id sympy__sympy-20590 (sympy__sympy-20590.json); keeping first.
+[02:48:33] WARNING: duplicate instance_id sympy__sympy-21930 (sympy__sympy-21930.json); keeping first.
+[02:48:34] WARNING: duplicate instance_id sympy__sympy-22456 (sympy__sympy-22456.json); keeping first.
+[02:48:34] WARNING: duplicate instance_id sympy__sympy-23262 (sympy__sympy-23262.json); keeping first.
+[02:48:34]   Wrote 103 prediction(s) -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Verified_resolution_preds.jsonl
+[02:48:34] === Step 2/2: Run resolution harness ===
+[02:48:35]   Backend     : Verified
+[02:48:35]   Dataset     : princeton-nlp/SWE-bench_Verified (split=test)
+[02:48:35]   Run id      : epimetheus_Verified
+[02:48:35]   Report dir  : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet
+[02:48:36]   Running: /home/andre/workspace/ContextBench/.venvs/resolution/bin/python -m swebench.harness.run_evaluation --dataset_name princeton-nlp/SWE-bench_Verified --split test --predictions_path /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Verified_resolution_preds.jsonl --run_id epimetheus_Verified --max_workers 1 --timeout 1800 --report_dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet --cache_level env --instance_ids psf__requests-6028
+<frozen runpy>:128: RuntimeWarning: 'swebench.harness.run_evaluation' found in sys.modules after import of package 'swebench.harness', but prior to execution of 'swebench.harness.run_evaluation'; this may result in unpredictable behaviour
+2026-09-11 02:48:38,006 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-09-11 02:48:38,035 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/princeton-nlp/SWE-bench_Verified/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/README.md "HTTP/1.1 200 OK"
+2026-09-11 02:48:38,154 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-09-11 02:48:38,507 - httpx - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/princeton-nlp/SWE-bench_Verified/princeton-nlp/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-09-11 02:48:38,631 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/princeton-nlp/SWE-bench_Verified/revision/c104f840cc67f8b6eec6f759ebc8b2693d585d4a "HTTP/1.1 200 OK"
+2026-09-11 02:48:38,747 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/.huggingface.yaml "HTTP/1.1 404 Not Found"
+2026-09-11 02:48:38,989 - httpx - INFO - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=princeton-nlp/SWE-bench_Verified "HTTP/1.1 200 OK"
+2026-09-11 02:48:39,118 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/princeton-nlp/SWE-bench_Verified/tree/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/data?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-09-11 02:48:39,250 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/princeton-nlp/SWE-bench_Verified/tree/c104f840cc67f8b6eec6f759ebc8b2693d585d4a?recursive=false&expand=false "HTTP/1.1 200 OK"
+2026-09-11 02:48:39,379 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/dataset_infos.json "HTTP/1.1 404 Not Found"
+2026-09-11 02:48:39,650 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-09-11 02:48:39,679 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/princeton-nlp/SWE-bench_Verified/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/README.md "HTTP/1.1 200 OK"
+2026-09-11 02:48:39,796 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-09-11 02:48:39,908 - httpx - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/princeton-nlp/SWE-bench_Verified/princeton-nlp/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-09-11 02:48:40,030 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/.huggingface.yaml "HTTP/1.1 404 Not Found"
+2026-09-11 02:48:40,217 - httpx - INFO - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=princeton-nlp/SWE-bench_Verified "HTTP/1.1 200 OK"
+2026-09-11 02:48:40,337 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/dataset_infos.json "HTTP/1.1 404 Not Found"
+Found 1 existing instance images. Will reuse them.
+Running 1 instances...
+
+Evaluation:   0%|          | 0/1 [00:00<?, ?it/s, error=0, ✓=0, ✖=0]
+Evaluation:   0%|          | 0/1 [00:17<?, ?it/s, ✓=0, ✖=1, error=0]
+Evaluation: 100%|██████████| 1/1 [00:17<00:00, 17.84s/it, ✓=0, ✖=1, error=0]
+Evaluation: 100%|██████████| 1/1 [00:17<00:00, 17.84s/it, ✓=0, ✖=1, error=0]
+All instances run.
+Cleaning cached images...
+Removed 0 images.
+Total instances: 1
+Instances submitted: 1
+Instances completed: 1
+Instances incomplete: 0
+Instances resolved: 0
+Instances unresolved: 1
+Instances with empty patches: 0
+Instances with errors: 0
+Unstopped containers: 1
+Unremoved images: 1
+Report written to epimetheus__Verified.epimetheus_Verified.json
+[02:49:14] === Issue resolution summary ===
+[02:49:14]   Report            : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Verified.epimetheus_Verified.json
+[02:49:14]   Total (evaluated) : 1
+[02:49:14]   Submitted (preds) : 103
+[02:49:14]   Completed         : 1
+[02:49:14]   Resolved          : 0
+[02:49:14]   Unresolved        : 1
+[02:49:14]   Errored           : 0
+[02:49:14]   Empty patches     : 0
+[02:49:14]   Resolved rate     : 0/1 = 0.0% (of evaluated)
+[02:49:14] Done.
+[02:49:14]   Predictions : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Verified_resolution_preds.jsonl
+[02:49:14]   Report      : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Verified.epimetheus_Verified.json
+[02:49:15] Deleted docker image: swebench/sweb.eval.x86_64.psf_1776_requests-6028:latest
+[02:49:15] Resolution scores -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Verified_resolution.jsonl

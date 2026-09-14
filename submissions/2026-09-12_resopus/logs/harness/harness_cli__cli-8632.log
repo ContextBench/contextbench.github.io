@@ -1,0 +1,109 @@
+[23:37:05] Retrieval eval: cli__cli-8632
+  Setting up repository
+  Warning: repo_url mismatch; overriding with /home/andre/workspace/ContextBench/repos/github.com__cli__cli
+  Repo: /home/andre/workspace/ContextBench/repos/github.com__cli__cli
+  Commit: f015020bcd61...
+  Checkout ready: /home/andre/workspace/ContextBench/repos/_worktrees/contextbench_worktrees/__home__andre__workspace__ContextBench__repos__github.com__cli__cli/f015020bcd61caf00d41d4c2dae014be2fb2fc29
+  Parsing trajectory
+  Extracted: 26 steps, final has 11 files
+DETAILS:
+instance_id=cli__cli-8632
+  gold_files: n=2
+    - pkg/cmd/release/list/http.go
+    - pkg/cmd/release/list/list.go
+  pred_files: n=11
+    - api/queries_repo.go
+    - go.mod
+    - pkg/cmd/cache/list/list.go
+    - pkg/cmd/issue/list/http.go
+    - pkg/cmd/label/http.go
+    - pkg/cmd/label/list.go
+    - pkg/cmd/release/list/http.go
+    - pkg/cmd/release/list/list.go
+    - pkg/cmd/release/list/list_test.go
+    - pkg/cmd/search/commits/commits.go
+    - pkg/search/searcher.go
+  hit_files: n=2
+    - pkg/cmd/release/list/http.go
+    - pkg/cmd/release/list/list.go
+  gold_symbols: n=7
+    - pkg/cmd/release/list/http.go:function_declaration@602-2028
+    - pkg/cmd/release/list/http.go:method_declaration@484-600
+    - pkg/cmd/release/list/http.go:type_declaration@312-482
+    - pkg/cmd/release/list/http.go:type_declaration@747-1080
+    - pkg/cmd/release/list/list.go:function_declaration@1406-3008
+    - pkg/cmd/release/list/list.go:function_declaration@534-1404
+    - pkg/cmd/release/list/list.go:type_declaration@283-532
+  pred_symbols: n=31
+    - api/queries_repo.go:function_declaration@26276-27318
+    - api/queries_repo.go:function_declaration@28850-29848
+    - pkg/cmd/cache/list/list.go:function_declaration@1947-3574
+    - pkg/cmd/cache/list/list.go:function_declaration@642-1945
+    - pkg/cmd/cache/list/list.go:type_declaration@403-640
+    - pkg/cmd/issue/list/http.go:function_declaration@156-3038
+    - pkg/cmd/issue/list/http.go:type_declaration@1911-2137
+    - pkg/cmd/label/http.go:function_declaration@1141-2657
+    - pkg/cmd/label/http.go:function_declaration@2659-2882
+    - pkg/cmd/label/http.go:method_declaration@578-973
+    - pkg/cmd/label/http.go:type_declaration@275-471
+    - pkg/cmd/label/http.go:type_declaration@473-576
+    - pkg/cmd/label/list.go:function_declaration@2460-3690
+    - pkg/cmd/label/list.go:function_declaration@598-2458
+    - pkg/cmd/label/list.go:type_declaration@352-596
+    - pkg/cmd/release/list/http.go:function_declaration@602-2028
+    - pkg/cmd/release/list/http.go:method_declaration@484-600
+    - pkg/cmd/release/list/http.go:type_declaration@312-482
+    - pkg/cmd/release/list/http.go:type_declaration@747-1080
+    - pkg/cmd/release/list/list.go:function_declaration@1406-3008
+    - pkg/cmd/release/list/list.go:function_declaration@534-1404
+    - pkg/cmd/release/list/list.go:type_declaration@283-532
+    - pkg/cmd/release/list/list_test.go:function_declaration@2022-5102
+    - pkg/cmd/release/list/list_test.go:function_declaration@373-2020
+    - pkg/cmd/release/list/list_test.go:function_declaration@5104-5827
+    - pkg/cmd/search/commits/commits.go:function_declaration@592-4820
+    - pkg/cmd/search/commits/commits.go:type_declaration@392-590
+    - pkg/search/searcher.go:type_declaration@454-658
+    - pkg/search/searcher.go:type_declaration@660-720
+    - pkg/search/searcher.go:type_declaration@722-831
+    - pkg/search/searcher.go:type_declaration@833-930
+  hit_symbols: n=7
+    - pkg/cmd/release/list/http.go:function_declaration@602-2028
+    - pkg/cmd/release/list/http.go:method_declaration@484-600
+    - pkg/cmd/release/list/http.go:type_declaration@312-482
+    - pkg/cmd/release/list/http.go:type_declaration@747-1080
+    - pkg/cmd/release/list/list.go:function_declaration@1406-3008
+    - pkg/cmd/release/list/list.go:function_declaration@534-1404
+    - pkg/cmd/release/list/list.go:type_declaration@283-532
+
+[23:37:05] Retrieval cli__cli-8632: line_f1=0.342
+
+# Harness overwritten from harness_rerun_17.log (failed first-pass resolution dropped)
+[14:56:23] Resolution eval (pending=16, workers=4): /home/andre/workspace/ContextBench/agent-frameworks/epimetheus/.venv/bin/python /home/andre/workspace/ContextBench/scripts/run_resolution_eval.py --input-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Multi --bench Multi --model-name epimetheus__Multi --run-id epimetheus_Multi --predictions /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution_preds.jsonl --report-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet --instance-ids cli__cli-8632,mui__material-ui-30374,mui__material-ui-34437,vuejs__core-10004,facebook__zstd-2094,sveltejs__svelte-13097,mui__material-ui-25149,clap-rs__clap-4474,fasterxml__jackson-core-1016,ponylang__ponyc-2168,facebook__zstd-1390,alibaba__fastjson2-2775,sveltejs__svelte-14629,ponylang__ponyc-3973,fmtlib__fmt-2394,cli__cli-5537 --max-workers 4
+[14:56:23] WARNING: duplicate instance_id cli__cli-8632 (cli__cli-8632.json); keeping first.
+Building images:  59%|█████▉    | 16/27 [16:51<12:25, 67.77s/it][2026-09-11 15:13:25,341] [run_evaluation.py] [INFO]: Building image mswebench/cli_m_cli:pr-8632...
+[2026-09-11 15:15:30,893] [run_evaluation.py] [INFO]: Image mswebench/cli_m_cli:pr-8632 built successfully.
+
+Building images:  74%|███████▍  | 20/27 [18:56<05:17, 45.32s/it][2026-09-11 15:15:30,904] [run_evaluation.py] [INFO]: Building image mswebench/mui_m_material-ui:pr-34437...
+Running instances:   0%|          | 0/16 [00:00<?, ?it/s][2026-09-11 15:27:13,480] [run_evaluation.py] [INFO]: Running mswebench/cli_m_cli:pr-8632 with command: bash /home/fix-run.sh...
+[16:11:10]   Resolved IDs      : vuejs__core-10004, sveltejs__svelte-13097, fmtlib__fmt-2394, facebook__zstd-1390, cli__cli-8632, clap-rs__clap-4474, alibaba__fastjson2-2775, mui__material-ui-30374, mui__material-ui-34437
+[16:11:10]   Resolved IDs            : cli__cli-8632, mui__material-ui-30374, mui__material-ui-34437, vuejs__core-10004, sveltejs__svelte-13097, clap-rs__clap-4474, facebook__zstd-1390, alibaba__fastjson2-2775, fmtlib__fmt-2394
+[16:12:14] === Issue resolution summary (aggregated) ===
+[16:12:14]   Agent instances         : 17
+[16:12:14]   Empty patches (skipped) : 0
+[16:12:14]   With patch              : 17
+[16:12:14]   Harness scored          : 17
+[16:12:14]   Harness infra errors    : 0
+[16:12:14]   Harness pending         : 0
+[16:12:14]   Resolved                : 10
+[16:12:14]   Resolved rate           : 10/17 = 58.8% (of harness-scored)
+[16:12:14]   Resolved rate           : 10/17 = 58.8% (of agent instances; empty patch = unresolved)
+[16:12:14]   Resolved IDs            : cli__cli-8632, mui__material-ui-30374, mui__material-ui-34437, vuejs__core-10004, sveltejs__svelte-13097, clap-rs__clap-4474, facebook__zstd-1390, alibaba__fastjson2-2775, sveltejs__svelte-3403, fmtlib__fmt-2394
+[16:12:14] Done.
+===== harness exit=0 2026-09-11T16:12:14+01:00; rebuilding shuffled jsonl from natives =====
+native Verified: 174
+native Multi: 152
+native Poly: 116
+native Pro: 54
+wrote epimetheus_Shuffled_resolution.jsonl: 496 rows resolved=300 infra=1 empty_skip=4
+[16:12:14] Wrote 500 pred record(s) -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Shuffled_pred.jsonl
+restored shuffled pred: 500

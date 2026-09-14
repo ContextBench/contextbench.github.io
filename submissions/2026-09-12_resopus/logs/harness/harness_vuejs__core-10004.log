@@ -1,0 +1,85 @@
+[23:37:02] Retrieval eval: vuejs__core-10004
+  Setting up repository
+  Warning: repo_url mismatch; overriding with /home/andre/workspace/ContextBench/repos/github.com__vuejs__core
+  Repo: /home/andre/workspace/ContextBench/repos/github.com__vuejs__core
+  Commit: 0275dd329d24...
+  Checkout ready: /home/andre/workspace/ContextBench/repos/_worktrees/contextbench_worktrees/__home__andre__workspace__ContextBench__repos__github.com__vuejs__core/0275dd329d241bdd84ce3ca0c7fc07211cb21751
+  Parsing trajectory
+  Extracted: 18 steps, final has 5 files
+DETAILS:
+instance_id=vuejs__core-10004
+  gold_files: n=3
+    - packages/runtime-dom/src/index.ts
+    - packages/vue/src/index.ts
+    - repro.ts
+  pred_files: n=5
+    - package.json
+    - packages/compiler-ssr/__tests__/ssrElement.spec.ts
+    - packages/runtime-core/__tests__/hydration.spec.ts
+    - packages/runtime-core/src/hydration.ts
+    - packages/shared/src/domAttrConfig.ts
+  hit_files: n=0
+  gold_symbols: n=14
+    - packages/runtime-dom/src/index.ts:function_declaration@1118-1313
+    - packages/runtime-dom/src/index.ts:function_declaration@3680-3932
+    - packages/runtime-dom/src/index.ts:function_declaration@3934-4222
+    - packages/runtime-dom/src/index.ts:function_declaration@4236-5612
+    - packages/runtime-dom/src/index.ts:function_declaration@5614-6211
+    - packages/runtime-dom/src/index.ts:function_declaration@979-1116
+    - packages/runtime-dom/src/index.ts:interface_declaration@597-670
+    - packages/runtime-dom/src/index.ts:method_definition@4429-4475
+    - packages/runtime-dom/src/index.ts:method_definition@4483-4654
+    - packages/runtime-dom/src/index.ts:method_definition@5493-5557
+    - packages/runtime-dom/src/index.ts:method_definition@5565-5598
+    - packages/vue/src/index.ts:function_declaration@2214-2595
+    - packages/vue/src/index.ts:function_declaration@709-941
+    - packages/vue/src/index.ts:function_declaration@943-3086
+  pred_symbols: n=8
+    - packages/runtime-core/__tests__/hydration.spec.ts:function_declaration@539-853
+    - packages/runtime-core/__tests__/hydration.spec.ts:method_definition@32886-33017
+    - packages/runtime-core/src/hydration.ts:function_declaration@1969-21083
+    - packages/runtime-core/src/hydration.ts:function_declaration@21105-22961
+    - packages/runtime-core/src/hydration.ts:function_declaration@22963-23054
+    - packages/runtime-core/src/hydration.ts:function_declaration@23056-23255
+    - packages/shared/src/domAttrConfig.ts:function_declaration@1060-1149
+    - packages/shared/src/domAttrConfig.ts:function_declaration@1274-1588
+  hit_symbols: n=0
+
+[23:37:02] Retrieval vuejs__core-10004: line_f1=0.000
+
+# Harness overwritten from harness_rerun_17.log (failed first-pass resolution dropped)
+[14:56:23] Resolution eval (pending=16, workers=4): /home/andre/workspace/ContextBench/agent-frameworks/epimetheus/.venv/bin/python /home/andre/workspace/ContextBench/scripts/run_resolution_eval.py --input-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Multi --bench Multi --model-name epimetheus__Multi --run-id epimetheus_Multi --predictions /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution_preds.jsonl --report-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet --instance-ids cli__cli-8632,mui__material-ui-30374,mui__material-ui-34437,vuejs__core-10004,facebook__zstd-2094,sveltejs__svelte-13097,mui__material-ui-25149,clap-rs__clap-4474,fasterxml__jackson-core-1016,ponylang__ponyc-2168,facebook__zstd-1390,alibaba__fastjson2-2775,sveltejs__svelte-14629,ponylang__ponyc-3973,fmtlib__fmt-2394,cli__cli-5537 --max-workers 4
+[14:56:24] WARNING: duplicate instance_id vuejs__core-10004 (vuejs__core-10004.json); keeping first.
+Building images:  78%|███████▊  | 21/27 [19:02<03:35, 35.92s/it][2026-09-11 15:15:36,956] [run_evaluation.py] [INFO]: Building image mswebench/vuejs_m_core:pr-10004...
+
+Building images:  78%|███████▊  | 21/27 [19:19<03:35, 35.92s/it][2026-09-11 15:16:21,099] [run_evaluation.py] [INFO]: Image mswebench/mui_m_material-ui:pr-25149 built successfully.
+
+Building images:  81%|████████▏ | 22/27 [19:46<03:10, 38.02s/it][2026-09-11 15:16:21,111] [run_evaluation.py] [INFO]: Building image mswebench/sveltejs_m_svelte:pr-14629...
+Building images:  96%|█████████▋| 26/27 [24:41<00:56, 56.45s/it][2026-09-11 15:27:13,454] [run_evaluation.py] [INFO]: Image mswebench/vuejs_m_core:pr-10004 built successfully.
+
+Building images: 100%|██████████| 27/27 [30:39<00:00, 144.37s/it]
+Building images: 100%|██████████| 27/27 [30:39<00:00, 68.12s/it] 
+Running instances:  56%|█████▋    | 9/16 [09:30<15:13, 130.44s/it][2026-09-11 15:36:44,447] [run_evaluation.py] [INFO]: Running mswebench/vuejs_m_core:pr-10004 with command: bash /home/fix-run.sh...
+
+[16:11:10]   Resolved IDs      : vuejs__core-10004, sveltejs__svelte-13097, fmtlib__fmt-2394, facebook__zstd-1390, cli__cli-8632, clap-rs__clap-4474, alibaba__fastjson2-2775, mui__material-ui-30374, mui__material-ui-34437
+[16:11:10]   Resolved IDs            : cli__cli-8632, mui__material-ui-30374, mui__material-ui-34437, vuejs__core-10004, sveltejs__svelte-13097, clap-rs__clap-4474, facebook__zstd-1390, alibaba__fastjson2-2775, fmtlib__fmt-2394
+[16:12:14] === Issue resolution summary (aggregated) ===
+[16:12:14]   Agent instances         : 17
+[16:12:14]   Empty patches (skipped) : 0
+[16:12:14]   With patch              : 17
+[16:12:14]   Harness scored          : 17
+[16:12:14]   Harness infra errors    : 0
+[16:12:14]   Harness pending         : 0
+[16:12:14]   Resolved                : 10
+[16:12:14]   Resolved rate           : 10/17 = 58.8% (of harness-scored)
+[16:12:14]   Resolved rate           : 10/17 = 58.8% (of agent instances; empty patch = unresolved)
+[16:12:14]   Resolved IDs            : cli__cli-8632, mui__material-ui-30374, mui__material-ui-34437, vuejs__core-10004, sveltejs__svelte-13097, clap-rs__clap-4474, facebook__zstd-1390, alibaba__fastjson2-2775, sveltejs__svelte-3403, fmtlib__fmt-2394
+[16:12:14] Done.
+===== harness exit=0 2026-09-11T16:12:14+01:00; rebuilding shuffled jsonl from natives =====
+native Verified: 174
+native Multi: 152
+native Poly: 116
+native Pro: 54
+wrote epimetheus_Shuffled_resolution.jsonl: 496 rows resolved=300 infra=1 empty_skip=4
+[16:12:14] Wrote 500 pred record(s) -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Shuffled_pred.jsonl
+restored shuffled pred: 500

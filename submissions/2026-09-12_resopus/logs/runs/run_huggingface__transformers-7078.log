@@ -1,0 +1,360 @@
+[20:04:24] === Instance [13/62] Poly huggingface__transformers-7078 ===
+[20:04:24] Docker prefetch Poly huggingface__transformers-7078: ghcr.io/timesler/swe-polybench.eval.x86_64.huggingface__transformers-7078:v1.1, ghcr.io/timesler/swe-polybench.eval.x86_64.huggingface__transformers-7078:latest
+[20:04:24] Running Epimetheus: /home/andre/workspace/ContextBench/agent-frameworks/epimetheus/.venv/bin/python /home/andre/workspace/ContextBench/agent-frameworks/epimetheus/run_single_instance.py Poly --instance huggingface__transformers-7078 --output /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet --cache /home/andre/workspace/ContextBench/repos
+[20:04:24] Docker image already present: ghcr.io/timesler/swe-polybench.eval.x86_64.huggingface__transformers-7078:v1.1
+[20:04:25] Docker image already present: ghcr.io/timesler/swe-polybench.eval.x86_64.huggingface__transformers-7078:latest
+[20:04:25] Docker prefetch Verified django__django-13023: docker.io/swebench/sweb.eval.x86_64.django_1776_django-13023:latest
+[20:04:25] Docker image already present: docker.io/swebench/sweb.eval.x86_64.django_1776_django-13023:latest
+[20:04:25] Docker prefetch Pro instance_ansible__ansible-5260527c4a71bfed99d803e687dd19619423b134-vba6da65a0f3baefda7a058ebbd0a8dcafb8512f5: jefzda/sweap-images:ansible.ansible-ansible__ansible-5260527c4a71bfed99d803e687dd19619423b134-vba6da65a0f3baefda7a058ebbd0a8dcafb8512f5
+[20:04:25] Docker image already present: jefzda/sweap-images:ansible.ansible-ansible__ansible-5260527c4a71bfed99d803e687dd19619423b134-vba6da65a0f3baefda7a058ebbd0a8dcafb8512f5
+[20:04:25] Docker prefetch Verified sympy__sympy-20428: docker.io/swebench/sweb.eval.x86_64.sympy_1776_sympy-20428:latest
+[20:04:25] Pulling docker image (1/3): docker.io/swebench/sweb.eval.x86_64.sympy_1776_sympy-20428:latest
+WARNING: playground dirty at start for huggingface__transformers-7078; git reset --hard && git clean -fd
+2026-09-10 20:04:36,712 INFO retropus.index: Building knowledge graph for /home/andre/workspace/ContextBench/repos/_worktrees/contextbench_worktrees/github.com__huggingface__transformers/4cbd50e611e5bace6ba81d7bb7e730852bb09142
+2026-09-10 20:04:36,713 INFO retropus.graph.knowledge_graph: KG: scanning repository tree under /home/andre/workspace/ContextBench/repos/_worktrees/contextbench_worktrees/github.com__huggingface__transformers/4cbd50e611e5bace6ba81d7bb7e730852bb09142
+2026-09-10 20:04:37,603 INFO retropus.graph.knowledge_graph: KG: parsing 1059 files with tree-sitter
+
+KG parse:   0%|          | 0/1059 [00:00<?, ?file/s]
+KG parse:   5%|▍         | 50/1059 [00:00<00:02, 498.04file/s]
+KG parse:   9%|▉         | 100/1059 [00:00<00:02, 476.97file/s]
+KG parse:  14%|█▍        | 148/1059 [00:00<00:02, 448.81file/s]
+KG parse:  18%|█▊        | 194/1059 [00:00<00:03, 269.96file/s]
+KG parse:  22%|██▏       | 228/1059 [00:00<00:03, 260.12file/s]
+KG parse:  37%|███▋      | 395/1059 [00:00<00:01, 595.82file/s]
+KG parse:  80%|████████  | 850/1059 [00:00<00:00, 1587.01file/s]
+KG parse:  99%|█████████▉| 1046/1059 [00:01<00:00, 1212.48file/s]
+                                                                 
+2026-09-10 20:04:38,844 WARNING retropus.graph.knowledge_graph: KG: building INHERITS edges
+2026-09-10 20:04:39,693 WARNING retropus.graph.knowledge_graph: KG: built 718 INHERITS edges in 0.8s; building IMPORTS edges
+2026-09-10 20:04:42,849 INFO retropus.graph.knowledge_graph: KG: INHERITS edges=718 (0.8s); IMPORTS edges=1239 (3.1s); CALLS=0 CONSTRUCTS=0 (0.0s); indexes ready (searchable_ast=7748, 4.0s)
+2026-09-10 20:04:42,850 INFO retropus.graph.knowledge_graph: KG: ready (files=1748 ast=8174 text=3179 inherits=718 imports=1239 calls=0 constructs=0, 6.1s)
+2026-09-10 20:04:42,852 INFO retropus.index: Knowledge graph built in 6.1s (files=1748 ast=8174 text=3179)
+2026-09-10 20:04:42,852 INFO retropus.index: Building bm25 retriever index
+2026-09-10 20:04:42,852 INFO retropus.retrievers.bm25: BM25: collecting searchable nodes from knowledge graph
+2026-09-10 20:04:42,859 INFO retropus.retrievers.bm25: BM25: collected 7748 AST docs (0.0s)
+2026-09-10 20:04:42,863 INFO retropus.retrievers.bm25: BM25: collected 3179 text docs (0.0s); total=10927
+2026-09-10 20:04:42,863 INFO retropus.retrievers.bm25: BM25: tokenizing 10927 documents with code-aware (workers=1)
+
+Code tokenize:   0%|          | 0/10927 [00:00<?, ?doc/s]
+Code tokenize:   6%|▌         | 604/10927 [00:00<00:01, 6026.30doc/s]
+Code tokenize:  11%|█         | 1207/10927 [00:00<00:01, 5661.15doc/s]
+Code tokenize:  18%|█▊        | 1958/10927 [00:00<00:01, 6464.36doc/s]
+Code tokenize:  24%|██▍       | 2608/10927 [00:00<00:01, 5886.49doc/s]
+Code tokenize:  29%|██▉       | 3205/10927 [00:00<00:01, 5657.06doc/s]
+Code tokenize:  36%|███▌      | 3904/10927 [00:00<00:01, 6074.49doc/s]
+Code tokenize:  42%|████▏     | 4570/10927 [00:00<00:01, 6254.72doc/s]
+Code tokenize:  48%|████▊     | 5241/10927 [00:00<00:00, 6385.80doc/s]
+Code tokenize:  54%|█████▍    | 5885/10927 [00:00<00:00, 6152.64doc/s]
+Code tokenize:  60%|█████▉    | 6505/10927 [00:01<00:00, 5759.81doc/s]
+Code tokenize:  66%|██████▌   | 7239/10927 [00:01<00:00, 6204.17doc/s]
+Code tokenize:  72%|███████▏  | 7868/10927 [00:01<00:00, 5899.14doc/s]
+Code tokenize:  80%|███████▉  | 8688/10927 [00:01<00:00, 6542.35doc/s]
+Code tokenize:  87%|████████▋ | 9491/10927 [00:01<00:00, 6965.08doc/s]
+Code tokenize:  95%|█████████▌| 10413/10927 [00:01<00:00, 7617.24doc/s]
+                                                                       
+2026-09-10 20:04:45,292 INFO retropus.retrievers.bm25: BM25: building index over 10927 documents
+2026-09-10 20:04:45,292 DEBUG bm25s: Building index from tokens
+
+BM25S Create Vocab:   0%|          | 0/10927 [00:00<?, ?it/s]
+BM25S Create Vocab:  98%|█████████▊| 10751/10927 [00:00<00:00, 107495.24it/s]
+                                                                             
+
+BM25S Convert tokens to indices:   0%|          | 0/10927 [00:00<?, ?it/s]
+BM25S Convert tokens to indices:  88%|████████▊ | 9612/10927 [00:00<00:00, 96108.41it/s]
+                                                                                        
+
+BM25S Count Tokens:   0%|          | 0/10927 [00:00<?, ?it/s]
+BM25S Count Tokens:  63%|██████▎   | 6897/10927 [00:00<00:00, 68956.26it/s]
+                                                                           
+
+BM25S Compute Scores:   0%|          | 0/10927 [00:00<?, ?it/s]
+BM25S Compute Scores:  36%|███▋      | 3967/10927 [00:00<00:00, 39593.95it/s]
+BM25S Compute Scores:  73%|███████▎  | 8018/10927 [00:00<00:00, 40126.72it/s]
+                                                                             
+2026-09-10 20:04:46,047 INFO retropus.retrievers.bm25: BM25: index ready (10927 docs, tokenizer=code-aware, workers=1, 3.2s)
+2026-09-10 20:04:46,047 INFO retropus.index: Retriever index ready in 3.2s
+2026-09-10 20:04:46,048 INFO epimetheus.docker_runner: Starting Docker container image=ghcr.io/timesler/swe-polybench.eval.x86_64.huggingface__transformers-7078:latest workdir=/testbed backend=pytest
+2026-09-10 20:04:46,278 INFO thread-135890175033856.epimetheus.docker.base_container: Created temporary project directory: /home/andre/workspace/ContextBench/.venvs/tmp/tmpg_tqqgic/4cbd50e611e5bace6ba81d7bb7e730852bb09142
+2026-09-10 20:04:46,336 INFO thread-135890175033856.epimetheus.docker.base_container: Using local docker image: ghcr.io/timesler/swe-polybench.eval.x86_64.huggingface__transformers-7078:latest
+2026-09-10 20:04:46,354 INFO thread-135890175033856.epimetheus.docker.base_container: Starting container from image epimetheus_user_defined_container_5e09be8c59
+2026-09-10 20:04:47,134 INFO thread-135890175033856.epimetheus.docker.base_container: Starting persistent shell for interactive mode...
+2026-09-10 20:04:47,243 INFO thread-135890175033856.epimetheus.docker.base_container: Persistent shell is ready
+2026-09-10 20:04:47,244 INFO thread-135890175033856.epimetheus.docker.base_container: Resetting git repository in the container
+2026-09-10 20:04:47,804 INFO retropus.llm: prompt_cache_key=retropus:7571b2e6f8e88c9b94ea2890
+2026-09-10 20:04:47,805 INFO epimetheus.agent: Epimetheus start: max_rounds=110 max_tool_calls=180 max_test_runs=12 max_cost_usd=1.50 explore_rounds=48 plan_after_rounds=4 advanced_fix_plan=False advanced_edit_lines=False advanced_edit_file=False advanced_apply_patch=False advanced_edits=False keep_advanced_turn=False must_edit=True playground_dirty_at_start=True docker=True
+2026-09-10 20:04:47,821 INFO retropus.llm: LLM call #1: model=deepseek-v4-pro tier=base messages=2 tools=15 | system(chars=3503) -> user(chars=2681)
+2026-09-10 20:04:53,330 INFO httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 20:04:57,720 INFO retropus.llm: LLM call #1 done: in_tokens=3761 out_tokens=218 content_chars=0 tools=['get_repo_structure', 'search_code']
+2026-09-10 20:04:57,721 INFO epimetheus.agent: Tool call: get_repo_structure(['query'])
+2026-09-10 20:04:57,771 INFO epimetheus.agent: Tool call: search_code(['query'])
+2026-09-10 20:04:57,812 INFO retropus.llm: LLM call #2: model=deepseek-v4-pro tier=base messages=5 tools=15 | system(chars=3503) -> user(chars=2681) -> assistant(tools=['get_repo_structure', 'search_code']) -> tool(id=call_5ea) -> tool(id=call_7d8)
+2026-09-10 20:05:00,777 INFO httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 20:05:04,107 INFO retropus.llm: LLM call #2 done: in_tokens=6089 out_tokens=193 content_chars=0 tools=['read_file', 'read_file']
+2026-09-10 20:05:04,107 INFO epimetheus.agent: Tool call: read_file(['path', 'start_line', 'end_line'])
+2026-09-10 20:05:04,108 INFO epimetheus.agent: Tool call: read_file(['path', 'start_line', 'end_line'])
+2026-09-10 20:05:04,131 INFO retropus.llm: LLM call #3: model=deepseek-v4-pro tier=base messages=8 tools=16 | system(chars=3503) -> user(chars=2681) -> assistant(tools=['get_repo_structure', 'search_code']) -> tool(id=call_5ea) -> tool(id=call_7d8) -> assistant(tools=['read_file', 'read_file']) -> tool(id=call_2ea) -> tool(id=call_0c8)
+2026-09-10 20:05:07,749 INFO httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 20:05:11,187 INFO retropus.llm: LLM call #3 done: in_tokens=7424 out_tokens=197 content_chars=0 tools=['grep_code']
+2026-09-10 20:05:11,187 INFO epimetheus.agent: Tool call: grep_code(['query'])
+2026-09-10 20:05:11,351 INFO retropus.llm: LLM call #4: model=deepseek-v4-pro tier=base messages=10 tools=16 | system(chars=3503) -> user(chars=2681) -> assistant(tools=['get_repo_structure', 'search_code']) -> tool(id=call_5ea) -> tool(id=call_7d8) -> assistant(tools=['read_file', 'read_file']) -> tool(id=call_2ea) -> tool(id=call_0c8) -> assistant(tools=['grep_code']) -> tool(id=call_04d)
+2026-09-10 20:05:13,116 INFO httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 20:05:18,004 INFO retropus.llm: LLM call #4 done: in_tokens=7538 out_tokens=242 content_chars=0 tools=['read_file']
+2026-09-10 20:05:18,005 INFO epimetheus.agent: Tool call: read_file(['end_line', 'path', 'start_line'])
+2026-09-10 20:05:18,028 INFO retropus.llm: LLM call #5: model=deepseek-v4-pro tier=base messages=12 tools=16 | system(chars=3503) -> user(chars=2681) -> assistant(tools=['get_repo_structure', 'search_code']) -> tool(id=call_5ea) -> tool(id=call_7d8) -> assistant(tools=['read_file', 'read_file']) -> tool(id=call_2ea) -> tool(id=call_0c8) -> assistant(tools=['grep_code']) -> tool(id=call_04d) -> assistant(tools=['read_file']) -> tool(id=call_bd2)
+2026-09-10 20:05:19,656 INFO httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 20:05:25,316 INFO retropus.llm: LLM call #5 done: in_tokens=7991 out_tokens=259 content_chars=0 tools=['read_file']
+2026-09-10 20:05:25,316 INFO epimetheus.agent: Tool call: read_file(['end_line', 'path', 'start_line'])
+2026-09-10 20:05:25,335 INFO retropus.llm: LLM call #6: model=deepseek-v4-pro tier=base messages=14 tools=16 | system(chars=3503) -> user(chars=2681) -> assistant(tools=['get_repo_structure', 'search_code']) -> tool(id=call_5ea) -> tool(id=call_7d8) -> assistant(tools=['read_file', 'read_file']) -> tool(id=call_2ea) -> tool(id=call_0c8) -> assistant(tools=['grep_code']) -> tool(id=call_04d) -> assistant(tools=['read_file']) -> tool(id=call_bd2) -> assistant(tools=['read_file']) -> tool(id=call_f94)
+2026-09-10 20:05:26,621 INFO httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 20:05:33,228 INFO retropus.llm: LLM call #6 done: in_tokens=9336 out_tokens=316 content_chars=0 tools=['grep_code']
+2026-09-10 20:05:33,228 INFO epimetheus.agent: Tool call: grep_code(['query'])
+2026-09-10 20:05:33,321 INFO retropus.llm: LLM call #7: model=deepseek-v4-pro tier=base messages=16 tools=16 | system(chars=3503) -> user(chars=2681) -> assistant(tools=['get_repo_structure', 'search_code']) -> tool(id=call_5ea) -> tool(id=call_7d8) -> assistant(tools=['read_file', 'read_file']) -> tool(id=call_2ea) -> tool(id=call_0c8) -> assistant(tools=['grep_code']) -> tool(id=call_04d) -> assistant(tools=['read_file']) -> tool(id=call_bd2) -> assistant(tools=['read_file']) -> tool(id=call_f94) -> assistant(tools=['grep_code']) -> tool(id=call_517)
+2026-09-10 20:05:35,876 INFO httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 20:05:46,063 INFO retropus.llm: LLM call #7 done: in_tokens=9806 out_tokens=496 content_chars=0 tools=['read_file', 'read_file']
+2026-09-10 20:05:46,063 INFO epimetheus.agent: Tool call: read_file(['end_line', 'path', 'start_line'])
+2026-09-10 20:05:46,064 INFO epimetheus.agent: Tool call: read_file(['end_line', 'path', 'start_line'])
+2026-09-10 20:05:46,088 INFO retropus.llm: LLM call #8: model=deepseek-v4-pro tier=base messages=19 tools=16 | system(chars=3503) -> user(chars=2681) -> assistant(tools=['get_repo_structure', 'search_code']) -> tool(id=call_5ea) -> tool(id=call_7d8) -> assistant(tools=['read_file', 'read_file']) -> tool(id=call_2ea) -> tool(id=call_0c8) -> assistant(tools=['grep_code']) -> tool(id=call_04d) -> assistant(tools=['read_file']) -> tool(id=call_bd2) -> assistant(tools=['read_file']) -> tool(id=call_f94) -> assistant(tools=['grep_code']) -> tool(id=call_517) -> assistant(tools=['read_file', 'read_file']) -> tool(id=call_a68) -> tool(id=call_d34)
+2026-09-10 20:05:48,049 INFO httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 20:05:54,630 INFO retropus.llm: LLM call #8 done: in_tokens=10611 out_tokens=312 content_chars=0 tools=['grep_code', 'read_file']
+2026-09-10 20:05:54,630 INFO epimetheus.agent: Tool call: grep_code(['query'])
+2026-09-10 20:05:54,761 INFO epimetheus.agent: Tool call: read_file(['end_line', 'path', 'start_line'])
+2026-09-10 20:05:54,779 INFO retropus.llm: LLM call #9: model=deepseek-v4-pro tier=base messages=22 tools=16 | system(chars=3503) -> user(chars=2681) -> assistant(tools=['get_repo_structure', 'search_code']) -> tool(id=call_5ea) -> tool(id=call_7d8) -> assistant(tools=['read_file', 'read_file']) -> tool(id=call_2ea) -> tool(id=call_0c8) -> assistant(tools=['grep_code']) -> tool(id=call_04d) -> assistant(tools=['read_file']) -> tool(id=call_bd2) -> assistant(tools=['read_file']) -> tool(id=call_f94) -> assistant(tools=['grep_code']) -> tool(id=call_517) -> assistant(tools=['read_file', 'read_file']) -> tool(id=call_a68) -> tool(id=call_d34) -> assistant(tools=['grep_code', 'read_file']) -> tool(id=call_9b2) -> tool(id=call_181)
+2026-09-10 20:05:57,165 INFO httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 20:06:07,273 INFO retropus.llm: LLM call #9 done: in_tokens=10957 out_tokens=443 content_chars=0 tools=['grep_code']
+2026-09-10 20:06:07,273 INFO epimetheus.agent: Tool call: grep_code(['query'])
+2026-09-10 20:06:07,387 INFO retropus.llm: LLM call #10: model=deepseek-v4-pro tier=base messages=24 tools=16 | system(chars=3503) -> user(chars=2681) -> assistant(tools=['get_repo_structure', 'search_code']) -> tool(id=call_5ea) -> tool(id=call_7d8) -> assistant(tools=['read_file', 'read_file']) -> tool(id=call_2ea) -> tool(id=call_0c8) -> assistant(tools=['grep_code']) -> tool(id=call_04d) -> assistant(tools=['read_file']) -> tool(id=call_bd2) -> assistant(tools=['read_file']) -> tool(id=call_f94) -> assistant(tools=['grep_code']) -> tool(id=call_517) -> assistant(tools=['read_file', 'read_file']) -> tool(id=call_a68) -> tool(id=call_d34) -> assistant(tools=['grep_code', 'read_file']) -> tool(id=call_9b2) -> tool(id=call_181) -> assistant(tools=['grep_code']) -> tool(id=call_ffb)
+2026-09-10 20:06:10,207 INFO httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 20:06:16,694 INFO retropus.llm: LLM call #10 done: in_tokens=12330 out_tokens=349 content_chars=0 tools=['read_file', 'read_file']
+2026-09-10 20:06:16,695 INFO epimetheus.agent: Tool call: read_file(['end_line', 'path', 'start_line'])
+2026-09-10 20:06:16,695 INFO epimetheus.agent: Tool call: read_file(['end_line', 'path', 'start_line'])
+2026-09-10 20:06:16,714 INFO retropus.llm: LLM call #11: model=deepseek-v4-pro tier=base messages=27 tools=16 | system(chars=3503) -> user(chars=2681) -> assistant(tools=['get_repo_structure', 'search_code']) -> tool(id=call_5ea) -> tool(id=call_7d8) -> assistant(tools=['read_file', 'read_file']) -> tool(id=call_2ea) -> tool(id=call_0c8) -> assistant(tools=['grep_code']) -> tool(id=call_04d) -> assistant(tools=['read_file']) -> tool(id=call_bd2) -> assistant(tools=['read_file']) -> tool(id=call_f94) -> assistant(tools=['grep_code']) -> tool(id=call_517) -> assistant(tools=['read_file', 'read_file']) -> tool(id=call_a68) -> tool(id=call_d34) -> assistant(tools=['grep_code', 'read_file']) -> tool(id=call_9b2) -> tool(id=call_181) -> assistant(tools=['grep_code']) -> tool(id=call_ffb) -> assistant(tools=['read_file', 'read_file']) -> tool(id=call_85a) -> tool(id=call_f2a)
+2026-09-10 20:06:18,967 INFO httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 20:06:27,173 INFO retropus.llm: LLM call #11 done: in_tokens=14331 out_tokens=412 content_chars=0 tools=['read_file']
+2026-09-10 20:06:27,173 INFO epimetheus.agent: Tool call: read_file(['end_line', 'path', 'start_line'])
+2026-09-10 20:06:27,194 INFO retropus.llm: LLM call #12: model=deepseek-v4-pro tier=base messages=29 tools=16 | system(chars=3503) -> user(chars=2681) -> assistant(tools=['get_repo_structure', 'search_code']) -> tool(id=call_5ea) -> tool(id=call_7d8) -> assistant(tools=['read_file', 'read_file']) -> tool(id=call_2ea) -> tool(id=call_0c8) -> assistant(tools=['grep_code']) -> tool(id=call_04d) -> assistant(tools=['read_file']) -> tool(id=call_bd2) -> assistant(tools=['read_file']) -> tool(id=call_f94) -> assistant(tools=['grep_code']) -> tool(id=call_517) -> assistant(tools=['read_file', 'read_file']) -> tool(id=call_a68) -> tool(id=call_d34) -> assistant(tools=['grep_code', 'read_file']) -> tool(id=call_9b2) -> tool(id=call_181) -> assistant(tools=['grep_code']) -> tool(id=call_ffb) -> assistant(tools=['read_file', 'read_file']) -> tool(id=call_85a) -> tool(id=call_f2a) -> assistant(tools=['read_file']) -> tool(id=call_e67)
+2026-09-10 20:06:28,817 INFO httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+[20:06:35] Pulled docker image: docker.io/swebench/sweb.eval.x86_64.sympy_1776_sympy-20428:latest
+2026-09-10 20:06:43,353 INFO retropus.llm: LLM call #12 done: in_tokens=15822 out_tokens=673 content_chars=374 tools=['run_repro_script']
+2026-09-10 20:06:43,353 INFO epimetheus.agent: Tool call: run_repro_script(['script'])
+2026-09-10 20:06:43,380 INFO thread-135890175033856.epimetheus.docker.base_container: Resetting git repository in the container
+2026-09-10 20:06:43,816 INFO thread-135890175033856.epimetheus.docker.base_container: Updating files in the container after edits.
+2026-09-10 20:06:43,816 INFO thread-135890175033856.epimetheus.docker.base_container: Creating directory .epimetheus in the container
+2026-09-10 20:06:43,919 INFO thread-135890175033856.epimetheus.docker.base_container: Updating .epimetheus/repro.py in the container
+2026-09-10 20:06:43,928 INFO thread-135890175033856.epimetheus.docker.base_container: Files updated successfully
+2026-09-10 20:06:51,475 INFO retropus.llm: LLM call #13: model=deepseek-v4-pro tier=base messages=31 tools=16 | system(chars=3503) -> user(chars=2681) -> assistant(tools=['get_repo_structure', 'search_code']) -> tool(id=call_5ea) -> tool(id=call_7d8) -> assistant(tools=['read_file', 'read_file']) -> tool(id=call_2ea) -> tool(id=call_0c8) -> assistant(tools=['grep_code']) -> tool(id=call_04d) -> assistant(tools=['read_file']) -> tool(id=call_bd2) -> assistant(tools=['read_file']) -> tool(id=call_f94) -> assistant(tools=['grep_code']) -> tool(id=call_517) -> assistant(tools=['read_file', 'read_file']) -> tool(id=call_a68) -> tool(id=call_d34) -> assistant(tools=['grep_code', 'read_file']) -> tool(id=call_9b2) -> tool(id=call_181) -> assistant(tools=['grep_code']) -> tool(id=call_ffb) -> assistant(tools=['read_file', 'read_file']) -> tool(id=call_85a) -> tool(id=call_f2a) -> assistant(tools=['read_file']) -> tool(id=call_e67) -> assistant(tools=['run_repro_script']) -> tool(id=call_d9f)
+2026-09-10 20:06:53,286 INFO httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 20:06:56,926 INFO retropus.llm: LLM call #13 done: in_tokens=16568 out_tokens=198 content_chars=0 tools=['run_repro_script']
+2026-09-10 20:06:56,926 INFO epimetheus.agent: Tool call: run_repro_script(['script'])
+2026-09-10 20:06:56,939 INFO thread-135890175033856.epimetheus.docker.base_container: Resetting git repository in the container
+2026-09-10 20:06:57,165 INFO thread-135890175033856.epimetheus.docker.base_container: Updating files in the container after edits.
+2026-09-10 20:06:57,165 INFO thread-135890175033856.epimetheus.docker.base_container: Creating directory .epimetheus in the container
+2026-09-10 20:06:57,266 INFO thread-135890175033856.epimetheus.docker.base_container: Updating .epimetheus/repro.py in the container
+2026-09-10 20:06:57,272 INFO thread-135890175033856.epimetheus.docker.base_container: Files updated successfully
+2026-09-10 20:07:02,653 INFO retropus.llm: LLM call #14: model=deepseek-v4-pro tier=base messages=33 tools=16 | system(chars=3503) -> user(chars=2681) -> assistant(tools=['get_repo_structure', 'search_code']) -> tool(id=call_5ea) -> tool(id=call_7d8) -> assistant(tools=['read_file', 'read_file']) -> tool(id=call_2ea) -> tool(id=call_0c8) -> assistant(tools=['grep_code']) -> tool(id=call_04d) -> assistant(tools=['read_file']) -> tool(id=call_bd2) -> assistant(tools=['read_file']) -> tool(id=call_f94) -> assistant(tools=['grep_code']) -> tool(id=call_517) -> assistant(tools=['read_file', 'read_file']) -> tool(id=call_a68) -> tool(id=call_d34) -> assistant(tools=['grep_code', 'read_file']) -> tool(id=call_9b2) -> tool(id=call_181) -> assistant(tools=['grep_code']) -> tool(id=call_ffb) -> assistant(tools=['read_file', 'read_file']) -> tool(id=call_85a) -> tool(id=call_f2a) -> assistant(tools=['read_file']) -> tool(id=call_e67) -> assistant(tools=['run_repro_script']) -> tool(id=call_d9f) -> assistant(tools=['run_repro_script']) -> tool(id=call_038)
+2026-09-10 20:07:06,907 INFO httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 20:07:14,517 INFO retropus.llm: LLM call #14 done: in_tokens=17140 out_tokens=394 content_chars=478 tools=['edit_lines']
+2026-09-10 20:07:14,517 INFO epimetheus.agent: Tool call: edit_lines(['end_line', 'new_text', 'path', 'start_line'])
+2026-09-10 20:07:14,574 INFO epimetheus.agent: Nudge #1: require run_tests after edits
+2026-09-10 20:07:14,575 INFO retropus.llm: LLM call #15: model=deepseek-v4-pro tier=base messages=36 tools=16 | system(chars=3503) -> user(chars=2681) -> assistant(tools=['get_repo_structure', 'search_code']) -> tool(id=call_5ea) -> tool(id=call_7d8) -> assistant(tools=['read_file', 'read_file']) -> tool(id=call_2ea) -> tool(id=call_0c8) -> assistant(tools=['grep_code']) -> tool(id=call_04d) -> assistant(tools=['read_file']) -> tool(id=call_bd2) -> assistant(tools=['read_file']) -> tool(id=call_f94) -> assistant(tools=['grep_code']) -> tool(id=call_517) -> assistant(tools=['read_file', 'read_file']) -> tool(id=call_a68) -> tool(id=call_d34) -> assistant(tools=['grep_code', 'read_file']) -> tool(id=call_9b2) -> tool(id=call_181) -> assistant(tools=['grep_code']) -> tool(id=call_ffb) -> assistant(tools=['read_file', 'read_file']) -> tool(id=call_85a) -> tool(id=call_f2a) -> assistant(tools=['read_file']) -> tool(id=call_e67) -> assistant(tools=['run_repro_script']) -> tool(id=call_d9f) -> assistant(tools=['run_repro_script']) -> tool(id=call_038) -> assistant(tools=['edit_lines']) -> tool(id=call_1d6) -> user(chars=129)
+2026-09-10 20:07:16,525 INFO httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 20:07:18,250 INFO retropus.llm: LLM call #15 done: in_tokens=17448 out_tokens=105 content_chars=0 tools=['read_file']
+2026-09-10 20:07:18,251 INFO epimetheus.agent: Tool call: read_file(['end_line', 'path', 'start_line'])
+2026-09-10 20:07:18,264 INFO epimetheus.agent: Nudge #2: require run_tests after edits
+2026-09-10 20:07:18,264 INFO retropus.llm: LLM call #16: model=deepseek-v4-pro tier=base messages=38 tools=16 | system(chars=3503) -> user(chars=2681) -> assistant(tools=['get_repo_structure', 'search_code']) -> tool(id=call_5ea) -> tool(id=call_7d8) -> assistant(tools=['read_file', 'read_file']) -> tool(id=call_2ea) -> tool(id=call_0c8) -> assistant(tools=['grep_code']) -> tool(id=call_04d) -> assistant(tools=['read_file']) -> tool(id=call_bd2) -> assistant(tools=['read_file']) -> tool(id=call_f94) -> assistant(tools=['grep_code']) -> tool(id=call_517) -> assistant(tools=['read_file', 'read_file']) -> tool(id=call_a68) -> tool(id=call_d34) -> assistant(tools=['grep_code', 'read_file']) -> tool(id=call_9b2) -> tool(id=call_181) -> assistant(tools=['grep_code']) -> tool(id=call_ffb) -> assistant(tools=['read_file', 'read_file']) -> tool(id=call_85a) -> tool(id=call_f2a) -> assistant(tools=['read_file']) -> tool(id=call_e67) -> assistant(tools=['run_repro_script']) -> tool(id=call_d9f) -> assistant(tools=['run_repro_script']) -> tool(id=call_038) -> assistant(tools=['edit_lines']) -> tool(id=call_1d6) -> assistant(tools=['read_file']) -> tool(id=call_6e6) -> user(chars=129)
+2026-09-10 20:07:43,872 INFO httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 20:07:48,479 INFO retropus.llm: LLM call #16 done: in_tokens=17922 out_tokens=236 content_chars=0 tools=['run_repro_script']
+2026-09-10 20:07:48,479 INFO epimetheus.agent: Tool call: run_repro_script(['script'])
+2026-09-10 20:07:48,501 INFO thread-135890175033856.epimetheus.docker.base_container: Resetting git repository in the container
+2026-09-10 20:07:48,706 INFO thread-135890175033856.epimetheus.docker.base_container: Updating files in the container after edits.
+2026-09-10 20:07:48,706 INFO thread-135890175033856.epimetheus.docker.base_container: Creating directory src/transformers in the container
+2026-09-10 20:07:48,807 INFO thread-135890175033856.epimetheus.docker.base_container: Updating src/transformers/tokenization_t5.py in the container
+2026-09-10 20:07:48,814 INFO thread-135890175033856.epimetheus.docker.base_container: Files updated successfully
+2026-09-10 20:07:48,814 INFO thread-135890175033856.epimetheus.docker.base_container: Updating files in the container after edits.
+2026-09-10 20:07:48,814 INFO thread-135890175033856.epimetheus.docker.base_container: Creating directory .epimetheus in the container
+2026-09-10 20:07:48,916 INFO thread-135890175033856.epimetheus.docker.base_container: Updating .epimetheus/repro.py in the container
+2026-09-10 20:07:48,921 INFO thread-135890175033856.epimetheus.docker.base_container: Files updated successfully
+2026-09-10 20:07:52,661 INFO epimetheus.agent: Nudge #3: require run_tests after edits
+2026-09-10 20:07:52,661 INFO retropus.llm: LLM call #17: model=deepseek-v4-pro tier=base messages=40 tools=16 | system(chars=3503) -> user(chars=2681) -> assistant(tools=['get_repo_structure', 'search_code']) -> tool(id=call_5ea) -> tool(id=call_7d8) -> assistant(tools=['read_file', 'read_file']) -> tool(id=call_2ea) -> tool(id=call_0c8) -> assistant(tools=['grep_code']) -> tool(id=call_04d) -> assistant(tools=['read_file']) -> tool(id=call_bd2) -> assistant(tools=['read_file']) -> tool(id=call_f94) -> assistant(tools=['grep_code']) -> tool(id=call_517) -> assistant(tools=['read_file', 'read_file']) -> tool(id=call_a68) -> tool(id=call_d34) -> assistant(tools=['grep_code', 'read_file']) -> tool(id=call_9b2) -> tool(id=call_181) -> assistant(tools=['grep_code']) -> tool(id=call_ffb) -> assistant(tools=['read_file', 'read_file']) -> tool(id=call_85a) -> tool(id=call_f2a) -> assistant(tools=['read_file']) -> tool(id=call_e67) -> assistant(tools=['run_repro_script']) -> tool(id=call_d9f) -> assistant(tools=['run_repro_script']) -> tool(id=call_038) -> assistant(tools=['edit_lines']) -> tool(id=call_1d6) -> assistant(tools=['read_file']) -> tool(id=call_6e6) -> assistant(tools=['run_repro_script']) -> tool(id=call_17d) -> user(chars=129)
+2026-09-10 20:07:54,008 INFO httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 20:07:55,939 INFO retropus.llm: LLM call #17 done: in_tokens=18219 out_tokens=96 content_chars=0 tools=['run_tests']
+2026-09-10 20:07:55,939 INFO epimetheus.agent: Tool call: run_tests(['commands'])
+2026-09-10 20:07:55,955 INFO epimetheus.docker_runner: Capturing clean-tree baseline for: python -m pytest tests/test_tokenization_t5.py -x -v
+2026-09-10 20:07:55,955 INFO thread-135890175033856.epimetheus.docker.base_container: Resetting git repository in the container
+2026-09-10 20:08:04,798 INFO epimetheus.docker_runner: Baseline: no test results parsed
+2026-09-10 20:08:04,798 INFO thread-135890175033856.epimetheus.docker.base_container: Resetting git repository in the container
+2026-09-10 20:08:05,001 INFO thread-135890175033856.epimetheus.docker.base_container: Updating files in the container after edits.
+2026-09-10 20:08:05,001 INFO thread-135890175033856.epimetheus.docker.base_container: Creating directory src/transformers in the container
+2026-09-10 20:08:05,103 INFO thread-135890175033856.epimetheus.docker.base_container: Updating src/transformers/tokenization_t5.py in the container
+2026-09-10 20:08:05,107 INFO thread-135890175033856.epimetheus.docker.base_container: Files updated successfully
+2026-09-10 20:08:09,729 INFO retropus.llm: LLM call #18: model=deepseek-v4-pro tier=base messages=42 tools=16 | system(chars=3503) -> user(chars=2681) -> assistant(tools=['get_repo_structure', 'search_code']) -> tool(id=call_5ea) -> tool(id=call_7d8) -> assistant(tools=['read_file', 'read_file']) -> tool(id=call_2ea) -> tool(id=call_0c8) -> assistant(tools=['grep_code']) -> tool(id=call_04d) -> assistant(tools=['read_file']) -> tool(id=call_bd2) -> assistant(tools=['read_file']) -> tool(id=call_f94) -> assistant(tools=['grep_code']) -> tool(id=call_517) -> assistant(tools=['read_file', 'read_file']) -> tool(id=call_a68) -> tool(id=call_d34) -> assistant(tools=['grep_code', 'read_file']) -> tool(id=call_9b2) -> tool(id=call_181) -> assistant(tools=['grep_code']) -> tool(id=call_ffb) -> assistant(tools=['read_file', 'read_file']) -> tool(id=call_85a) -> tool(id=call_f2a) -> assistant(tools=['read_file']) -> tool(id=call_e67) -> assistant(tools=['run_repro_script']) -> tool(id=call_d9f) -> assistant(tools=['run_repro_script']) -> tool(id=call_038) -> assistant(tools=['edit_lines']) -> tool(id=call_1d6) -> assistant(tools=['read_file']) -> tool(id=call_6e6) -> assistant(tools=['run_repro_script']) -> tool(id=call_17d) -> user(chars=129) -> assistant(tools=['run_tests']) -> tool(id=call_af3)
+2026-09-10 20:08:12,133 INFO httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 20:08:14,913 INFO retropus.llm: LLM call #18 done: in_tokens=19573 out_tokens=174 content_chars=0 tools=['read_file']
+2026-09-10 20:08:14,913 INFO epimetheus.agent: Tool call: read_file(['end_line', 'path', 'start_line'])
+2026-09-10 20:08:14,913 INFO retropus.llm: LLM call #19: model=deepseek-v4-pro tier=base messages=44 tools=16 | system(chars=3503) -> user(chars=2681) -> assistant(tools=['get_repo_structure', 'search_code']) -> tool(id=call_5ea) -> tool(id=call_7d8) -> assistant(tools=['read_file', 'read_file']) -> tool(id=call_2ea) -> tool(id=call_0c8) -> assistant(tools=['grep_code']) -> tool(id=call_04d) -> assistant(tools=['read_file']) -> tool(id=call_bd2) -> assistant(tools=['read_file']) -> tool(id=call_f94) -> assistant(tools=['grep_code']) -> tool(id=call_517) -> assistant(tools=['read_file', 'read_file']) -> tool(id=call_a68) -> tool(id=call_d34) -> assistant(tools=['grep_code', 'read_file']) -> tool(id=call_9b2) -> tool(id=call_181) -> assistant(tools=['grep_code']) -> tool(id=call_ffb) -> assistant(tools=['read_file', 'read_file']) -> tool(id=call_85a) -> tool(id=call_f2a) -> assistant(tools=['read_file']) -> tool(id=call_e67) -> assistant(tools=['run_repro_script']) -> tool(id=call_d9f) -> assistant(tools=['run_repro_script']) -> tool(id=call_038) -> assistant(tools=['edit_lines']) -> tool(id=call_1d6) -> assistant(tools=['read_file']) -> tool(id=call_6e6) -> assistant(tools=['run_repro_script']) -> tool(id=call_17d) -> user(chars=129) -> assistant(tools=['run_tests']) -> tool(id=call_af3) -> assistant(tools=['read_file']) -> tool(id=call_b33)
+2026-09-10 20:08:18,073 INFO httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 20:08:34,771 INFO retropus.llm: LLM call #19 done: in_tokens=19954 out_tokens=760 content_chars=150 tools=['edit_lines']
+2026-09-10 20:08:34,772 INFO epimetheus.agent: Tool call: edit_lines(['end_line', 'new_text', 'path', 'start_line'])
+2026-09-10 20:08:34,772 INFO retropus.llm: LLM call #20: model=deepseek-v4-pro tier=base messages=46 tools=16 | system(chars=3503) -> user(chars=2681) -> assistant(tools=['get_repo_structure', 'search_code']) -> tool(id=call_5ea) -> tool(id=call_7d8) -> assistant(tools=['read_file', 'read_file']) -> tool(id=call_2ea) -> tool(id=call_0c8) -> assistant(tools=['grep_code']) -> tool(id=call_04d) -> assistant(tools=['read_file']) -> tool(id=call_bd2) -> assistant(tools=['read_file']) -> tool(id=call_f94) -> assistant(tools=['grep_code']) -> tool(id=call_517) -> assistant(tools=['read_file', 'read_file']) -> tool(id=call_a68) -> tool(id=call_d34) -> assistant(tools=['grep_code', 'read_file']) -> tool(id=call_9b2) -> tool(id=call_181) -> assistant(tools=['grep_code']) -> tool(id=call_ffb) -> assistant(tools=['read_file', 'read_file']) -> tool(id=call_85a) -> tool(id=call_f2a) -> assistant(tools=['read_file']) -> tool(id=call_e67) -> assistant(tools=['run_repro_script']) -> tool(id=call_d9f) -> assistant(tools=['run_repro_script']) -> tool(id=call_038) -> assistant(tools=['edit_lines']) -> tool(id=call_1d6) -> assistant(tools=['read_file']) -> tool(id=call_6e6) -> assistant(tools=['run_repro_script']) -> tool(id=call_17d) -> user(chars=129) -> assistant(tools=['run_tests']) -> tool(id=call_af3) -> assistant(tools=['read_file']) -> tool(id=call_b33) -> assistant(tools=['edit_lines']) -> tool(id=call_c09)
+2026-09-10 20:08:40,489 INFO httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 20:08:51,429 INFO retropus.llm: LLM call #20 done: in_tokens=20181 out_tokens=674 content_chars=190 tools=['run_tests']
+2026-09-10 20:08:51,429 INFO epimetheus.agent: Tool call: run_tests(['commands'])
+2026-09-10 20:08:51,445 INFO epimetheus.docker_runner: Capturing clean-tree baseline for: python -m pytest tests/test_tokenization_t5.py -v
+2026-09-10 20:08:51,445 INFO thread-135890175033856.epimetheus.docker.base_container: Resetting git repository in the container
+2026-09-10 20:09:01,767 INFO epimetheus.docker_runner: Baseline: no test results parsed
+2026-09-10 20:09:01,768 INFO thread-135890175033856.epimetheus.docker.base_container: Resetting git repository in the container
+2026-09-10 20:09:01,990 INFO thread-135890175033856.epimetheus.docker.base_container: Updating files in the container after edits.
+2026-09-10 20:09:01,990 INFO thread-135890175033856.epimetheus.docker.base_container: Creating directory src/transformers in the container
+2026-09-10 20:09:02,091 INFO thread-135890175033856.epimetheus.docker.base_container: Updating src/transformers/tokenization_t5.py in the container
+2026-09-10 20:09:02,099 INFO thread-135890175033856.epimetheus.docker.base_container: Files updated successfully
+2026-09-10 20:09:12,923 WARNING retropus.graph.knowledge_graph: KG: building INHERITS edges
+2026-09-10 20:09:13,615 WARNING retropus.graph.knowledge_graph: KG: built 671 INHERITS edges in 0.7s; building IMPORTS edges
+2026-09-10 20:09:15,631 INFO retropus.graph.knowledge_graph: KG: INHERITS edges=704 (0.7s); IMPORTS edges=1118 (2.0s); CALLS=0 CONSTRUCTS=0 (0.0s); indexes ready (searchable_ast=7748, 2.7s); restricted to 297 file(s)
+2026-09-10 20:09:15,632 INFO retropus.graph.knowledge_graph: KG: refreshed 1 path(s) in 2.8s (files=1748 ast=8174 text=3179)
+2026-09-10 20:09:15,632 INFO retropus.retrievers.bm25: BM25: collecting searchable nodes from knowledge graph
+2026-09-10 20:09:15,640 INFO retropus.retrievers.bm25: BM25: collected 7748 AST docs (0.0s)
+2026-09-10 20:09:15,644 INFO retropus.retrievers.bm25: BM25: collected 3179 text docs (0.0s); total=10927
+2026-09-10 20:09:15,651 INFO retropus.retrievers.bm25: BM25: tokenizing 10927 documents with code-aware (workers=1)
+
+Code tokenize:   0%|          | 0/10927 [00:00<?, ?doc/s]
+Code tokenize:   5%|▍         | 516/10927 [00:00<00:02, 5137.77doc/s]
+Code tokenize:  10%|▉         | 1060/10927 [00:00<00:01, 5225.08doc/s]
+Code tokenize:  15%|█▌        | 1662/10927 [00:00<00:01, 5579.87doc/s]
+Code tokenize:  20%|██        | 2221/10927 [00:00<00:01, 5106.43doc/s]
+Code tokenize:  25%|██▌       | 2738/10927 [00:00<00:01, 4697.34doc/s]
+Code tokenize:  29%|██▉       | 3215/10927 [00:00<00:01, 4328.83doc/s]
+Code tokenize:  34%|███▍      | 3710/10927 [00:00<00:01, 4501.54doc/s]
+Code tokenize:  40%|███▉      | 4331/10927 [00:00<00:01, 4995.53doc/s]
+Code tokenize:  44%|████▍     | 4847/10927 [00:00<00:01, 5041.49doc/s]
+Code tokenize:  50%|█████     | 5505/10927 [00:01<00:00, 5490.86doc/s]
+Code tokenize:  55%|█████▌    | 6061/10927 [00:01<00:00, 5344.39doc/s]
+Code tokenize:  60%|██████    | 6608/10927 [00:01<00:00, 5378.45doc/s]
+Code tokenize:  66%|██████▌   | 7212/10927 [00:01<00:00, 5568.75doc/s]
+Code tokenize:  71%|███████   | 7773/10927 [00:01<00:00, 4908.02doc/s]
+Code tokenize:  76%|███████▋  | 8355/10927 [00:01<00:00, 5152.32doc/s]
+Code tokenize:  83%|████████▎ | 9037/10927 [00:01<00:00, 5614.87doc/s]
+Code tokenize:  90%|████████▉ | 9800/10927 [00:01<00:00, 6183.05doc/s]
+Code tokenize:  99%|█████████▊| 10773/10927 [00:01<00:00, 7206.94doc/s]
+                                                                       
+2026-09-10 20:09:18,262 INFO retropus.retrievers.bm25: BM25: building index over 10927 documents
+2026-09-10 20:09:18,264 DEBUG bm25s: Building index from tokens
+
+BM25S Create Vocab:   0%|          | 0/10927 [00:00<?, ?it/s]
+                                                             
+
+BM25S Convert tokens to indices:   0%|          | 0/10927 [00:00<?, ?it/s]
+BM25S Convert tokens to indices:  88%|████████▊ | 9619/10927 [00:00<00:00, 96182.98it/s]
+                                                                                        
+
+BM25S Count Tokens:   0%|          | 0/10927 [00:00<?, ?it/s]
+BM25S Count Tokens:  74%|███████▍  | 8085/10927 [00:00<00:00, 80834.47it/s]
+                                                                           
+
+BM25S Compute Scores:   0%|          | 0/10927 [00:00<?, ?it/s]
+BM25S Compute Scores:  25%|██▌       | 2762/10927 [00:00<00:00, 27615.35it/s]
+BM25S Compute Scores:  59%|█████▉    | 6427/10927 [00:00<00:00, 32916.53it/s]
+                                                                             
+2026-09-10 20:09:19,070 INFO retropus.retrievers.bm25: BM25: index ready (10927 docs, tokenizer=code-aware, workers=1, 3.4s)
+2026-09-10 20:09:19,074 INFO retropus.llm: LLM call #21: model=deepseek-v4-pro tier=base messages=48 tools=16 | system(chars=3503) -> user(chars=2681) -> assistant(tools=['get_repo_structure', 'search_code']) -> tool(id=call_5ea) -> tool(id=call_7d8) -> assistant(tools=['read_file', 'read_file']) -> tool(id=call_2ea) -> tool(id=call_0c8) -> assistant(tools=['grep_code']) -> tool(id=call_04d) -> assistant(tools=['read_file']) -> tool(id=call_bd2) -> assistant(tools=['read_file']) -> tool(id=call_f94) -> assistant(tools=['grep_code']) -> tool(id=call_517) -> assistant(tools=['read_file', 'read_file']) -> tool(id=call_a68) -> tool(id=call_d34) -> assistant(tools=['grep_code', 'read_file']) -> tool(id=call_9b2) -> tool(id=call_181) -> assistant(tools=['grep_code']) -> tool(id=call_ffb) -> assistant(tools=['read_file', 'read_file']) -> tool(id=call_85a) -> tool(id=call_f2a) -> assistant(tools=['read_file']) -> tool(id=call_e67) -> assistant(tools=['run_repro_script']) -> tool(id=call_d9f) -> assistant(tools=['run_repro_script']) -> tool(id=call_038) -> assistant(tools=['edit_lines']) -> tool(id=call_1d6) -> assistant(tools=['read_file']) -> tool(id=call_6e6) -> assistant(tools=['run_repro_script']) -> tool(id=call_17d) -> user(chars=129) -> assistant(tools=['run_tests']) -> tool(id=call_af3) -> assistant(tools=['read_file']) -> tool(id=call_b33) -> assistant(tools=['edit_lines']) -> tool(id=call_c09) -> assistant(tools=['run_tests']) -> tool(id=call_741)
+2026-09-10 20:09:21,233 INFO httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 20:09:36,276 INFO retropus.llm: LLM call #21 done: in_tokens=22654 out_tokens=744 content_chars=245 tools=['edit_lines']
+2026-09-10 20:09:36,278 INFO epimetheus.agent: Tool call: edit_lines(['end_line', 'new_text', 'path', 'start_line'])
+2026-09-10 20:09:36,344 INFO retropus.llm: LLM call #22: model=deepseek-v4-pro tier=base messages=50 tools=16 | system(chars=3503) -> user(chars=2681) -> assistant(tools=['get_repo_structure', 'search_code']) -> tool(id=call_5ea) -> tool(id=call_7d8) -> assistant(tools=['read_file', 'read_file']) -> tool(id=call_2ea) -> tool(id=call_0c8) -> assistant(tools=['grep_code']) -> tool(id=call_04d) -> assistant(tools=['read_file']) -> tool(id=call_bd2) -> assistant(tools=['read_file']) -> tool(id=call_f94) -> assistant(tools=['grep_code']) -> tool(id=call_517) -> assistant(tools=['read_file', 'read_file']) -> tool(id=call_a68) -> tool(id=call_d34) -> assistant(tools=['grep_code', 'read_file']) -> tool(id=call_9b2) -> tool(id=call_181) -> assistant(tools=['grep_code']) -> tool(id=call_ffb) -> assistant(tools=['read_file', 'read_file']) -> tool(id=call_85a) -> tool(id=call_f2a) -> assistant(tools=['read_file']) -> tool(id=call_e67) -> assistant(tools=['run_repro_script']) -> tool(id=call_d9f) -> assistant(tools=['run_repro_script']) -> tool(id=call_038) -> assistant(tools=['edit_lines']) -> tool(id=call_1d6) -> assistant(tools=['read_file']) -> tool(id=call_6e6) -> assistant(tools=['run_repro_script']) -> tool(id=call_17d) -> user(chars=129) -> assistant(tools=['run_tests']) -> tool(id=call_af3) -> assistant(tools=['read_file']) -> tool(id=call_b33) -> assistant(tools=['edit_lines']) -> tool(id=call_c09) -> assistant(tools=['run_tests']) -> tool(id=call_741) -> assistant(tools=['edit_lines']) -> tool(id=call_006)
+2026-09-10 20:09:39,811 INFO httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 20:09:56,935 INFO retropus.llm: LLM call #22 done: in_tokens=22891 out_tokens=837 content_chars=27 tools=['run_tests']
+2026-09-10 20:09:56,937 INFO epimetheus.agent: Tool call: run_tests(['commands'])
+2026-09-10 20:09:56,967 INFO epimetheus.docker_runner: Capturing clean-tree baseline for: python -m pytest tests/test_tokenization_t5.py -v -k 'not test_eos_in_input'
+2026-09-10 20:09:56,968 INFO thread-135890175033856.epimetheus.docker.base_container: Resetting git repository in the container
+2026-09-10 20:10:07,717 INFO epimetheus.docker_runner: Baseline: no test results parsed
+2026-09-10 20:10:07,717 INFO thread-135890175033856.epimetheus.docker.base_container: Resetting git repository in the container
+2026-09-10 20:10:07,968 INFO thread-135890175033856.epimetheus.docker.base_container: Updating files in the container after edits.
+2026-09-10 20:10:07,969 INFO thread-135890175033856.epimetheus.docker.base_container: Creating directory src/transformers in the container
+2026-09-10 20:10:08,109 INFO thread-135890175033856.epimetheus.docker.base_container: Updating src/transformers/tokenization_t5.py in the container
+2026-09-10 20:10:08,578 INFO thread-135890175033856.epimetheus.docker.base_container: Files updated successfully
+2026-09-10 20:10:18,138 INFO retropus.llm: LLM call #23: model=deepseek-v4-pro tier=base messages=52 tools=16 | system(chars=3503) -> user(chars=2681) -> assistant(tools=['get_repo_structure', 'search_code']) -> tool(id=call_5ea) -> tool(id=call_7d8) -> assistant(tools=['read_file', 'read_file']) -> tool(id=call_2ea) -> tool(id=call_0c8) -> assistant(tools=['grep_code']) -> tool(id=call_04d) -> assistant(tools=['read_file']) -> tool(id=call_bd2) -> assistant(tools=['read_file']) -> tool(id=call_f94) -> assistant(tools=['grep_code']) -> tool(id=call_517) -> assistant(tools=['read_file', 'read_file']) -> tool(id=call_a68) -> tool(id=call_d34) -> assistant(tools=['grep_code', 'read_file']) -> tool(id=call_9b2) -> tool(id=call_181) -> assistant(tools=['grep_code']) -> tool(id=call_ffb) -> assistant(tools=['read_file', 'read_file']) -> tool(id=call_85a) -> tool(id=call_f2a) -> assistant(tools=['read_file']) -> tool(id=call_e67) -> assistant(tools=['run_repro_script']) -> tool(id=call_d9f) -> assistant(tools=['run_repro_script']) -> tool(id=call_038) -> assistant(tools=['edit_lines']) -> tool(id=call_1d6) -> assistant(tools=['read_file']) -> tool(id=call_6e6) -> assistant(tools=['run_repro_script']) -> tool(id=call_17d) -> user(chars=129) -> assistant(tools=['run_tests']) -> tool(id=call_af3) -> assistant(tools=['read_file']) -> tool(id=call_b33) -> assistant(tools=['edit_lines']) -> tool(id=call_c09) -> assistant(tools=['run_tests']) -> tool(id=call_741) -> assistant(tools=['edit_lines']) -> tool(id=call_006) -> assistant(tools=['run_tests']) -> tool(id=call_c66)
+2026-09-10 20:10:26,972 INFO httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 20:10:33,457 INFO retropus.llm: LLM call #23 done: in_tokens=24745 out_tokens=351 content_chars=148 tools=['run_repro_script']
+2026-09-10 20:10:33,457 INFO epimetheus.agent: Tool call: run_repro_script(['script'])
+2026-09-10 20:10:33,482 INFO thread-135890175033856.epimetheus.docker.base_container: Resetting git repository in the container
+2026-09-10 20:10:33,686 INFO thread-135890175033856.epimetheus.docker.base_container: Updating files in the container after edits.
+2026-09-10 20:10:33,686 INFO thread-135890175033856.epimetheus.docker.base_container: Creating directory src/transformers in the container
+2026-09-10 20:10:33,788 INFO thread-135890175033856.epimetheus.docker.base_container: Updating src/transformers/tokenization_t5.py in the container
+2026-09-10 20:10:33,793 INFO thread-135890175033856.epimetheus.docker.base_container: Files updated successfully
+2026-09-10 20:10:33,795 INFO thread-135890175033856.epimetheus.docker.base_container: Updating files in the container after edits.
+2026-09-10 20:10:33,795 INFO thread-135890175033856.epimetheus.docker.base_container: Creating directory .epimetheus in the container
+2026-09-10 20:10:33,897 INFO thread-135890175033856.epimetheus.docker.base_container: Updating .epimetheus/repro.py in the container
+2026-09-10 20:10:33,902 INFO thread-135890175033856.epimetheus.docker.base_container: Files updated successfully
+2026-09-10 20:10:37,968 INFO retropus.llm: LLM call #24: model=deepseek-v4-pro tier=base messages=54 tools=16 | system(chars=3503) -> user(chars=2681) -> assistant(tools=['get_repo_structure', 'search_code']) -> tool(id=call_5ea) -> tool(id=call_7d8) -> assistant(tools=['read_file', 'read_file']) -> tool(id=call_2ea) -> tool(id=call_0c8) -> assistant(tools=['grep_code']) -> tool(id=call_04d) -> assistant(tools=['read_file']) -> tool(id=call_bd2) -> assistant(tools=['read_file']) -> tool(id=call_f94) -> assistant(tools=['grep_code']) -> tool(id=call_517) -> assistant(tools=['read_file', 'read_file']) -> tool(id=call_a68) -> tool(id=call_d34) -> assistant(tools=['grep_code', 'read_file']) -> tool(id=call_9b2) -> tool(id=call_181) -> assistant(tools=['grep_code']) -> tool(id=call_ffb) -> assistant(tools=['read_file', 'read_file']) -> tool(id=call_85a) -> tool(id=call_f2a) -> assistant(tools=['read_file']) -> tool(id=call_e67) -> assistant(tools=['run_repro_script']) -> tool(id=call_d9f) -> assistant(tools=['run_repro_script']) -> tool(id=call_038) -> assistant(tools=['edit_lines']) -> tool(id=call_1d6) -> assistant(tools=['read_file']) -> tool(id=call_6e6) -> assistant(tools=['run_repro_script']) -> tool(id=call_17d) -> user(chars=129) -> assistant(tools=['run_tests']) -> tool(id=call_af3) -> assistant(tools=['read_file']) -> tool(id=call_b33) -> assistant(tools=['edit_lines']) -> tool(id=call_c09) -> assistant(tools=['run_tests']) -> tool(id=call_741) -> assistant(tools=['edit_lines']) -> tool(id=call_006) -> assistant(tools=['run_tests']) -> tool(id=call_c66) -> assistant(tools=['run_repro_script']) -> tool(id=call_268)
+2026-09-10 20:10:41,637 INFO httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 20:10:43,999 INFO retropus.llm: LLM call #24 done: in_tokens=25077 out_tokens=225 content_chars=0 tools=['get_diff']
+2026-09-10 20:10:43,999 INFO epimetheus.agent: Tool call: get_diff([])
+2026-09-10 20:10:44,035 INFO retropus.llm: LLM call #25: model=deepseek-v4-pro tier=base messages=56 tools=16 | system(chars=3503) -> user(chars=2681) -> assistant(tools=['get_repo_structure', 'search_code']) -> tool(id=call_5ea) -> tool(id=call_7d8) -> assistant(tools=['read_file', 'read_file']) -> tool(id=call_2ea) -> tool(id=call_0c8) -> assistant(tools=['grep_code']) -> tool(id=call_04d) -> assistant(tools=['read_file']) -> tool(id=call_bd2) -> assistant(tools=['read_file']) -> tool(id=call_f94) -> assistant(tools=['grep_code']) -> tool(id=call_517) -> assistant(tools=['read_file', 'read_file']) -> tool(id=call_a68) -> tool(id=call_d34) -> assistant(tools=['grep_code', 'read_file']) -> tool(id=call_9b2) -> tool(id=call_181) -> assistant(tools=['grep_code']) -> tool(id=call_ffb) -> assistant(tools=['read_file', 'read_file']) -> tool(id=call_85a) -> tool(id=call_f2a) -> assistant(tools=['read_file']) -> tool(id=call_e67) -> assistant(tools=['run_repro_script']) -> tool(id=call_d9f) -> assistant(tools=['run_repro_script']) -> tool(id=call_038) -> assistant(tools=['edit_lines']) -> tool(id=call_1d6) -> assistant(tools=['read_file']) -> tool(id=call_6e6) -> assistant(tools=['run_repro_script']) -> tool(id=call_17d) -> user(chars=129) -> assistant(tools=['run_tests']) -> tool(id=call_af3) -> assistant(tools=['read_file']) -> tool(id=call_b33) -> assistant(tools=['edit_lines']) -> tool(id=call_c09) -> assistant(tools=['run_tests']) -> tool(id=call_741) -> assistant(tools=['edit_lines']) -> tool(id=call_006) -> assistant(tools=['run_tests']) -> tool(id=call_c66) -> assistant(tools=['run_repro_script']) -> tool(id=call_268) -> assistant(tools=['get_diff']) -> tool(id=call_b8f)
+2026-09-10 20:10:45,736 INFO httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 20:10:53,224 INFO retropus.llm: LLM call #25 done: in_tokens=25280 out_tokens=360 content_chars=0 tools=['submit_patch']
+2026-09-10 20:10:53,224 INFO epimetheus.agent: Tool call: submit_patch(['reason'])
+2026-09-10 20:10:53,242 INFO retropus.llm: LLM call #26: model=deepseek-v4-pro tier=base messages=58 tools=16 | system(chars=3503) -> user(chars=2681) -> assistant(tools=['get_repo_structure', 'search_code']) -> tool(id=call_5ea) -> tool(id=call_7d8) -> assistant(tools=['read_file', 'read_file']) -> tool(id=call_2ea) -> tool(id=call_0c8) -> assistant(tools=['grep_code']) -> tool(id=call_04d) -> assistant(tools=['read_file']) -> tool(id=call_bd2) -> assistant(tools=['read_file']) -> tool(id=call_f94) -> assistant(tools=['grep_code']) -> tool(id=call_517) -> assistant(tools=['read_file', 'read_file']) -> tool(id=call_a68) -> tool(id=call_d34) -> assistant(tools=['grep_code', 'read_file']) -> tool(id=call_9b2) -> tool(id=call_181) -> assistant(tools=['grep_code']) -> tool(id=call_ffb) -> assistant(tools=['read_file', 'read_file']) -> tool(id=call_85a) -> tool(id=call_f2a) -> assistant(tools=['read_file']) -> tool(id=call_e67) -> assistant(tools=['run_repro_script']) -> tool(id=call_d9f) -> assistant(tools=['run_repro_script']) -> tool(id=call_038) -> assistant(tools=['edit_lines']) -> tool(id=call_1d6) -> assistant(tools=['read_file']) -> tool(id=call_6e6) -> assistant(tools=['run_repro_script']) -> tool(id=call_17d) -> user(chars=129) -> assistant(tools=['run_tests']) -> tool(id=call_af3) -> assistant(tools=['read_file']) -> tool(id=call_b33) -> assistant(tools=['edit_lines']) -> tool(id=call_c09) -> assistant(tools=['run_tests']) -> tool(id=call_741) -> assistant(tools=['edit_lines']) -> tool(id=call_006) -> assistant(tools=['run_tests']) -> tool(id=call_c66) -> assistant(tools=['run_repro_script']) -> tool(id=call_268) -> assistant(tools=['get_diff']) -> tool(id=call_b8f) -> assistant(tools=['submit_patch']) -> tool(id=call_6c4)
+2026-09-10 20:10:57,512 INFO httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 20:10:59,644 INFO retropus.llm: LLM call #26 done: in_tokens=25580 out_tokens=114 content_chars=0 tools=['run_tests']
+2026-09-10 20:10:59,645 INFO epimetheus.agent: Tool call: run_tests(['commands'])
+2026-09-10 20:10:59,667 INFO retropus.llm: LLM call #27: model=deepseek-v4-pro tier=base messages=60 tools=16 | system(chars=3503) -> user(chars=2681) -> assistant(tools=['get_repo_structure', 'search_code']) -> tool(id=call_5ea) -> tool(id=call_7d8) -> assistant(tools=['read_file', 'read_file']) -> tool(id=call_2ea) -> tool(id=call_0c8) -> assistant(tools=['grep_code']) -> tool(id=call_04d) -> assistant(tools=['read_file']) -> tool(id=call_bd2) -> assistant(tools=['read_file']) -> tool(id=call_f94) -> assistant(tools=['grep_code']) -> tool(id=call_517) -> assistant(tools=['read_file', 'read_file']) -> tool(id=call_a68) -> tool(id=call_d34) -> assistant(tools=['grep_code', 'read_file']) -> tool(id=call_9b2) -> tool(id=call_181) -> assistant(tools=['grep_code']) -> tool(id=call_ffb) -> assistant(tools=['read_file', 'read_file']) -> tool(id=call_85a) -> tool(id=call_f2a) -> assistant(tools=['read_file']) -> tool(id=call_e67) -> assistant(tools=['run_repro_script']) -> tool(id=call_d9f) -> assistant(tools=['run_repro_script']) -> tool(id=call_038) -> assistant(tools=['edit_lines']) -> tool(id=call_1d6) -> assistant(tools=['read_file']) -> tool(id=call_6e6) -> assistant(tools=['run_repro_script']) -> tool(id=call_17d) -> user(chars=129) -> assistant(tools=['run_tests']) -> tool(id=call_af3) -> assistant(tools=['read_file']) -> tool(id=call_b33) -> assistant(tools=['edit_lines']) -> tool(id=call_c09) -> assistant(tools=['run_tests']) -> tool(id=call_741) -> assistant(tools=['edit_lines']) -> tool(id=call_006) -> assistant(tools=['run_tests']) -> tool(id=call_c66) -> assistant(tools=['run_repro_script']) -> tool(id=call_268) -> assistant(tools=['get_diff']) -> tool(id=call_b8f) -> assistant(tools=['submit_patch']) -> tool(id=call_6c4) -> assistant(tools=['run_tests']) -> tool(id=call_f8d)
+2026-09-10 20:11:01,613 INFO httpx: HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 20:11:05,704 INFO retropus.llm: LLM call #27 done: in_tokens=27460 out_tokens=202 content_chars=0 tools=['submit_patch']
+2026-09-10 20:11:05,705 INFO epimetheus.agent: Tool call: submit_patch(['reason'])
+2026-09-10 20:11:05,783 INFO epimetheus.agent: Epimetheus done: stop=submitted tests_passed=True patch_lines=13 tool_calls=32 test_runs=3 successful_edits=2 infra_error=False
+2026-09-10 20:11:05,787 INFO thread-135890175033856.epimetheus.docker.base_container: Cleaning up container and temporary files
+2026-09-10 20:11:05,787 INFO thread-135890175033856.epimetheus.docker.base_container: Closing persistent shell...
+2026-09-10 20:11:05,891 INFO thread-135890175033856.epimetheus.docker.base_container: Cleaning up container and temporary files
+2026-09-10 20:11:16,636 WARNING retropus.graph.knowledge_graph: KG: building INHERITS edges
+2026-09-10 20:11:17,368 WARNING retropus.graph.knowledge_graph: KG: built 671 INHERITS edges in 0.7s; building IMPORTS edges
+2026-09-10 20:11:19,676 INFO retropus.graph.knowledge_graph: KG: INHERITS edges=704 (0.7s); IMPORTS edges=1116 (2.3s); CALLS=0 CONSTRUCTS=0 (0.0s); indexes ready (searchable_ast=7748, 3.0s); restricted to 296 file(s)
+2026-09-10 20:11:19,677 INFO retropus.graph.knowledge_graph: KG: refreshed 1 path(s) in 3.4s (files=1748 ast=8174 text=3179)
+2026-09-10 20:11:19,678 INFO retropus.retrievers.bm25: BM25: collecting searchable nodes from knowledge graph
+2026-09-10 20:11:19,693 INFO retropus.retrievers.bm25: BM25: collected 7748 AST docs (0.0s)
+2026-09-10 20:11:19,738 INFO retropus.retrievers.bm25: BM25: collected 3179 text docs (0.0s); total=10927
+2026-09-10 20:11:19,739 INFO retropus.retrievers.bm25: BM25: tokenizing 10927 documents with code-aware (workers=1)
+
+Code tokenize:   0%|          | 0/10927 [00:00<?, ?doc/s]
+Code tokenize:   4%|▍         | 426/10927 [00:00<00:02, 4241.79doc/s]
+Code tokenize:   8%|▊         | 851/10927 [00:00<00:02, 3743.95doc/s]
+Code tokenize:  11%|█▏        | 1233/10927 [00:00<00:02, 3769.42doc/s]
+Code tokenize:  15%|█▌        | 1661/10927 [00:00<00:02, 3961.98doc/s]
+Code tokenize:  19%|█▉        | 2060/10927 [00:00<00:02, 3056.36doc/s]
+Code tokenize:  22%|██▏       | 2422/10927 [00:00<00:02, 3208.46doc/s]
+Code tokenize:  27%|██▋       | 2966/10927 [00:00<00:02, 3841.34doc/s]
+Code tokenize:  31%|███▏      | 3417/10927 [00:00<00:01, 4032.25doc/s]
+Code tokenize:  36%|███▌      | 3951/10927 [00:01<00:02, 3342.43doc/s]
+Code tokenize:  41%|████      | 4470/10927 [00:01<00:01, 3780.33doc/s]
+Code tokenize:  46%|████▌     | 5026/10927 [00:01<00:01, 4233.48doc/s]
+Code tokenize:  51%|█████▏    | 5626/10927 [00:01<00:01, 4699.71doc/s]
+Code tokenize:  56%|█████▌    | 6127/10927 [00:01<00:01, 3742.95doc/s]
+Code tokenize:  61%|██████    | 6679/10927 [00:01<00:01, 4157.94doc/s]
+Code tokenize:  67%|██████▋   | 7303/10927 [00:01<00:00, 4674.98doc/s]
+Code tokenize:  72%|███████▏  | 7813/10927 [00:01<00:00, 4377.13doc/s]
+Code tokenize:  76%|███████▌  | 8283/10927 [00:02<00:00, 2983.25doc/s]
+Code tokenize:  81%|████████▏ | 8902/10927 [00:02<00:00, 3613.85doc/s]
+Code tokenize:  87%|████████▋ | 9494/10927 [00:02<00:00, 4118.55doc/s]
+Code tokenize:  91%|█████████▏| 9986/10927 [00:03<00:00, 1669.69doc/s]
+Code tokenize:  99%|█████████▉| 10836/10927 [00:03<00:00, 2466.35doc/s]
+                                                                       
+2026-09-10 20:11:24,018 INFO retropus.retrievers.bm25: BM25: building index over 10927 documents
+2026-09-10 20:11:24,018 DEBUG bm25s: Building index from tokens
+
+BM25S Create Vocab:   0%|          | 0/10927 [00:00<?, ?it/s]
+                                                             
+
+BM25S Convert tokens to indices:   0%|          | 0/10927 [00:00<?, ?it/s]
+BM25S Convert tokens to indices:  84%|████████▍ | 9196/10927 [00:00<00:00, 91946.28it/s]
+                                                                                        
+
+BM25S Count Tokens:   0%|          | 0/10927 [00:00<?, ?it/s]
+BM25S Count Tokens:  69%|██████▉   | 7515/10927 [00:00<00:00, 75138.96it/s]
+                                                                           
+
+BM25S Compute Scores:   0%|          | 0/10927 [00:00<?, ?it/s]
+BM25S Compute Scores:  33%|███▎      | 3595/10927 [00:00<00:00, 35932.90it/s]
+BM25S Compute Scores:  68%|██████▊   | 7403/10927 [00:00<00:00, 37191.08it/s]
+                                                                             
+2026-09-10 20:11:24,819 INFO retropus.retrievers.bm25: BM25: index ready (10927 docs, tokenizer=code-aware, workers=1, 5.1s)
+2026-09-10 20:11:24,863 INFO retropus.graph.knowledge_graph: KG: dumped to /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Poly/huggingface__transformers-7078.index/kg.pkl
+2026-09-10 20:11:24,869 INFO retropus.retrievers.bm25: BM25: dumped index to /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Poly/huggingface__transformers-7078.index/bm25
+2026-09-10 20:11:24,869 INFO retropus.index: Dumped index to /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Poly/huggingface__transformers-7078.index in 0.0s
+OK: huggingface__transformers-7078 patch_lines=13 tests_passed=True runtime=408.4s -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Poly/huggingface__transformers-7078.json

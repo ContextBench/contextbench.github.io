@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-12",
+  "model": "Resopus + DeepSeek-V4-Pro",
+  "system_type": "agent",
+  "submitter": {
+    "name": "Andre Melo",
+    "organization": "Huawei",
+    "github": "https://github.com/andeolmelo"
+  },
+  "evaluation": {
+    "dataset": "HuggingFace Contextbench/ContextBench config contextbench_verified (500 Lite tasks); local task list data/shuffled_500_instances.csv (same 500 IDs, shuffled order); gold from data/full.parquet",
+    "dataset_revision": "1436c28a8eb95496da4ea69ad458b9f8a8eb7d61",
+    "split": "Lite 500 (Verified 174 + Multi 156 + Poly 116 + Pro 54); same instance set as Lite / contextbench_verified",
+    "instance_count": 500,
+    "evaluator_commit": "1436c28a8eb95496da4ea69ad458b9f8a8eb7d61",
+    "command": "python -m contextbench.evaluate --gold data/full.parquet --pred submissions/2026-09-12_resopus/logs/epimetheus_Shuffled_pred.jsonl --cache ./repos --out submissions/2026-09-12_resopus/logs/epimetheus_Shuffled_eval.jsonl"
+  }
+}

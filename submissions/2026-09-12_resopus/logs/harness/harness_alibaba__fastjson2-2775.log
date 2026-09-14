@@ -1,0 +1,96 @@
+[04:17:28] Retrieval eval: alibaba__fastjson2-2775
+  Setting up repository
+  Warning: repo_url mismatch; overriding with /home/andre/workspace/ContextBench/repos/github.com__alibaba__fastjson2
+  Repo: /home/andre/workspace/ContextBench/repos/github.com__alibaba__fastjson2
+  Commit: 12b40c7ba3e7...
+  Checkout ready: /home/andre/workspace/ContextBench/repos/_worktrees/contextbench_worktrees/__home__andre__workspace__ContextBench__repos__github.com__alibaba__fastjson2/12b40c7ba3e7c30e35977195770c80beb34715c5
+  Parsing trajectory
+  Extracted: 18 steps, final has 6 files
+DETAILS:
+instance_id=alibaba__fastjson2-2775
+  gold_files: n=1
+    - core/src/main/java/com/alibaba/fastjson2/JSON.java
+  pred_files: n=6
+    - core/src/main/java/com/alibaba/fastjson2/JSON.java
+    - core/src/main/java/com/alibaba/fastjson2/JSONB.java
+    - core/src/main/java/com/alibaba/fastjson2/JSONReader.java
+    - fastjson1-compatible/src/main/java/com/alibaba/fastjson/JSON.java
+    - mvnw
+    - pom.xml
+  hit_files: n=1
+    - core/src/main/java/com/alibaba/fastjson2/JSON.java
+  gold_symbols: n=3
+    - core/src/main/java/com/alibaba/fastjson2/JSON.java:interface_declaration@1285-171016
+    - core/src/main/java/com/alibaba/fastjson2/JSON.java:method_declaration@36739-38012
+    - core/src/main/java/com/alibaba/fastjson2/JSON.java:method_declaration@38373-39347
+  pred_symbols: n=29
+    - core/src/main/java/com/alibaba/fastjson2/JSON.java:interface_declaration@1285-171016
+    - core/src/main/java/com/alibaba/fastjson2/JSON.java:method_declaration@17845-18614
+    - core/src/main/java/com/alibaba/fastjson2/JSON.java:method_declaration@19075-19789
+    - core/src/main/java/com/alibaba/fastjson2/JSON.java:method_declaration@20195-20978
+    - core/src/main/java/com/alibaba/fastjson2/JSON.java:method_declaration@38373-39347
+    - core/src/main/java/com/alibaba/fastjson2/JSON.java:method_declaration@39729-40521
+    - core/src/main/java/com/alibaba/fastjson2/JSON.java:method_declaration@40946-41062
+    - core/src/main/java/com/alibaba/fastjson2/JSON.java:method_declaration@41487-42482
+    - core/src/main/java/com/alibaba/fastjson2/JSON.java:method_declaration@42971-44043
+    - core/src/main/java/com/alibaba/fastjson2/JSON.java:method_declaration@44467-45403
+    - core/src/main/java/com/alibaba/fastjson2/JSON.java:method_declaration@50197-51014
+    - core/src/main/java/com/alibaba/fastjson2/JSON.java:method_declaration@51494-52334
+    - core/src/main/java/com/alibaba/fastjson2/JSON.java:method_declaration@52797-53737
+    - core/src/main/java/com/alibaba/fastjson2/JSONB.java:interface_declaration@2667-52538
+    - core/src/main/java/com/alibaba/fastjson2/JSONB.java:method_declaration@23078-23321
+    - core/src/main/java/com/alibaba/fastjson2/JSONB.java:method_declaration@23364-24072
+    - core/src/main/java/com/alibaba/fastjson2/JSONB.java:method_declaration@26805-28244
+    - core/src/main/java/com/alibaba/fastjson2/JSONB.java:method_declaration@28250-29542
+    - core/src/main/java/com/alibaba/fastjson2/JSONB.java:method_declaration@29548-30402
+    - core/src/main/java/com/alibaba/fastjson2/JSONReader.java:class_declaration@1106-161085
+    - core/src/main/java/com/alibaba/fastjson2/JSONReader.java:class_declaration@132201-148197
+    - core/src/main/java/com/alibaba/fastjson2/JSONReader.java:method_declaration@138882-138960
+    - core/src/main/java/com/alibaba/fastjson2/JSONReader.java:method_declaration@138970-139167
+    - core/src/main/java/com/alibaba/fastjson2/JSONReader.java:method_declaration@139177-139259
+    - core/src/main/java/com/alibaba/fastjson2/JSONReader.java:method_declaration@139269-139394
+    - fastjson1-compatible/src/main/java/com/alibaba/fastjson/JSON.java:class_declaration@1494-90580
+    - fastjson1-compatible/src/main/java/com/alibaba/fastjson/JSON.java:method_declaration@29351-30441
+    - fastjson1-compatible/src/main/java/com/alibaba/fastjson/JSON.java:method_declaration@30447-31350
+    - fastjson1-compatible/src/main/java/com/alibaba/fastjson/JSON.java:method_declaration@31356-32566
+  hit_symbols: n=2
+    - core/src/main/java/com/alibaba/fastjson2/JSON.java:interface_declaration@1285-171016
+    - core/src/main/java/com/alibaba/fastjson2/JSON.java:method_declaration@38373-39347
+
+[04:17:29] Retrieval alibaba__fastjson2-2775: line_f1=0.105
+
+# Harness overwritten from harness_rerun_17.log (failed first-pass resolution dropped)
+[14:56:23] Resolution eval (pending=16, workers=4): /home/andre/workspace/ContextBench/agent-frameworks/epimetheus/.venv/bin/python /home/andre/workspace/ContextBench/scripts/run_resolution_eval.py --input-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Multi --bench Multi --model-name epimetheus__Multi --run-id epimetheus_Multi --predictions /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution_preds.jsonl --report-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet --instance-ids cli__cli-8632,mui__material-ui-30374,mui__material-ui-34437,vuejs__core-10004,facebook__zstd-2094,sveltejs__svelte-13097,mui__material-ui-25149,clap-rs__clap-4474,fasterxml__jackson-core-1016,ponylang__ponyc-2168,facebook__zstd-1390,alibaba__fastjson2-2775,sveltejs__svelte-14629,ponylang__ponyc-3973,fmtlib__fmt-2394,cli__cli-5537 --max-workers 4
+[14:56:23] WARNING: duplicate instance_id alibaba__fastjson2-2775 (alibaba__fastjson2-2775.json); keeping first.
+Building images:  48%|████▊     | 13/27 [14:51<21:16, 91.17s/it] [2026-09-11 15:11:25,429] [run_evaluation.py] [INFO]: Building image mswebench/alibaba_m_fastjson2:pr-2775...
+Building images:  89%|████████▉ | 24/27 [22:39<03:03, 61.21s/it][2026-09-11 15:21:07,317] [run_evaluation.py] [INFO]: Image mswebench/alibaba_m_fastjson2:pr-2775 built successfully.
+
+Building images:  93%|█████████▎| 25/27 [24:33<02:32, 76.07s/it][2026-09-11 15:21:15,220] [run_evaluation.py] [INFO]: Image mswebench/mui_m_material-ui:pr-34437 built successfully.
+
+Building images:  96%|█████████▋| 26/27 [24:41<00:56, 56.45s/it][2026-09-11 15:27:13,454] [run_evaluation.py] [INFO]: Image mswebench/vuejs_m_core:pr-10004 built successfully.
+
+Building images: 100%|██████████| 27/27 [30:39<00:00, 144.37s/it]
+Building images: 100%|██████████| 27/27 [30:39<00:00, 68.12s/it] 
+[2026-09-11 15:27:13,490] [run_evaluation.py] [INFO]: Running mswebench/alibaba_m_fastjson2:pr-2775 with command: bash /home/fix-run.sh...
+[16:11:10]   Resolved IDs      : vuejs__core-10004, sveltejs__svelte-13097, fmtlib__fmt-2394, facebook__zstd-1390, cli__cli-8632, clap-rs__clap-4474, alibaba__fastjson2-2775, mui__material-ui-30374, mui__material-ui-34437
+[16:11:10]   Resolved IDs            : cli__cli-8632, mui__material-ui-30374, mui__material-ui-34437, vuejs__core-10004, sveltejs__svelte-13097, clap-rs__clap-4474, facebook__zstd-1390, alibaba__fastjson2-2775, fmtlib__fmt-2394
+[16:12:14] === Issue resolution summary (aggregated) ===
+[16:12:14]   Agent instances         : 17
+[16:12:14]   Empty patches (skipped) : 0
+[16:12:14]   With patch              : 17
+[16:12:14]   Harness scored          : 17
+[16:12:14]   Harness infra errors    : 0
+[16:12:14]   Harness pending         : 0
+[16:12:14]   Resolved                : 10
+[16:12:14]   Resolved rate           : 10/17 = 58.8% (of harness-scored)
+[16:12:14]   Resolved rate           : 10/17 = 58.8% (of agent instances; empty patch = unresolved)
+[16:12:14]   Resolved IDs            : cli__cli-8632, mui__material-ui-30374, mui__material-ui-34437, vuejs__core-10004, sveltejs__svelte-13097, clap-rs__clap-4474, facebook__zstd-1390, alibaba__fastjson2-2775, sveltejs__svelte-3403, fmtlib__fmt-2394
+[16:12:14] Done.
+===== harness exit=0 2026-09-11T16:12:14+01:00; rebuilding shuffled jsonl from natives =====
+native Verified: 174
+native Multi: 152
+native Poly: 116
+native Pro: 54
+wrote epimetheus_Shuffled_resolution.jsonl: 496 rows resolved=300 infra=1 empty_skip=4
+[16:12:14] Wrote 500 pred record(s) -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Shuffled_pred.jsonl
+restored shuffled pred: 500

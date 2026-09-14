@@ -1,0 +1,205 @@
+[23:09:29] Retrieval eval: cli__cli-513
+  Setting up repository
+  Warning: repo_url mismatch; overriding with /home/andre/workspace/ContextBench/repos/github.com__cli__cli
+  Repo: /home/andre/workspace/ContextBench/repos/github.com__cli__cli
+  Commit: cc96ddd5514c...
+  Checkout ready: /home/andre/workspace/ContextBench/repos/_worktrees/contextbench_worktrees/__home__andre__workspace__ContextBench__repos__github.com__cli__cli/cc96ddd5514c04ee90fff11c840aad68af9fada3
+  Parsing trajectory
+  Extracted: 24 steps, final has 7 files
+DETAILS:
+instance_id=cli__cli-513
+  gold_files: n=1
+    - command/pr.go
+  pred_files: n=7
+    - README.md
+    - api/queries_pr.go
+    - command/issue.go
+    - command/pr.go
+    - command/pr_test.go
+    - source.md
+    - test/helpers.go
+  hit_files: n=1
+    - command/pr.go
+  gold_symbols: n=13
+    - command/pr.go:function_declaration@10967-11042
+    - command/pr.go:function_declaration@11044-11120
+    - command/pr.go:function_declaration@11122-11259
+    - command/pr.go:function_declaration@11261-11466
+    - command/pr.go:function_declaration@1863-3435
+    - command/pr.go:function_declaration@275-944
+    - command/pr.go:function_declaration@3437-5756
+    - command/pr.go:function_declaration@5758-5969
+    - command/pr.go:function_declaration@5971-7192
+    - command/pr.go:function_declaration@7194-7762
+    - command/pr.go:function_declaration@7849-8292
+    - command/pr.go:function_declaration@8294-9610
+    - command/pr.go:function_declaration@9612-10965
+  pred_symbols: n=24
+    - api/queries_pr.go:function_declaration@12267-12329
+    - api/queries_pr.go:function_declaration@8295-8987
+    - api/queries_pr.go:function_declaration@8989-12265
+    - api/queries_pr.go:method_declaration@1050-1223
+    - api/queries_pr.go:type_declaration@1012-1048
+    - api/queries_pr.go:type_declaration@1225-1333
+    - api/queries_pr.go:type_declaration@233-319
+    - api/queries_pr.go:type_declaration@321-1010
+    - api/queries_pr.go:type_declaration@82-231
+    - api/queries_pr.go:type_declaration@9092-9225
+    - api/queries_pr.go:type_declaration@9227-9319
+    - command/issue.go:function_declaration@2130-3858
+    - command/issue.go:function_declaration@3860-5288
+    - command/pr.go:function_declaration@1863-3435
+    - command/pr.go:function_declaration@275-944
+    - command/pr.go:function_declaration@3437-5756
+    - command/pr.go:function_declaration@5758-5969
+    - command/pr.go:function_declaration@5971-7192
+    - command/pr_test.go:function_declaration@3498-3950
+    - command/pr_test.go:function_declaration@3952-4743
+    - command/pr_test.go:function_declaration@4745-5405
+    - command/pr_test.go:function_declaration@5407-5828
+    - command/pr_test.go:function_declaration@5830-6750
+    - command/pr_test.go:function_declaration@6752-7800
+  hit_symbols: n=5
+    - command/pr.go:function_declaration@1863-3435
+    - command/pr.go:function_declaration@275-944
+    - command/pr.go:function_declaration@3437-5756
+    - command/pr.go:function_declaration@5758-5969
+    - command/pr.go:function_declaration@5971-7192
+
+[23:09:29] Retrieval cli__cli-513: line_f1=0.378
+[23:09:29] Resolution resume: 0 harness-scored, 1 pending (stable run_id=epimetheus_Multi)
+[23:09:29] Resolution eval (pending=1): /home/andre/workspace/ContextBench/agent-frameworks/epimetheus/.venv/bin/python /home/andre/workspace/ContextBench/scripts/run_resolution_eval.py --input-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Multi --bench Multi --model-name epimetheus__Multi --run-id epimetheus_Multi --predictions /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution_preds.jsonl --report-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet --instance-ids cli__cli-513 --max-workers 1
+[23:09:29] === Step 1/2: Build SWE-bench predictions ===
+[23:09:29]   Input dir   : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Multi
+[23:09:29] WARNING: duplicate instance_id axios__axios-5661 (axios__axios-5661.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id clap-rs__clap-2501 (clap-rs__clap-2501.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id clap-rs__clap-2534 (clap-rs__clap-2534.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id clap-rs__clap-2758 (clap-rs__clap-2758.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id clap-rs__clap-2895 (clap-rs__clap-2895.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id clap-rs__clap-3421 (clap-rs__clap-3421.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id clap-rs__clap-3684 (clap-rs__clap-3684.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id clap-rs__clap-3975 (clap-rs__clap-3975.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id cli__cli-1457 (cli__cli-1457.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id cli__cli-2250 (cli__cli-2250.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id cli__cli-2351 (cli__cli-2351.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id cli__cli-2466 (cli__cli-2466.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id cli__cli-2785 (cli__cli-2785.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id cli__cli-3270 (cli__cli-3270.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id cli__cli-3608 (cli__cli-3608.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id cli__cli-3982 (cli__cli-3982.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id cli__cli-5019 (cli__cli-5019.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id cli__cli-513 (cli__cli-513.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id cli__cli-5396 (cli__cli-5396.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id cli__cli-7645 (cli__cli-7645.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id cli__cli-8157 (cli__cli-8157.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id expressjs__express-3870 (expressjs__express-3870.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id facebook__zstd-1243 (facebook__zstd-1243.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id facebook__zstd-1532 (facebook__zstd-1532.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id facebook__zstd-637 (facebook__zstd-637.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id fasterxml__jackson-core-1016 (fasterxml__jackson-core-1016.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id fasterxml__jackson-core-183 (fasterxml__jackson-core-183.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id fasterxml__jackson-databind-3701 (fasterxml__jackson-databind-3701.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id fasterxml__jackson-databind-4050 (fasterxml__jackson-databind-4050.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id fasterxml__jackson-databind-4469 (fasterxml__jackson-databind-4469.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id fasterxml__jackson-databind-4641 (fasterxml__jackson-databind-4641.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id fasterxml__jackson-dataformat-xml-638 (fasterxml__jackson-dataformat-xml-638.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id google__gson-1391 (google__gson-1391.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id iamkun__dayjs-1611 (iamkun__dayjs-1611.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id iamkun__dayjs-882 (iamkun__dayjs-882.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id iamkun__dayjs-938 (iamkun__dayjs-938.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id jqlang__jq-2654 (jqlang__jq-2654.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id jqlang__jq-2919 (jqlang__jq-2919.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id mui__material-ui-29898 (mui__material-ui-29898.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id mui__material-ui-30374 (mui__material-ui-30374.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id mui__material-ui-34159 (mui__material-ui-34159.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id mui__material-ui-34337 (mui__material-ui-34337.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id mui__material-ui-34401 (mui__material-ui-34401.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id mui__material-ui-34437 (mui__material-ui-34437.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id mui__material-ui-39108 (mui__material-ui-39108.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id mui__material-ui-39196 (mui__material-ui-39196.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id nlohmann__json-2989 (nlohmann__json-2989.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id nlohmann__json-4512 (nlohmann__json-4512.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id nushell__nushell-13357 (nushell__nushell-13357.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id ponylang__ponyc-2168 (ponylang__ponyc-2168.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id ponylang__ponyc-2201 (ponylang__ponyc-2201.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id ponylang__ponyc-2247 (ponylang__ponyc-2247.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id ponylang__ponyc-2586 (ponylang__ponyc-2586.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id ponylang__ponyc-4595 (ponylang__ponyc-4595.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id rayon-rs__rayon-986 (rayon-rs__rayon-986.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id simdjson__simdjson-1695 (simdjson__simdjson-1695.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id sveltejs__svelte-10608 (sveltejs__svelte-10608.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id sveltejs__svelte-11913 (sveltejs__svelte-11913.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id sveltejs__svelte-12649 (sveltejs__svelte-12649.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id sveltejs__svelte-14629 (sveltejs__svelte-14629.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id sveltejs__svelte-14935 (sveltejs__svelte-14935.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id tokio-rs__tokio-4519 (tokio-rs__tokio-4519.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id vuejs__core-10027 (vuejs__core-10027.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id vuejs__core-11517 (vuejs__core-11517.json); keeping first.
+[23:09:29] WARNING: duplicate instance_id vuejs__core-9213 (vuejs__core-9213.json); keeping first.
+[23:09:29]   Wrote 65 prediction(s) -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution_preds.jsonl
+[23:09:29] === Step 2/2: Run resolution harness ===
+[23:09:29]   Backend     : Multi
+[23:09:29]   Dataset     : ByteDance-Seed/Multi-SWE-bench (split=train)
+[23:09:29]   Run id      : epimetheus_Multi
+[23:09:29]   Report dir  : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet
+
+Fetching 50 files:   0%|          | 0/50 [00:00<?, ?it/s]
+Fetching 50 files: 100%|██████████| 50/50 [00:00<00:00, 2941.64it/s]
+[23:09:39]   Running: /home/andre/workspace/ContextBench/.venvs/resolution/bin/python -m multi_swe_bench.harness.run_evaluation --config /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/multi_eval/epimetheus_Multi/config.json
+[2026-09-10 23:09:40,233] [run_evaluation.py] [INFO]: Initialize logger successfully.
+[2026-09-10 23:09:40,233] [run_evaluation.py] [INFO]: Building images...
+[2026-09-10 23:09:40,234] [run_evaluation.py] [INFO]: Loading repo commits...
+[2026-09-10 23:09:40,234] [run_evaluation.py] [INFO]: Creating instances...
+[2026-09-10 23:09:40,234] [run_evaluation.py] [INFO]: Loading datasets...
+[2026-09-10 23:09:40,244] [run_evaluation.py] [INFO]: Successfully loaded 1 valid datasets from ['/home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/multi_eval/epimetheus_Multi/dataset.jsonl']
+[2026-09-10 23:09:40,244] [run_evaluation.py] [INFO]: Successfully loaded 1 valid instances.
+
+Checking commit hashes:   0%|          | 0/1 [00:00<?, ?it/s]
+
+Checking commit hashes for cli/cli:   0%|          | 0/1 [00:00<?, ?it/s][A
+Checking commit hashes for cli/cli: 100%|██████████| 1/1 [00:00<00:00, 24105.20it/s]
+
+Checking commit hashes: 100%|██████████| 1/1 [00:00<00:00,  5.11it/s]
+Checking commit hashes: 100%|██████████| 1/1 [00:00<00:00,  5.11it/s]
+[2026-09-10 23:09:40,446] [run_evaluation.py] [INFO]: Total images: 2
+
+Building images:   0%|          | 0/2 [00:00<?, ?it/s]
+Building images: 100%|██████████| 2/2 [00:00<00:00, 36.33it/s]
+[2026-09-10 23:09:40,501] [run_evaluation.py] [INFO]: Images built successfully.
+[2026-09-10 23:09:40,502] [run_evaluation.py] [INFO]: Running instances...
+
+Running instances:   0%|          | 0/1 [00:00<?, ?it/s][2026-09-10 23:09:40,503] [run_evaluation.py] [INFO]: Running mswebench/cli_m_cli:pr-513 with command: bash /home/fix-run.sh...
+
+Running instances: 100%|██████████| 1/1 [00:04<00:00,  4.27s/it]
+Running instances: 100%|██████████| 1/1 [00:04<00:00,  4.27s/it]
+[2026-09-10 23:09:44,774] [run_evaluation.py] [INFO]: Instances run successfully.
+[2026-09-10 23:09:44,774] [run_evaluation.py] [INFO]: Running evaluation...
+[2026-09-10 23:09:44,775] [gen_report.py] [INFO]: Initialize logger successfully.
+[2026-09-10 23:09:44,775] [gen_report.py] [INFO]: Collecting report tasks...
+[2026-09-10 23:09:44,786] [gen_report.py] [INFO]: Successfully collected 65 tasks.
+[2026-09-10 23:09:44,786] [gen_report.py] [INFO]: Loading dataset...
+[2026-09-10 23:09:44,798] [gen_report.py] [INFO]: Successfully loaded 1 valid datasets from ['/home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/multi_eval/epimetheus_Multi/dataset.jsonl']
+
+Generating eval reports:   0%|          | 0/1 [00:00<?, ?it/s]
+Generating eval reports: 100%|██████████| 1/1 [00:00<00:00, 85.80it/s]
+[2026-09-10 23:09:44,811] [gen_report.py] [INFO]: Successfully generated 1 reports.
+
+Fetching 50 files:   0%|          | 0/50 [00:00<?, ?it/s]
+Fetching 50 files: 100%|██████████| 50/50 [00:00<00:00, 2369.90it/s]
+[23:09:46]   Multi report -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Multi.epimetheus_Multi.json
+[23:09:46] === Issue resolution summary ===
+[23:09:46]   Report            : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Multi.epimetheus_Multi.json
+[23:09:46]   Total (evaluated) : 1
+[23:09:46]   Submitted (preds) : 1
+[23:09:46]   Completed         : 1
+[23:09:46]   Resolved          : 1
+[23:09:46]   Unresolved        : 0
+[23:09:46]   Errored           : 0
+[23:09:46]   Empty patches     : 0
+[23:09:46]   Resolved rate     : 1/1 = 100.0% (of evaluated)
+[23:09:46]   Resolved IDs      : cli__cli-513
+[23:09:46] Done.
+[23:09:46]   Predictions : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution_preds.jsonl
+[23:09:46]   Report      : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Multi.epimetheus_Multi.json
+[23:09:46] Resolution scores -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution.jsonl
+[23:09:47] Deleted docker image: mswebench/cli_m_cli:pr-513

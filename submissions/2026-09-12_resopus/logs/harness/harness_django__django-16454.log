@@ -1,0 +1,131 @@
+[15:44:14] Retrieval eval: django__django-16454
+  Setting up repository
+  Warning: repo_url mismatch; overriding with /home/andre/workspace/ContextBench/repos/github.com__django__django
+  Repo: /home/andre/workspace/ContextBench/repos/github.com__django__django
+  Commit: 1250483ebf73...
+  Checkout ready: /home/andre/workspace/ContextBench/repos/_worktrees/contextbench_worktrees/__home__andre__workspace__ContextBench__repos__github.com__django__django/1250483ebf73f7a82ff820b94092c63ce4238264
+  Parsing trajectory
+  Extracted: 10 steps, final has 4 files
+DETAILS:
+instance_id=django__django-16454
+  gold_files: n=1
+    - django/core/management/base.py
+  pred_files: n=4
+    - django/core/management/base.py
+    - tests/user_commands/management/commands/subparser.py
+    - tests/user_commands/management/commands/subparser_required.py
+    - tests/user_commands/tests.py
+  hit_files: n=1
+    - django/core/management/base.py
+  gold_symbols: n=6
+    - django/core/management/base.py:class_definition@1273-2299
+    - django/core/management/base.py:function_definition@1524-1785
+    - django/core/management/base.py:function_definition@1791-2123
+    - django/core/management/base.py:function_definition@2129-2299
+    - django/core/management/base.py:function_definition@2302-2672
+    - django/core/management/base.py:function_definition@2675-3164
+  pred_symbols: n=24
+    - django/core/management/base.py:class_definition@1145-1270
+    - django/core/management/base.py:class_definition@1273-2299
+    - django/core/management/base.py:class_definition@492-1142
+    - django/core/management/base.py:class_definition@5003-21084
+    - django/core/management/base.py:function_definition@1013-1142
+    - django/core/management/base.py:function_definition@1524-1785
+    - django/core/management/base.py:function_definition@1791-2123
+    - django/core/management/base.py:function_definition@2129-2299
+    - django/core/management/base.py:function_definition@9715-12256
+    - tests/user_commands/management/commands/subparser.py:class_definition@54-348
+    - tests/user_commands/management/commands/subparser.py:function_definition@268-348
+    - tests/user_commands/management/commands/subparser.py:function_definition@86-262
+    - tests/user_commands/management/commands/subparser_required.py:class_definition@54-512
+    - tests/user_commands/management/commands/subparser_required.py:function_definition@432-512
+    - tests/user_commands/management/commands/subparser_required.py:function_definition@86-426
+    - tests/user_commands/tests.py:class_definition@16589-18116
+    - tests/user_commands/tests.py:class_definition@946-16586
+    - tests/user_commands/tests.py:function_definition@13985-14794
+    - tests/user_commands/tests.py:function_definition@14800-14963
+    - tests/user_commands/tests.py:function_definition@14969-15151
+    - tests/user_commands/tests.py:function_definition@15157-15385
+    - tests/user_commands/tests.py:function_definition@15391-15819
+    - tests/user_commands/tests.py:function_definition@15825-16292
+    - tests/user_commands/tests.py:function_definition@16298-16586
+  hit_symbols: n=4
+    - django/core/management/base.py:class_definition@1273-2299
+    - django/core/management/base.py:function_definition@1524-1785
+    - django/core/management/base.py:function_definition@1791-2123
+    - django/core/management/base.py:function_definition@2129-2299
+
+[15:44:14] Retrieval django__django-16454: line_f1=0.245
+[15:44:14] Resolution resume: 0 harness-scored, 1 pending (stable run_id=epimetheus_Verified)
+[15:44:14] Resolution eval: 1 pending; pull-if-missing → score → delete image (per instance)
+[15:44:14] Resolution [1/1] django__django-16454
+[15:44:14] Docker image already present: swebench/sweb.eval.x86_64.django_1776_django-16454:latest
+[15:44:14] Resolution eval: /home/andre/workspace/ContextBench/agent-frameworks/epimetheus/.venv/bin/python /home/andre/workspace/ContextBench/scripts/run_resolution_eval.py --input-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Verified --bench Verified --model-name epimetheus__Verified --run-id epimetheus_Verified --predictions /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Verified_resolution_preds.jsonl --report-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet --instance-ids django__django-16454 --max-workers 1
+[15:44:14] === Step 1/2: Build SWE-bench predictions ===
+[15:44:14]   Input dir   : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Verified
+[15:44:14] WARNING: duplicate instance_id django__django-11749 (django__django-11749.json); keeping first.
+[15:44:14] WARNING: duplicate instance_id django__django-14140 (django__django-14140.json); keeping first.
+[15:44:14] WARNING: duplicate instance_id django__django-16454 (django__django-16454.json); keeping first.
+[15:44:14]   Wrote 3 prediction(s) -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Verified_resolution_preds.jsonl
+[15:44:14] === Step 2/2: Run resolution harness ===
+[15:44:16]   Backend     : Verified
+[15:44:16]   Dataset     : princeton-nlp/SWE-bench_Verified (split=test)
+[15:44:16]   Run id      : epimetheus_Verified
+[15:44:16]   Report dir  : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet
+[15:44:17]   Running: /home/andre/workspace/ContextBench/.venvs/resolution/bin/python -m swebench.harness.run_evaluation --dataset_name princeton-nlp/SWE-bench_Verified --split test --predictions_path /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Verified_resolution_preds.jsonl --run_id epimetheus_Verified --max_workers 1 --timeout 1800 --report_dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet --cache_level env --instance_ids django__django-16454
+<frozen runpy>:128: RuntimeWarning: 'swebench.harness.run_evaluation' found in sys.modules after import of package 'swebench.harness', but prior to execution of 'swebench.harness.run_evaluation'; this may result in unpredictable behaviour
+2026-09-10 15:44:19,084 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-09-10 15:44:19,221 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/princeton-nlp/SWE-bench_Verified/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/README.md "HTTP/1.1 200 OK"
+2026-09-10 15:44:19,463 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-09-10 15:44:20,096 - httpx - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/princeton-nlp/SWE-bench_Verified/princeton-nlp/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-09-10 15:44:20,358 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/princeton-nlp/SWE-bench_Verified/revision/c104f840cc67f8b6eec6f759ebc8b2693d585d4a "HTTP/1.1 200 OK"
+2026-09-10 15:44:20,489 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/.huggingface.yaml "HTTP/1.1 404 Not Found"
+2026-09-10 15:44:20,801 - httpx - INFO - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=princeton-nlp/SWE-bench_Verified "HTTP/1.1 200 OK"
+2026-09-10 15:44:20,951 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/princeton-nlp/SWE-bench_Verified/tree/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/data?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-09-10 15:44:21,089 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/princeton-nlp/SWE-bench_Verified/tree/c104f840cc67f8b6eec6f759ebc8b2693d585d4a?recursive=false&expand=false "HTTP/1.1 200 OK"
+2026-09-10 15:44:21,309 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/dataset_infos.json "HTTP/1.1 404 Not Found"
+2026-09-10 15:44:21,591 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-09-10 15:44:21,781 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/princeton-nlp/SWE-bench_Verified/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/README.md "HTTP/1.1 200 OK"
+2026-09-10 15:44:22,079 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-09-10 15:44:22,436 - httpx - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/princeton-nlp/SWE-bench_Verified/princeton-nlp/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-09-10 15:44:22,747 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/.huggingface.yaml "HTTP/1.1 404 Not Found"
+2026-09-10 15:44:23,152 - httpx - INFO - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=princeton-nlp/SWE-bench_Verified "HTTP/1.1 200 OK"
+2026-09-10 15:44:23,360 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/dataset_infos.json "HTTP/1.1 404 Not Found"
+Found 1 existing instance images. Will reuse them.
+Running 1 instances...
+
+Evaluation:   0%|          | 0/1 [00:00<?, ?it/s, error=0, ✓=0, ✖=0]
+Evaluation:   0%|          | 0/1 [00:23<?, ?it/s, ✓=1, ✖=0, error=0]
+Evaluation: 100%|██████████| 1/1 [00:23<00:00, 23.77s/it, ✓=1, ✖=0, error=0]
+Evaluation: 100%|██████████| 1/1 [00:23<00:00, 23.77s/it, ✓=1, ✖=0, error=0]
+All instances run.
+Cleaning cached images...
+Removed 0 images.
+Total instances: 1
+Instances submitted: 1
+Instances completed: 1
+Instances incomplete: 0
+Instances resolved: 1
+Instances unresolved: 0
+Instances with empty patches: 0
+Instances with errors: 0
+Unstopped containers: 0
+Unremoved images: 1
+Report written to epimetheus__Verified.epimetheus_Verified.json
+[15:45:02] === Issue resolution summary ===
+[15:45:02]   Report            : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Verified.epimetheus_Verified.json
+[15:45:02]   Total (evaluated) : 1
+[15:45:02]   Submitted (preds) : 3
+[15:45:02]   Completed         : 1
+[15:45:02]   Resolved          : 1
+[15:45:02]   Unresolved        : 0
+[15:45:02]   Errored           : 0
+[15:45:02]   Empty patches     : 0
+[15:45:02]   Resolved rate     : 1/1 = 100.0% (of evaluated)
+[15:45:02]   Resolved IDs      : django__django-16454
+[15:45:02] Done.
+[15:45:02]   Predictions : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Verified_resolution_preds.jsonl
+[15:45:02]   Report      : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Verified.epimetheus_Verified.json
+[15:45:02] Keeping Docker image for django__django-16454 (first prefetch slots; restart cache)
+[15:45:02] Resolution scores -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Verified_resolution.jsonl
+[15:45:02] Keeping Docker images for django__django-16454 (first 3 prefetch slots)

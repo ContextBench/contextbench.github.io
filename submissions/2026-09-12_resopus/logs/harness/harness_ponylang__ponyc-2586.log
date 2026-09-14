@@ -1,0 +1,168 @@
+[17:24:28] Retrieval eval: ponylang__ponyc-2586
+  Setting up repository
+  Warning: repo_url mismatch; overriding with /home/andre/workspace/ContextBench/repos/github.com__ponylang__ponyc
+  Repo: /home/andre/workspace/ContextBench/repos/github.com__ponylang__ponyc
+  Commit: 3ed6c09a5f41...
+  Checkout ready: /home/andre/workspace/ContextBench/repos/_worktrees/contextbench_worktrees/__home__andre__workspace__ContextBench__repos__github.com__ponylang__ponyc/3ed6c09a5f410351cb0eb9eb545eae9114cbb065
+  Parsing trajectory
+  Extracted: 34 steps, final has 10 files
+DETAILS:
+instance_id=ponylang__ponyc-2586
+  gold_files: n=1
+    - src/libponyc/pass/sugar.c
+  pred_files: n=10
+    - CONTRIBUTING.md
+    - Dockerfile
+    - Makefile
+    - README.md
+    - src/libponyc/ast/ast.c
+    - src/libponyc/ast/parser.c
+    - src/libponyc/pass/flatten.c
+    - src/libponyc/pass/sugar.c
+    - test/libponyc/sugar.cc
+    - test/libponyc/util.cc
+  hit_files: n=1
+    - src/libponyc/pass/sugar.c
+  gold_symbols: n=5
+    - src/libponyc/pass/sugar.c:function_definition@2035-3029
+    - src/libponyc/pass/sugar.c:function_definition@3032-4822
+    - src/libponyc/pass/sugar.c:function_definition@4825-5100
+    - src/libponyc/pass/sugar.c:function_definition@5103-5660
+    - src/libponyc/pass/sugar.c:function_definition@5663-6328
+  pred_symbols: n=44
+    - src/libponyc/ast/ast.c:function_definition@28144-28322
+    - src/libponyc/ast/ast.c:function_definition@28324-28712
+    - src/libponyc/ast/ast.c:function_definition@28714-29323
+    - src/libponyc/pass/flatten.c:function_definition@2357-2782
+    - src/libponyc/pass/flatten.c:function_definition@2784-3118
+    - src/libponyc/pass/flatten.c:function_definition@3120-3328
+    - src/libponyc/pass/flatten.c:function_definition@3330-3878
+    - src/libponyc/pass/flatten.c:function_definition@3915-5389
+    - src/libponyc/pass/sugar.c:function_definition@1046-1529
+    - src/libponyc/pass/sugar.c:function_definition@1532-2032
+    - src/libponyc/pass/sugar.c:function_definition@2035-3029
+    - src/libponyc/pass/sugar.c:function_definition@24829-25305
+    - src/libponyc/pass/sugar.c:function_definition@25308-29410
+    - src/libponyc/pass/sugar.c:function_definition@3032-4822
+    - src/libponyc/pass/sugar.c:function_definition@457-1043
+    - src/libponyc/pass/sugar.c:function_definition@4825-5100
+    - src/libponyc/pass/sugar.c:function_definition@5103-5660
+    - src/libponyc/pass/sugar.c:function_definition@5663-6328
+    - src/libponyc/pass/sugar.c:function_definition@6331-6703
+    - src/libponyc/pass/sugar.c:function_definition@6706-7559
+    - src/libponyc/pass/sugar.c:function_definition@7562-7699
+    - src/libponyc/pass/sugar.c:function_definition@7763-7993
+    - src/libponyc/pass/sugar.c:function_definition@7996-8346
+    - test/libponyc/sugar.cc:class_specifier@257-292
+    - test/libponyc/sugar.cc:function_definition@1268-1612
+    - test/libponyc/sugar.cc:function_definition@1615-1946
+    - test/libponyc/sugar.cc:function_definition@1949-2200
+    - test/libponyc/sugar.cc:function_definition@2203-2443
+    - test/libponyc/sugar.cc:function_definition@2446-2733
+    - test/libponyc/sugar.cc:function_definition@2736-3074
+    - test/libponyc/sugar.cc:function_definition@296-534
+    - test/libponyc/sugar.cc:function_definition@3077-3416
+    - test/libponyc/sugar.cc:function_definition@3419-3750
+    - test/libponyc/sugar.cc:function_definition@3753-4077
+    - test/libponyc/sugar.cc:function_definition@537-919
+    - test/libponyc/sugar.cc:function_definition@922-1265
+    - test/libponyc/util.cc:function_definition@10394-10814
+    - test/libponyc/util.cc:function_definition@10817-10964
+    - test/libponyc/util.cc:function_definition@10967-11096
+    - test/libponyc/util.cc:function_definition@11099-11344
+    - test/libponyc/util.cc:function_definition@11347-11464
+    - test/libponyc/util.cc:function_definition@11467-11729
+    - test/libponyc/util.cc:function_definition@11732-11886
+    - test/libponyc/util.cc:function_definition@9273-10391
+  hit_symbols: n=5
+    - src/libponyc/pass/sugar.c:function_definition@2035-3029
+    - src/libponyc/pass/sugar.c:function_definition@3032-4822
+    - src/libponyc/pass/sugar.c:function_definition@4825-5100
+    - src/libponyc/pass/sugar.c:function_definition@5103-5660
+    - src/libponyc/pass/sugar.c:function_definition@5663-6328
+
+[17:24:28] Retrieval ponylang__ponyc-2586: line_f1=0.127
+[17:24:28] Resolution resume: 0 harness-scored, 1 pending (stable run_id=epimetheus_Multi)
+[17:24:28] Resolution eval (pending=1): /home/andre/workspace/ContextBench/agent-frameworks/epimetheus/.venv/bin/python /home/andre/workspace/ContextBench/scripts/run_resolution_eval.py --input-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Multi --bench Multi --model-name epimetheus__Multi --run-id epimetheus_Multi --predictions /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution_preds.jsonl --report-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet --instance-ids ponylang__ponyc-2586 --max-workers 1
+[17:24:28] === Step 1/2: Build SWE-bench predictions ===
+[17:24:28]   Input dir   : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Multi
+[17:24:28] WARNING: duplicate instance_id clap-rs__clap-2501 (clap-rs__clap-2501.json); keeping first.
+[17:24:28] WARNING: duplicate instance_id clap-rs__clap-3684 (clap-rs__clap-3684.json); keeping first.
+[17:24:28] WARNING: duplicate instance_id cli__cli-2250 (cli__cli-2250.json); keeping first.
+[17:24:28] WARNING: duplicate instance_id cli__cli-2785 (cli__cli-2785.json); keeping first.
+[17:24:28] WARNING: duplicate instance_id jqlang__jq-2654 (jqlang__jq-2654.json); keeping first.
+[17:24:28] WARNING: duplicate instance_id mui__material-ui-34401 (mui__material-ui-34401.json); keeping first.
+[17:24:28] WARNING: duplicate instance_id mui__material-ui-39196 (mui__material-ui-39196.json); keeping first.
+[17:24:28] WARNING: duplicate instance_id ponylang__ponyc-2247 (ponylang__ponyc-2247.json); keeping first.
+[17:24:28] WARNING: duplicate instance_id ponylang__ponyc-2586 (ponylang__ponyc-2586.json); keeping first.
+[17:24:28] WARNING: duplicate instance_id rayon-rs__rayon-986 (rayon-rs__rayon-986.json); keeping first.
+[17:24:28] WARNING: duplicate instance_id sveltejs__svelte-10608 (sveltejs__svelte-10608.json); keeping first.
+[17:24:28] WARNING: duplicate instance_id vuejs__core-9213 (vuejs__core-9213.json); keeping first.
+[17:24:28]   Wrote 12 prediction(s) -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution_preds.jsonl
+[17:24:28] === Step 2/2: Run resolution harness ===
+[17:24:28]   Backend     : Multi
+[17:24:28]   Dataset     : ByteDance-Seed/Multi-SWE-bench (split=train)
+[17:24:28]   Run id      : epimetheus_Multi
+[17:24:28]   Report dir  : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet
+
+Fetching 50 files:   0%|          | 0/50 [00:00<?, ?it/s]
+Fetching 50 files: 100%|██████████| 50/50 [00:00<00:00, 2702.06it/s]
+[17:24:42]   Running: /home/andre/workspace/ContextBench/.venvs/resolution/bin/python -m multi_swe_bench.harness.run_evaluation --config /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/multi_eval/epimetheus_Multi/config.json
+[2026-09-10 17:24:43,695] [run_evaluation.py] [INFO]: Initialize logger successfully.
+[2026-09-10 17:24:43,696] [run_evaluation.py] [INFO]: Building images...
+[2026-09-10 17:24:43,696] [run_evaluation.py] [INFO]: Loading repo commits...
+[2026-09-10 17:24:43,696] [run_evaluation.py] [INFO]: Creating instances...
+[2026-09-10 17:24:43,696] [run_evaluation.py] [INFO]: Loading datasets...
+[2026-09-10 17:24:43,819] [run_evaluation.py] [INFO]: Successfully loaded 1 valid datasets from ['/home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/multi_eval/epimetheus_Multi/dataset.jsonl']
+[2026-09-10 17:24:43,819] [run_evaluation.py] [INFO]: Successfully loaded 1 valid instances.
+
+Checking commit hashes:   0%|          | 0/1 [00:00<?, ?it/s]
+
+Checking commit hashes for ponylang/ponyc:   0%|          | 0/1 [00:00<?, ?it/s][A
+Checking commit hashes for ponylang/ponyc: 100%|██████████| 1/1 [00:00<00:00, 28149.69it/s]
+
+Checking commit hashes: 100%|██████████| 1/1 [00:00<00:00,  2.71it/s]
+Checking commit hashes: 100%|██████████| 1/1 [00:00<00:00,  2.71it/s]
+[2026-09-10 17:24:44,196] [run_evaluation.py] [INFO]: Total images: 2
+
+Building images:   0%|          | 0/2 [00:00<?, ?it/s]
+Building images: 100%|██████████| 2/2 [00:00<00:00, 23.88it/s]
+[2026-09-10 17:24:44,280] [run_evaluation.py] [INFO]: Images built successfully.
+[2026-09-10 17:24:44,280] [run_evaluation.py] [INFO]: Running instances...
+
+Running instances:   0%|          | 0/1 [00:00<?, ?it/s][2026-09-10 17:24:44,281] [run_evaluation.py] [INFO]: Running mswebench/ponylang_m_ponyc:pr-2586 with command: bash /home/fix-run.sh...
+
+Running instances: 100%|██████████| 1/1 [03:23<00:00, 203.56s/it]
+Running instances: 100%|██████████| 1/1 [03:23<00:00, 203.56s/it]
+[2026-09-10 17:28:07,845] [run_evaluation.py] [INFO]: Instances run successfully.
+[2026-09-10 17:28:07,846] [run_evaluation.py] [INFO]: Running evaluation...
+[2026-09-10 17:28:07,846] [gen_report.py] [INFO]: Initialize logger successfully.
+[2026-09-10 17:28:07,846] [gen_report.py] [INFO]: Collecting report tasks...
+[2026-09-10 17:28:07,850] [gen_report.py] [INFO]: Successfully collected 12 tasks.
+[2026-09-10 17:28:07,851] [gen_report.py] [INFO]: Loading dataset...
+[2026-09-10 17:28:07,974] [gen_report.py] [INFO]: Successfully loaded 1 valid datasets from ['/home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/multi_eval/epimetheus_Multi/dataset.jsonl']
+
+Generating eval reports:   0%|          | 0/1 [00:00<?, ?it/s]
+Generating eval reports: 100%|██████████| 1/1 [00:00<00:00,  9.28it/s]
+Generating eval reports: 100%|██████████| 1/1 [00:00<00:00,  9.26it/s]
+[2026-09-10 17:28:08,083] [gen_report.py] [INFO]: Successfully generated 1 reports.
+
+Fetching 50 files:   0%|          | 0/50 [00:00<?, ?it/s]
+Fetching 50 files: 100%|██████████| 50/50 [00:00<00:00, 2157.23it/s]
+[17:28:15]   Multi report -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Multi.epimetheus_Multi.json
+[17:28:15] === Issue resolution summary ===
+[17:28:15]   Report            : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Multi.epimetheus_Multi.json
+[17:28:15]   Total (evaluated) : 1
+[17:28:15]   Submitted (preds) : 1
+[17:28:15]   Completed         : 1
+[17:28:15]   Resolved          : 1
+[17:28:15]   Unresolved        : 0
+[17:28:15]   Errored           : 0
+[17:28:15]   Empty patches     : 0
+[17:28:15]   Resolved rate     : 1/1 = 100.0% (of evaluated)
+[17:28:15]   Resolved IDs      : ponylang__ponyc-2586
+[17:28:15] Done.
+[17:28:15]   Predictions : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution_preds.jsonl
+[17:28:15]   Report      : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Multi.epimetheus_Multi.json
+[17:28:15] Resolution scores -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution.jsonl
+[17:28:15] Deleted docker image: mswebench/ponylang_m_ponyc:pr-2586

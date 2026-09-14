@@ -1,0 +1,92 @@
+[16:09:05] Retrieval eval: huggingface__transformers-12981
+  Setting up repository
+  Warning: repo_url mismatch; overriding with /home/andre/workspace/ContextBench/repos/github.com__huggingface__transformers
+  Repo: /home/andre/workspace/ContextBench/repos/github.com__huggingface__transformers
+  Commit: 75b8990d9068...
+  Checkout ready: /home/andre/workspace/ContextBench/repos/_worktrees/contextbench_worktrees/__home__andre__workspace__ContextBench__repos__github.com__huggingface__transformers/75b8990d9068a2c6ef448c190f2595c17fbcb993
+  Parsing trajectory
+  Extracted: 6 steps, final has 1 files
+DETAILS:
+instance_id=huggingface__transformers-12981
+  gold_files: n=1
+    - src/transformers/trainer.py
+  pred_files: n=1
+    - src/transformers/trainer.py
+  hit_files: n=1
+    - src/transformers/trainer.py
+  gold_symbols: n=2
+    - src/transformers/trainer.py:class_definition@5470-126600
+    - src/transformers/trainer.py:function_definition@44259-66150
+  pred_symbols: n=2
+    - src/transformers/trainer.py:class_definition@5470-126600
+    - src/transformers/trainer.py:function_definition@44259-66150
+  hit_symbols: n=2
+    - src/transformers/trainer.py:class_definition@5470-126600
+    - src/transformers/trainer.py:function_definition@44259-66150
+
+[16:09:05] Retrieval huggingface__transformers-12981: line_f1=0.848
+[16:09:05] Resolution resume: 0 harness-scored, 1 pending (stable run_id=epimetheus_Poly)
+[16:09:05] Waiting for Docker prefetch Poly huggingface__transformers-12981
+[16:09:05] Docker prefetch Poly huggingface__transformers-12981: ghcr.io/timesler/swe-polybench.eval.x86_64.huggingface__transformers-12981:v1.1, ghcr.io/timesler/swe-polybench.eval.x86_64.huggingface__transformers-12981:latest
+[16:09:06] Docker image already present: ghcr.io/timesler/swe-polybench.eval.x86_64.huggingface__transformers-12981:v1.1
+[16:09:06] Docker image already present: ghcr.io/timesler/swe-polybench.eval.x86_64.huggingface__transformers-12981:latest
+[16:09:06] Resolution eval (pending=1): /home/andre/workspace/ContextBench/agent-frameworks/epimetheus/.venv/bin/python /home/andre/workspace/ContextBench/scripts/run_resolution_eval.py --input-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Poly --bench Poly --model-name epimetheus__Poly --run-id epimetheus_Poly --predictions /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Poly_resolution_preds.jsonl --report-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet --instance-ids huggingface__transformers-12981 --max-workers 1
+[16:09:06] === Step 1/2: Build SWE-bench predictions ===
+[16:09:06]   Input dir   : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Poly
+[16:09:06] WARNING: duplicate instance_id huggingface__transformers-12981 (huggingface__transformers-12981.json); keeping first.
+[16:09:06] WARNING: duplicate instance_id huggingface__transformers-22458 (huggingface__transformers-22458.json); keeping first.
+[16:09:06] WARNING: duplicate instance_id langchain-ai__langchain-4009 (langchain-ai__langchain-4009.json); keeping first.
+[16:09:06] WARNING: duplicate instance_id mui__material-ui-19849 (mui__material-ui-19849.json); keeping first.
+[16:09:06]   Wrote 5 prediction(s) -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Poly_resolution_preds.jsonl
+[16:09:06] === Step 2/2: Run resolution harness ===
+[16:09:06]   Backend     : Poly
+[16:09:06]   Dataset     : AmazonScience/SWE-PolyBench (split=test)
+[16:09:06]   Run id      : epimetheus_Poly
+[16:09:06]   Report dir  : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet
+[16:09:10]   Poly dataset subset : 1 instance(s)
+[16:09:10]   Running resilient Poly worker: /home/andre/workspace/ContextBench/.venvs/resolution/bin/python /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/poly_eval/epimetheus_Poly/_poly_worker.py /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/poly_eval/epimetheus_Poly/dataset_subset.csv /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/poly_eval/epimetheus_Poly/results /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/poly_eval/epimetheus_Poly/repos 1
+/home/andre/workspace/ContextBench/.venvs/resolution/lib/python3.12/site-packages/tree_sitter/__init__.py:36: FutureWarning: Language(path, name) is deprecated. Use Language(ptr, name) instead.
+  warn("{} is deprecated. Use {} instead.".format(old, new), FutureWarning)
+[poly-worker] evaluate huggingface__transformers-12981
+[poly-worker] using local prebuilt ghcr.io/timesler/swe-polybench.eval.x86_64.huggingface__transformers-12981:v1.1 -> polybench_python_huggingface__transformers-12981
+2026-09-10 16:09:12.544 | INFO     | poly_bench_evaluation.run_evaluation:evaluate_instance:130 - Successfully pulled pre-built image from GHCR: polybench_python_huggingface__transformers-12981
+2026-09-10 16:09:12.862 | INFO     | poly_bench_evaluation.run_evaluation:evaluate_instance:235 - docker running for huggingface__transformers-12981
+2026-09-10 16:10:47.975 | DEBUG    | poly_bench_evaluation.docker_utils:_cleanup:432 - Removed local image tag: polybench_python_huggingface__transformers-12981
+2026-09-10 16:10:47.989 | INFO     | poly_bench_evaluation.scoring:aggregate_logs:256 - Writing aggregated results to result.json
+Total resolved: 3/4
+Total pass rate: 75.00%
+
+Pass rate by language:
+Python: 1/1 (100.0%)
+
+Pass rate by task category:
+Bug Fix: 1/1 (100.0%)
+
+File retrieval metrics by language:
+          file_recall  file_precision  file_f1
+language                                      
+Python            1.0             1.0      1.0
+
+File retrieval metrics overall:
+file_recall       0.75
+file_precision    0.62
+file_f1           0.67
+[poly-worker] done failures=0
+[16:10:48]   Poly report -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Poly.epimetheus_Poly.json
+[16:10:48] === Issue resolution summary ===
+[16:10:48]   Report            : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Poly.epimetheus_Poly.json
+[16:10:48]   Total (evaluated) : 4
+[16:10:48]   Submitted (preds) : 1
+[16:10:48]   Completed         : 4
+[16:10:48]   Resolved          : 3
+[16:10:48]   Unresolved        : 1
+[16:10:48]   Errored           : 0
+[16:10:48]   Empty patches     : 3
+[16:10:48]   Resolved rate     : 3/4 = 75.0% (of evaluated)
+[16:10:48]   Resolved IDs      : huggingface__transformers-12981, mui__material-ui-19849, langchain-ai__langchain-4009
+[16:10:48] Done.
+[16:10:48]   Predictions : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Poly_resolution_preds.jsonl
+[16:10:48]   Report      : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Poly.epimetheus_Poly.json
+[16:10:48] Resolution scores -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Poly_resolution.jsonl
+[16:10:48] Deleted docker image: ghcr.io/timesler/swe-polybench.eval.x86_64.huggingface__transformers-12981:v1.1
+[16:10:51] Deleted docker image: ghcr.io/timesler/swe-polybench.eval.x86_64.huggingface__transformers-12981:latest

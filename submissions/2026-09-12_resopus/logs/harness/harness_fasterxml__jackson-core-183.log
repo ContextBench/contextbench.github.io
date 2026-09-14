@@ -1,0 +1,155 @@
+[18:44:06] Retrieval eval: fasterxml__jackson-core-183
+  Setting up repository
+  Warning: repo_url mismatch; overriding with /home/andre/workspace/ContextBench/repos/github.com__fasterxml__jackson-core
+  Repo: /home/andre/workspace/ContextBench/repos/github.com__fasterxml__jackson-core
+  Commit: ac6d8e22847c...
+  Checkout ready: /home/andre/workspace/ContextBench/repos/_worktrees/contextbench_worktrees/__home__andre__workspace__ContextBench__repos__github.com__fasterxml__jackson-core/ac6d8e22847c19b2695cbd7d1f418e07a9a3dbb2
+  Parsing trajectory
+  Extracted: 13 steps, final has 2 files
+DETAILS:
+instance_id=fasterxml__jackson-core-183
+  gold_files: n=1
+    - src/main/java/com/fasterxml/jackson/core/util/TextBuffer.java
+  pred_files: n=2
+    - src/main/java/com/fasterxml/jackson/core/util/TextBuffer.java
+    - src/test/java/com/fasterxml/jackson/core/util/TestTextBuffer.java
+  hit_files: n=1
+    - src/main/java/com/fasterxml/jackson/core/util/TextBuffer.java
+  gold_symbols: n=3
+    - src/main/java/com/fasterxml/jackson/core/util/TextBuffer.java:class_declaration@858-23080
+    - src/main/java/com/fasterxml/jackson/core/util/TextBuffer.java:method_declaration@8487-8762
+    - src/main/java/com/fasterxml/jackson/core/util/TextBuffer.java:method_declaration@8772-9295
+  pred_symbols: n=30
+    - src/main/java/com/fasterxml/jackson/core/util/TextBuffer.java:class_declaration@858-23080
+    - src/main/java/com/fasterxml/jackson/core/util/TextBuffer.java:constructor_declaration@3386-3469
+    - src/main/java/com/fasterxml/jackson/core/util/TextBuffer.java:method_declaration@11189-11380
+    - src/main/java/com/fasterxml/jackson/core/util/TextBuffer.java:method_declaration@11500-12243
+    - src/main/java/com/fasterxml/jackson/core/util/TextBuffer.java:method_declaration@14562-15758
+    - src/main/java/com/fasterxml/jackson/core/util/TextBuffer.java:method_declaration@15953-16597
+    - src/main/java/com/fasterxml/jackson/core/util/TextBuffer.java:method_declaration@16603-17169
+    - src/main/java/com/fasterxml/jackson/core/util/TextBuffer.java:method_declaration@17175-17234
+    - src/main/java/com/fasterxml/jackson/core/util/TextBuffer.java:method_declaration@17239-17300
+    - src/main/java/com/fasterxml/jackson/core/util/TextBuffer.java:method_declaration@17340-17825
+    - src/main/java/com/fasterxml/jackson/core/util/TextBuffer.java:method_declaration@21129-21844
+    - src/main/java/com/fasterxml/jackson/core/util/TextBuffer.java:method_declaration@21850-23018
+    - src/main/java/com/fasterxml/jackson/core/util/TextBuffer.java:method_declaration@23024-23078
+    - src/main/java/com/fasterxml/jackson/core/util/TextBuffer.java:method_declaration@3900-4412
+    - src/main/java/com/fasterxml/jackson/core/util/TextBuffer.java:method_declaration@4556-4928
+    - src/main/java/com/fasterxml/jackson/core/util/TextBuffer.java:method_declaration@5226-5691
+    - src/main/java/com/fasterxml/jackson/core/util/TextBuffer.java:method_declaration@5697-6232
+    - src/main/java/com/fasterxml/jackson/core/util/TextBuffer.java:method_declaration@6238-6533
+    - src/main/java/com/fasterxml/jackson/core/util/TextBuffer.java:method_declaration@6647-6881
+    - src/main/java/com/fasterxml/jackson/core/util/TextBuffer.java:method_declaration@6887-7358
+    - src/main/java/com/fasterxml/jackson/core/util/TextBuffer.java:method_declaration@7646-8028
+    - src/main/java/com/fasterxml/jackson/core/util/TextBuffer.java:method_declaration@8034-8335
+    - src/main/java/com/fasterxml/jackson/core/util/TextBuffer.java:method_declaration@8487-8762
+    - src/main/java/com/fasterxml/jackson/core/util/TextBuffer.java:method_declaration@8772-9295
+    - src/main/java/com/fasterxml/jackson/core/util/TextBuffer.java:method_declaration@9469-11182
+    - src/test/java/com/fasterxml/jackson/core/util/TestTextBuffer.java:class_declaration@149-2487
+    - src/test/java/com/fasterxml/jackson/core/util/TestTextBuffer.java:method_declaration@1126-2004
+    - src/test/java/com/fasterxml/jackson/core/util/TestTextBuffer.java:method_declaration@2032-2485
+    - src/test/java/com/fasterxml/jackson/core/util/TestTextBuffer.java:method_declaration@329-680
+    - src/test/java/com/fasterxml/jackson/core/util/TestTextBuffer.java:method_declaration@686-1118
+  hit_symbols: n=3
+    - src/main/java/com/fasterxml/jackson/core/util/TextBuffer.java:class_declaration@858-23080
+    - src/main/java/com/fasterxml/jackson/core/util/TextBuffer.java:method_declaration@8487-8762
+    - src/main/java/com/fasterxml/jackson/core/util/TextBuffer.java:method_declaration@8772-9295
+
+[18:44:06] Retrieval fasterxml__jackson-core-183: line_f1=0.059
+[18:44:06] Resolution resume: 0 harness-scored, 1 pending (stable run_id=epimetheus_Multi)
+[18:44:06] Resolution eval (pending=1): /home/andre/workspace/ContextBench/agent-frameworks/epimetheus/.venv/bin/python /home/andre/workspace/ContextBench/scripts/run_resolution_eval.py --input-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Multi --bench Multi --model-name epimetheus__Multi --run-id epimetheus_Multi --predictions /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution_preds.jsonl --report-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet --instance-ids fasterxml__jackson-core-183 --max-workers 1
+[18:44:06] === Step 1/2: Build SWE-bench predictions ===
+[18:44:06]   Input dir   : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Multi
+[18:44:06] WARNING: duplicate instance_id clap-rs__clap-2501 (clap-rs__clap-2501.json); keeping first.
+[18:44:06] WARNING: duplicate instance_id clap-rs__clap-2895 (clap-rs__clap-2895.json); keeping first.
+[18:44:06] WARNING: duplicate instance_id clap-rs__clap-3684 (clap-rs__clap-3684.json); keeping first.
+[18:44:06] WARNING: duplicate instance_id cli__cli-2250 (cli__cli-2250.json); keeping first.
+[18:44:06] WARNING: duplicate instance_id cli__cli-2785 (cli__cli-2785.json); keeping first.
+[18:44:06] WARNING: duplicate instance_id expressjs__express-3870 (expressjs__express-3870.json); keeping first.
+[18:44:06] WARNING: duplicate instance_id facebook__zstd-1243 (facebook__zstd-1243.json); keeping first.
+[18:44:06] WARNING: duplicate instance_id facebook__zstd-637 (facebook__zstd-637.json); keeping first.
+[18:44:06] WARNING: duplicate instance_id fasterxml__jackson-core-183 (fasterxml__jackson-core-183.json); keeping first.
+[18:44:06] WARNING: duplicate instance_id iamkun__dayjs-1611 (iamkun__dayjs-1611.json); keeping first.
+[18:44:06] WARNING: duplicate instance_id iamkun__dayjs-882 (iamkun__dayjs-882.json); keeping first.
+[18:44:06] WARNING: duplicate instance_id jqlang__jq-2654 (jqlang__jq-2654.json); keeping first.
+[18:44:06] WARNING: duplicate instance_id mui__material-ui-34401 (mui__material-ui-34401.json); keeping first.
+[18:44:06] WARNING: duplicate instance_id mui__material-ui-39108 (mui__material-ui-39108.json); keeping first.
+[18:44:06] WARNING: duplicate instance_id mui__material-ui-39196 (mui__material-ui-39196.json); keeping first.
+[18:44:06] WARNING: duplicate instance_id nlohmann__json-4512 (nlohmann__json-4512.json); keeping first.
+[18:44:06] WARNING: duplicate instance_id ponylang__ponyc-2201 (ponylang__ponyc-2201.json); keeping first.
+[18:44:06] WARNING: duplicate instance_id ponylang__ponyc-2247 (ponylang__ponyc-2247.json); keeping first.
+[18:44:06] WARNING: duplicate instance_id ponylang__ponyc-2586 (ponylang__ponyc-2586.json); keeping first.
+[18:44:06] WARNING: duplicate instance_id rayon-rs__rayon-986 (rayon-rs__rayon-986.json); keeping first.
+[18:44:06] WARNING: duplicate instance_id sveltejs__svelte-10608 (sveltejs__svelte-10608.json); keeping first.
+[18:44:06] WARNING: duplicate instance_id sveltejs__svelte-14935 (sveltejs__svelte-14935.json); keeping first.
+[18:44:06] WARNING: duplicate instance_id vuejs__core-10027 (vuejs__core-10027.json); keeping first.
+[18:44:06] WARNING: duplicate instance_id vuejs__core-9213 (vuejs__core-9213.json); keeping first.
+[18:44:06]   Wrote 24 prediction(s) -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution_preds.jsonl
+[18:44:06] === Step 2/2: Run resolution harness ===
+[18:44:06]   Backend     : Multi
+[18:44:06]   Dataset     : ByteDance-Seed/Multi-SWE-bench (split=train)
+[18:44:06]   Run id      : epimetheus_Multi
+[18:44:06]   Report dir  : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet
+
+Fetching 50 files:   0%|          | 0/50 [00:00<?, ?it/s]
+Fetching 50 files: 100%|██████████| 50/50 [00:00<00:00, 2826.69it/s]
+[18:44:14]   Running: /home/andre/workspace/ContextBench/.venvs/resolution/bin/python -m multi_swe_bench.harness.run_evaluation --config /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/multi_eval/epimetheus_Multi/config.json
+[2026-09-10 18:44:14,998] [run_evaluation.py] [INFO]: Initialize logger successfully.
+[2026-09-10 18:44:14,999] [run_evaluation.py] [INFO]: Building images...
+[2026-09-10 18:44:14,999] [run_evaluation.py] [INFO]: Loading repo commits...
+[2026-09-10 18:44:14,999] [run_evaluation.py] [INFO]: Creating instances...
+[2026-09-10 18:44:14,999] [run_evaluation.py] [INFO]: Loading datasets...
+[2026-09-10 18:44:15,003] [run_evaluation.py] [INFO]: Successfully loaded 1 valid datasets from ['/home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/multi_eval/epimetheus_Multi/dataset.jsonl']
+[2026-09-10 18:44:15,003] [run_evaluation.py] [INFO]: Successfully loaded 1 valid instances.
+
+Checking commit hashes:   0%|          | 0/1 [00:00<?, ?it/s][2026-09-10 18:44:15,008] [run_evaluation.py] [WARNING]: Repository not found: /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/multi_eval/epimetheus_Multi/repos/fasterxml/jackson-core
+Cloning into '/home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/multi_eval/epimetheus_Multi/repos/fasterxml/jackson-core'...
+
+
+Checking commit hashes for fasterxml/jackson-core:   0%|          | 0/1 [00:00<?, ?it/s][A
+Checking commit hashes for fasterxml/jackson-core: 100%|██████████| 1/1 [00:00<00:00, 39199.10it/s]
+
+Checking commit hashes: 100%|██████████| 1/1 [00:03<00:00,  4.00s/it]
+Checking commit hashes: 100%|██████████| 1/1 [00:03<00:00,  4.00s/it]
+[2026-09-10 18:44:19,005] [run_evaluation.py] [INFO]: Total images: 2
+
+Building images:   0%|          | 0/2 [00:00<?, ?it/s]
+Building images: 100%|██████████| 2/2 [00:00<00:00, 51.74it/s]
+[2026-09-10 18:44:19,044] [run_evaluation.py] [INFO]: Images built successfully.
+[2026-09-10 18:44:19,044] [run_evaluation.py] [INFO]: Running instances...
+
+Running instances:   0%|          | 0/1 [00:00<?, ?it/s][2026-09-10 18:44:19,045] [run_evaluation.py] [INFO]: Running mswebench/fasterxml_m_jackson-core:pr-183 with command: bash /home/fix-run.sh...
+
+Running instances: 100%|██████████| 1/1 [00:06<00:00,  6.89s/it]
+Running instances: 100%|██████████| 1/1 [00:06<00:00,  6.89s/it]
+[2026-09-10 18:44:25,935] [run_evaluation.py] [INFO]: Instances run successfully.
+[2026-09-10 18:44:25,935] [run_evaluation.py] [INFO]: Running evaluation...
+[2026-09-10 18:44:25,936] [gen_report.py] [INFO]: Initialize logger successfully.
+[2026-09-10 18:44:25,936] [gen_report.py] [INFO]: Collecting report tasks...
+[2026-09-10 18:44:25,940] [gen_report.py] [INFO]: Successfully collected 24 tasks.
+[2026-09-10 18:44:25,940] [gen_report.py] [INFO]: Loading dataset...
+[2026-09-10 18:44:25,943] [gen_report.py] [INFO]: Successfully loaded 1 valid datasets from ['/home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/multi_eval/epimetheus_Multi/dataset.jsonl']
+
+Generating eval reports:   0%|          | 0/1 [00:00<?, ?it/s]
+Generating eval reports: 100%|██████████| 1/1 [00:00<00:00, 189.40it/s]
+[2026-09-10 18:44:25,949] [gen_report.py] [INFO]: Successfully generated 1 reports.
+
+Fetching 50 files:   0%|          | 0/50 [00:00<?, ?it/s]
+Fetching 50 files: 100%|██████████| 50/50 [00:00<00:00, 3406.74it/s]
+[18:44:27]   Multi report -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Multi.epimetheus_Multi.json
+[18:44:27] === Issue resolution summary ===
+[18:44:27]   Report            : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Multi.epimetheus_Multi.json
+[18:44:27]   Total (evaluated) : 1
+[18:44:27]   Submitted (preds) : 1
+[18:44:27]   Completed         : 1
+[18:44:27]   Resolved          : 1
+[18:44:27]   Unresolved        : 0
+[18:44:27]   Errored           : 0
+[18:44:27]   Empty patches     : 0
+[18:44:27]   Resolved rate     : 1/1 = 100.0% (of evaluated)
+[18:44:27]   Resolved IDs      : fasterxml__jackson-core-183
+[18:44:27] Done.
+[18:44:27]   Predictions : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution_preds.jsonl
+[18:44:27]   Report      : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Multi.epimetheus_Multi.json
+[18:44:27] Resolution scores -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution.jsonl
+[18:44:27] Deleted docker image: mswebench/fasterxml_m_jackson-core:pr-183

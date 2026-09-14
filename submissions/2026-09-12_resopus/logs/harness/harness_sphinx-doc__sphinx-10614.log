@@ -1,0 +1,226 @@
+[00:00:02] Retrieval eval: sphinx-doc__sphinx-10614
+  Setting up repository
+  Warning: repo_url mismatch; overriding with /home/andre/workspace/ContextBench/repos/github.com__sphinx-doc__sphinx
+  Repo: /home/andre/workspace/ContextBench/repos/github.com__sphinx-doc__sphinx
+  Commit: ac2b7599d212...
+  Checkout ready: /home/andre/workspace/ContextBench/repos/_worktrees/contextbench_worktrees/__home__andre__workspace__ContextBench__repos__github.com__sphinx-doc__sphinx/ac2b7599d212af7d04649959ce6926c63c3133fa
+  Parsing trajectory
+  Extracted: 24 steps, final has 5 files
+DETAILS:
+instance_id=sphinx-doc__sphinx-10614
+  gold_files: n=4
+    - sphinx/ext/graphviz.py
+    - sphinx/ext/inheritance_diagram.py
+    - sphinx/ext/intersphinx.py
+    - sphinx/util/nodes.py
+  pred_files: n=5
+    - sphinx/builders/html/__init__.py
+    - sphinx/ext/graphviz.py
+    - sphinx/ext/inheritance_diagram.py
+    - tests/test_ext_graphviz.py
+    - tests/test_ext_inheritance_diagram.py
+  hit_files: n=2
+    - sphinx/ext/graphviz.py
+    - sphinx/ext/inheritance_diagram.py
+  gold_symbols: n=9
+    - sphinx/ext/graphviz.py:function_definition@7643-8723
+    - sphinx/ext/graphviz.py:function_definition@8726-11115
+    - sphinx/ext/inheritance_diagram.py:class_definition@11265-13679
+    - sphinx/ext/inheritance_diagram.py:class_definition@3590-11125
+    - sphinx/ext/inheritance_diagram.py:function_definition@11710-13679
+    - sphinx/ext/inheritance_diagram.py:function_definition@13873-15261
+    - sphinx/ext/inheritance_diagram.py:function_definition@9172-11125
+    - sphinx/ext/intersphinx.py:function_definition@10625-11968
+    - sphinx/util/nodes.py:function_definition@19944-20649
+  pred_symbols: n=38
+    - sphinx/builders/html/__init__.py:class_definition@6158-48054
+    - sphinx/builders/html/__init__.py:function_definition@36219-36503
+    - sphinx/builders/html/__init__.py:function_definition@36509-36622
+    - sphinx/builders/html/__init__.py:function_definition@36628-37961
+    - sphinx/builders/html/__init__.py:function_definition@37967-38879
+    - sphinx/ext/graphviz.py:class_definition@1271-1336
+    - sphinx/ext/graphviz.py:class_definition@1339-2817
+    - sphinx/ext/graphviz.py:class_definition@2820-2888
+    - sphinx/ext/graphviz.py:class_definition@3482-6107
+    - sphinx/ext/graphviz.py:class_definition@6110-7640
+    - sphinx/ext/graphviz.py:function_definition@11118-13637
+    - sphinx/ext/graphviz.py:function_definition@13640-13805
+    - sphinx/ext/graphviz.py:function_definition@13808-14874
+    - sphinx/ext/graphviz.py:function_definition@1519-1770
+    - sphinx/ext/graphviz.py:function_definition@1776-2489
+    - sphinx/ext/graphviz.py:function_definition@2495-2817
+    - sphinx/ext/graphviz.py:function_definition@2891-3371
+    - sphinx/ext/graphviz.py:function_definition@4043-6107
+    - sphinx/ext/graphviz.py:function_definition@6677-7640
+    - sphinx/ext/graphviz.py:function_definition@7643-8723
+    - sphinx/ext/graphviz.py:function_definition@8726-11115
+    - sphinx/ext/inheritance_diagram.py:class_definition@11128-11262
+    - sphinx/ext/inheritance_diagram.py:class_definition@3590-11125
+    - sphinx/ext/inheritance_diagram.py:function_definition@13682-13870
+    - sphinx/ext/inheritance_diagram.py:function_definition@13873-15261
+    - sphinx/ext/inheritance_diagram.py:function_definition@15264-15752
+    - sphinx/ext/inheritance_diagram.py:function_definition@3819-4674
+    - sphinx/ext/inheritance_diagram.py:function_definition@4680-4949
+    - sphinx/ext/inheritance_diagram.py:function_definition@4955-7388
+    - sphinx/ext/inheritance_diagram.py:function_definition@5993-7265
+    - sphinx/ext/inheritance_diagram.py:function_definition@7394-8146
+    - sphinx/ext/inheritance_diagram.py:function_definition@8152-8328
+    - sphinx/ext/inheritance_diagram.py:function_definition@8899-9028
+    - sphinx/ext/inheritance_diagram.py:function_definition@9034-9166
+    - sphinx/ext/inheritance_diagram.py:function_definition@9172-11125
+    - tests/test_ext_graphviz.py:function_definition@1657-3735
+    - tests/test_ext_inheritance_diagram.py:function_definition@5148-5807
+    - tests/test_ext_inheritance_diagram.py:function_definition@5989-6739
+  hit_symbols: n=5
+    - sphinx/ext/graphviz.py:function_definition@7643-8723
+    - sphinx/ext/graphviz.py:function_definition@8726-11115
+    - sphinx/ext/inheritance_diagram.py:class_definition@3590-11125
+    - sphinx/ext/inheritance_diagram.py:function_definition@13873-15261
+    - sphinx/ext/inheritance_diagram.py:function_definition@9172-11125
+
+[00:00:02] Retrieval sphinx-doc__sphinx-10614: line_f1=0.321
+[00:00:02] Resolution resume: 0 harness-scored, 1 pending (stable run_id=epimetheus_Verified)
+[00:00:02] Resolution eval: 1 pending; pull-if-missing → score → delete image (per instance)
+[00:00:02] Resolution [1/1] sphinx-doc__sphinx-10614
+[00:00:02] Docker image already present: swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-10614:latest
+[00:00:02] Resolution eval: /home/andre/workspace/ContextBench/agent-frameworks/epimetheus/.venv/bin/python /home/andre/workspace/ContextBench/scripts/run_resolution_eval.py --input-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Verified --bench Verified --model-name epimetheus__Verified --run-id epimetheus_Verified --predictions /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Verified_resolution_preds.jsonl --report-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet --instance-ids sphinx-doc__sphinx-10614 --max-workers 1
+[00:00:02] === Step 1/2: Build SWE-bench predictions ===
+[00:00:02]   Input dir   : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Verified
+[00:00:02] WARNING: duplicate instance_id astropy__astropy-13398 (astropy__astropy-13398.json); keeping first.
+[00:00:02] WARNING: duplicate instance_id astropy__astropy-14096 (astropy__astropy-14096.json); keeping first.
+[00:00:02] WARNING: duplicate instance_id astropy__astropy-14539 (astropy__astropy-14539.json); keeping first.
+[00:00:02] WARNING: duplicate instance_id django__django-10880 (django__django-10880.json); keeping first.
+[00:00:02] WARNING: duplicate instance_id django__django-11163 (django__django-11163.json); keeping first.
+[00:00:02] WARNING: duplicate instance_id django__django-11179 (django__django-11179.json); keeping first.
+[00:00:02] WARNING: duplicate instance_id django__django-11400 (django__django-11400.json); keeping first.
+[00:00:02] WARNING: duplicate instance_id django__django-11749 (django__django-11749.json); keeping first.
+[00:00:02] WARNING: duplicate instance_id django__django-11820 (django__django-11820.json); keeping first.
+[00:00:02] WARNING: duplicate instance_id django__django-12125 (django__django-12125.json); keeping first.
+[00:00:02] WARNING: duplicate instance_id django__django-12143 (django__django-12143.json); keeping first.
+[00:00:02] WARNING: duplicate instance_id django__django-12193 (django__django-12193.json); keeping first.
+[00:00:02] WARNING: duplicate instance_id django__django-12262 (django__django-12262.json); keeping first.
+[00:00:02] WARNING: duplicate instance_id django__django-12663 (django__django-12663.json); keeping first.
+[00:00:02] WARNING: duplicate instance_id django__django-12858 (django__django-12858.json); keeping first.
+[00:00:02] WARNING: duplicate instance_id django__django-13023 (django__django-13023.json); keeping first.
+[00:00:02] WARNING: duplicate instance_id django__django-13343 (django__django-13343.json); keeping first.
+[00:00:02] WARNING: duplicate instance_id django__django-13417 (django__django-13417.json); keeping first.
+[00:00:03] WARNING: duplicate instance_id django__django-14140 (django__django-14140.json); keeping first.
+[00:00:03] WARNING: duplicate instance_id django__django-14351 (django__django-14351.json); keeping first.
+[00:00:03] WARNING: duplicate instance_id django__django-14404 (django__django-14404.json); keeping first.
+[00:00:03] WARNING: duplicate instance_id django__django-14434 (django__django-14434.json); keeping first.
+[00:00:03] WARNING: duplicate instance_id django__django-14500 (django__django-14500.json); keeping first.
+[00:00:03] WARNING: duplicate instance_id django__django-14765 (django__django-14765.json); keeping first.
+[00:00:03] WARNING: duplicate instance_id django__django-15252 (django__django-15252.json); keeping first.
+[00:00:03] WARNING: duplicate instance_id django__django-15467 (django__django-15467.json); keeping first.
+[00:00:03] WARNING: duplicate instance_id django__django-15563 (django__django-15563.json); keeping first.
+[00:00:03] WARNING: duplicate instance_id django__django-15569 (django__django-15569.json); keeping first.
+[00:00:03] WARNING: duplicate instance_id django__django-15695 (django__django-15695.json); keeping first.
+[00:00:03] WARNING: duplicate instance_id django__django-15814 (django__django-15814.json); keeping first.
+[00:00:03] WARNING: duplicate instance_id django__django-15930 (django__django-15930.json); keeping first.
+[00:00:03] WARNING: duplicate instance_id django__django-15987 (django__django-15987.json); keeping first.
+[00:00:03] WARNING: duplicate instance_id django__django-16032 (django__django-16032.json); keeping first.
+[00:00:03] WARNING: duplicate instance_id django__django-16454 (django__django-16454.json); keeping first.
+[00:00:03] WARNING: duplicate instance_id django__django-16485 (django__django-16485.json); keeping first.
+[00:00:03] WARNING: duplicate instance_id django__django-16527 (django__django-16527.json); keeping first.
+[00:00:03] WARNING: duplicate instance_id django__django-16631 (django__django-16631.json); keeping first.
+[00:00:03] WARNING: duplicate instance_id django__django-7530 (django__django-7530.json); keeping first.
+[00:00:03] WARNING: duplicate instance_id matplotlib__matplotlib-20826 (matplotlib__matplotlib-20826.json); keeping first.
+[00:00:03] WARNING: duplicate instance_id matplotlib__matplotlib-22719 (matplotlib__matplotlib-22719.json); keeping first.
+[00:00:03] WARNING: duplicate instance_id matplotlib__matplotlib-22865 (matplotlib__matplotlib-22865.json); keeping first.
+[00:00:03] WARNING: duplicate instance_id matplotlib__matplotlib-23299 (matplotlib__matplotlib-23299.json); keeping first.
+[00:00:03] WARNING: duplicate instance_id matplotlib__matplotlib-23314 (matplotlib__matplotlib-23314.json); keeping first.
+[00:00:03] WARNING: duplicate instance_id matplotlib__matplotlib-24627 (matplotlib__matplotlib-24627.json); keeping first.
+[00:00:03] WARNING: duplicate instance_id matplotlib__matplotlib-25311 (matplotlib__matplotlib-25311.json); keeping first.
+[00:00:03] WARNING: duplicate instance_id matplotlib__matplotlib-25479 (matplotlib__matplotlib-25479.json); keeping first.
+[00:00:03] WARNING: duplicate instance_id matplotlib__matplotlib-26208 (matplotlib__matplotlib-26208.json); keeping first.
+[00:00:03] WARNING: duplicate instance_id matplotlib__matplotlib-26342 (matplotlib__matplotlib-26342.json); keeping first.
+[00:00:03] WARNING: duplicate instance_id pydata__xarray-4075 (pydata__xarray-4075.json); keeping first.
+[00:00:03] WARNING: duplicate instance_id pydata__xarray-4966 (pydata__xarray-4966.json); keeping first.
+[00:00:03] WARNING: duplicate instance_id pydata__xarray-6461 (pydata__xarray-6461.json); keeping first.
+[00:00:03] WARNING: duplicate instance_id pylint-dev__pylint-8898 (pylint-dev__pylint-8898.json); keeping first.
+[00:00:03] WARNING: duplicate instance_id pytest-dev__pytest-10356 (pytest-dev__pytest-10356.json); keeping first.
+[00:00:03] WARNING: duplicate instance_id pytest-dev__pytest-7205 (pytest-dev__pytest-7205.json); keeping first.
+[00:00:03] WARNING: duplicate instance_id pytest-dev__pytest-7324 (pytest-dev__pytest-7324.json); keeping first.
+[00:00:03] WARNING: duplicate instance_id pytest-dev__pytest-7432 (pytest-dev__pytest-7432.json); keeping first.
+[00:00:03] WARNING: duplicate instance_id scikit-learn__scikit-learn-10844 (scikit-learn__scikit-learn-10844.json); keeping first.
+[00:00:03] WARNING: duplicate instance_id scikit-learn__scikit-learn-13142 (scikit-learn__scikit-learn-13142.json); keeping first.
+[00:00:03] WARNING: duplicate instance_id scikit-learn__scikit-learn-14141 (scikit-learn__scikit-learn-14141.json); keeping first.
+[00:00:03] WARNING: duplicate instance_id scikit-learn__scikit-learn-25931 (scikit-learn__scikit-learn-25931.json); keeping first.
+[00:00:03] WARNING: duplicate instance_id sphinx-doc__sphinx-10449 (sphinx-doc__sphinx-10449.json); keeping first.
+[00:00:03] WARNING: duplicate instance_id sphinx-doc__sphinx-10614 (sphinx-doc__sphinx-10614.json); keeping first.
+[00:00:03] WARNING: duplicate instance_id sphinx-doc__sphinx-11445 (sphinx-doc__sphinx-11445.json); keeping first.
+[00:00:03] WARNING: duplicate instance_id sphinx-doc__sphinx-7910 (sphinx-doc__sphinx-7910.json); keeping first.
+[00:00:03] WARNING: duplicate instance_id sphinx-doc__sphinx-8265 (sphinx-doc__sphinx-8265.json); keeping first.
+[00:00:03] WARNING: duplicate instance_id sympy__sympy-12489 (sympy__sympy-12489.json); keeping first.
+[00:00:03] WARNING: duplicate instance_id sympy__sympy-13551 (sympy__sympy-13551.json); keeping first.
+[00:00:03] WARNING: duplicate instance_id sympy__sympy-13647 (sympy__sympy-13647.json); keeping first.
+[00:00:03] WARNING: duplicate instance_id sympy__sympy-13852 (sympy__sympy-13852.json); keeping first.
+[00:00:03] WARNING: duplicate instance_id sympy__sympy-13877 (sympy__sympy-13877.json); keeping first.
+[00:00:03] WARNING: duplicate instance_id sympy__sympy-14976 (sympy__sympy-14976.json); keeping first.
+[00:00:03] WARNING: duplicate instance_id sympy__sympy-17318 (sympy__sympy-17318.json); keeping first.
+[00:00:03] WARNING: duplicate instance_id sympy__sympy-20428 (sympy__sympy-20428.json); keeping first.
+[00:00:03] WARNING: duplicate instance_id sympy__sympy-20590 (sympy__sympy-20590.json); keeping first.
+[00:00:03] WARNING: duplicate instance_id sympy__sympy-21930 (sympy__sympy-21930.json); keeping first.
+[00:00:03] WARNING: duplicate instance_id sympy__sympy-22456 (sympy__sympy-22456.json); keeping first.
+[00:00:03] WARNING: duplicate instance_id sympy__sympy-23262 (sympy__sympy-23262.json); keeping first.
+[00:00:03]   Wrote 77 prediction(s) -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Verified_resolution_preds.jsonl
+[00:00:03] === Step 2/2: Run resolution harness ===
+[00:00:04]   Backend     : Verified
+[00:00:04]   Dataset     : princeton-nlp/SWE-bench_Verified (split=test)
+[00:00:04]   Run id      : epimetheus_Verified
+[00:00:04]   Report dir  : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet
+[00:00:05]   Running: /home/andre/workspace/ContextBench/.venvs/resolution/bin/python -m swebench.harness.run_evaluation --dataset_name princeton-nlp/SWE-bench_Verified --split test --predictions_path /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Verified_resolution_preds.jsonl --run_id epimetheus_Verified --max_workers 1 --timeout 1800 --report_dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet --cache_level env --instance_ids sphinx-doc__sphinx-10614
+<frozen runpy>:128: RuntimeWarning: 'swebench.harness.run_evaluation' found in sys.modules after import of package 'swebench.harness', but prior to execution of 'swebench.harness.run_evaluation'; this may result in unpredictable behaviour
+2026-09-11 00:00:06,923 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-09-11 00:00:06,963 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/princeton-nlp/SWE-bench_Verified/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/README.md "HTTP/1.1 200 OK"
+2026-09-11 00:00:07,086 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-09-11 00:00:07,610 - httpx - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/princeton-nlp/SWE-bench_Verified/princeton-nlp/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-09-11 00:00:07,744 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/princeton-nlp/SWE-bench_Verified/revision/c104f840cc67f8b6eec6f759ebc8b2693d585d4a "HTTP/1.1 200 OK"
+2026-09-11 00:00:07,885 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/.huggingface.yaml "HTTP/1.1 404 Not Found"
+2026-09-11 00:00:08,122 - httpx - INFO - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=princeton-nlp/SWE-bench_Verified "HTTP/1.1 200 OK"
+2026-09-11 00:00:08,244 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/princeton-nlp/SWE-bench_Verified/tree/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/data?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-09-11 00:00:08,367 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/princeton-nlp/SWE-bench_Verified/tree/c104f840cc67f8b6eec6f759ebc8b2693d585d4a?recursive=false&expand=false "HTTP/1.1 200 OK"
+2026-09-11 00:00:08,508 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/dataset_infos.json "HTTP/1.1 404 Not Found"
+2026-09-11 00:00:08,742 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-09-11 00:00:08,775 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/princeton-nlp/SWE-bench_Verified/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/README.md "HTTP/1.1 200 OK"
+2026-09-11 00:00:08,904 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-09-11 00:00:09,015 - httpx - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/princeton-nlp/SWE-bench_Verified/princeton-nlp/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-09-11 00:00:09,251 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/.huggingface.yaml "HTTP/1.1 404 Not Found"
+2026-09-11 00:00:09,396 - httpx - INFO - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=princeton-nlp/SWE-bench_Verified "HTTP/1.1 200 OK"
+2026-09-11 00:00:09,517 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/dataset_infos.json "HTTP/1.1 404 Not Found"
+Found 1 existing instance images. Will reuse them.
+Running 1 instances...
+
+Evaluation:   0%|          | 0/1 [00:00<?, ?it/s, error=0, ✓=0, ✖=0]
+Evaluation:   0%|          | 0/1 [00:28<?, ?it/s, ✓=0, ✖=1, error=0]
+Evaluation: 100%|██████████| 1/1 [00:28<00:00, 28.70s/it, ✓=0, ✖=1, error=0]
+Evaluation: 100%|██████████| 1/1 [00:28<00:00, 28.70s/it, ✓=0, ✖=1, error=0]
+All instances run.
+Cleaning cached images...
+Removed 0 images.
+Total instances: 1
+Instances submitted: 1
+Instances completed: 1
+Instances incomplete: 0
+Instances resolved: 0
+Instances unresolved: 1
+Instances with empty patches: 0
+Instances with errors: 0
+Unstopped containers: 0
+Unremoved images: 1
+Report written to epimetheus__Verified.epimetheus_Verified.json
+[00:02:03] === Issue resolution summary ===
+[00:02:03]   Report            : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Verified.epimetheus_Verified.json
+[00:02:03]   Total (evaluated) : 1
+[00:02:03]   Submitted (preds) : 77
+[00:02:03]   Completed         : 1
+[00:02:03]   Resolved          : 0
+[00:02:03]   Unresolved        : 1
+[00:02:03]   Errored           : 0
+[00:02:03]   Empty patches     : 0
+[00:02:03]   Resolved rate     : 0/1 = 0.0% (of evaluated)
+[00:02:03] Done.
+[00:02:03]   Predictions : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Verified_resolution_preds.jsonl
+[00:02:03]   Report      : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Verified.epimetheus_Verified.json
+[00:02:32] Deleted docker image: swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-10614:latest
+[00:02:33] Resolution scores -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Verified_resolution.jsonl

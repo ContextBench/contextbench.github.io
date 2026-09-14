@@ -1,0 +1,116 @@
+[07:40:41] Retrieval eval: clap-rs__clap-4474
+  Setting up repository
+  Warning: repo_url mismatch; overriding with /home/andre/workspace/ContextBench/repos/github.com__clap-rs__clap
+  Repo: /home/andre/workspace/ContextBench/repos/github.com__clap-rs__clap
+  Commit: 4d69e56f06d6...
+  Checkout ready: /home/andre/workspace/ContextBench/repos/_worktrees/contextbench_worktrees/__home__andre__workspace__ContextBench__repos__github.com__clap-rs__clap/4d69e56f06d66ff5215a900dc42809d34a2d4184
+  Parsing trajectory
+  Extracted: 22 steps, final has 9 files
+DETAILS:
+instance_id=clap-rs__clap-4474
+  gold_files: n=1
+    - src/parser/parser.rs
+  pred_files: n=9
+    - CHANGELOG.md
+    - Cargo.toml
+    - clap_lex/src/lib.rs
+    - src/error/mod.rs
+    - src/lib.rs
+    - src/parser/features/suggestions.rs
+    - src/parser/matches/arg_matches.rs
+    - src/parser/parser.rs
+    - tests/builder/utf8.rs
+  hit_files: n=1
+    - src/parser/parser.rs
+  gold_symbols: n=2
+    - src/parser/parser.rs:function_item@1309-21379
+    - src/parser/parser.rs:impl_item@1201-60083
+  pred_symbols: n=56
+    - clap_lex/src/lib.rs:function_item@6884-7114
+    - clap_lex/src/lib.rs:function_item@7157-7580
+    - clap_lex/src/lib.rs:function_item@7640-7918
+    - clap_lex/src/lib.rs:impl_item@3953-8049
+    - src/error/mod.rs:function_item@15563-16189
+    - src/error/mod.rs:function_item@16195-16605
+    - src/error/mod.rs:function_item@16611-17298
+    - src/error/mod.rs:impl_item@2078-23384
+    - src/parser/features/suggestions.rs:function_item@1205-2455
+    - src/parser/features/suggestions.rs:function_item@2547-2704
+    - src/parser/features/suggestions.rs:function_item@2722-2864
+    - src/parser/features/suggestions.rs:function_item@2882-3041
+    - src/parser/features/suggestions.rs:function_item@3059-3250
+    - src/parser/features/suggestions.rs:function_item@437-946
+    - src/parser/features/suggestions.rs:function_item@985-1122
+    - src/parser/matches/arg_matches.rs:function_item@15971-16259
+    - src/parser/matches/arg_matches.rs:function_item@34191-34464
+    - src/parser/matches/arg_matches.rs:function_item@34562-35071
+    - src/parser/matches/arg_matches.rs:function_item@35135-35713
+    - src/parser/matches/arg_matches.rs:function_item@35776-36212
+    - src/parser/matches/arg_matches.rs:function_item@36278-36742
+    - src/parser/matches/arg_matches.rs:function_item@49413-49636
+    - src/parser/matches/arg_matches.rs:function_item@49731-49961
+    - src/parser/matches/arg_matches.rs:function_item@50050-50156
+    - src/parser/matches/arg_matches.rs:function_item@50174-50307
+    - src/parser/matches/arg_matches.rs:function_item@7200-7383
+    - src/parser/matches/arg_matches.rs:impl_item@2595-26847
+    - src/parser/matches/arg_matches.rs:impl_item@26867-34466
+    - src/parser/matches/arg_matches.rs:impl_item@34483-37650
+    - src/parser/matches/arg_matches.rs:impl_item@49374-49638
+    - src/parser/parser.rs:function_item@1309-21379
+    - src/parser/parser.rs:function_item@59365-60081
+    - src/parser/parser.rs:function_item@60235-62336
+    - src/parser/parser.rs:function_item@62342-62503
+    - src/parser/parser.rs:function_item@62509-62679
+    - src/parser/parser.rs:function_item@975-1178
+    - src/parser/parser.rs:impl_item@1201-60083
+    - src/parser/parser.rs:impl_item@60121-62681
+    - src/parser/parser.rs:impl_item@945-1180
+    - src/parser/parser.rs:struct_item@566-919
+    - tests/builder/utf8.rs:function_item@10204-10515
+    - tests/builder/utf8.rs:function_item@10683-10989
+    - tests/builder/utf8.rs:function_item@2388-2870
+    - tests/builder/utf8.rs:function_item@2880-3322
+    - tests/builder/utf8.rs:function_item@3332-3988
+    - tests/builder/utf8.rs:function_item@3998-4639
+    - tests/builder/utf8.rs:function_item@4649-5286
+    - tests/builder/utf8.rs:function_item@5296-5954
+    - tests/builder/utf8.rs:function_item@5964-6622
+    - tests/builder/utf8.rs:function_item@6632-7097
+    ... (6 more)
+  hit_symbols: n=2
+    - src/parser/parser.rs:function_item@1309-21379
+    - src/parser/parser.rs:impl_item@1201-60083
+
+[07:40:41] Retrieval clap-rs__clap-4474: line_f1=0.033
+
+# Harness overwritten from harness_rerun_17.log (failed first-pass resolution dropped)
+[14:56:23] Resolution eval (pending=16, workers=4): /home/andre/workspace/ContextBench/agent-frameworks/epimetheus/.venv/bin/python /home/andre/workspace/ContextBench/scripts/run_resolution_eval.py --input-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Multi --bench Multi --model-name epimetheus__Multi --run-id epimetheus_Multi --predictions /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution_preds.jsonl --report-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet --instance-ids cli__cli-8632,mui__material-ui-30374,mui__material-ui-34437,vuejs__core-10004,facebook__zstd-2094,sveltejs__svelte-13097,mui__material-ui-25149,clap-rs__clap-4474,fasterxml__jackson-core-1016,ponylang__ponyc-2168,facebook__zstd-1390,alibaba__fastjson2-2775,sveltejs__svelte-14629,ponylang__ponyc-3973,fmtlib__fmt-2394,cli__cli-5537 --max-workers 4
+[14:56:23] WARNING: duplicate instance_id clap-rs__clap-4474 (clap-rs__clap-4474.json); keeping first.
+[2026-09-11 15:11:14,199] [run_evaluation.py] [INFO]: Building image mswebench/clap-rs_m_clap:pr-4474...
+[2026-09-11 15:14:42,681] [run_evaluation.py] [INFO]: Image mswebench/clap-rs_m_clap:pr-4474 built successfully.
+
+Building images:  67%|██████▋   | 18/27 [18:08<08:39, 57.74s/it][2026-09-11 15:14:42,696] [run_evaluation.py] [INFO]: Building image mswebench/fasterxml_m_jackson-core:pr-1016...
+Running instances:  19%|█▉        | 3/16 [00:26<02:00,  9.26s/it][2026-09-11 15:27:40,244] [run_evaluation.py] [INFO]: Running mswebench/clap-rs_m_clap:pr-4474 with command: bash /home/fix-run.sh...
+
+[16:11:10]   Resolved IDs      : vuejs__core-10004, sveltejs__svelte-13097, fmtlib__fmt-2394, facebook__zstd-1390, cli__cli-8632, clap-rs__clap-4474, alibaba__fastjson2-2775, mui__material-ui-30374, mui__material-ui-34437
+[16:11:10]   Resolved IDs            : cli__cli-8632, mui__material-ui-30374, mui__material-ui-34437, vuejs__core-10004, sveltejs__svelte-13097, clap-rs__clap-4474, facebook__zstd-1390, alibaba__fastjson2-2775, fmtlib__fmt-2394
+[16:12:14] === Issue resolution summary (aggregated) ===
+[16:12:14]   Agent instances         : 17
+[16:12:14]   Empty patches (skipped) : 0
+[16:12:14]   With patch              : 17
+[16:12:14]   Harness scored          : 17
+[16:12:14]   Harness infra errors    : 0
+[16:12:14]   Harness pending         : 0
+[16:12:14]   Resolved                : 10
+[16:12:14]   Resolved rate           : 10/17 = 58.8% (of harness-scored)
+[16:12:14]   Resolved rate           : 10/17 = 58.8% (of agent instances; empty patch = unresolved)
+[16:12:14]   Resolved IDs            : cli__cli-8632, mui__material-ui-30374, mui__material-ui-34437, vuejs__core-10004, sveltejs__svelte-13097, clap-rs__clap-4474, facebook__zstd-1390, alibaba__fastjson2-2775, sveltejs__svelte-3403, fmtlib__fmt-2394
+[16:12:14] Done.
+===== harness exit=0 2026-09-11T16:12:14+01:00; rebuilding shuffled jsonl from natives =====
+native Verified: 174
+native Multi: 152
+native Poly: 116
+native Pro: 54
+wrote epimetheus_Shuffled_resolution.jsonl: 496 rows resolved=300 infra=1 empty_skip=4
+[16:12:14] Wrote 500 pred record(s) -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Shuffled_pred.jsonl
+restored shuffled pred: 500

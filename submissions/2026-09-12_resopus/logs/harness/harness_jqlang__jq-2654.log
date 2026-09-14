@@ -1,0 +1,146 @@
+[16:26:25] Retrieval eval: jqlang__jq-2654
+  Setting up repository
+  Warning: repo_url mismatch; overriding with /home/andre/workspace/ContextBench/repos/github.com__jqlang__jq
+  Repo: /home/andre/workspace/ContextBench/repos/github.com__jqlang__jq
+  Commit: c077b95ba2dc...
+  Checkout ready: /home/andre/workspace/ContextBench/repos/_worktrees/contextbench_worktrees/__home__andre__workspace__ContextBench__repos__github.com__jqlang__jq/c077b95ba2dcaafee39e302cc086bf99fa9248d0
+  Parsing trajectory
+  Extracted: 28 steps, final has 6 files
+DETAILS:
+instance_id=jqlang__jq-2654
+  gold_files: n=1
+    - src/main.c
+  pred_files: n=6
+    - Makefile.am
+    - docs/content/manual/manual.yml
+    - src/jq_test.c
+    - src/main.c
+    - tests/setup
+    - tests/shtest
+  hit_files: n=1
+    - src/main.c
+  gold_symbols: n=1
+    - src/main.c:function_definition@9262-24881
+  pred_symbols: n=19
+    - src/jq_test.c:function_definition@1051-1174
+    - src/jq_test.c:function_definition@1216-1626
+    - src/jq_test.c:function_definition@1628-6552
+    - src/jq_test.c:function_definition@190-785
+    - src/jq_test.c:function_definition@6555-12253
+    - src/jq_test.c:function_definition@787-963
+    - src/jq_test.c:function_definition@965-1049
+    - src/jq_test.c:struct_specifier@1176-1213
+    - src/jq_test.c:struct_specifier@1262-1277
+    - src/jq_test.c:struct_specifier@1756-1771
+    - src/main.c:function_definition@3456-3666
+    - src/main.c:function_definition@3671-3795
+    - src/main.c:function_definition@3797-4307
+    - src/main.c:function_definition@5257-5644
+    - src/main.c:function_definition@5646-8475
+    - src/main.c:function_definition@8477-8668
+    - src/main.c:function_definition@862-3454
+    - src/main.c:function_definition@8719-9212
+    - src/main.c:function_definition@9262-24881
+  hit_symbols: n=1
+    - src/main.c:function_definition@9262-24881
+
+[16:26:25] Retrieval jqlang__jq-2654: line_f1=0.032
+[16:26:25] Resolution resume: 0 harness-scored, 1 pending (stable run_id=epimetheus_Multi)
+[16:26:25] Resolution eval (pending=1): /home/andre/workspace/ContextBench/agent-frameworks/epimetheus/.venv/bin/python /home/andre/workspace/ContextBench/scripts/run_resolution_eval.py --input-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Multi --bench Multi --model-name epimetheus__Multi --run-id epimetheus_Multi --predictions /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution_preds.jsonl --report-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet --instance-ids jqlang__jq-2654 --max-workers 1
+[16:26:26] === Step 1/2: Build SWE-bench predictions ===
+[16:26:26]   Input dir   : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Multi
+[16:26:26] WARNING: duplicate instance_id cli__cli-2250 (cli__cli-2250.json); keeping first.
+[16:26:26] WARNING: duplicate instance_id cli__cli-2785 (cli__cli-2785.json); keeping first.
+[16:26:26] WARNING: duplicate instance_id jqlang__jq-2654 (jqlang__jq-2654.json); keeping first.
+[16:26:26] WARNING: duplicate instance_id mui__material-ui-34401 (mui__material-ui-34401.json); keeping first.
+[16:26:26] WARNING: duplicate instance_id ponylang__ponyc-2247 (ponylang__ponyc-2247.json); keeping first.
+[16:26:26] WARNING: duplicate instance_id rayon-rs__rayon-986 (rayon-rs__rayon-986.json); keeping first.
+[16:26:26]   Wrote 6 prediction(s) -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution_preds.jsonl
+[16:26:26] === Step 2/2: Run resolution harness ===
+[16:26:26]   Backend     : Multi
+[16:26:26]   Dataset     : ByteDance-Seed/Multi-SWE-bench (split=train)
+[16:26:26]   Run id      : epimetheus_Multi
+[16:26:26]   Report dir  : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet
+
+Fetching 50 files:   0%|          | 0/50 [00:00<?, ?it/s]
+Fetching 50 files: 100%|██████████| 50/50 [00:00<00:00, 2667.89it/s]
+[16:26:35]   Running: /home/andre/workspace/ContextBench/.venvs/resolution/bin/python -m multi_swe_bench.harness.run_evaluation --config /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/multi_eval/epimetheus_Multi/config.json
+[2026-09-10 16:26:36,362] [run_evaluation.py] [INFO]: Initialize logger successfully.
+[2026-09-10 16:26:36,362] [run_evaluation.py] [INFO]: Building images...
+[2026-09-10 16:26:36,362] [run_evaluation.py] [INFO]: Loading repo commits...
+[2026-09-10 16:26:36,362] [run_evaluation.py] [INFO]: Creating instances...
+[2026-09-10 16:26:36,362] [run_evaluation.py] [INFO]: Loading datasets...
+[2026-09-10 16:26:36,365] [run_evaluation.py] [INFO]: Successfully loaded 1 valid datasets from ['/home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/multi_eval/epimetheus_Multi/dataset.jsonl']
+[2026-09-10 16:26:36,365] [run_evaluation.py] [INFO]: Successfully loaded 1 valid instances.
+
+Checking commit hashes:   0%|          | 0/1 [00:00<?, ?it/s][2026-09-10 16:26:36,369] [run_evaluation.py] [WARNING]: Repository not found: /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/multi_eval/epimetheus_Multi/repos/jqlang/jq
+Cloning into '/home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/multi_eval/epimetheus_Multi/repos/jqlang/jq'...
+
+
+Checking commit hashes for jqlang/jq:   0%|          | 0/1 [00:00<?, ?it/s][A
+Checking commit hashes for jqlang/jq: 100%|██████████| 1/1 [00:00<00:00, 22919.69it/s]
+
+Checking commit hashes: 100%|██████████| 1/1 [00:02<00:00,  2.05s/it]
+Checking commit hashes: 100%|██████████| 1/1 [00:02<00:00,  2.05s/it]
+[2026-09-10 16:26:38,418] [run_evaluation.py] [INFO]: Total images: 2
+
+Building images:   0%|          | 0/2 [00:00<?, ?it/s]
+Building images: 100%|██████████| 2/2 [00:00<00:00, 48.45it/s]
+[2026-09-10 16:26:38,460] [run_evaluation.py] [INFO]: Images built successfully.
+[2026-09-10 16:26:38,460] [run_evaluation.py] [INFO]: Running instances...
+
+Running instances:   0%|          | 0/1 [00:00<?, ?it/s][2026-09-10 16:26:38,461] [run_evaluation.py] [INFO]: Running mswebench/jqlang_m_jq:pr-2654 with command: bash /home/fix-run.sh...
+
+Running instances: 100%|██████████| 1/1 [00:35<00:00, 35.74s/it]
+Running instances: 100%|██████████| 1/1 [00:35<00:00, 35.74s/it]
+[2026-09-10 16:27:14,203] [run_evaluation.py] [INFO]: Instances run successfully.
+[2026-09-10 16:27:14,203] [run_evaluation.py] [INFO]: Running evaluation...
+[2026-09-10 16:27:14,204] [gen_report.py] [INFO]: Initialize logger successfully.
+[2026-09-10 16:27:14,204] [gen_report.py] [INFO]: Collecting report tasks...
+[2026-09-10 16:27:14,204] [gen_report.py] [INFO]: Successfully collected 6 tasks.
+[2026-09-10 16:27:14,205] [gen_report.py] [INFO]: Loading dataset...
+[2026-09-10 16:27:14,209] [gen_report.py] [INFO]: Successfully loaded 1 valid datasets from ['/home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/multi_eval/epimetheus_Multi/dataset.jsonl']
+
+Generating eval reports:   0%|          | 0/1 [00:00<?, ?it/s][2026-09-10 16:27:14,212] [gen_report.py] [ERROR]: Invalid report for jqlang/jq:pr-2654, Test Result Summary:
+Stage Descriptions:
+  run  : Execute the test command without any patches applied.
+  test : Execute the test command after applying the test patch.
+  fix  : Execute the test command after applying both the test patch and the fix patch.
+Each stage is reported as (pass, fail, skip), representing the number of tests that passed, failed, or were skipped, respectively.
+
+Results:
+  run  = (28, 0, 0)
+  test = (27, 1, 0)
+  fix  = (27, 1, 0), After applying the fix patch, no test cases transitioned from failed to passed. A brief summary is as follows: Test Result Summary:
+Stage Descriptions:
+  run  : Execute the test command without any patches applied.
+  test : Execute the test command after applying the test patch.
+  fix  : Execute the test command after applying both the test patch and the fix patch.
+Each stage is reported as (pass, fail, skip), representing the number of tests that passed, failed, or were skipped, respectively.
+
+Results:
+  run  = (28, 0, 0)
+  test = (27, 1, 0)
+  fix  = (27, 1, 0)
+
+Generating eval reports: 100%|██████████| 1/1 [00:00<00:00, 344.64it/s]
+[2026-09-10 16:27:14,212] [gen_report.py] [INFO]: Successfully generated 0 reports.
+
+Fetching 50 files:   0%|          | 0/50 [00:00<?, ?it/s]
+Fetching 50 files: 100%|██████████| 50/50 [00:00<00:00, 2509.13it/s]
+[16:27:19]   Multi report -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Multi.epimetheus_Multi.json
+[16:27:19] === Issue resolution summary ===
+[16:27:19]   Report            : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Multi.epimetheus_Multi.json
+[16:27:19]   Total (evaluated) : 1
+[16:27:19]   Submitted (preds) : 1
+[16:27:19]   Completed         : 1
+[16:27:19]   Resolved          : 0
+[16:27:19]   Unresolved        : 1
+[16:27:19]   Errored           : 0
+[16:27:19]   Empty patches     : 0
+[16:27:19]   Resolved rate     : 0/1 = 0.0% (of evaluated)
+[16:27:19] Done.
+[16:27:19]   Predictions : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution_preds.jsonl
+[16:27:19]   Report      : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Multi.epimetheus_Multi.json
+[16:27:19] Resolution scores -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution.jsonl
+[16:27:19] Deleted docker image: mswebench/jqlang_m_jq:pr-2654

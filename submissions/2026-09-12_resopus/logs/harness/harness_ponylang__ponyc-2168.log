@@ -1,0 +1,184 @@
+[21:29:54] Retrieval eval: ponylang__ponyc-2168
+  Setting up repository
+  Warning: repo_url mismatch; overriding with /home/andre/workspace/ContextBench/repos/github.com__ponylang__ponyc
+  Repo: /home/andre/workspace/ContextBench/repos/github.com__ponylang__ponyc
+  Commit: ae5fabe6fdf7...
+  Checkout ready: /home/andre/workspace/ContextBench/repos/_worktrees/contextbench_worktrees/__home__andre__workspace__ContextBench__repos__github.com__ponylang__ponyc/ae5fabe6fdf7c99f3e797b85674ded5d52cde7a2
+  Parsing trajectory
+  Extracted: 65 steps, final has 14 files
+DETAILS:
+instance_id=ponylang__ponyc-2168
+  gold_files: n=4
+    - src/libponyc/expr/array.c
+    - src/libponyc/expr/array.h
+    - src/libponyc/expr/lambda.c
+    - src/libponyc/expr/lambda.h
+  pred_files: n=14
+    - Dockerfile
+    - Makefile
+    - src/libponyc/expr/array.c
+    - src/libponyc/expr/call.c
+    - src/libponyc/expr/lambda.c
+    - src/libponyc/expr/literal.c
+    - src/libponyc/expr/reference.c
+    - src/libponyc/pass/expr.c
+    - src/libponyc/pass/refer.c
+    - test/libponyc/badpony.cc
+    - test/libponyc/lambda.cc
+    - test/libponyc/literal_inference.cc
+    - test/libponyc/local_inference.cc
+    - test/libponyc/util.h
+  hit_files: n=2
+    - src/libponyc/expr/array.c
+    - src/libponyc/expr/lambda.c
+  gold_symbols: n=9
+    - src/libponyc/expr/array.c:function_definition@334-3546
+    - src/libponyc/expr/lambda.c:function_definition@10507-15093
+    - src/libponyc/expr/lambda.c:function_definition@3388-6191
+    - src/libponyc/expr/lambda.c:function_definition@6194-7606
+    - src/libponyc/expr/lambda.c:function_definition@650-3385
+    - src/libponyc/expr/lambda.c:function_definition@7609-8226
+    - src/libponyc/expr/lambda.c:function_definition@8229-8967
+    - src/libponyc/expr/lambda.c:function_definition@8970-9864
+    - src/libponyc/expr/lambda.c:function_definition@9867-10504
+  pred_symbols: n=195
+    - src/libponyc/expr/array.c:function_definition@334-3546
+    - src/libponyc/expr/call.c:function_definition@1712-2330
+    - src/libponyc/expr/call.c:function_definition@2332-3735
+    - src/libponyc/expr/call.c:function_definition@3737-4501
+    - src/libponyc/expr/call.c:function_definition@4503-6158
+    - src/libponyc/expr/call.c:function_definition@469-840
+    - src/libponyc/expr/call.c:function_definition@6160-7167
+    - src/libponyc/expr/call.c:function_definition@842-1710
+    - src/libponyc/expr/lambda.c:function_definition@10507-15093
+    - src/libponyc/expr/lambda.c:function_definition@3388-6191
+    - src/libponyc/expr/lambda.c:function_definition@6194-7606
+    - src/libponyc/expr/lambda.c:function_definition@650-3385
+    - src/libponyc/expr/lambda.c:function_definition@7609-8226
+    - src/libponyc/expr/lambda.c:function_definition@8229-8967
+    - src/libponyc/expr/lambda.c:function_definition@8970-9864
+    - src/libponyc/expr/lambda.c:function_definition@9867-10504
+    - src/libponyc/expr/literal.c:function_definition@11865-13415
+    - src/libponyc/expr/literal.c:function_definition@13483-16036
+    - src/libponyc/expr/literal.c:function_definition@16114-17378
+    - src/libponyc/expr/literal.c:function_definition@17447-18695
+    - src/libponyc/expr/literal.c:function_definition@18763-21565
+    - src/libponyc/expr/literal.c:function_definition@2094-2305
+    - src/libponyc/expr/literal.c:function_definition@21568-22162
+    - src/libponyc/expr/literal.c:function_definition@22225-22887
+    - src/libponyc/expr/literal.c:function_definition@22890-23882
+    - src/libponyc/expr/literal.c:function_definition@2308-2596
+    - src/libponyc/expr/literal.c:function_definition@23885-25369
+    - src/libponyc/expr/literal.c:function_definition@25372-26324
+    - src/libponyc/expr/literal.c:function_definition@2599-2797
+    - src/libponyc/expr/literal.c:function_definition@26327-26412
+    - src/libponyc/expr/literal.c:function_definition@2800-3006
+    - src/libponyc/expr/literal.c:function_definition@3009-3116
+    - src/libponyc/expr/literal.c:function_definition@3119-3231
+    - src/libponyc/expr/literal.c:function_definition@3941-4217
+    - src/libponyc/expr/literal.c:function_definition@4220-4518
+    - src/libponyc/expr/literal.c:function_definition@4521-4911
+    - src/libponyc/expr/literal.c:function_definition@4914-5224
+    - src/libponyc/expr/literal.c:function_definition@5395-5811
+    - src/libponyc/expr/literal.c:function_definition@5880-7901
+    - src/libponyc/expr/literal.c:function_definition@7974-8888
+    - src/libponyc/expr/literal.c:function_definition@8968-9810
+    - src/libponyc/expr/literal.c:function_definition@9867-11829
+    - src/libponyc/expr/literal.c:struct_specifier@1341-1456
+    - src/libponyc/expr/literal.c:struct_specifier@3389-3639
+    - src/libponyc/expr/literal.c:struct_specifier@3599-3617
+    - src/libponyc/expr/literal.c:struct_specifier@498-615
+    - src/libponyc/expr/reference.c:function_definition@10274-10389
+    - src/libponyc/expr/reference.c:function_definition@10391-12368
+    - src/libponyc/expr/reference.c:function_definition@1059-2359
+    - src/libponyc/expr/reference.c:function_definition@17208-20240
+    ... (145 more)
+  hit_symbols: n=9
+    - src/libponyc/expr/array.c:function_definition@334-3546
+    - src/libponyc/expr/lambda.c:function_definition@10507-15093
+    - src/libponyc/expr/lambda.c:function_definition@3388-6191
+    - src/libponyc/expr/lambda.c:function_definition@6194-7606
+    - src/libponyc/expr/lambda.c:function_definition@650-3385
+    - src/libponyc/expr/lambda.c:function_definition@7609-8226
+    - src/libponyc/expr/lambda.c:function_definition@8229-8967
+    - src/libponyc/expr/lambda.c:function_definition@8970-9864
+    - src/libponyc/expr/lambda.c:function_definition@9867-10504
+
+[21:29:54] Retrieval ponylang__ponyc-2168: line_f1=0.248
+
+# Harness overwritten from harness_rerun_17.log (failed first-pass resolution dropped)
+[14:56:23] Resolution eval (pending=16, workers=4): /home/andre/workspace/ContextBench/agent-frameworks/epimetheus/.venv/bin/python /home/andre/workspace/ContextBench/scripts/run_resolution_eval.py --input-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Multi --bench Multi --model-name epimetheus__Multi --run-id epimetheus_Multi --predictions /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution_preds.jsonl --report-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet --instance-ids cli__cli-8632,mui__material-ui-30374,mui__material-ui-34437,vuejs__core-10004,facebook__zstd-2094,sveltejs__svelte-13097,mui__material-ui-25149,clap-rs__clap-4474,fasterxml__jackson-core-1016,ponylang__ponyc-2168,facebook__zstd-1390,alibaba__fastjson2-2775,sveltejs__svelte-14629,ponylang__ponyc-3973,fmtlib__fmt-2394,cli__cli-5537 --max-workers 4
+[14:56:24] WARNING: duplicate instance_id ponylang__ponyc-2168 (ponylang__ponyc-2168.json); keeping first.
+Building images:  41%|████      | 11/27 [14:39<37:08, 139.28s/it][2026-09-11 15:11:14,198] [run_evaluation.py] [INFO]: Building image mswebench/ponylang_m_ponyc:pr-2168...
+[2026-09-11 15:11:27,451] [run_evaluation.py] [INFO]: Image mswebench/ponylang_m_ponyc:pr-2168 built successfully.
+
+Building images:  52%|█████▏    | 14/27 [14:53<15:48, 72.94s/it][2026-09-11 15:11:27,453] [run_evaluation.py] [INFO]: Building image mswebench/facebook_m_zstd:pr-2094...
+Running instances:  31%|███▏      | 5/16 [01:29<04:13, 23.09s/it][2026-09-11 15:28:42,770] [run_evaluation.py] [INFO]: Running mswebench/ponylang_m_ponyc:pr-2168 with command: bash /home/fix-run.sh...
+
+Generating eval reports:   6%|▋         | 1/16 [00:00<00:08,  1.75it/s][2026-09-11 16:10:57,964] [gen_report.py] [ERROR]: Invalid report for ponylang/ponyc:pr-2168, Test Result Summary:
+Stage Descriptions:
+  run  : Execute the test command without any patches applied.
+  test : Execute the test command after applying the test patch.
+  fix  : Execute the test command after applying both the test patch and the fix patch.
+Each stage is reported as (pass, fail, skip), representing the number of tests that passed, failed, or were skipped, respectively.
+
+Results:
+  run  = (1066, 0, 0)
+  test = (1000, 36, 0)
+  fix  = (380, 26, 0), Before applying the fix patch, the test passed; however, after applying the fix patch, the test failed. A brief summary is as follows: Test Result Summary:
+Stage Descriptions:
+  run  : Execute the test command without any patches applied.
+  test : Execute the test command after applying the test patch.
+  fix  : Execute the test command after applying both the test patch and the fix patch.
+Each stage is reported as (pass, fail, skip), representing the number of tests that passed, failed, or were skipped, respectively.
+
+Results:
+  run  = (1066, 0, 0)
+  test = (1000, 36, 0)
+  fix  = (380, 26, 0). `LambdaTest.LambdaCaptureDontcareFree`: Test(run=<TestStatus.PASS: 'PASS'>, test=<TestStatus.PASS: 'PASS'>, fix=<TestStatus.FAIL: 'FAIL'>)
+
+Generating eval reports:  19%|█▉        | 3/16 [00:00<00:02,  4.74it/s]
+Generating eval reports:  25%|██▌       | 4/16 [00:00<00:02,  5.07it/s][2026-09-11 16:10:58,241] [gen_report.py] [ERROR]: Invalid report for sveltejs/svelte:pr-14629, Test Result Summary:
+Stage Descriptions:
+  run  : Execute the test command without any patches applied.
+  test : Execute the test command after applying the test patch.
+  fix  : Execute the test command after applying both the test patch and the fix patch.
+Each stage is reported as (pass, fail, skip), representing the number of tests that passed, failed, or were skipped, respectively.
+
+Results:
+  run  = (5651, 0, 0)
+  test = (5277, 374, 0)
+  fix  = (5277, 374, 0), After applying the fix patch, no test cases transitioned from failed to passed. A brief summary is as follows: Test Result Summary:
+Stage Descriptions:
+  run  : Execute the test command without any patches applied.
+  test : Execute the test command after applying the test patch.
+  fix  : Execute the test command after applying both the test patch and the fix patch.
+Each stage is reported as (pass, fail, skip), representing the number of tests that passed, failed, or were skipped, respectively.
+
+Results:
+  run  = (5651, 0, 0)
+  test = (5277, 374, 0)
+  fix  = (5277, 374, 0)
+
+Generating eval reports:  31%|███▏      | 5/16 [00:01<00:02,  5.13it/s]
+Generating eval reports:  38%|███▊      | 6/16 [00:01<00:01,  5.23it/s][2026-09-11 16:10:58,660] [gen_report.py] [ERROR]: Invalid report for fasterxml/jackson-core:pr-1016, Test Result Summary:
+Stage Descriptions:
+  run  : Execute the test command without any patches applied.
+  test : Execute the test command after applying the test patch.
+  fix  : Execute the test command after applying both the test patch and the fix patch.
+Each stage is reported as (pass, fail, skip), representing the number of tests that passed, failed, or were skipped, respectively.
+
+Results:
+  run  = (173, 0, 0)
+  test = (172, 1, 0)
+  fix  = (0, 0, 0), After applying the fix patch, no test results were captured when executing the test command. A brief summary is as follows: Test Result Summary:
+Stage Descriptions:
+  run  : Execute the test command without any patches applied.
+  test : Execute the test command after applying the test patch.
+  fix  : Execute the test command after applying both the test patch and the fix patch.
+Each stage is reported as (pass, fail, skip), representing the number of tests that passed, failed, or were skipped, respectively.
+
+Results:
+  run  = (173, 0, 0)
+  test = (172, 1, 0)
+  fix  = (0, 0, 0)

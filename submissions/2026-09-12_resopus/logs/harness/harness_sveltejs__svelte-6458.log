@@ -1,0 +1,129 @@
+[17:49:46] Retrieval eval: sveltejs__svelte-6458
+  Setting up repository
+  Warning: repo_url mismatch; overriding with /home/andre/workspace/ContextBench/repos/github.com__sveltejs__svelte
+  Repo: /home/andre/workspace/ContextBench/repos/github.com__sveltejs__svelte
+  Commit: b662c7fd41b3...
+  Checkout ready: /home/andre/workspace/ContextBench/repos/_worktrees/contextbench_worktrees/__home__andre__workspace__ContextBench__repos__github.com__sveltejs__svelte/b662c7fd41b3b778ea1ae80b0a4d86c239ffcfe7
+  Parsing trajectory
+  Extracted: 9 steps, final has 7 files
+DETAILS:
+instance_id=sveltejs__svelte-6458
+  gold_files: n=3
+    - src/compiler/compile/render_ssr/handlers/Element.ts
+    - src/compiler/compile/render_ssr/handlers/shared/boolean_attributes.ts
+    - src/runtime/internal/ssr.ts
+  pred_files: n=7
+    - src/compiler/compile/render_dom/wrappers/Element/Binding.ts
+    - src/compiler/compile/render_ssr/handlers/Element.ts
+    - src/compiler/compile/render_ssr/handlers/shared/boolean_attributes.ts
+    - src/compiler/compile/render_ssr/handlers/shared/get_attribute_value.ts
+    - src/runtime/internal/dom.ts
+    - src/runtime/internal/ssr.ts
+    - test/server-side-rendering/index.ts
+  hit_files: n=3
+    - src/compiler/compile/render_ssr/handlers/Element.ts
+    - src/compiler/compile/render_ssr/handlers/shared/boolean_attributes.ts
+    - src/runtime/internal/ssr.ts
+  gold_symbols: n=2
+    - src/runtime/internal/ssr.ts:function_declaration@3748-3973
+    - src/runtime/internal/ssr.ts:function_declaration@3982-4061
+  pred_symbols: n=20
+    - src/compiler/compile/render_dom/wrappers/Element/Binding.ts:class_declaration@686-6060
+    - src/compiler/compile/render_dom/wrappers/Element/Binding.ts:function_declaration@6062-7021
+    - src/compiler/compile/render_dom/wrappers/Element/Binding.ts:function_declaration@7023-8941
+    - src/compiler/compile/render_dom/wrappers/Element/Binding.ts:method_definition@1795-2225
+    - src/compiler/compile/render_dom/wrappers/Element/Binding.ts:method_definition@2228-2312
+    - src/compiler/compile/render_dom/wrappers/Element/Binding.ts:method_definition@2315-6058
+    - src/compiler/compile/render_dom/wrappers/Element/Binding.ts:method_definition@980-1792
+    - src/compiler/compile/render_ssr/handlers/shared/get_attribute_value.ts:function_declaration@303-725
+    - src/compiler/compile/render_ssr/handlers/shared/get_attribute_value.ts:function_declaration@734-1094
+    - src/runtime/internal/dom.ts:function_declaration@6350-6465
+    - src/runtime/internal/dom.ts:function_declaration@6474-6681
+    - src/runtime/internal/dom.ts:function_declaration@6690-7280
+    - src/runtime/internal/ssr.ts:function_declaration@1464-1556
+    - src/runtime/internal/ssr.ts:function_declaration@1565-1666
+    - src/runtime/internal/ssr.ts:function_declaration@1675-1821
+    - src/runtime/internal/ssr.ts:function_declaration@1830-1960
+    - src/runtime/internal/ssr.ts:function_declaration@2643-3739
+    - src/runtime/internal/ssr.ts:function_declaration@3748-3973
+    - src/runtime/internal/ssr.ts:function_declaration@3982-4061
+    - test/server-side-rendering/index.ts:function_declaration@314-469
+  hit_symbols: n=2
+    - src/runtime/internal/ssr.ts:function_declaration@3748-3973
+    - src/runtime/internal/ssr.ts:function_declaration@3982-4061
+
+[17:49:46] Retrieval sveltejs__svelte-6458: line_f1=0.184
+[17:49:46] Resolution resume: 0 harness-scored, 1 pending (stable run_id=epimetheus_Poly)
+[17:49:46] Waiting for Docker prefetch Poly sveltejs__svelte-6458
+[17:49:46] Docker prefetch Poly sveltejs__svelte-6458: ghcr.io/timesler/swe-polybench.eval.x86_64.sveltejs__svelte-6458:v1.1, ghcr.io/timesler/swe-polybench.eval.x86_64.sveltejs__svelte-6458:latest
+[17:49:46] Docker image already present: ghcr.io/timesler/swe-polybench.eval.x86_64.sveltejs__svelte-6458:v1.1
+[17:49:46] Docker image already present: ghcr.io/timesler/swe-polybench.eval.x86_64.sveltejs__svelte-6458:latest
+[17:49:46] Resolution eval (pending=1): /home/andre/workspace/ContextBench/agent-frameworks/epimetheus/.venv/bin/python /home/andre/workspace/ContextBench/scripts/run_resolution_eval.py --input-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Poly --bench Poly --model-name epimetheus__Poly --run-id epimetheus_Poly --predictions /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Poly_resolution_preds.jsonl --report-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet --instance-ids sveltejs__svelte-6458 --max-workers 1
+[17:49:46] === Step 1/2: Build SWE-bench predictions ===
+[17:49:46]   Input dir   : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Poly
+[17:49:46] WARNING: duplicate instance_id coder__code-server-6278 (coder__code-server-6278.json); keeping first.
+[17:49:46] WARNING: duplicate instance_id huggingface__transformers-12981 (huggingface__transformers-12981.json); keeping first.
+[17:49:46] WARNING: duplicate instance_id huggingface__transformers-22458 (huggingface__transformers-22458.json); keeping first.
+[17:49:46] WARNING: duplicate instance_id huggingface__transformers-23223 (huggingface__transformers-23223.json); keeping first.
+[17:49:46] WARNING: duplicate instance_id huggingface__transformers-26839 (huggingface__transformers-26839.json); keeping first.
+[17:49:46] WARNING: duplicate instance_id langchain-ai__langchain-4009 (langchain-ai__langchain-4009.json); keeping first.
+[17:49:46] WARNING: duplicate instance_id mui__material-ui-19072 (mui__material-ui-19072.json); keeping first.
+[17:49:46] WARNING: duplicate instance_id mui__material-ui-19849 (mui__material-ui-19849.json); keeping first.
+[17:49:46] WARNING: duplicate instance_id serverless__serverless-2576 (serverless__serverless-2576.json); keeping first.
+[17:49:46] WARNING: duplicate instance_id serverless__serverless-2945 (serverless__serverless-2945.json); keeping first.
+[17:49:46] WARNING: duplicate instance_id serverless__serverless-3457 (serverless__serverless-3457.json); keeping first.
+[17:49:46] WARNING: duplicate instance_id sveltejs__svelte-2185 (sveltejs__svelte-2185.json); keeping first.
+[17:49:46] WARNING: duplicate instance_id sveltejs__svelte-6458 (sveltejs__svelte-6458.json); keeping first.
+[17:49:46]   Wrote 16 prediction(s) -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Poly_resolution_preds.jsonl
+[17:49:46] === Step 2/2: Run resolution harness ===
+[17:49:46]   Backend     : Poly
+[17:49:46]   Dataset     : AmazonScience/SWE-PolyBench (split=test)
+[17:49:46]   Run id      : epimetheus_Poly
+[17:49:46]   Report dir  : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet
+[17:50:03]   Poly dataset subset : 1 instance(s)
+[17:50:03]   Running resilient Poly worker: /home/andre/workspace/ContextBench/.venvs/resolution/bin/python /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/poly_eval/epimetheus_Poly/_poly_worker.py /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/poly_eval/epimetheus_Poly/dataset_subset.csv /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/poly_eval/epimetheus_Poly/results /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/poly_eval/epimetheus_Poly/repos 1
+/home/andre/workspace/ContextBench/.venvs/resolution/lib/python3.12/site-packages/tree_sitter/__init__.py:36: FutureWarning: Language(path, name) is deprecated. Use Language(ptr, name) instead.
+  warn("{} is deprecated. Use {} instead.".format(old, new), FutureWarning)
+[poly-worker] evaluate sveltejs__svelte-6458
+[poly-worker] using local prebuilt ghcr.io/timesler/swe-polybench.eval.x86_64.sveltejs__svelte-6458:v1.1 -> polybench_javascript_sveltejs__svelte-6458
+2026-09-10 17:50:06.683 | INFO     | poly_bench_evaluation.run_evaluation:evaluate_instance:130 - Successfully pulled pre-built image from GHCR: polybench_javascript_sveltejs__svelte-6458
+2026-09-10 17:50:07.358 | INFO     | poly_bench_evaluation.run_evaluation:evaluate_instance:235 - docker running for sveltejs__svelte-6458
+2026-09-10 17:51:55.404 | DEBUG    | poly_bench_evaluation.docker_utils:_cleanup:432 - Removed local image tag: polybench_javascript_sveltejs__svelte-6458
+2026-09-10 17:51:55.778 | INFO     | poly_bench_evaluation.scoring:aggregate_logs:256 - Writing aggregated results to result.json
+Total resolved: 6/13
+Total pass rate: 46.15%
+
+Pass rate by language:
+JavaScript: 0/1 (0.0%)
+
+Pass rate by task category:
+Bug Fix: 0/1 (0.0%)
+
+File retrieval metrics by language:
+            file_recall  file_precision  file_f1
+language                                        
+JavaScript          0.0             0.0      0.0
+
+File retrieval metrics overall:
+file_recall       0.72
+file_precision    0.81
+file_f1           0.73
+[poly-worker] done failures=0
+[17:51:57]   Poly report -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Poly.epimetheus_Poly.json
+[17:51:57] === Issue resolution summary ===
+[17:51:57]   Report            : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Poly.epimetheus_Poly.json
+[17:51:57]   Total (evaluated) : 13
+[17:51:57]   Submitted (preds) : 1
+[17:51:57]   Completed         : 13
+[17:51:57]   Resolved          : 6
+[17:51:57]   Unresolved        : 7
+[17:51:57]   Errored           : 0
+[17:51:57]   Empty patches     : 12
+[17:51:57]   Resolved rate     : 6/13 = 46.2% (of evaluated)
+[17:51:57]   Resolved IDs      : huggingface__transformers-26839, huggingface__transformers-12981, mui__material-ui-19849, sveltejs__svelte-2185, serverless__serverless-3457, langchain-ai__langchain-4009
+[17:51:57] Done.
+[17:51:57]   Predictions : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Poly_resolution_preds.jsonl
+[17:51:57]   Report      : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Poly.epimetheus_Poly.json
+[17:51:59] Resolution scores -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Poly_resolution.jsonl
+[17:51:59] Deleted docker image: ghcr.io/timesler/swe-polybench.eval.x86_64.sveltejs__svelte-6458:v1.1
+[17:52:00] Deleted docker image: ghcr.io/timesler/swe-polybench.eval.x86_64.sveltejs__svelte-6458:latest

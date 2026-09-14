@@ -1,0 +1,299 @@
+[22:57:40] Retrieval eval: fasterxml__jackson-databind-4469
+  Setting up repository
+  Warning: repo_url mismatch; overriding with /home/andre/workspace/ContextBench/repos/github.com__fasterxml__jackson-databind
+  Repo: /home/andre/workspace/ContextBench/repos/github.com__fasterxml__jackson-databind
+  Commit: 7c9e7c1e2acd...
+From https://github.com/fasterxml/jackson-databind
+ * branch                7c9e7c1e2acd9c55926b9d2592fc65234d9c3ff7 -> FETCH_HEAD
+Preparing worktree (detached HEAD 7c9e7c1e2)
+HEAD is now at 7c9e7c1e2 Fix #4450: deserialize QName "" as empty, not null (#4468)
+  Checkout ready: /home/andre/workspace/ContextBench/repos/_worktrees/contextbench_worktrees/__home__andre__workspace__ContextBench__repos__github.com__fasterxml__jackson-databind/7c9e7c1e2acd9c55926b9d2592fc65234d9c3ff7
+  Parsing trajectory
+  Extracted: 21 steps, final has 11 files
+DETAILS:
+instance_id=fasterxml__jackson-databind-4469
+  gold_files: n=7
+    - ReproduceIssue.java
+    - src/main/java/com/fasterxml/jackson/databind/deser/BeanDeserializer.java
+    - src/main/java/com/fasterxml/jackson/databind/deser/BeanDeserializerBase.java
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/BeanPropertyMap.java
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/FieldProperty.java
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/MethodProperty.java
+    - src/main/java/com/fasterxml/jackson/databind/deser/std/StdDeserializer.java
+  pred_files: n=11
+    - create-test-report.sh
+    - pom.xml
+    - profile.sh
+    - run.sh
+    - src/main/java/com/fasterxml/jackson/databind/deser/CreatorProperty.java
+    - src/main/java/com/fasterxml/jackson/databind/deser/SettableBeanProperty.java
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/FieldProperty.java
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/MethodProperty.java
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/PropertyValue.java
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/PropertyValueBuffer.java
+    - src/test/java/com/fasterxml/jackson/databind/deser/filter/NullConversionsSkipTest.java
+  hit_files: n=2
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/FieldProperty.java
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/MethodProperty.java
+  gold_symbols: n=49
+    - src/main/java/com/fasterxml/jackson/databind/deser/BeanDeserializer.java:class_declaration@722-49005
+    - src/main/java/com/fasterxml/jackson/databind/deser/BeanDeserializer.java:constructor_declaration@1697-2113
+    - src/main/java/com/fasterxml/jackson/databind/deser/BeanDeserializer.java:constructor_declaration@2221-2709
+    - src/main/java/com/fasterxml/jackson/databind/deser/BeanDeserializer.java:constructor_declaration@2868-2971
+    - src/main/java/com/fasterxml/jackson/databind/deser/BeanDeserializer.java:constructor_declaration@2977-3101
+    - src/main/java/com/fasterxml/jackson/databind/deser/BeanDeserializer.java:constructor_declaration@3107-3225
+    - src/main/java/com/fasterxml/jackson/databind/deser/BeanDeserializer.java:constructor_declaration@3231-3333
+    - src/main/java/com/fasterxml/jackson/databind/deser/BeanDeserializer.java:constructor_declaration@3399-3536
+    - src/main/java/com/fasterxml/jackson/databind/deser/BeanDeserializer.java:method_declaration@10318-11437
+    - src/main/java/com/fasterxml/jackson/databind/deser/BeanDeserializer.java:method_declaration@11531-14993
+    - src/main/java/com/fasterxml/jackson/databind/deser/BeanDeserializer.java:method_declaration@22964-23945
+    - src/main/java/com/fasterxml/jackson/databind/deser/BeanDeserializer.java:method_declaration@5126-5267
+    - src/main/java/com/fasterxml/jackson/databind/deser/BeanDeserializer.java:method_declaration@5273-5492
+    - src/main/java/com/fasterxml/jackson/databind/deser/BeanDeserializer.java:method_declaration@5764-6485
+    - src/main/java/com/fasterxml/jackson/databind/deser/BeanDeserializer.java:method_declaration@6491-8016
+    - src/main/java/com/fasterxml/jackson/databind/deser/BeanDeserializer.java:method_declaration@8235-10020
+    - src/main/java/com/fasterxml/jackson/databind/deser/BeanDeserializerBase.java:class_declaration@1014-82269
+    - src/main/java/com/fasterxml/jackson/databind/deser/BeanDeserializerBase.java:method_declaration@30600-32691
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/BeanPropertyMap.java:class_declaration@1464-28190
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/BeanPropertyMap.java:constructor_declaration@3119-3582
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/FieldProperty.java:class_declaration@896-7083
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/FieldProperty.java:method_declaration@3230-3384
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/FieldProperty.java:method_declaration@3390-3590
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/FieldProperty.java:method_declaration@3765-3924
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/FieldProperty.java:method_declaration@3930-3998
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/FieldProperty.java:method_declaration@4174-5154
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/FieldProperty.java:method_declaration@5160-6191
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/FieldProperty.java:method_declaration@6197-6492
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/FieldProperty.java:method_declaration@6498-6829
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/MethodProperty.java:class_declaration@690-6872
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/MethodProperty.java:constructor_declaration@1110-1498
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/MethodProperty.java:constructor_declaration@1504-1777
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/MethodProperty.java:constructor_declaration@1783-1991
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/MethodProperty.java:constructor_declaration@2089-2266
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/MethodProperty.java:method_declaration@2272-2402
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/MethodProperty.java:method_declaration@2408-2824
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/MethodProperty.java:method_declaration@2830-2985
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/MethodProperty.java:method_declaration@2991-3177
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/MethodProperty.java:method_declaration@3352-3511
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/MethodProperty.java:method_declaration@3517-3585
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/MethodProperty.java:method_declaration@3761-4751
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/MethodProperty.java:method_declaration@4757-5865
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/MethodProperty.java:method_declaration@5871-6176
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/MethodProperty.java:method_declaration@6182-6590
+    - src/main/java/com/fasterxml/jackson/databind/deser/std/StdDeserializer.java:class_declaration@1610-89857
+    - src/main/java/com/fasterxml/jackson/databind/deser/std/StdDeserializer.java:constructor_declaration@2856-2955
+    - src/main/java/com/fasterxml/jackson/databind/deser/std/StdDeserializer.java:constructor_declaration@2961-3214
+    - src/main/java/com/fasterxml/jackson/databind/deser/std/StdDeserializer.java:constructor_declaration@3428-3561
+    - src/main/java/com/fasterxml/jackson/databind/deser/std/StdDeserializer.java:method_declaration@3728-3795
+  pred_symbols: n=84
+    - src/main/java/com/fasterxml/jackson/databind/deser/CreatorProperty.java:class_declaration@1233-12776
+    - src/main/java/com/fasterxml/jackson/databind/deser/CreatorProperty.java:method_declaration@10077-10239
+    - src/main/java/com/fasterxml/jackson/databind/deser/CreatorProperty.java:method_declaration@10245-10434
+    - src/main/java/com/fasterxml/jackson/databind/deser/CreatorProperty.java:method_declaration@10440-11106
+    - src/main/java/com/fasterxml/jackson/databind/deser/CreatorProperty.java:method_declaration@9577-9809
+    - src/main/java/com/fasterxml/jackson/databind/deser/CreatorProperty.java:method_declaration@9815-10071
+    - src/main/java/com/fasterxml/jackson/databind/deser/SettableBeanProperty.java:class_declaration@1003-27797
+    - src/main/java/com/fasterxml/jackson/databind/deser/SettableBeanProperty.java:class_declaration@23236-27795
+    - src/main/java/com/fasterxml/jackson/databind/deser/SettableBeanProperty.java:method_declaration@18118-18752
+    - src/main/java/com/fasterxml/jackson/databind/deser/SettableBeanProperty.java:method_declaration@18792-20639
+    - src/main/java/com/fasterxml/jackson/databind/deser/SettableBeanProperty.java:method_declaration@20942-21837
+    - src/main/java/com/fasterxml/jackson/databind/deser/SettableBeanProperty.java:method_declaration@27224-27466
+    - src/main/java/com/fasterxml/jackson/databind/deser/SettableBeanProperty.java:method_declaration@27476-27614
+    - src/main/java/com/fasterxml/jackson/databind/deser/SettableBeanProperty.java:method_declaration@27624-27789
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/FieldProperty.java:class_declaration@896-7083
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/FieldProperty.java:constructor_declaration@1370-1740
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/FieldProperty.java:constructor_declaration@1746-2015
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/FieldProperty.java:constructor_declaration@2021-2225
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/FieldProperty.java:constructor_declaration@2323-2668
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/FieldProperty.java:method_declaration@2674-2803
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/FieldProperty.java:method_declaration@2809-3224
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/FieldProperty.java:method_declaration@3230-3384
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/FieldProperty.java:method_declaration@3390-3590
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/FieldProperty.java:method_declaration@3765-3924
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/FieldProperty.java:method_declaration@3930-3998
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/FieldProperty.java:method_declaration@4174-5154
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/FieldProperty.java:method_declaration@5160-6191
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/FieldProperty.java:method_declaration@6197-6492
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/FieldProperty.java:method_declaration@6498-6829
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/FieldProperty.java:method_declaration@7013-7081
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/MethodProperty.java:class_declaration@690-6872
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/MethodProperty.java:constructor_declaration@1110-1498
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/MethodProperty.java:constructor_declaration@1504-1777
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/MethodProperty.java:constructor_declaration@1783-1991
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/MethodProperty.java:constructor_declaration@2089-2266
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/MethodProperty.java:method_declaration@2272-2402
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/MethodProperty.java:method_declaration@2408-2824
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/MethodProperty.java:method_declaration@2830-2985
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/MethodProperty.java:method_declaration@2991-3177
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/MethodProperty.java:method_declaration@3352-3511
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/MethodProperty.java:method_declaration@3517-3585
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/MethodProperty.java:method_declaration@3761-4751
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/MethodProperty.java:method_declaration@4757-5865
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/MethodProperty.java:method_declaration@5871-6176
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/MethodProperty.java:method_declaration@6182-6590
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/MethodProperty.java:method_declaration@6774-6870
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/PropertyValue.java:class_declaration@1122-1576
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/PropertyValue.java:class_declaration@1827-2392
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/PropertyValue.java:class_declaration@2496-2946
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/PropertyValue.java:class_declaration@307-2948
+    ... (34 more)
+  hit_symbols: n=24
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/FieldProperty.java:class_declaration@896-7083
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/FieldProperty.java:method_declaration@3230-3384
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/FieldProperty.java:method_declaration@3390-3590
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/FieldProperty.java:method_declaration@3765-3924
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/FieldProperty.java:method_declaration@3930-3998
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/FieldProperty.java:method_declaration@4174-5154
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/FieldProperty.java:method_declaration@5160-6191
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/FieldProperty.java:method_declaration@6197-6492
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/FieldProperty.java:method_declaration@6498-6829
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/MethodProperty.java:class_declaration@690-6872
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/MethodProperty.java:constructor_declaration@1110-1498
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/MethodProperty.java:constructor_declaration@1504-1777
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/MethodProperty.java:constructor_declaration@1783-1991
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/MethodProperty.java:constructor_declaration@2089-2266
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/MethodProperty.java:method_declaration@2272-2402
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/MethodProperty.java:method_declaration@2408-2824
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/MethodProperty.java:method_declaration@2830-2985
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/MethodProperty.java:method_declaration@2991-3177
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/MethodProperty.java:method_declaration@3352-3511
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/MethodProperty.java:method_declaration@3517-3585
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/MethodProperty.java:method_declaration@3761-4751
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/MethodProperty.java:method_declaration@4757-5865
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/MethodProperty.java:method_declaration@5871-6176
+    - src/main/java/com/fasterxml/jackson/databind/deser/impl/MethodProperty.java:method_declaration@6182-6590
+
+[22:57:41] Retrieval fasterxml__jackson-databind-4469: line_f1=0.294
+[22:57:41] Resolution resume: 0 harness-scored, 1 pending (stable run_id=epimetheus_Multi)
+[22:57:41] Resolution eval (pending=1): /home/andre/workspace/ContextBench/agent-frameworks/epimetheus/.venv/bin/python /home/andre/workspace/ContextBench/scripts/run_resolution_eval.py --input-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Multi --bench Multi --model-name epimetheus__Multi --run-id epimetheus_Multi --predictions /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution_preds.jsonl --report-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet --instance-ids fasterxml__jackson-databind-4469 --max-workers 1
+[22:57:42] === Step 1/2: Build SWE-bench predictions ===
+[22:57:42]   Input dir   : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Multi
+[22:57:42] WARNING: duplicate instance_id axios__axios-5661 (axios__axios-5661.json); keeping first.
+[22:57:42] WARNING: duplicate instance_id clap-rs__clap-2501 (clap-rs__clap-2501.json); keeping first.
+[22:57:42] WARNING: duplicate instance_id clap-rs__clap-2534 (clap-rs__clap-2534.json); keeping first.
+[22:57:42] WARNING: duplicate instance_id clap-rs__clap-2758 (clap-rs__clap-2758.json); keeping first.
+[22:57:42] WARNING: duplicate instance_id clap-rs__clap-2895 (clap-rs__clap-2895.json); keeping first.
+[22:57:42] WARNING: duplicate instance_id clap-rs__clap-3421 (clap-rs__clap-3421.json); keeping first.
+[22:57:42] WARNING: duplicate instance_id clap-rs__clap-3684 (clap-rs__clap-3684.json); keeping first.
+[22:57:42] WARNING: duplicate instance_id clap-rs__clap-3975 (clap-rs__clap-3975.json); keeping first.
+[22:57:42] WARNING: duplicate instance_id cli__cli-1457 (cli__cli-1457.json); keeping first.
+[22:57:42] WARNING: duplicate instance_id cli__cli-2250 (cli__cli-2250.json); keeping first.
+[22:57:42] WARNING: duplicate instance_id cli__cli-2351 (cli__cli-2351.json); keeping first.
+[22:57:42] WARNING: duplicate instance_id cli__cli-2785 (cli__cli-2785.json); keeping first.
+[22:57:42] WARNING: duplicate instance_id cli__cli-3270 (cli__cli-3270.json); keeping first.
+[22:57:42] WARNING: duplicate instance_id cli__cli-3608 (cli__cli-3608.json); keeping first.
+[22:57:42] WARNING: duplicate instance_id cli__cli-3982 (cli__cli-3982.json); keeping first.
+[22:57:42] WARNING: duplicate instance_id cli__cli-5019 (cli__cli-5019.json); keeping first.
+[22:57:42] WARNING: duplicate instance_id cli__cli-5396 (cli__cli-5396.json); keeping first.
+[22:57:42] WARNING: duplicate instance_id cli__cli-7645 (cli__cli-7645.json); keeping first.
+[22:57:42] WARNING: duplicate instance_id cli__cli-8157 (cli__cli-8157.json); keeping first.
+[22:57:42] WARNING: duplicate instance_id expressjs__express-3870 (expressjs__express-3870.json); keeping first.
+[22:57:42] WARNING: duplicate instance_id facebook__zstd-1243 (facebook__zstd-1243.json); keeping first.
+[22:57:42] WARNING: duplicate instance_id facebook__zstd-1532 (facebook__zstd-1532.json); keeping first.
+[22:57:42] WARNING: duplicate instance_id facebook__zstd-637 (facebook__zstd-637.json); keeping first.
+[22:57:42] WARNING: duplicate instance_id fasterxml__jackson-core-1016 (fasterxml__jackson-core-1016.json); keeping first.
+[22:57:42] WARNING: duplicate instance_id fasterxml__jackson-core-183 (fasterxml__jackson-core-183.json); keeping first.
+[22:57:42] WARNING: duplicate instance_id fasterxml__jackson-databind-3701 (fasterxml__jackson-databind-3701.json); keeping first.
+[22:57:42] WARNING: duplicate instance_id fasterxml__jackson-databind-4050 (fasterxml__jackson-databind-4050.json); keeping first.
+[22:57:42] WARNING: duplicate instance_id fasterxml__jackson-databind-4469 (fasterxml__jackson-databind-4469.json); keeping first.
+[22:57:42] WARNING: duplicate instance_id fasterxml__jackson-databind-4641 (fasterxml__jackson-databind-4641.json); keeping first.
+[22:57:42] WARNING: duplicate instance_id fasterxml__jackson-dataformat-xml-638 (fasterxml__jackson-dataformat-xml-638.json); keeping first.
+[22:57:42] WARNING: duplicate instance_id google__gson-1391 (google__gson-1391.json); keeping first.
+[22:57:42] WARNING: duplicate instance_id iamkun__dayjs-1611 (iamkun__dayjs-1611.json); keeping first.
+[22:57:42] WARNING: duplicate instance_id iamkun__dayjs-882 (iamkun__dayjs-882.json); keeping first.
+[22:57:42] WARNING: duplicate instance_id iamkun__dayjs-938 (iamkun__dayjs-938.json); keeping first.
+[22:57:42] WARNING: duplicate instance_id jqlang__jq-2654 (jqlang__jq-2654.json); keeping first.
+[22:57:42] WARNING: duplicate instance_id jqlang__jq-2919 (jqlang__jq-2919.json); keeping first.
+[22:57:42] WARNING: duplicate instance_id mui__material-ui-29898 (mui__material-ui-29898.json); keeping first.
+[22:57:42] WARNING: duplicate instance_id mui__material-ui-30374 (mui__material-ui-30374.json); keeping first.
+[22:57:42] WARNING: duplicate instance_id mui__material-ui-34159 (mui__material-ui-34159.json); keeping first.
+[22:57:42] WARNING: duplicate instance_id mui__material-ui-34337 (mui__material-ui-34337.json); keeping first.
+[22:57:42] WARNING: duplicate instance_id mui__material-ui-34401 (mui__material-ui-34401.json); keeping first.
+[22:57:42] WARNING: duplicate instance_id mui__material-ui-34437 (mui__material-ui-34437.json); keeping first.
+[22:57:42] WARNING: duplicate instance_id mui__material-ui-39108 (mui__material-ui-39108.json); keeping first.
+[22:57:42] WARNING: duplicate instance_id mui__material-ui-39196 (mui__material-ui-39196.json); keeping first.
+[22:57:42] WARNING: duplicate instance_id nlohmann__json-2989 (nlohmann__json-2989.json); keeping first.
+[22:57:42] WARNING: duplicate instance_id nlohmann__json-4512 (nlohmann__json-4512.json); keeping first.
+[22:57:42] WARNING: duplicate instance_id nushell__nushell-13357 (nushell__nushell-13357.json); keeping first.
+[22:57:42] WARNING: duplicate instance_id ponylang__ponyc-2168 (ponylang__ponyc-2168.json); keeping first.
+[22:57:42] WARNING: duplicate instance_id ponylang__ponyc-2201 (ponylang__ponyc-2201.json); keeping first.
+[22:57:42] WARNING: duplicate instance_id ponylang__ponyc-2247 (ponylang__ponyc-2247.json); keeping first.
+[22:57:42] WARNING: duplicate instance_id ponylang__ponyc-2586 (ponylang__ponyc-2586.json); keeping first.
+[22:57:42] WARNING: duplicate instance_id ponylang__ponyc-4595 (ponylang__ponyc-4595.json); keeping first.
+[22:57:42] WARNING: duplicate instance_id rayon-rs__rayon-986 (rayon-rs__rayon-986.json); keeping first.
+[22:57:42] WARNING: duplicate instance_id simdjson__simdjson-1695 (simdjson__simdjson-1695.json); keeping first.
+[22:57:42] WARNING: duplicate instance_id sveltejs__svelte-10608 (sveltejs__svelte-10608.json); keeping first.
+[22:57:42] WARNING: duplicate instance_id sveltejs__svelte-11913 (sveltejs__svelte-11913.json); keeping first.
+[22:57:42] WARNING: duplicate instance_id sveltejs__svelte-12649 (sveltejs__svelte-12649.json); keeping first.
+[22:57:42] WARNING: duplicate instance_id sveltejs__svelte-14629 (sveltejs__svelte-14629.json); keeping first.
+[22:57:42] WARNING: duplicate instance_id sveltejs__svelte-14935 (sveltejs__svelte-14935.json); keeping first.
+[22:57:42] WARNING: duplicate instance_id tokio-rs__tokio-4519 (tokio-rs__tokio-4519.json); keeping first.
+[22:57:42] WARNING: duplicate instance_id vuejs__core-10027 (vuejs__core-10027.json); keeping first.
+[22:57:42] WARNING: duplicate instance_id vuejs__core-11517 (vuejs__core-11517.json); keeping first.
+[22:57:42] WARNING: duplicate instance_id vuejs__core-9213 (vuejs__core-9213.json); keeping first.
+[22:57:42]   Wrote 63 prediction(s) -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution_preds.jsonl
+[22:57:42] === Step 2/2: Run resolution harness ===
+[22:57:42]   Backend     : Multi
+[22:57:42]   Dataset     : ByteDance-Seed/Multi-SWE-bench (split=train)
+[22:57:42]   Run id      : epimetheus_Multi
+[22:57:42]   Report dir  : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet
+
+Fetching 50 files:   0%|          | 0/50 [00:00<?, ?it/s]
+Fetching 50 files: 100%|██████████| 50/50 [00:00<00:00, 2893.74it/s]
+[22:57:49]   Running: /home/andre/workspace/ContextBench/.venvs/resolution/bin/python -m multi_swe_bench.harness.run_evaluation --config /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/multi_eval/epimetheus_Multi/config.json
+[2026-09-10 22:57:50,431] [run_evaluation.py] [INFO]: Initialize logger successfully.
+[2026-09-10 22:57:50,432] [run_evaluation.py] [INFO]: Building images...
+[2026-09-10 22:57:50,432] [run_evaluation.py] [INFO]: Loading repo commits...
+[2026-09-10 22:57:50,432] [run_evaluation.py] [INFO]: Creating instances...
+[2026-09-10 22:57:50,432] [run_evaluation.py] [INFO]: Loading datasets...
+[2026-09-10 22:57:50,464] [run_evaluation.py] [INFO]: Successfully loaded 1 valid datasets from ['/home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/multi_eval/epimetheus_Multi/dataset.jsonl']
+[2026-09-10 22:57:50,464] [run_evaluation.py] [INFO]: Successfully loaded 1 valid instances.
+
+Checking commit hashes:   0%|          | 0/1 [00:00<?, ?it/s]
+
+Checking commit hashes for fasterxml/jackson-databind:   0%|          | 0/1 [00:00<?, ?it/s][A
+Checking commit hashes for fasterxml/jackson-databind: 100%|██████████| 1/1 [00:00<00:00, 31536.12it/s]
+
+Checking commit hashes: 100%|██████████| 1/1 [00:00<00:00, 10.44it/s]
+[2026-09-10 22:57:50,565] [run_evaluation.py] [INFO]: Total images: 2
+
+Building images:   0%|          | 0/2 [00:00<?, ?it/s]
+Building images: 100%|██████████| 2/2 [00:00<00:00, 56.83it/s]
+[2026-09-10 22:57:50,601] [run_evaluation.py] [INFO]: Images built successfully.
+[2026-09-10 22:57:50,601] [run_evaluation.py] [INFO]: Running instances...
+
+Running instances:   0%|          | 0/1 [00:00<?, ?it/s][2026-09-10 22:57:50,601] [run_evaluation.py] [INFO]: Running mswebench/fasterxml_m_jackson-databind:pr-4469 with command: bash /home/fix-run.sh...
+
+Running instances: 100%|██████████| 1/1 [00:33<00:00, 33.08s/it]
+Running instances: 100%|██████████| 1/1 [00:33<00:00, 33.08s/it]
+[2026-09-10 22:58:23,682] [run_evaluation.py] [INFO]: Instances run successfully.
+[2026-09-10 22:58:23,682] [run_evaluation.py] [INFO]: Running evaluation...
+[2026-09-10 22:58:23,682] [gen_report.py] [INFO]: Initialize logger successfully.
+[2026-09-10 22:58:23,682] [gen_report.py] [INFO]: Collecting report tasks...
+[2026-09-10 22:58:23,685] [gen_report.py] [INFO]: Successfully collected 63 tasks.
+[2026-09-10 22:58:23,685] [gen_report.py] [INFO]: Loading dataset...
+[2026-09-10 22:58:23,724] [gen_report.py] [INFO]: Successfully loaded 1 valid datasets from ['/home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/multi_eval/epimetheus_Multi/dataset.jsonl']
+
+Generating eval reports:   0%|          | 0/1 [00:00<?, ?it/s]
+Generating eval reports: 100%|██████████| 1/1 [00:00<00:00, 24.80it/s]
+[2026-09-10 22:58:23,766] [gen_report.py] [INFO]: Successfully generated 1 reports.
+
+Fetching 50 files:   0%|          | 0/50 [00:00<?, ?it/s]
+Fetching 50 files: 100%|██████████| 50/50 [00:00<00:00, 3045.93it/s]
+[22:58:25]   Multi report -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Multi.epimetheus_Multi.json
+[22:58:25] === Issue resolution summary ===
+[22:58:25]   Report            : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Multi.epimetheus_Multi.json
+[22:58:25]   Total (evaluated) : 1
+[22:58:25]   Submitted (preds) : 1
+[22:58:25]   Completed         : 1
+[22:58:25]   Resolved          : 1
+[22:58:25]   Unresolved        : 0
+[22:58:25]   Errored           : 0
+[22:58:25]   Empty patches     : 0
+[22:58:25]   Resolved rate     : 1/1 = 100.0% (of evaluated)
+[22:58:25]   Resolved IDs      : fasterxml__jackson-databind-4469
+[22:58:25] Done.
+[22:58:25]   Predictions : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution_preds.jsonl
+[22:58:25]   Report      : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Multi.epimetheus_Multi.json
+[22:58:25] Resolution scores -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Multi_resolution.jsonl
+[22:58:25] Deleted docker image: mswebench/fasterxml_m_jackson-databind:pr-4469

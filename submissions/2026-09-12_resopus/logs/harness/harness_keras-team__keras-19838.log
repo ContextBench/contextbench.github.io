@@ -1,0 +1,116 @@
+[18:32:14] Retrieval eval: keras-team__keras-19838
+  Setting up repository
+  Warning: repo_url mismatch; overriding with /home/andre/workspace/ContextBench/repos/github.com__keras-team__keras
+  Repo: /home/andre/workspace/ContextBench/repos/github.com__keras-team__keras
+  Commit: 26abe697a880...
+  Checkout ready: /home/andre/workspace/ContextBench/repos/_worktrees/contextbench_worktrees/__home__andre__workspace__ContextBench__repos__github.com__keras-team__keras/26abe697a8802de40cb2761fc98b843fe1b2d5f6
+  Parsing trajectory
+  Extracted: 4 steps, final has 3 files
+DETAILS:
+instance_id=keras-team__keras-19838
+  gold_files: n=4
+    - keras/src/backend/tensorflow/nn.py
+    - keras/src/backend/torch/nn.py
+    - keras/src/losses/losses.py
+    - keras/src/ops/nn.py
+  pred_files: n=3
+    - keras/src/losses/losses.py
+    - keras/src/losses/losses_test.py
+    - keras/src/ops/nn.py
+  hit_files: n=2
+    - keras/src/losses/losses.py
+    - keras/src/ops/nn.py
+  gold_symbols: n=4
+    - keras/src/backend/tensorflow/nn.py:function_definition@18065-20377
+    - keras/src/backend/torch/nn.py:function_definition@19338-20473
+    - keras/src/losses/losses.py:function_definition@56135-58012
+    - keras/src/ops/nn.py:function_definition@47952-50043
+  pred_symbols: n=7
+    - keras/src/losses/losses.py:function_definition@56135-58012
+    - keras/src/losses/losses_test.py:class_definition@41157-44809
+    - keras/src/losses/losses_test.py:class_definition@44812-48249
+    - keras/src/losses/losses_test.py:function_definition@44447-44809
+    - keras/src/losses/losses_test.py:function_definition@44869-45000
+    - keras/src/losses/losses_test.py:function_definition@45006-45727
+    - keras/src/ops/nn.py:function_definition@47952-50043
+  hit_symbols: n=2
+    - keras/src/losses/losses.py:function_definition@56135-58012
+    - keras/src/ops/nn.py:function_definition@47952-50043
+
+[18:32:14] Retrieval keras-team__keras-19838: line_f1=0.542
+[18:32:14] Resolution resume: 0 harness-scored, 1 pending (stable run_id=epimetheus_Poly)
+[18:32:14] Waiting for Docker prefetch Poly keras-team__keras-19838
+[18:32:14] Docker prefetch Poly keras-team__keras-19838: ghcr.io/timesler/swe-polybench.eval.x86_64.keras-team__keras-19838:v1.1, ghcr.io/timesler/swe-polybench.eval.x86_64.keras-team__keras-19838:latest
+[18:32:14] Docker image already present: ghcr.io/timesler/swe-polybench.eval.x86_64.keras-team__keras-19838:v1.1
+[18:32:14] Docker image already present: ghcr.io/timesler/swe-polybench.eval.x86_64.keras-team__keras-19838:latest
+[18:32:15] Resolution eval (pending=1): /home/andre/workspace/ContextBench/agent-frameworks/epimetheus/.venv/bin/python /home/andre/workspace/ContextBench/scripts/run_resolution_eval.py --input-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Poly --bench Poly --model-name epimetheus__Poly --run-id epimetheus_Poly --predictions /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Poly_resolution_preds.jsonl --report-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet --instance-ids keras-team__keras-19838 --max-workers 1
+[18:32:15] === Step 1/2: Build SWE-bench predictions ===
+[18:32:15]   Input dir   : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Poly
+[18:32:15] WARNING: duplicate instance_id coder__code-server-6278 (coder__code-server-6278.json); keeping first.
+[18:32:15] WARNING: duplicate instance_id huggingface__transformers-12981 (huggingface__transformers-12981.json); keeping first.
+[18:32:15] WARNING: duplicate instance_id huggingface__transformers-22458 (huggingface__transformers-22458.json); keeping first.
+[18:32:15] WARNING: duplicate instance_id huggingface__transformers-23223 (huggingface__transformers-23223.json); keeping first.
+[18:32:15] WARNING: duplicate instance_id huggingface__transformers-26839 (huggingface__transformers-26839.json); keeping first.
+[18:32:15] WARNING: duplicate instance_id keras-team__keras-19838 (keras-team__keras-19838.json); keeping first.
+[18:32:15] WARNING: duplicate instance_id langchain-ai__langchain-4009 (langchain-ai__langchain-4009.json); keeping first.
+[18:32:15] WARNING: duplicate instance_id mui__material-ui-19072 (mui__material-ui-19072.json); keeping first.
+[18:32:15] WARNING: duplicate instance_id mui__material-ui-19849 (mui__material-ui-19849.json); keeping first.
+[18:32:15] WARNING: duplicate instance_id prettier__prettier-12930 (prettier__prettier-12930.json); keeping first.
+[18:32:15] WARNING: duplicate instance_id serverless__serverless-2576 (serverless__serverless-2576.json); keeping first.
+[18:32:15] WARNING: duplicate instance_id serverless__serverless-2945 (serverless__serverless-2945.json); keeping first.
+[18:32:15] WARNING: duplicate instance_id serverless__serverless-3457 (serverless__serverless-3457.json); keeping first.
+[18:32:15] WARNING: duplicate instance_id sveltejs__svelte-2185 (sveltejs__svelte-2185.json); keeping first.
+[18:32:15] WARNING: duplicate instance_id sveltejs__svelte-6458 (sveltejs__svelte-6458.json); keeping first.
+[18:32:15]   Wrote 18 prediction(s) -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Poly_resolution_preds.jsonl
+[18:32:15] === Step 2/2: Run resolution harness ===
+[18:32:15]   Backend     : Poly
+[18:32:15]   Dataset     : AmazonScience/SWE-PolyBench (split=test)
+[18:32:15]   Run id      : epimetheus_Poly
+[18:32:15]   Report dir  : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet
+[18:32:18]   Poly dataset subset : 1 instance(s)
+[18:32:18]   Running resilient Poly worker: /home/andre/workspace/ContextBench/.venvs/resolution/bin/python /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/poly_eval/epimetheus_Poly/_poly_worker.py /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/poly_eval/epimetheus_Poly/dataset_subset.csv /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/poly_eval/epimetheus_Poly/results /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/poly_eval/epimetheus_Poly/repos 1
+/home/andre/workspace/ContextBench/.venvs/resolution/lib/python3.12/site-packages/tree_sitter/__init__.py:36: FutureWarning: Language(path, name) is deprecated. Use Language(ptr, name) instead.
+  warn("{} is deprecated. Use {} instead.".format(old, new), FutureWarning)
+[poly-worker] evaluate keras-team__keras-19838
+[poly-worker] using local prebuilt ghcr.io/timesler/swe-polybench.eval.x86_64.keras-team__keras-19838:v1.1 -> polybench_python_keras-team__keras-19838
+2026-09-10 18:32:20.327 | INFO     | poly_bench_evaluation.run_evaluation:evaluate_instance:130 - Successfully pulled pre-built image from GHCR: polybench_python_keras-team__keras-19838
+2026-09-10 18:32:20.618 | INFO     | poly_bench_evaluation.run_evaluation:evaluate_instance:235 - docker running for keras-team__keras-19838
+2026-09-10 18:32:37.427 | DEBUG    | poly_bench_evaluation.docker_utils:_cleanup:432 - Removed local image tag: polybench_python_keras-team__keras-19838
+2026-09-10 18:32:37.443 | INFO     | poly_bench_evaluation.scoring:aggregate_logs:256 - Writing aggregated results to result.json
+Total resolved: 8/15
+Total pass rate: 53.33%
+
+Pass rate by language:
+Python: 1/1 (100.0%)
+
+Pass rate by task category:
+Bug Fix: 1/1 (100.0%)
+
+File retrieval metrics by language:
+          file_recall  file_precision  file_f1
+language                                      
+Python            1.0             1.0      1.0
+
+File retrieval metrics overall:
+file_recall       0.72
+file_precision    0.83
+file_f1           0.74
+[poly-worker] done failures=0
+[18:32:37]   Poly report -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Poly.epimetheus_Poly.json
+[18:32:37] === Issue resolution summary ===
+[18:32:37]   Report            : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Poly.epimetheus_Poly.json
+[18:32:37]   Total (evaluated) : 15
+[18:32:37]   Submitted (preds) : 1
+[18:32:37]   Completed         : 15
+[18:32:37]   Resolved          : 8
+[18:32:37]   Unresolved        : 7
+[18:32:37]   Errored           : 0
+[18:32:37]   Empty patches     : 14
+[18:32:37]   Resolved rate     : 8/15 = 53.3% (of evaluated)
+[18:32:37]   Resolved IDs      : keras-team__keras-19838, huggingface__transformers-26839, huggingface__transformers-12981, prettier__prettier-12930, mui__material-ui-19849, sveltejs__svelte-2185, serverless__serverless-3457, langchain-ai__langchain-4009
+[18:32:37] Done.
+[18:32:37]   Predictions : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Poly_resolution_preds.jsonl
+[18:32:37]   Report      : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Poly.epimetheus_Poly.json
+[18:32:37] Resolution scores -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Poly_resolution.jsonl
+[18:32:37] Deleted docker image: ghcr.io/timesler/swe-polybench.eval.x86_64.keras-team__keras-19838:v1.1
+[18:32:39] Deleted docker image: ghcr.io/timesler/swe-polybench.eval.x86_64.keras-team__keras-19838:latest

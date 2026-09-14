@@ -1,0 +1,170 @@
+[16:57:37] Retrieval eval: django__django-16032
+  Setting up repository
+  Warning: repo_url mismatch; overriding with /home/andre/workspace/ContextBench/repos/github.com__django__django
+  Repo: /home/andre/workspace/ContextBench/repos/github.com__django__django
+  Commit: 0c3981eb5094...
+  Checkout ready: /home/andre/workspace/ContextBench/repos/_worktrees/contextbench_worktrees/__home__andre__workspace__ContextBench__repos__github.com__django__django/0c3981eb5094419fe200eb46c71b5376a2266166
+  Parsing trajectory
+  Extracted: 10 steps, final has 4 files
+DETAILS:
+instance_id=django__django-16032
+  gold_files: n=3
+    - django/db/models/fields/related_lookups.py
+    - django/db/models/query.py
+    - django/db/models/sql/query.py
+  pred_files: n=4
+    - django/db/models/lookups.py
+    - django/db/models/query.py
+    - django/db/models/sql/compiler.py
+    - django/db/models/sql/query.py
+  hit_files: n=2
+    - django/db/models/query.py
+    - django/db/models/sql/query.py
+  gold_symbols: n=14
+    - django/db/models/fields/related_lookups.py:class_definition@2263-6002
+    - django/db/models/fields/related_lookups.py:function_definition@2288-4213
+    - django/db/models/fields/related_lookups.py:function_definition@4219-6002
+    - django/db/models/query.py:class_definition@10180-75093
+    - django/db/models/query.py:function_definition@60854-61099
+    - django/db/models/query.py:function_definition@61105-63160
+    - django/db/models/sql/query.py:class_definition@5099-108577
+    - django/db/models/sql/query.py:function_definition@100179-100350
+    - django/db/models/sql/query.py:function_definition@100737-102887
+    - django/db/models/sql/query.py:function_definition@8775-9058
+    - django/db/models/sql/query.py:function_definition@88941-89187
+    - django/db/models/sql/query.py:function_definition@9078-9218
+    - django/db/models/sql/query.py:function_definition@9245-9328
+    - django/db/models/sql/query.py:function_definition@99872-100173
+  pred_symbols: n=33
+    - django/db/models/lookups.py:class_definition@13996-14075
+    - django/db/models/lookups.py:class_definition@14101-14188
+    - django/db/models/lookups.py:class_definition@14191-14532
+    - django/db/models/lookups.py:class_definition@14565-14653
+    - django/db/models/lookups.py:class_definition@14686-14754
+    - django/db/models/lookups.py:class_definition@14780-17886
+    - django/db/models/lookups.py:function_definition@14382-14532
+    - django/db/models/lookups.py:function_definition@14867-15247
+    - django/db/models/lookups.py:function_definition@15253-16356
+    - django/db/models/query.py:class_definition@10180-75093
+    - django/db/models/query.py:function_definition@60558-60848
+    - django/db/models/query.py:function_definition@60854-61099
+    - django/db/models/query.py:function_definition@61105-63160
+    - django/db/models/query.py:function_definition@63166-63545
+    - django/db/models/sql/compiler.py:class_definition@962-65605
+    - django/db/models/sql/compiler.py:function_definition@10374-13743
+    - django/db/models/sql/compiler.py:function_definition@12482-12823
+    - django/db/models/sql/compiler.py:function_definition@13749-17966
+    - django/db/models/sql/compiler.py:function_definition@22422-25893
+    - django/db/models/sql/query.py:class_definition@5099-108577
+    - django/db/models/sql/query.py:function_definition@100737-102887
+    - django/db/models/sql/query.py:function_definition@102907-103613
+    - django/db/models/sql/query.py:function_definition@103633-104073
+    - django/db/models/sql/query.py:function_definition@46432-46946
+    - django/db/models/sql/query.py:function_definition@46952-48254
+    - django/db/models/sql/query.py:function_definition@8775-9058
+    - django/db/models/sql/query.py:function_definition@88700-88935
+    - django/db/models/sql/query.py:function_definition@88941-89187
+    - django/db/models/sql/query.py:function_definition@89193-89471
+    - django/db/models/sql/query.py:function_definition@89477-89581
+    - django/db/models/sql/query.py:function_definition@89587-89682
+    - django/db/models/sql/query.py:function_definition@9078-9218
+    - django/db/models/sql/query.py:function_definition@9245-9328
+  hit_symbols: n=9
+    - django/db/models/query.py:class_definition@10180-75093
+    - django/db/models/query.py:function_definition@60854-61099
+    - django/db/models/query.py:function_definition@61105-63160
+    - django/db/models/sql/query.py:class_definition@5099-108577
+    - django/db/models/sql/query.py:function_definition@100737-102887
+    - django/db/models/sql/query.py:function_definition@8775-9058
+    - django/db/models/sql/query.py:function_definition@88941-89187
+    - django/db/models/sql/query.py:function_definition@9078-9218
+    - django/db/models/sql/query.py:function_definition@9245-9328
+
+[16:57:38] Retrieval django__django-16032: line_f1=0.327
+[16:57:38] Resolution resume: 0 harness-scored, 1 pending (stable run_id=epimetheus_Verified)
+[16:57:38] Resolution eval: 1 pending; pull-if-missing → score → delete image (per instance)
+[16:57:38] Resolution [1/1] django__django-16032
+[16:57:38] Docker image already present: swebench/sweb.eval.x86_64.django_1776_django-16032:latest
+[16:57:38] Resolution eval: /home/andre/workspace/ContextBench/agent-frameworks/epimetheus/.venv/bin/python /home/andre/workspace/ContextBench/scripts/run_resolution_eval.py --input-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Verified --bench Verified --model-name epimetheus__Verified --run-id epimetheus_Verified --predictions /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Verified_resolution_preds.jsonl --report-dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet --instance-ids django__django-16032 --max-workers 1
+[16:57:38] === Step 1/2: Build SWE-bench predictions ===
+[16:57:38]   Input dir   : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/Verified
+[16:57:38] WARNING: duplicate instance_id django__django-11163 (django__django-11163.json); keeping first.
+[16:57:38] WARNING: duplicate instance_id django__django-11179 (django__django-11179.json); keeping first.
+[16:57:38] WARNING: duplicate instance_id django__django-11749 (django__django-11749.json); keeping first.
+[16:57:38] WARNING: duplicate instance_id django__django-12125 (django__django-12125.json); keeping first.
+[16:57:38] WARNING: duplicate instance_id django__django-13343 (django__django-13343.json); keeping first.
+[16:57:38] WARNING: duplicate instance_id django__django-14140 (django__django-14140.json); keeping first.
+[16:57:38] WARNING: duplicate instance_id django__django-14404 (django__django-14404.json); keeping first.
+[16:57:38] WARNING: duplicate instance_id django__django-16032 (django__django-16032.json); keeping first.
+[16:57:38] WARNING: duplicate instance_id django__django-16454 (django__django-16454.json); keeping first.
+[16:57:38] WARNING: duplicate instance_id django__django-16527 (django__django-16527.json); keeping first.
+[16:57:38] WARNING: duplicate instance_id matplotlib__matplotlib-20826 (matplotlib__matplotlib-20826.json); keeping first.
+[16:57:38] WARNING: duplicate instance_id matplotlib__matplotlib-23299 (matplotlib__matplotlib-23299.json); keeping first.
+[16:57:38] WARNING: duplicate instance_id matplotlib__matplotlib-23314 (matplotlib__matplotlib-23314.json); keeping first.
+[16:57:38] WARNING: duplicate instance_id pydata__xarray-4075 (pydata__xarray-4075.json); keeping first.
+[16:57:38] WARNING: duplicate instance_id pydata__xarray-6461 (pydata__xarray-6461.json); keeping first.
+[16:57:38] WARNING: duplicate instance_id sphinx-doc__sphinx-8265 (sphinx-doc__sphinx-8265.json); keeping first.
+[16:57:38] WARNING: duplicate instance_id sympy__sympy-12489 (sympy__sympy-12489.json); keeping first.
+[16:57:38] WARNING: duplicate instance_id sympy__sympy-17318 (sympy__sympy-17318.json); keeping first.
+[16:57:38]   Wrote 18 prediction(s) -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Verified_resolution_preds.jsonl
+[16:57:38] === Step 2/2: Run resolution harness ===
+[16:57:39]   Backend     : Verified
+[16:57:39]   Dataset     : princeton-nlp/SWE-bench_Verified (split=test)
+[16:57:39]   Run id      : epimetheus_Verified
+[16:57:39]   Report dir  : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet
+[16:57:40]   Running: /home/andre/workspace/ContextBench/.venvs/resolution/bin/python -m swebench.harness.run_evaluation --dataset_name princeton-nlp/SWE-bench_Verified --split test --predictions_path /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Verified_resolution_preds.jsonl --run_id epimetheus_Verified --max_workers 1 --timeout 1800 --report_dir /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet --cache_level env --instance_ids django__django-16032
+<frozen runpy>:128: RuntimeWarning: 'swebench.harness.run_evaluation' found in sys.modules after import of package 'swebench.harness', but prior to execution of 'swebench.harness.run_evaluation'; this may result in unpredictable behaviour
+2026-09-10 16:57:42,039 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-09-10 16:57:42,073 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/princeton-nlp/SWE-bench_Verified/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/README.md "HTTP/1.1 200 OK"
+2026-09-10 16:57:42,200 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-09-10 16:57:42,681 - httpx - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/princeton-nlp/SWE-bench_Verified/princeton-nlp/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-09-10 16:57:42,817 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/princeton-nlp/SWE-bench_Verified/revision/c104f840cc67f8b6eec6f759ebc8b2693d585d4a "HTTP/1.1 200 OK"
+2026-09-10 16:57:42,949 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/.huggingface.yaml "HTTP/1.1 404 Not Found"
+2026-09-10 16:57:43,193 - httpx - INFO - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=princeton-nlp/SWE-bench_Verified "HTTP/1.1 200 OK"
+2026-09-10 16:57:43,324 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/princeton-nlp/SWE-bench_Verified/tree/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/data?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-09-10 16:57:43,448 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/princeton-nlp/SWE-bench_Verified/tree/c104f840cc67f8b6eec6f759ebc8b2693d585d4a?recursive=false&expand=false "HTTP/1.1 200 OK"
+2026-09-10 16:57:43,577 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/dataset_infos.json "HTTP/1.1 404 Not Found"
+2026-09-10 16:57:43,848 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-09-10 16:57:43,882 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/princeton-nlp/SWE-bench_Verified/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/README.md "HTTP/1.1 200 OK"
+2026-09-10 16:57:44,008 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-09-10 16:57:44,122 - httpx - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/princeton-nlp/SWE-bench_Verified/princeton-nlp/SWE-bench_Verified.py "HTTP/1.1 404 Not Found"
+2026-09-10 16:57:44,253 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/.huggingface.yaml "HTTP/1.1 404 Not Found"
+2026-09-10 16:57:44,385 - httpx - INFO - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=princeton-nlp/SWE-bench_Verified "HTTP/1.1 200 OK"
+2026-09-10 16:57:44,509 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/dataset_infos.json "HTTP/1.1 404 Not Found"
+Found 1 existing instance images. Will reuse them.
+Running 1 instances...
+
+Evaluation:   0%|          | 0/1 [00:00<?, ?it/s, error=0, ✓=0, ✖=0]
+Evaluation:   0%|          | 0/1 [00:21<?, ?it/s, ✓=1, ✖=0, error=0]
+Evaluation: 100%|██████████| 1/1 [00:21<00:00, 21.47s/it, ✓=1, ✖=0, error=0]
+Evaluation: 100%|██████████| 1/1 [00:21<00:00, 21.47s/it, ✓=1, ✖=0, error=0]
+All instances run.
+Cleaning cached images...
+Removed 0 images.
+Total instances: 1
+Instances submitted: 1
+Instances completed: 1
+Instances incomplete: 0
+Instances resolved: 1
+Instances unresolved: 0
+Instances with empty patches: 0
+Instances with errors: 0
+Unstopped containers: 0
+Unremoved images: 1
+Report written to epimetheus__Verified.epimetheus_Verified.json
+[16:58:20] === Issue resolution summary ===
+[16:58:20]   Report            : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Verified.epimetheus_Verified.json
+[16:58:20]   Total (evaluated) : 1
+[16:58:20]   Submitted (preds) : 18
+[16:58:20]   Completed         : 1
+[16:58:20]   Resolved          : 1
+[16:58:20]   Unresolved        : 0
+[16:58:20]   Errored           : 0
+[16:58:20]   Empty patches     : 0
+[16:58:20]   Resolved rate     : 1/1 = 100.0% (of evaluated)
+[16:58:20]   Resolved IDs      : django__django-16032
+[16:58:20] Done.
+[16:58:20]   Predictions : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Verified_resolution_preds.jsonl
+[16:58:20]   Report      : /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus__Verified.epimetheus_Verified.json
+[16:58:20] Deleted docker image: swebench/sweb.eval.x86_64.django_1776_django-16032:latest
+[16:58:20] Resolution scores -> /home/andre/workspace/ContextBench/results/agent_runs/epimetheus_shuf500_dsv4pro_b4_quiet/epimetheus_Verified_resolution.jsonl
