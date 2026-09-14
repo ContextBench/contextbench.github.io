@@ -1,14 +1,14 @@
-# Resopus + DeepSeek-V4-Pro
+# openJiuwen-JiuwenSwarm
 
 Agent-systems submission on ContextBench Lite (500 tasks). Display name matches
 `metadata.json` and `results.json`.
 
-`system_type` is **agent**: Resopus is the agent; DeepSeek-V4-Pro is the backbone.
+`system_type` is **agent**: openJiuwen is the agent; DeepSeek-V4-Pro is the backbone.
 This is not a Fixed-harness (mini SWE-agent) row.
 
 ## System
 
-Resopus is a single-process ReAct issue-resolution agent. Each task:
+openJiuwen-JiuwenSwarm issue-resolution agent is a single-process ReAct, which:
 
 1. Checks out the repository at `base_commit`.
 2. Builds a BM25 index and an in-memory tree-sitter knowledge graph.
@@ -47,10 +47,10 @@ were **on**.
 **Code.** Retrieval scoring used `python -m contextbench.evaluate` from
 [EuniAI/ContextBench](https://github.com/EuniAI/ContextBench) commit
 `1436c28a8eb95496da4ea69ad458b9f8a8eb7d61` (matches
-`metadata.evaluation.evaluator_commit`). The Resopus agent itself ran from a
+`metadata.evaluation.evaluator_commit`). The openJiuwen agent itself ran from a
 private checkout of that tree; that repository is **not** part of this GitHub
 Pages submission. Run artifacts on disk use the internal run name
-`epimetheus_shuf500_dsv4pro_b4_quiet`; the public system name is **Resopus**.
+`epimetheus_shuf500_dsv4pro_b4_quiet`; the public system name is **openJiuwen-JiuwenSwarm**.
 
 
 ## Evaluation and reproduction
@@ -98,9 +98,9 @@ resolution (Verified / Multi / Poly / Pro harnesses).
 ```bash
 python -m contextbench.evaluate \
   --gold data/full.parquet \
-  --pred submissions/2026-09-12_resopus/logs/epimetheus_Shuffled_pred.jsonl \
+  --pred submissions/2026-09-12_openjiuwen-jiuwenswarm/logs/epimetheus_Shuffled_pred.jsonl \
   --cache ./repos \
-  --out submissions/2026-09-12_resopus/logs/epimetheus_Shuffled_eval.jsonl
+  --out submissions/2026-09-12_openjiuwen-jiuwenswarm/logs/epimetheus_Shuffled_eval.jsonl
 ```
 
 **Coverage and failures.** All 500 instances have an agent sidecar. Pass@1
@@ -197,7 +197,7 @@ BM25 `*.index/` trees and Multi `multi_eval/workdir` dumps are omitted.
   paths. Tests still run in official SWE-bench images.
 - **No gold-context injection.** The agent does not receive `gold_context` or
   the reference patch as input.
-- **Usage drop 0.** Resopus records `pred_spans` as the union of `pred_steps`,
+- **Usage drop 0.** openJiuwen records `pred_spans` as the union of `pred_steps`,
   so explored gold is still in the final retrieval set. This is not “unused in
   the patch.”
 - **Evaluator.** Retrieval metrics come from EuniAI/ContextBench
