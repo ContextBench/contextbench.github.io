@@ -21,7 +21,7 @@ import backboneData from "@/data/backbone_results.json";
 import agentData from "@/data/agent_results.json";
 
 export function HomePage({ lastUpdated }: { lastUpdated?: string }) {
-  const [systemType, setSystemType] = useState<SystemType>("backbone");
+  const [systemType, setSystemType] = useState<SystemType>("agent");
   const [sort, setSort] = useState<Sort>({ key: "line_recall", direction: "desc" });
   const [query, setQuery] = useState("");
   const data: BenchmarkResult[] = systemType === "agent" ? agentData : backboneData;
@@ -45,7 +45,7 @@ export function HomePage({ lastUpdated }: { lastUpdated?: string }) {
             </div>
             <div className="mt-3 flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-4">
               <ToggleGroup type="single" value={systemType} aria-label="Evaluation setup" onValueChange={value => { if (value === "backbone" || value === "agent") setSystemType(value); }} className="w-full shrink-0 rounded-lg border border-border bg-muted p-1 sm:w-auto">
-                {(["backbone", "agent"] as const).map(type => <ToggleGroupItem key={type} value={type} className="h-8 min-w-0 flex-1 rounded-md px-3 text-xs font-medium data-[state=on]:bg-primary data-[state=on]:text-white sm:flex-none">{systemViews[type].label}</ToggleGroupItem>)}
+                {(["agent", "backbone"] as const).map(type => <ToggleGroupItem key={type} value={type} className="h-8 min-w-0 flex-1 rounded-md px-3 text-xs font-medium data-[state=on]:bg-primary data-[state=on]:text-white sm:flex-none">{systemViews[type].label}</ToggleGroupItem>)}
               </ToggleGroup>
               <p className="max-w-xl text-xs leading-relaxed text-muted-foreground">{systemViews[systemType].description}</p>
             </div>
