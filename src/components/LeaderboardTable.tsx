@@ -62,7 +62,7 @@ export const LeaderboardTable = ({ rows, sort, systemType, onSort }: Props) => {
                   </td>)}
                   <td className="border-b border-border/70 px-2 py-2 text-center group-hover:bg-muted/60"><button type="button" aria-label={`Details for ${result.model}`} aria-expanded={open} aria-controls={panel} onClick={() => toggle(result.model)} className="rounded-lg p-2 text-muted-foreground hover:bg-muted hover:text-primary focus-visible:outline-2 focus-visible:outline-ring"><ChevronDown className={cn("h-4 w-4 transition-transform", open && "rotate-180")} /></button></td>
                 </tr>
-                {open && <tr><td colSpan={7} className="border-b border-border"><div id={panel}><ResultDetails result={result} systemType={systemType} /></div></td></tr>}
+                {open && <tr><td colSpan={metricKeys.length + 3} className="border-b border-border"><div id={panel}><ResultDetails result={result} systemType={systemType} /></div></td></tr>}
               </Fragment>;
             })}</tbody>
           </table>
@@ -74,7 +74,7 @@ export const LeaderboardTable = ({ rows, sort, systemType, onSort }: Props) => {
         <ol aria-label="Leaderboard results" className="divide-y divide-border">
           {rows.map(({ result, rank }, index) => {
             const open = expanded.has(result.model);
-            const secondary = sort.key === "pass_at_1" ? "line_f1" : "pass_at_1";
+            const secondary = sort.key === "line_recall" ? "pass_at_1" : "line_recall";
             const panel = `${id}-mobile-${index}`;
             return <li key={result.model} data-model={result.model}>
               <button type="button" aria-label={`Details for ${result.model}`} aria-expanded={open} aria-controls={panel} onClick={() => toggle(result.model)} className="grid w-full grid-cols-[24px_minmax(0,1fr)_auto] items-start gap-2.5 px-3 py-3.5 text-left focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-ring">

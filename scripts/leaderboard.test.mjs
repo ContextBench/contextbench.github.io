@@ -6,7 +6,7 @@ import ts from 'typescript';
 // Test the production sorting/formatting code on Node 20 as well as local runtimes.
 const source = readFileSync(new URL('../src/lib/leaderboard.ts', import.meta.url), 'utf8');
 const { outputText } = ts.transpileModule(source, { compilerOptions: { module: ts.ModuleKind.ESNext, target: ts.ScriptTarget.ES2022 } });
-const { rankResults, filterResults, nextSort, formatMetric, metricValue } = await import(`data:text/javascript;base64,${Buffer.from(outputText).toString('base64')}`);
+const { rankResults, filterResults, nextSort, formatMetric, metricValue, metricKeys, metrics } = await import(`data:text/javascript;base64,${Buffer.from(outputText).toString('base64')}`);
 const result = (model, pass, f1, cost, efficiency) => ({
   model,
   performance: { pass_at_1: pass, line: { f1, recall: f1, precision: f1 }, file: { f1, recall: f1, precision: f1 }, block: { f1, recall: f1, precision: f1 } },
@@ -16,6 +16,40 @@ const result = (model, pass, f1, cost, efficiency) => ({
 const fixture = [result('Alpha', .8, .2, 1, 0), result('Beta', .5, .4, 0, .2), result('Gamma', .5, .1), result('Delta', 0, 0, 2, .1)];
 const names = rows => rows.map(row => row.result.model);
 
+test('Recall is the first metric and ranks line recall rather than Pass@1, F1 or other levels', () => {
+  assert.deepEqual(metricKeys, ['line_recall', 'pass_at_1', 'line_f1', 'efficiency', 'cost']);
+  assert.equal(metrics.line_recall.direction, 'desc');
+  const data = structuredClone(fixture);
+  data[2].performance.line.recall = .9;
+  const sort = nextSort({ key: 'cost', direction: 'asc' }, 'line_recall');
+  assert.deepEqual(sort, { key: 'line_recall', direction: 'desc' });
+  assert.equal(metricValue(data[2], 'line_recall'), .9);
+  assert.deepEqual(names(rankResults(data, sort)), ['Gamma', 'Beta', 'Alpha', 'Delta']);
+  assert.deepEqual(nextSort(sort, 'line_recall'), { key: 'line_recall', direction: 'asc' });
+  assert.deepEqual(nextSort(nextSort(sort, 'line_recall'), 'line_recall'), sort);
+});
+test('Recall ties keep their ranks when reversing or searching, with zero above missing scores', () => {
+  const data = structuredClone(fixture);
+  data[0].performance.line.recall = .4;
+  data[2].performance.line.recall = undefined;
+  const descending = rankResults(data, { key: 'line_recall', direction: 'desc' });
+  const ascending = rankResults(data, { key: 'line_recall', direction: 'asc' });
+  assert.deepEqual(descending.map(({result, rank}) => [result.model, rank]), [['Alpha', 1], ['Beta', 1], ['Delta', 3], ['Gamma', null]]);
+  assert.deepEqual(ascending.map(({result, rank}) => [result.model, rank]), [['Delta', 3], ['Alpha', 1], ['Beta', 1], ['Gamma', null]]);
+  assert.deepEqual(filterResults(descending, ' DELTA ').map(row => row.rank), [3]);
+  assert.equal(formatMetric(0, 'line_recall'), '0.000');
+  assert.equal(formatMetric(.45678, 'line_recall'), '0.457');
+  for (const value of [undefined, NaN, Infinity]) {
+    data[2].performance.line.recall = value;
+    assert.equal(metricValue(data[2], 'line_recall'), undefined);
+    assert.equal(formatMetric(value, 'line_recall'), '—');
+    for (const direction of ['asc', 'desc']) {
+      const last = rankResults(data, { key: 'line_recall', direction }).at(-1);
+      assert.equal(last.result.model, 'Gamma');
+      assert.equal(last.rank, null);
+    }
+  }
+});
 test('changing metrics starts with the best score, while repeated clicks reverse the order', () => {
   const f1 = nextSort({ key: 'pass_at_1', direction: 'desc' }, 'line_f1');
   assert.deepEqual(f1, { key: 'line_f1', direction: 'desc' });
@@ -66,8 +100,8 @@ test('sorting and filtering do not mutate published results', () => {
 test('published boards retain every result and sort correctly on each selectable metric', () => {
   for (const filename of ['backbone_results.json', 'agent_results.json']) {
     const data = JSON.parse(readFileSync(new URL(`../src/data/${filename}`, import.meta.url)));
-    for (const key of ['pass_at_1', 'line_f1', 'efficiency', 'cost']) {
-      const direction = key === 'cost' ? 'asc' : 'desc';
+    for (const key of metricKeys) {
+      const direction = metrics[key].direction;
       const rows = rankResults(data, { key, direction });
       assert.equal(rows.length, data.length);
       assert.equal(new Set(names(rows)).size, data.length);
