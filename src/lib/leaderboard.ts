@@ -1,5 +1,5 @@
 export type SystemType = "backbone" | "agent";
-export type MetricKey = "pass_at_1" | "line_f1" | "efficiency" | "cost";
+export type MetricKey = "line_recall" | "pass_at_1" | "line_f1" | "efficiency" | "cost";
 export type Sort = { key: MetricKey; direction: "asc" | "desc" };
 export type RetrievalMetrics = { recall: number; precision: number; f1: number };
 
@@ -24,8 +24,9 @@ export const systemViews = {
   },
 };
 
-export const metricKeys: MetricKey[] = ["pass_at_1", "line_f1", "efficiency", "cost"];
+export const metricKeys: MetricKey[] = ["line_recall", "pass_at_1", "line_f1", "efficiency", "cost"];
 export const metrics: Record<MetricKey, { label: string; shortLabel: string; direction: "asc" | "desc"; description: string }> = {
+  line_recall: { label: "Recall", shortLabel: "Recall", direction: "desc", description: "Line-level context retrieval recall. Higher is better." },
   pass_at_1: { label: "Pass@1", shortLabel: "Pass@1", direction: "desc", description: "Share of issues resolved in a single attempt. Higher is better." },
   line_f1: { label: "Context F1", shortLabel: "Context F1", direction: "desc", description: "Line-level retrieval F1, balancing precision and recall. Higher is better." },
   efficiency: { label: "Retrieval efficiency", shortLabel: "Efficiency", direction: "desc", description: "Efficiency of context retrieval. Higher is better; unreported values are listed last." },
@@ -33,7 +34,8 @@ export const metrics: Record<MetricKey, { label: string; shortLabel: string; dir
 };
 
 export function metricValue(result: BenchmarkResult, key: MetricKey): number | undefined {
-  const value = key === "pass_at_1" ? result.performance.pass_at_1
+  const value = key === "line_recall" ? result.performance.line.recall
+    : key === "pass_at_1" ? result.performance.pass_at_1
     : key === "line_f1" ? result.performance.line.f1
     : key === "efficiency" ? result.dynamics?.efficiency
     : result.patterns?.avg_cost_per_instance;
