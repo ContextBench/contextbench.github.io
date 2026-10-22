@@ -1,0 +1,517 @@
+{
+  "scope": "Descriptive regrouping of unchanged submitted500; not a new run or causal ablation",
+  "input_sha256": {
+    "logs/official-metrics.json": "10531aceb2b4f7448e44a656b590837dcff51deb782bbcf965990f1059cc961b",
+    "logs/joined-results.jsonl": "1620936dbbd7add252c37fb04f50e7d62e1cef173ed7c1e05ee469dddabf419b",
+    "logs/instance_ids.txt": "94f05c340133973b068edc2ce5c11aaf40b3ebb30f1f537ba055b73eba829836",
+    "results.json": "9e3dfd9ceafdd542ea540909b1d124b63001ed4882527ab92348b4b9dff28642",
+    "logs/verification/canonical500-summary.json": "f41f513565fdc9020f42cefa2555767270ec380f26aa2a698d0491487b3f96de"
+  },
+  "aggregation": "Per-case F1 then macro mean; every original native outcome and unique model session retained",
+  "overall": {
+    "cases": 500,
+    "resolved": 388,
+    "unresolved": 112,
+    "pass_at_1": 0.776,
+    "context": {
+      "file": {
+        "recall": 0.8798819951358517,
+        "precision": 0.18802957419728297,
+        "f1": 0.27875712215810766
+      },
+      "block": {
+        "recall": 0.8518213268660296,
+        "precision": 0.14268197833970264,
+        "f1": 0.21608170129657342
+      },
+      "line": {
+        "recall": 0.7789821260975377,
+        "precision": 0.20394093240076408,
+        "f1": 0.28111030793467
+      }
+    },
+    "model_usage_by_role": {
+      "search": {
+        "SDK_sessions": 1000,
+        "usage_usd_decimal": "5.6807717450000000351"
+      },
+      "repair": {
+        "SDK_sessions": 4514,
+        "usage_usd_decimal": "333.195828900000000971"
+      }
+    },
+    "total_model_usage_usd_decimal": "338.8766006450000010061",
+    "model_usage_per_case_usd": 0.67775320129
+  },
+  "by_source": {
+    "SWE-Bench-Verified": {
+      "cases": 174,
+      "resolved": 152,
+      "unresolved": 22,
+      "pass_at_1": 0.8735632183908046,
+      "context": {
+        "file": {
+          "recall": 0.9525269111476008,
+          "precision": 0.1981070338643253,
+          "f1": 0.2962523461357088
+        },
+        "block": {
+          "recall": 0.8976733960462772,
+          "precision": 0.12308748680413165,
+          "f1": 0.20229812490337343
+        },
+        "line": {
+          "recall": 0.8394971763428182,
+          "precision": 0.20223638009058714,
+          "f1": 0.29736151372001257
+        }
+      },
+      "model_usage_by_role": {
+        "search": {
+          "SDK_sessions": 348,
+          "usage_usd_decimal": "1.5708279250000000092"
+        },
+        "repair": {
+          "SDK_sessions": 1360,
+          "usage_usd_decimal": "66.463794000000000188"
+        }
+      },
+      "total_model_usage_usd_decimal": "68.0346219250000001972",
+      "model_usage_per_case_usd": 0.3910035742816092
+    },
+    "SWE-Bench-Pro": {
+      "cases": 54,
+      "resolved": 34,
+      "unresolved": 20,
+      "pass_at_1": 0.6296296296296297,
+      "context": {
+        "file": {
+          "recall": 0.7866935168470256,
+          "precision": 0.22219654263977034,
+          "f1": 0.3234835257224602
+        },
+        "block": {
+          "recall": 0.7834421848383474,
+          "precision": 0.2007495752900169,
+          "f1": 0.29768581886528667
+        },
+        "line": {
+          "recall": 0.7109468896597867,
+          "precision": 0.25866413815193623,
+          "f1": 0.358760594613487
+        }
+      },
+      "model_usage_by_role": {
+        "search": {
+          "SDK_sessions": 108,
+          "usage_usd_decimal": "0.7651089449999999996"
+        },
+        "repair": {
+          "SDK_sessions": 675,
+          "usage_usd_decimal": "70.995123400000000576"
+        }
+      },
+      "total_model_usage_usd_decimal": "71.7602323450000005756",
+      "model_usage_per_case_usd": 1.328893191574074
+    },
+    "SWE-PolyBench": {
+      "cases": 116,
+      "resolved": 92,
+      "unresolved": 24,
+      "pass_at_1": 0.7931034482758621,
+      "context": {
+        "file": {
+          "recall": 0.8556684455391352,
+          "precision": 0.21237286600402588,
+          "f1": 0.3043963911679834
+        },
+        "block": {
+          "recall": 0.861749805118304,
+          "precision": 0.15379890806743302,
+          "f1": 0.23633749125468456
+        },
+        "line": {
+          "recall": 0.810314683004927,
+          "precision": 0.23368671009857547,
+          "f1": 0.31904104327250543
+        }
+      },
+      "model_usage_by_role": {
+        "search": {
+          "SDK_sessions": 232,
+          "usage_usd_decimal": "1.2769051800000000248"
+        },
+        "repair": {
+          "SDK_sessions": 1006,
+          "usage_usd_decimal": "73.956761899999999857"
+        }
+      },
+      "total_model_usage_usd_decimal": "75.2336670799999998818",
+      "model_usage_per_case_usd": 0.6485660955172414
+    },
+    "Multi-SWE-Bench": {
+      "cases": 156,
+      "resolved": 110,
+      "unresolved": 46,
+      "pass_at_1": 0.7051282051282052,
+      "context": {
+        "file": {
+          "recall": 0.8491174707433606,
+          "precision": 0.14686088107201464,
+          "f1": 0.22469590440347167
+        },
+        "block": {
+          "recall": 0.8169656227305675,
+          "precision": 0.13617061579775178,
+          "f1": 0.18814611353096694
+        },
+        "line": {
+          "recall": 0.7117366608648621,
+          "precision": 0.16478086046782414,
+          "f1": 0.20790011186739676
+        }
+      },
+      "model_usage_by_role": {
+        "search": {
+          "SDK_sessions": 312,
+          "usage_usd_decimal": "2.0679296950000000015"
+        },
+        "repair": {
+          "SDK_sessions": 1473,
+          "usage_usd_decimal": "121.780149600000000350"
+        }
+      },
+      "total_model_usage_usd_decimal": "123.8480792950000003515",
+      "model_usage_per_case_usd": 0.793897944198718
+    }
+  },
+  "by_language": {
+    "c": {
+      "cases": 23,
+      "resolved": 12,
+      "unresolved": 11,
+      "pass_at_1": 0.5217391304347826,
+      "context": {
+        "file": {
+          "recall": 0.8971014492753623,
+          "precision": 0.1380440641610333,
+          "f1": 0.2222636705165313
+        },
+        "block": {
+          "recall": 0.8556766219631795,
+          "precision": 0.13077629530612678,
+          "f1": 0.19494837936496878
+        },
+        "line": {
+          "recall": 0.6685553652039151,
+          "precision": 0.17881531680121843,
+          "f1": 0.23649027386644414
+        }
+      },
+      "model_usage_by_role": {
+        "search": {
+          "SDK_sessions": 46,
+          "usage_usd_decimal": "0.3691530749999999965"
+        },
+        "repair": {
+          "SDK_sessions": 272,
+          "usage_usd_decimal": "24.116257600000000042"
+        }
+      },
+      "total_model_usage_usd_decimal": "24.4854106750000000385",
+      "model_usage_per_case_usd": 1.064583072826087
+    },
+    "cpp": {
+      "cases": 10,
+      "resolved": 8,
+      "unresolved": 2,
+      "pass_at_1": 0.8,
+      "context": {
+        "file": {
+          "recall": 0.7738095238095238,
+          "precision": 0.16904527604527603,
+          "f1": 0.27207028265851796
+        },
+        "block": {
+          "recall": 0.7472514132627432,
+          "precision": 0.2288792647532803,
+          "f1": 0.2860832758049453
+        },
+        "line": {
+          "recall": 0.4360735223562936,
+          "precision": 0.2052899239410273,
+          "f1": 0.2224354870828035
+        }
+      },
+      "model_usage_by_role": {
+        "search": {
+          "SDK_sessions": 20,
+          "usage_usd_decimal": "0.1473773949999999981"
+        },
+        "repair": {
+          "SDK_sessions": 102,
+          "usage_usd_decimal": "9.288476500000000086"
+        }
+      },
+      "total_model_usage_usd_decimal": "9.4358538950000000841",
+      "model_usage_per_case_usd": 0.9435853895
+    },
+    "go": {
+      "cases": 40,
+      "resolved": 28,
+      "unresolved": 12,
+      "pass_at_1": 0.7,
+      "context": {
+        "file": {
+          "recall": 0.9206734551306919,
+          "precision": 0.17894769966699894,
+          "f1": 0.26860182866695803
+        },
+        "block": {
+          "recall": 0.8864317548393637,
+          "precision": 0.14528720236996706,
+          "f1": 0.2223330981659728
+        },
+        "line": {
+          "recall": 0.8303533228086488,
+          "precision": 0.1714033670872488,
+          "f1": 0.2362606917598578
+        }
+      },
+      "model_usage_by_role": {
+        "search": {
+          "SDK_sessions": 80,
+          "usage_usd_decimal": "0.4214362399999999941"
+        },
+        "repair": {
+          "SDK_sessions": 298,
+          "usage_usd_decimal": "24.344860000000000153"
+        }
+      },
+      "total_model_usage_usd_decimal": "24.7662962400000001471",
+      "model_usage_per_case_usd": 0.619157406
+    },
+    "java": {
+      "cases": 15,
+      "resolved": 11,
+      "unresolved": 4,
+      "pass_at_1": 0.7333333333333333,
+      "context": {
+        "file": {
+          "recall": 0.7656898656898657,
+          "precision": 0.11601079867671121,
+          "f1": 0.18341025890057522
+        },
+        "block": {
+          "recall": 0.7484962788534217,
+          "precision": 0.18586851079317898,
+          "f1": 0.18072989714614823
+        },
+        "line": {
+          "recall": 0.6069451083964454,
+          "precision": 0.20385356915059016,
+          "f1": 0.22554835841854756
+        }
+      },
+      "model_usage_by_role": {
+        "search": {
+          "SDK_sessions": 30,
+          "usage_usd_decimal": "0.2408201300000000102"
+        },
+        "repair": {
+          "SDK_sessions": 170,
+          "usage_usd_decimal": "14.353778899999999919"
+        }
+      },
+      "total_model_usage_usd_decimal": "14.5945990299999999292",
+      "model_usage_per_case_usd": 0.9729732686666667
+    },
+    "javascript": {
+      "cases": 60,
+      "resolved": 47,
+      "unresolved": 13,
+      "pass_at_1": 0.7833333333333333,
+      "context": {
+        "file": {
+          "recall": 0.8031251618751619,
+          "precision": 0.1982532615496057,
+          "f1": 0.28196058924081824
+        },
+        "block": {
+          "recall": 0.7871331265218592,
+          "precision": 0.17092506758916645,
+          "f1": 0.25743053901129576
+        },
+        "line": {
+          "recall": 0.7311369676843299,
+          "precision": 0.2435388015456655,
+          "f1": 0.32403605006291375
+        }
+      },
+      "model_usage_by_role": {
+        "search": {
+          "SDK_sessions": 120,
+          "usage_usd_decimal": "0.7661914100000000077"
+        },
+        "repair": {
+          "SDK_sessions": 597,
+          "usage_usd_decimal": "46.722536300000000039"
+        }
+      },
+      "total_model_usage_usd_decimal": "47.4887277100000000467",
+      "model_usage_per_case_usd": 0.7914787951666666
+    },
+    "python": {
+      "cases": 266,
+      "resolved": 220,
+      "unresolved": 46,
+      "pass_at_1": 0.8270676691729323,
+      "context": {
+        "file": {
+          "recall": 0.9229553237072035,
+          "precision": 0.19975006427221326,
+          "f1": 0.2975432644038173
+        },
+        "block": {
+          "recall": 0.8846189111643484,
+          "precision": 0.1430630368451776,
+          "f1": 0.22482826542616616
+        },
+        "line": {
+          "recall": 0.8184644107058534,
+          "precision": 0.2242902548495929,
+          "f1": 0.31695832474844216
+        }
+      },
+      "model_usage_by_role": {
+        "search": {
+          "SDK_sessions": 532,
+          "usage_usd_decimal": "2.6695285100000000181"
+        },
+        "repair": {
+          "SDK_sessions": 2264,
+          "usage_usd_decimal": "149.645276400000000477"
+        }
+      },
+      "total_model_usage_usd_decimal": "152.3148049100000004951",
+      "model_usage_per_case_usd": 0.5726120485338346
+    },
+    "rust": {
+      "cases": 20,
+      "resolved": 16,
+      "unresolved": 4,
+      "pass_at_1": 0.8,
+      "context": {
+        "file": {
+          "recall": 0.9349624060150376,
+          "precision": 0.17585054955600316,
+          "f1": 0.26383171312930026
+        },
+        "block": {
+          "recall": 0.8565192763480493,
+          "precision": 0.12328380867416044,
+          "f1": 0.19320091247543678
+        },
+        "line": {
+          "recall": 0.8141629620811278,
+          "precision": 0.17568169337603884,
+          "f1": 0.25433515280630714
+        }
+      },
+      "model_usage_by_role": {
+        "search": {
+          "SDK_sessions": 40,
+          "usage_usd_decimal": "0.2788487200000000021"
+        },
+        "repair": {
+          "SDK_sessions": 217,
+          "usage_usd_decimal": "18.919665099999999930"
+        }
+      },
+      "total_model_usage_usd_decimal": "19.1985138199999999321",
+      "model_usage_per_case_usd": 0.959925691
+    },
+    "typescript": {
+      "cases": 66,
+      "resolved": 46,
+      "unresolved": 20,
+      "pass_at_1": 0.696969696969697,
+      "context": {
+        "file": {
+          "recall": 0.7706728616211375,
+          "precision": 0.17735647144165465,
+          "f1": 0.25317861896895416
+        },
+        "block": {
+          "recall": 0.7940283201646837,
+          "precision": 0.10104360521107272,
+          "f1": 0.15117823617371454
+        },
+        "line": {
+          "recall": 0.7510944596482408,
+          "precision": 0.12278343490215936,
+          "f1": 0.16997105011999458
+        }
+      },
+      "model_usage_by_role": {
+        "search": {
+          "SDK_sessions": 132,
+          "usage_usd_decimal": "0.7874162650000000083"
+        },
+        "repair": {
+          "SDK_sessions": 594,
+          "usage_usd_decimal": "45.804978100000000325"
+        }
+      },
+      "total_model_usage_usd_decimal": "46.5923943650000003333",
+      "model_usage_per_case_usd": 0.7059453691666667
+    }
+  },
+  "same500_search_context": {
+    "file": {
+      "recall": 0.8778819951358517,
+      "precision": 0.1882682366698341,
+      "f1": 0.2790931071256489
+    },
+    "block": {
+      "recall": 0.8479549336448242,
+      "precision": 0.1433431234560971,
+      "f1": 0.21682881233805654
+    },
+    "line": {
+      "recall": 0.7706906156843804,
+      "precision": 0.2051765587068771,
+      "f1": 0.28161839002407457
+    }
+  },
+  "same500_descriptive_delta_counts": {
+    "file": {
+      "recall_higher": 1,
+      "recall_equal": 499,
+      "recall_lower": 0,
+      "F1_higher": 1,
+      "F1_equal": 482,
+      "F1_lower": 17
+    },
+    "block": {
+      "recall_higher": 11,
+      "recall_equal": 489,
+      "recall_lower": 0,
+      "F1_higher": 9,
+      "F1_equal": 430,
+      "F1_lower": 61
+    },
+    "line": {
+      "recall_higher": 35,
+      "recall_equal": 465,
+      "recall_lower": 0,
+      "F1_higher": 23,
+      "F1_equal": 377,
+      "F1_lower": 100
+    }
+  },
+  "all_group_weighted_metrics_and_exact_fees_reconstruct_submitted_results": true,
+  "new_model_calls": 0,
+  "native_tests_rerun": 0,
+  "official_context_rescoring": false
+}

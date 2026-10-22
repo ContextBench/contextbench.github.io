@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-19",
+  "model": "CodeNib (Haiku5.5 search pair + Opus5.5 mini SWE-agent)",
+  "system_type": "agent",
+  "submitter": {
+    "name": "CodeNib",
+    "organization": "SysEvol",
+    "github": "https://github.com/sysevol-ai"
+  },
+  "evaluation": {
+    "dataset": "Contextbench/ContextBench, config=contextbench_verified; exact canonical IDs in logs/instance_ids.txt; issue/Gold projection from hash-pinned full.parquet",
+    "dataset_revision": "c2855792b006af41c67202d33883fb9d46362853",
+    "split": "train",
+    "instance_count": 500,
+    "evaluator_commit": "1436c28a8eb95496da4ea69ad458b9f8a8eb7d61",
+    "command": "python tools/contextbench_submission_results.py --protocol logs/protocol.json --evaluation logs/official-metrics.json --joined-results logs/joined-results.jsonl --model \"CodeNib (Haiku5.5 search pair + Opus5.5 mini SWE-agent)\" --output reproduced-results.json --audit reproduced-aggregation.json"
+  }
+}
