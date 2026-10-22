@@ -353,32 +353,50 @@
     "model": "openJiuwen-JiuwenSwarm + DeepSeek-V4-Pro",
     "performance": {
       "file": {
-        "recall": 0.817,
-        "precision": 0.378,
-        "f1": 0.46
+        "recall": 0.617,
+        "precision": 0.919,
+        "f1": 0.683
       },
       "block": {
-        "recall": 0.784,
-        "precision": 0.231,
-        "f1": 0.297
+        "recall": 0.45,
+        "precision": 0.765,
+        "f1": 0.49
       },
       "line": {
-        "recall": 0.753,
-        "precision": 0.195,
-        "f1": 0.257
+        "recall": 0.411,
+        "precision": 0.607,
+        "f1": 0.389
       },
-      "pass_at_1": 0.604
+      "pass_at_1": 0.608
     },
     "patterns": {
-      "avg_steps_per_instance": 21.998,
-      "avg_lines_per_step": 59.604,
-      "avg_cost_per_instance": 0.571
+      "avg_cost_per_instance": 0.556
     },
-    "dynamics": {
-      "efficiency": 0.642,
-      "redundancy": 0.165,
-      "usage_drop": 0
+    "submission": "2026-10-14_openjiuwen-jiuwenswarm"
+  },
+  {
+    "model": "CodeNib (Haiku5.5 search pair + Opus5.5 mini SWE-agent)",
+    "performance": {
+      "file": {
+        "recall": 0.8798819951358517,
+        "precision": 0.18802957419728297,
+        "f1": 0.27875712215810766
+      },
+      "block": {
+        "recall": 0.8518213268660295,
+        "precision": 0.14268197833970264,
+        "f1": 0.21608170129657342
+      },
+      "line": {
+        "recall": 0.7789821260975378,
+        "precision": 0.20394093240076408,
+        "f1": 0.28111030793467
+      },
+      "pass_at_1": 0.776
     },
-    "submission": "2026-09-12_openjiuwen-jiuwenswarm"
+    "patterns": {
+      "avg_cost_per_instance": 0.67775320129
+    },
+    "submission": "2026-10-19_codenib-agent-haiku55-opus55"
   }
 ]
