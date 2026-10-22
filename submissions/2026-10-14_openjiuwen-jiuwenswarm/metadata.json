@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-14",
+  "model": "openJiuwen-JiuwenSwarm + DeepSeek-V4-Pro",
+  "system_type": "agent",
+  "submitter": {
+    "name": "Le Zhang",
+    "organization": "Huawei",
+    "github": "https://github.com/Mmmmroy0806"
+  },
+  "evaluation": {
+    "dataset": "EuniAI/ContextBench (GitHub) data/full.parquet, task list data/selected_500_instances.csv (Lite 500)",
+    "dataset_revision": "1436c28a8eb95496da4ea69ad458b9f8a8eb7d61",
+    "split": "Lite 500: Verified 174 + Multi 156 + Poly 116 + Pro 54",
+    "instance_count": 500,
+    "evaluator_commit": "1436c28a8eb95496da4ea69ad458b9f8a8eb7d61",
+    "command": "python -m contextbench.evaluate --gold data/full.parquet --pred logs/cb_preds.jsonl --cache ./repos --out logs/eval_final.jsonl"
+  }
+}
